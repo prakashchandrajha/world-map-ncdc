@@ -1,15 +1,25 @@
-<header class="fixed inset-x-0 top-0 z-30 w-full bg-white shadow-lg backdrop-blur-md py-8 px-50">
+
+
+<header 
+  [ngClass]="isHome 
+    ? 'fixed inset-x-0 top-0 z-30 w-full bg-transparent py-8 px-50 transition-all duration-300' 
+    : 'fixed inset-x-0 top-0 z-30 w-full bg-white shadow-lg backdrop-blur-md py-8 px-50 transition-all duration-300'"
+>
   <div class="flex items-center justify-between w-full">
 
     <!-- Left Side: Logo -->
     <div class="flex items-center">
       <a href="/" aria-current="page" class="flex items-center">
-        <img src="/assets/images/icc_logo.png" alt="Logo" class="h-10 w-auto">
+        <img 
+          [src]="isHome ? '/assets/images/ww.png' : '/assets/images/icc_logo.png'" 
+          alt="Logo" 
+          class="h-10 w-auto transition-all duration-300"
+        >
       </a>
     </div>
 
     <!-- Right Side: Navigation -->
-    <nav
+   <nav
       class="mr-6 flex items-center rounded-full p-[1px] bg-gradient-to-r from-[#ff9ebd] via-[#ff80aa] to-[#ff4c91] shadow-md">
       <div class="flex items-center justify-center rounded-full bg-white backdrop-blur-md py-2 px-10">
         <ul class="flex items-center space-x-8">
@@ -83,5 +93,6 @@
         </ul>
       </div>
     </nav>
+
   </div>
 </header>

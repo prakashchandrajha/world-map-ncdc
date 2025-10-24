@@ -1,4 +1,6 @@
-<div class="relative w-full h-screen bg-gradient-to-r from-[#7a004a] via-[#520035] to-[#1a0011] overflow-hidden flex flex-col items-center justify-center px-6 md:px-24">
+<!-- hero banner -->
+<section>
+  <div class="relative w-full h-screen bg-gradient-to-r from-[#7a004a] via-[#520035] to-[#1a0011] overflow-hidden flex flex-col items-center justify-center px-6 md:px-24">
 
   <!-- Decorative glowing shades -->
   <div class="absolute -bottom-20 -left-20 w-[320px] h-[320px] bg-white/10 rounded-full blur-3xl"></div>
@@ -23,21 +25,7 @@
         Explore The Map
       </button>
     </div>
-
-  </div>
-</div>
-
-
-
-
-<app-world-map></app-world-map>
-<section class="mx-auto  max-w-[1440px] min-w-[280px] py-8 px-4 sm:px-8 md:px-10 lg:0px-20 ">
-  <div
-    class="w-full rounded-[50px] sm:rounded-[60px] md:rounded-[70px] lg:rounded-[80px]    flex flex-col lg:flex-row  items-center  py-6 sm:py-9 md:py-11 lg:py-14  px-2  sm:px-4 md:px-8 xl:px-16">
-    <img class="w-full lg:w-1/2 xl:w-full max-w-[550px] lg:order-2" src="../../../assets/images/plmko.png" alt="">
-    <div class="text-center md:text-left">
-
-  <h1
+     <h1
     class="absolute bottom-10 left-50 text-4xl leading-[48px] md:text-5xl md:leading-[58px] lg:text-[20px] lg:leading-[30px] font-bold 
            bg-clip-text text-transparent bg-gradient-to-r from-[#ffffff] to-white">
     Preserving <br>
@@ -46,10 +34,40 @@ cultural wisdom <br>
 across generations.
   </h1>
 
+  </div>
+</div>
+</section>
 
 
 
-      
+
+<!-- world map component -->
+<app-world-map></app-world-map>
+
+
+
+
+
+
+
+<!-- what is cooperative culture haritage with img on right side -->
+<section class="mx-auto  max-w-[1440px] min-w-[280px] py-8 px-4 sm:px-8 md:px-10 lg:0px-20 ">
+  <div
+    class="w-full rounded-[50px] sm:rounded-[60px] md:rounded-[70px] lg:rounded-[80px]    flex flex-col lg:flex-row  items-center  py-6 sm:py-9 md:py-11 lg:py-14  px-2  sm:px-4 md:px-8 xl:px-16">
+    <img class="w-full lg:w-1/2 xl:w-full max-w-[550px] lg:order-2" src="../../../assets/images/plmko.png" alt="">
+    <div class="text-center md:text-left">
+
+ 
+
+
+
+
+      <h4 class="text-[#7a004a] text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
+        What is the <br>
+        Cooperative <br>
+        Cultural <br>
+        Heritage?
+      </h4>
       <p class="text-pink-800 text-xl leading-[27px]  font-normal sm:text-[24px] mb-8 md:mb-12 ">
         A global initiative dedicated to preserving and celebrating cooperative cultural traditions that connect communities around the world, promoting the exchange of ancestral knowledge and sustainable practices.
 
@@ -63,43 +81,255 @@ Read More
 
 
 
+<!-- 3 circle -->
+<section class="flex justify-center items-center bg-white mt-[50px]">
+  <div
+    class="w-[1000px] h-[380px] cursor-pointer group bg-gradient-to-br transition-all duration-1000 flex flex-col relative overflow-hidden rounded-2xl shadow-lg">
 
-
-
-
-<section class="flex justify-center space-x-12 py-10 bg-white">
-  <!-- Item 1 -->
-  <div class="flex flex-col items-center">
-    <div class="bg-[#7a004a]/10 border-2 border-[#7a004a] rounded-full p-1 mb-2">
-      <div class="text-[#7a004a] border-2 border-[#7a004a] rounded-full p-4">
-       <i class="fas fa-globe text-[#7a004a] text-2xl"></i>
-      </div>
-    </div>
-    <h2 class="text-3xl font-bold text-[#7a004a]">47</h2>
-    <p class="text-sm text-gray-500">Countries</p>
-  </div>
-
-  <!-- Item 2 -->
-  <div class="flex flex-col items-center">
-    <div class="bg-[#7a004a]/10 border-2 border-[#7a004a] rounded-full p-1 mb-2">
-      <div class="text-[#7a004a] border-2 border-[#7a004a] rounded-full p-4">
-      <i class="fas fa-sitemap text-[#7a004a] text-2xl"></i>
+    <div class="grow m-4 flex items-center justify-center -mb-4 px-3">
+      
+      <!-- Circle 1 -->
+      <div class="flex flex-col items-center">
+        <div
+          class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
+          <div
+            class="h-14 w-14 rounded-full flex items-center justify-center border border-zinc-400 bg-white overflow-hidden">
+            <img src="../../../assets/images/language.png" alt="Svelte" class="h-10 w-10 object-contain">
+          </div>
+        </div>
+        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Countries</p>
+                <p class="mt-3 text-[30px] font-bold text-[#7a004a] tracking-tight">47</p>
 
       </div>
-    </div>
-    <h2 class="text-3xl font-bold text-[#7a004a]">152</h2>
-    <p class="text-sm text-gray-500">Items</p>
-  </div>
 
-  <!-- Item 3 -->
-  <div class="flex flex-col items-center">
-    <div class="bg-[#7a004a]/10 border-2 border-[#7a004a] rounded-full p-1 mb-2">
-      <div class="text-[#7a004a] border-2 border-[#7a004a] rounded-full p-4">
-             <i class="fas fa-users text-[#7a004a] text-2xl"></i>
+      <div class="h-[1px] grow bg-zinc-400 mx-4 mb-20"></div>
+
+      <!-- Circle 2 -->
+      <div class="flex flex-col items-center">
+        <div
+          class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
+          <div
+            class="h-14 w-14 rounded-full flex items-center justify-center border border-zinc-400 bg-white overflow-hidden">
+            <img src="../../../assets/images/inventory_2.png" alt="Supabase" class="h-10 w-10 object-contain">
+          </div>
+        </div>
+        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Items</p>
+                <p class="mt-3 text-[30px] font-bold text-[#7a004a] tracking-tight">152</p>
 
       </div>
+
+      <div class="h-[1px] grow bg-zinc-400 mx-4 mb-20"></div>
+
+      <!-- Circle 3 -->
+      <div class="flex flex-col items-center">
+        <div
+          class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
+          <div
+            class="h-14 w-14 rounded-full flex items-center justify-center border border-zinc-400 bg-white overflow-hidden">
+            <img src="../../../assets/images/account_circle.png" alt="Vercel" class="h-10 w-10 object-contain">
+          </div>
+        </div>
+        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Practices</p>
+        <p class="mt-3 text-[30px] font-bold text-[#7a004a] tracking-tight">89</p>
+        
+      </div>
+
     </div>
-    <h2 class="text-3xl font-bold text-[#7a004a]">89</h2>
-    <p class="text-sm text-gray-500">Practices</p>
+
+    <div class="flex flex-col justify-between items-end mt-auto p-4 pt-0 text-black">
+      <div class="h-4 w-full"></div>
+    </div>
   </div>
 </section>
+
+
+
+
+<!-- card for tangible and intangible haritage -->
+<section class="flex justify-center items-center px-4 mt-[100px]">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
+    
+    <!-- Loop through cards -->
+    @for (card of cards; track $index) {
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-lg w-full relative">
+        <div class="relative">
+          <img [src]="card.img" alt="Card image" class="w-full h-40 object-cover">
+          
+          <!-- Badge -->
+          <img [src]="card.badge"
+            class="absolute top-[-0.5rem] left-3 text-white text-xs font-semibold px-3 py-1 mb-24"
+            alt="Badge">
+        </div>
+
+        <div class="p-6">
+          <h2 class="text-2xl font-bold text-gray-800 mb-2">{{ card.title }}</h2>
+          <p class="text-gray-700 leading-tight mb-4">
+            {{ card.desc }}
+          </p>
+
+          <div class="flex justify-between items-center">
+            @if (card.title === 'Intangible Heritage') {
+              <button class="px-4 py-2 rounded-full text-white font-semibold bg-[#3077a7] hover:bg-[#0c50b8] transition-colors duration-300">
+  {{ card.btn }}
+</button>
+
+            } @else {
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-4 justify-center items-center">
+  @for (tangibleButton of tangibleButtons; track $index) {
+    <button
+      class="px-2 py-1 rounded-full text-gray-700 text-sm font-medium bg-white hover:bg-gray-100 border border-gray-300 transition-colors duration-300 w-full shadow-sm"
+    >
+      {{ tangibleButton }}
+    </button>
+  } <button
+  class="px-2 py-1 rounded-full text-white text-sm font-medium bg-[#7a004a] hover:bg-[#5c0037] border border-[#7a004a] transition-colors duration-300 w-full shadow-sm"
+>
+  ReadMore
+</button>
+
+</div>
+
+
+            }
+          </div>
+        </div>
+      </div>
+    }
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 5 circle  -->
+<section class="">
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <div class="lg:text-center">
+    <p class="font-heading mt-2 text-3xl leading-8 font-semibold tracking-tight sm:text-4xl
+              text-transparent bg-clip-text 
+              bg-gradient-to-r from-[#6f003f] to-gray-300">
+        Criteria for Identifying <br>
+        Cultural Heritage
+    </p>
+    <p class="mt-4 max-w-2xl text-lg lg:mx-auto text-[#9a2d60]">
+        Contribute to the preservation of cooperative cultural heritage. Does your community have traditions or places that deserve recognition?
+    </p>
+</div>
+
+<section class="flex justify-center items-center bg-white mt-[50px]">
+  <div
+    class="w-[1000px] h-[380px] cursor-pointer group bg-gradient-to-br transition-all duration-1000 flex flex-col relative overflow-hidden rounded-2xl shadow-lg">
+
+    <div class="grow m-4 flex items-center justify-center -mb-4 px-3">
+      
+      <!-- Circle 1 -->
+      <div class="flex flex-col items-center">
+        <div
+          class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
+          <div
+            class="h-14 w-14 rounded-full flex items-center justify-center  overflow-hidden">
+            <img src="../../../assets/images/handshake.png" alt="Svelte" class="h-10 w-10 object-contain">
+          </div>
+        </div>
+        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Cooperative <br>Principles</p>
+
+      </div>
+
+      <div class="h-[1px] grow bg-zinc-400 mx-4 mb-10"></div>
+
+      <!-- Circle 2 -->
+      <div class="flex flex-col items-center">
+        <div
+          class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
+          <div
+            class="h-14 w-14 rounded-full flex items-center justify-center  overflow-hidden">
+            <img src="../../../assets/images/military_tech.png" alt="Supabase" class="h-10 w-10 object-contain">
+          </div>
+        </div>
+        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Cultural <br>Significance</p>
+
+      </div>
+
+      <div class="h-[1px] grow bg-zinc-400 mx-4 mb-10"></div>
+
+      <!-- Circle 3 -->
+      <div class="flex flex-col items-center">
+        <div
+          class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
+          <div
+            class="h-14 w-14 rounded-full flex items-center justify-center  overflow-hidden">
+            <img src="../../../assets/images/family_history.png" alt="Vercel" class="h-10 w-10 object-contain">
+          </div>
+        </div>
+        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Generational <br>Transmission</p>
+        
+        
+      </div>
+      <div class="h-[1px] grow bg-zinc-400 mx-4 mb-10"></div>
+
+      <!-- Circle 3 -->
+      <div class="flex flex-col items-center">
+        <div
+          class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
+          <div
+            class="h-14 w-14 rounded-full flex items-center justify-center  overflow-hidden">
+            <img src="../../../assets/images/diamond.png" alt="Vercel" class="h-10 w-10 object-contain">
+          </div>
+        </div>
+        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Innovative <br> Continuity</p>
+        
+      </div>
+      <div class="h-[1px] grow bg-zinc-400 mx-4 mb-10"></div>
+
+      <!-- Circle 3 -->
+      <div class="flex flex-col items-center mb-10">
+        <div
+          class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
+          <div
+            class="h-14 w-14 rounded-full flex items-center justify-center  overflow-hidden">
+            <img src="../../../assets/images/Group 50.png" alt="Vercel" class="h-10 w-10 object-contain">
+          </div>
+        </div>
+        
+      </div>
+      
+
+    </div>
+
+    <div class="flex flex-col justify-between items-end mt-auto p-4 pt-0 text-black">
+      <div class="h-4 w-full"></div>
+    </div>
+<!-- From Uiverse.io by vinodjangid07 --> 
+<button class="py-2 border border-[5.5px] border-[#7a004a] text-[#7a004a] font-semibold rounded-full hover:bg-[#7a004a] hover:text-white transition-colors duration-300">
+  Read More
+</button>
+
+
+  </div>
+</section>
+            
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+

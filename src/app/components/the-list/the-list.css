@@ -1,0 +1,114 @@
+/* Custom styles for the-list component */
+
+.the-list-container {
+  padding: 2rem 0;
+}
+
+.heritage-title {
+  margin-bottom: 2rem;
+}
+
+.heritage-description {
+  margin-bottom: 3rem;
+}
+
+.boxes-section {
+  margin-bottom: 4rem;
+}
+
+.heritage-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.heritage-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.selection-title {
+  margin-bottom: 2rem;
+}
+
+.selection-description {
+  margin-bottom: 3rem;
+}
+
+.process-section {
+  margin-bottom: 4rem;
+}
+
+.process-container {
+  transition: transform 0.3s ease;
+}
+
+.process-container:hover {
+  transform: scale(1.02);
+}
+
+.circle-item {
+  transition: transform 0.3s ease;
+}
+
+.circle-item:hover {
+  transform: translateY(-5px);
+}
+
+.criteria-title {
+  margin-bottom: 2rem;
+}
+
+.criteria-cards {
+  margin-bottom: 4rem;
+}
+
+.criteria-card {
+  transition: all 0.3s ease;
+}
+
+.criteria-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.criteria-card .card-icon {
+  transition: transform 0.3s ease;
+}
+
+.criteria-card:hover .card-icon {
+  transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heritage-title {
+    font-size: 2.5rem;
+  }
+
+  .selection-title {
+    font-size: 2.5rem;
+  }
+
+  .heritage-box {
+    padding: 1.5rem;
+  }
+
+  .process-container {
+    height: auto;
+    padding: 2rem;
+  }
+
+  .circle-item {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .boxes-section .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .criteria-cards {
+    padding: 0 1rem;
+  }
+}

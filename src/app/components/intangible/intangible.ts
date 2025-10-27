@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-intangible',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './intangible.html',
   styleUrl: './intangible.css'
 })

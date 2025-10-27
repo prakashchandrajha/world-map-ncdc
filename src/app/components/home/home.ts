@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { WorldMapComponent } from "../world-map/world-map.component";
 import { Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [WorldMapComponent,CommonModule],
+  imports: [WorldMapComponent,CommonModule,RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

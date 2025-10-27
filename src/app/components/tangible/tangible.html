@@ -122,7 +122,7 @@
 
     <!-- Loop through Tangible Heritage cards -->
     @for (card of cards; track $index) {
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-lg w-full relative transition-transform duration-300 hover:scale-[1.02]">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-lg w-full relative transition-transform duration-300 hover:scale-[1.02]" >
         
         <!-- Image Section -->
         <div class="relative">
@@ -154,7 +154,7 @@
           <div class="flex justify-start">
             <button
               class="px-4 py-2 rounded-full text-white text-sm font-medium bg-[#7a004a] hover:bg-[#5c0037] border border-[#7a004a] transition-colors duration-300 shadow-sm"
-            >
+           routerLink="/aboutTangiblePage" >
               {{ card.btn || 'Read More' }}
             </button>
           </div>

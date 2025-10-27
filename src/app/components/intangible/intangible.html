@@ -122,7 +122,7 @@
 
     <!-- Loop through Tangible Heritage cards -->
     @for (card of cards; track $index) {
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-lg w-full relative transition-transform duration-300 hover:scale-[1.02]">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-lg w-full relative transition-transform duration-300 hover:scale-[1.02]" > 
         
         <!-- Image Section -->
         <div class="relative">
@@ -153,7 +153,7 @@
           <!-- Read More Button -->
           <div class="flex justify-start">
             <button
-              class="px-4 py-2 rounded-full text-white text-sm font-medium bg-[#7a004a] hover:bg-[#5c0037] border border-[#7a004a] transition-colors duration-300 shadow-sm"
+              class="px-4 py-2 rounded-full text-white text-sm font-medium bg-[#7a004a] hover:bg-[#5c0037] border border-[#7a004a] transition-colors duration-300 shadow-sm" routerLink="/aboutInTangiblePage"
             >
               {{ card.btn || 'Read More' }}
             </button>
@@ -169,187 +169,9 @@
 
 
 
-<section class="py-10 px-6 bg-gray-100 font-[Poppins] min-h-screen">
-  <!-- Back button -->
-  <button 
-    
-    class=" ml-30 mb-6 px-4 py-2 bg-gradient-to-r from-[#7a004a] to-[#c7007f] text-white font-semibold rounded-lg shadow hover:brightness-110 transition"
-  >
-    ← Back to Previous Page
-  </button>
-
-  <!-- Title and Paragraph -->
-  <div class="mb-8">
-    <h1 class="ml-30 text-4xl font-bold text-[#7a004a] mb-4">Title Goes Here</h1>
-    <p class="ml-30 text-gray-700 text-lg max-w-3xl">This is your paragraph describing the content. It gives details about the topic shown in this section.</p>
-  </div>
-
-  <!-- Image and Details side by side -->
-  <div class="flex flex-row items-center gap-8">
-    <!-- Image -->
-    <div class="flex-shrink-0">
-      <img src="../../../assets/images/Maskgroup.png" 
-           alt="Example Image" 
-           class="ml-70 w-200 h-80 rounded-lg shadow-lg">
-          <div class="ml-70 flex flex-row items-center gap-8 mt-1">
-  <!-- Item 1 -->
-  <div class="w-24 h-24 flex-shrink-0">
-    <img class="w-full h-full object-cover rounded-lg" src="../../../assets/images/t1.png" alt="Item 1">
-  </div>
-
-  <!-- Item 2 -->
-  <div class="w-24 h-24 flex-shrink-0">
-    <img class="w-full h-full object-cover rounded-lg" src="../../../assets/images/t1.png" alt="Item 2">
-  </div>
-
-  <!-- Item 3 -->
-  <div class="w-24 h-24 flex-shrink-0">
-    <img class="w-full h-full object-cover rounded-lg" src="../../../assets/images/t1.png" alt="Item 3">
-  </div>
-
-  <!-- Item 4 -->
-  <div class="w-24 h-24 flex-shrink-0">
-    <img class="w-full h-full object-cover rounded-lg" src="../../../assets/images/t1.png" alt="Item 4">
-  </div>
-  
-</div>
-
-    </div>
-    
-
-    <!-- Details Grid -->
-    <div class="grid grid-cols-2 gap-6 text-gray-700 flex-1">
-  <!-- Country -->
-  
-
-  <!-- Theme -->
- 
-
-  <!-- Icon Entry -->
- 
-
-  <!-- Year -->
-   <div
-    class="rounded-xl hover:shadow-sm shadow-md border border-l-4 hover:border-black relative w-60 border-gray-200 pb-3 transition duration-200 hover:scale-105 bg-white">
-
-    <!-- Main Image -->
-    
-
-    <!-- Name -->
-    
-
-    <!-- Patient Visit -->
-   
-
-    <!-- Additional Info Section -->
-    <div class="mt-3 space-y-2 px-4">
-        <!-- Country -->
-        <div class="flex items-center gap-2 text-sm text-gray-700">
-            <img class="w-10 h-10 " src="../../../assets/images/cntry.png" alt="Brazil Logo">
-            <span class="font-medium">Brazil</span>
-        </div>
-        <!-- Theme -->
-        <div class="flex items-center gap-2 text-sm text-gray-700">
-            <i class="fas fa-paint-brush text-[#ff7a00]"></i>
-            <span class="font-medium">Craftsmanship</span>
-        </div>
-        <!-- Entry -->
-        <div class="flex items-center gap-2 text-sm text-gray-700">
-            <i class="fas fa-calendar-alt text-[#0066cc]"></i>
-            <span class="font-medium">2010</span>
-        </div>
-        <!-- Coordinates -->
-        <div class="flex items-center gap-2 text-sm text-gray-700">
-            <i class="fas fa-map-marker-alt text-red-500"></i>
-            <span class="font-medium">-8,706º S  -34,156º W</span>
-        </div>
-    </div>
-
-    <!-- View More Button -->
-    <div class="w-full text-center mx-auto mt-4">
-        <button
-            class="border-indigo-500 bg-cyan-500 text-white rounded-md px-4 py-1.5 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline text-xs font-medium">
-            View More
-        </button>
-    </div>
-</div>
-
-
- 
-</div>
-
-
-
-  </div>
-</section>
 
 
 
     
-<section class="flex flex-col items-center justify-start py-10 px-4 bg-gray-100">
 
-  <!-- Title -->
-  <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2 text-center">History and Context</h2>
-
-  <!-- Paragraph -->
-  <p class="text-gray-700 max-w-3xl text-center mb-10">
-    The artisan cooperatives of Brazil’s Northeast represent a unique form of social and economic organization dating back to the colonial period. Over the centuries, these communities have developed a cooperative system based on solidarity, knowledge sharing, and the preservation of traditional artisanal techniques.
-    <br><br>
-    The cooperative tradition emerged from the need for small artisans to organize in order to face the region’s economic and social challenges. By joining forces, they not only survived but also thrived, keeping cultural traditions alive that might otherwise have been lost.
-  </p>
-
-  <!-- You Might Like -->
-  <h3 class="text-2xl font-semibold text-gray-800 mb-6">You might like</h3>
-
-  <!-- Cards Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl">
-
-    <!-- Card Template -->
-    <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
-      <!-- Image -->
-      <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-           src="https://images.unsplash.com/photo-1599058917213-cae2067e9c6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGJhY2tlcnklMjBpbWFnZXxlbnwwfHwwfHw%3D&ixlib=rb-4.0.3&q=80&w=400"
-           alt="Brazil">
-      
-      <!-- Overlay Details -->
-      <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4">
-        <h4 class="text-white text-xl font-bold mb-1">Brazil</h4>
-        <p class="text-gray-200 mb-2">Sunny</p>
-        <p class="text-white text-2xl font-bold mb-2">22°C</p>
-        <p class="text-gray-200 text-sm">Feels Like: 20°C</p>
-        <p class="text-gray-200 text-sm">Wind: 10 km/h</p>
-        <p class="text-gray-200 text-sm">Humidity: 75%</p>
-      </div>
-    </div>
-
-    <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
-      <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-           src="https://images.unsplash.com/photo-1564865886199-6f1c2f9c3c62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZmFuY3l8ZW58MHx8MHx8&ixlib=rb-4.0.3&q=80&w=400"
-           alt="France">
-      <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4">
-        <h4 class="text-white text-xl font-bold mb-1">France</h4>
-        <p class="text-gray-200 mb-2">Cloudy</p>
-        <p class="text-white text-2xl font-bold mb-2">18°C</p>
-        <p class="text-gray-200 text-sm">Feels Like: 17°C</p>
-        <p class="text-gray-200 text-sm">Wind: 12 km/h</p>
-        <p class="text-gray-200 text-sm">Humidity: 80%</p>
-      </div>
-    </div>
-
-    <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
-      <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-           src="https://images.unsplash.com/photo-1553621042-f6e147245754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8amFwYW58ZW58MHx8MHx8&ixlib=rb-4.0.3&q=80&w=400"
-           alt="Japan">
-      <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4">
-        <h4 class="text-white text-xl font-bold mb-1">Japan</h4>
-        <p class="text-gray-200 mb-2">Rainy</p>
-        <p class="text-white text-2xl font-bold mb-2">16°C</p>
-        <p class="text-gray-200 text-sm">Feels Like: 15°C</p>
-        <p class="text-gray-200 text-sm">Wind: 8 km/h</p>
-        <p class="text-gray-200 text-sm">Humidity: 70%</p>
-      </div>
-    </div>
-
-  </div>
-</section>
 

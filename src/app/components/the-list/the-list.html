@@ -16,9 +16,9 @@
 <div class="boxes-section w-full min-h-screen flex flex-col items-center justify-center py-10">
   <div class="px-4 md:px-[2rem] xl:px-[6rem] flex flex-col lg:flex-row gap-10 w-full">
     <!-- Left Column: Boxes -->
-    <div class="lg:w-[50%] xl:w-[50%] flex flex-col space-y-6">
+<div class="lg:w-[50%] xl:w-[50%] flex flex-col space-y-6" >
       <!-- Top Box -->
-      <div class="heritage-box bg-[#7a004a] text-white rounded-xl p-20 flex items-start space-x-4 w-full">
+      <div class="heritage-box bg-[#7a004a] text-white rounded-xl p-20 flex items-start space-x-4 w-full" routerLink="/tangible">
         <img src="../../../assets/images/Logo.png" alt="Icon" class="w-20 h-20 object-contain flex-shrink-0">
         <div class="min-w-0">
           <h2 class="text-2xl font-bold mb-1 truncate">Tangible:</h2>
@@ -26,7 +26,7 @@
         </div>
       </div>
       <!-- Bottom Box -->
-      <div class="heritage-box bg-gradient-to-r from-sky-400 to-blue-300 text-gray-800 rounded-xl p-20 flex items-start space-x-4 w-full">
+      <div class="heritage-box bg-gradient-to-r from-sky-400 to-blue-300 text-gray-800 rounded-xl p-20 flex items-start space-x-4 w-full" routerLink="/intangible">
         <img src="../../../assets/images/Logo.png" alt="Icon" class="w-20 h-20 object-contain flex-shrink-0">
         <div class="min-w-0">
           <h2 class="text-2xl font-bold mb-1 truncate">Intangible:</h2>
@@ -148,96 +148,68 @@ Shared Standards
     Evaluation Criteria
   </h1>
 <!-- From Uiverse.io by carlosepcc -->
-<section class="criteria-cards flex flex-wrap justify-center mt-12 ">
-  <!-- Card 1 -->
-  <div class="criteria-card card m-auto text-gray-300 w-[clamp(260px,80%,300px)] hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
-    <div class="px-8 py-10">
-      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-4 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
-      <div class="uppercase font-bold text-xl">
-       Cooperative Cultural Value
-      </div>
-     
-      <div class="text-gray-400 mt-8">
-        <p class="font-bold">Influence on Cooperative Identity, Traditions, or Ways 
-of Life</p>
-     
+<section class="criteria-cards flex flex-wrap justify-center mt-12">
+  <!-- Card -->
+  <div class="criteria-card card text-gray-300 w-[clamp(260px,80%,300px)] min-h-[300px] flex flex-col justify-between hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
+    <div class="px-6 py-8 flex-grow">
+      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-3 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
+      <div class="uppercase font-bold text-lg">Cooperative Cultural Value</div>
+      <div class="text-gray-400 mt-6">
+        <p class="font-bold text-sm">Influence on Cooperative Identity, Traditions, or Ways of Life</p>
       </div>
     </div>
-
-    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl m-auto rounded transition-all absolute bottom-0"></div>
+    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
     <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
   </div>
 
   <!-- Card 2 -->
-  <div class="criteria-card card m-auto text-gray-300 w-[clamp(260px,80%,300px)] hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
-    <div class="px-8 py-10">
-      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-4 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
-      <div class="uppercase font-bold text-xl">
-        Global <br>
-Recognition
-      </div>
-     
-      <div class="text-gray-400 mt-8">
-        <p class="font-bold">Contribution to Cooperative Practices Beyond the Immediate Community</p>
-     
+  <div class="criteria-card card text-gray-300 w-[clamp(260px,80%,300px)] min-h-[300px] flex flex-col justify-between hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
+    <div class="px-6 py-8 flex-grow">
+      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-3 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
+      <div class="uppercase font-bold text-lg">Global <br> Recognition</div>
+      <div class="text-gray-400 mt-6">
+        <p class="font-bold text-sm">Contribution to Cooperative Practices Beyond the Immediate Community</p>
       </div>
     </div>
-
-    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl m-auto rounded transition-all absolute bottom-0"></div>
+    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
     <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
   </div>
-  <div class="criteria-card card m-auto text-gray-300 w-[clamp(260px,80%,300px)] hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
-    <div class="px-8 py-10">
-      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-4 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
-      <div class="uppercase font-bold text-xl">
-        Historical Significance 
-and Legacy
-      </div>
-      
-      <div class="text-gray-400 mt-8">
-        <p>Contribution to the Origins or Milestones of the Cooperative Movement</p>
+  <div class="criteria-card card text-gray-300 w-[clamp(260px,80%,300px)] min-h-[300px] flex flex-col justify-between hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
+    <div class="px-6 py-8 flex-grow">
+      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-3 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
+      <div class="uppercase font-bold text-lg">Global <br> Recognition</div>
+      <div class="text-gray-400 mt-6">
+        <p class="font-bold text-sm">Contribution to Cooperative Practices Beyond the Immediate Community</p>
       </div>
     </div>
-
-    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl m-auto rounded transition-all absolute bottom-0"></div>
+    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
     <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
   </div>
-  <div class="criteria-card card m-auto text-gray-300 w-[clamp(260px,80%,300px)] hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
-    <div class="px-8 py-10">
-      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-4 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
-      <div class="uppercase font-bold text-xl">
-        Educational and Inspirational Role
-
-      </div>
-      
-      <div class="text-gray-400 mt-8">
-        <p class="font-bold">Ability to Teach and Pass on Cooperative Values to 
-Future Generations</p>
-      
+  <div class="criteria-card card text-gray-300 w-[clamp(260px,80%,300px)] min-h-[300px] flex flex-col justify-between hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
+    <div class="px-6 py-8 flex-grow">
+      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-3 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
+      <div class="uppercase font-bold text-lg">Global <br> Recognition</div>
+      <div class="text-gray-400 mt-6">
+        <p class="font-bold text-sm">Contribution to Cooperative Practices Beyond the Immediate Community</p>
       </div>
     </div>
-
-    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl m-auto rounded transition-all absolute bottom-0"></div>
+    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
     <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
   </div>
-  <div class="criteria-card card m-auto text-gray-300 w-[clamp(260px,80%,300px)] hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
-    <div class="px-8 py-10">
-      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-4 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
-      <div class="uppercase font-bold text-xl">
-        Sustainability 
-and Continuity
-      </div>
-      
-      <div class="text-gray-400 mt-8">
-        <p class="font-bold">Evidence of Lasting Impact and Relevance in Today’s Societies</p>
-      
+  <div class="criteria-card card text-gray-300 w-[clamp(260px,80%,300px)] min-h-[300px] flex flex-col justify-between hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
+    <div class="px-6 py-8 flex-grow">
+      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-3 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
+      <div class="uppercase font-bold text-lg">Global <br> Recognition</div>
+      <div class="text-gray-400 mt-6">
+        <p class="font-bold text-sm">Contribution to Cooperative Practices Beyond the Immediate Community</p>
       </div>
     </div>
-
-    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl m-auto rounded transition-all absolute bottom-0"></div>
+    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
     <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
   </div>
 </section>
+
+
 
 <h1 class="selection-title text-center text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#e61692] to-gray-200 text-transparent bg-clip-text">
    Identification Criteria
@@ -270,4 +242,74 @@ and Continuity
         </div>
     </div>
 </section>
+
+
+
+<h1 class="selection-title text-center text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#e61692] to-gray-200 text-transparent bg-clip-text">
+Checklist for evaluation</h1>
+
+<p class="selection-description text-center text-2xl text-black mt-10">
+  Use the quiz below to assess whether your heritage meets the <br> criteria to become a Cooperative Cultural Heritage.
+</p>
+<div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-visible">
+  <div class="md:flex items-center relative">
+
+    <!-- Image Section -->
+    <div class="relative md:shrink-0 flex justify-center items-end p-0">
+      <!-- Gradient behind image -->
+      <div class="absolute inset-2 bg-gradient-to-br from-[#7a004a] via-[#9c2b6a] to-[#ff77a9] rounded-xl opacity-90"></div>
+      <!-- Image (touches bottom, smaller height) -->
+      <img
+        src="../../../assets/images/ujm.png"
+        alt="Cultural Heritage"
+        class="relative z-10 h-60 w-60 object-contain transform transition-transform duration-500 scale-120  "
+      >
+    </div>
+
+    <!-- Text Section -->
+    <div class="p-8 text-center">
+      <!-- Main heading -->
+      <h3 class="uppercase tracking-wide text-lg text-[#7a004a] font-bold mb-2">
+        Cooperative Cultural Heritage Assessment
+      </h3>
+
+      <!-- Sub-heading for radio buttons (theme-colored) -->
+      <h4 class="text-sm font-semibold text-[#7a004a] mb-3">
+        Nature of the cultural asset
+      </h4>
+
+      <!-- Radio buttons -->
+      <div class="flex flex-col space-y-3 mb-4">
+        <label class="inline-flex items-center justify-center space-x-2 cursor-pointer">
+          <input type="radio" name="heritage" class="text-[#7a004a] focus:ring-[#7a004a]">
+          <span class="text-gray-700 text-sm">Tangible (site, building, landscape, archive, infrastructure)</span>
+        </label>
+        <label class="inline-flex items-center justify-center space-x-2 cursor-pointer">
+          <input type="radio" name="heritage" class="text-[#7a004a] focus:ring-[#7a004a]">
+          <span class="text-gray-700 text-sm">Intangible (values, governance, traditions, rituals, knowledge)</span>
+        </label>
+      </div>
+
+      <!-- Description -->
+      <p class="mt-2 text-slate-500 text-sm">
+        Explore the importance of preserving cultural heritage through cooperative initiatives. Click to learn more or participate in the assessment.
+      </p>
+      <button class="px-6 py-2 mt-2 rounded-lg text-white font-semibold 
+               bg-gradient-to-r from-[#7a004a] via-[#9c2b6a] to-[#ff77a9] 
+               hover:from-[#9c2b6a] hover:via-[#ff77a9] hover:to-[#7a004a] 
+               transition-all duration-300">
+  Read Me
+</button>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
 

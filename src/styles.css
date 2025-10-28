@@ -1,2 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+* {
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+
+:root {
+  --primary-color: #7a004a;
+  --secondary-color: #c7007f;
+  --accent-color: #ff7a00;
+  --info-color: #0066cc;
+}

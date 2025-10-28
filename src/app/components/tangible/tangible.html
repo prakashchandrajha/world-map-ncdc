@@ -1,0 +1,171 @@
+<app-banner [gradientBackground]="'linear-gradient(to right, #7a004a, #7a004a)'"
+  
+  [titleText]="'List of Tangible<br>Cooperative<br>Cultural Heritage'"
+  [titleText2]="'Explore the cooperative traditions, practices, <br>and knowledge recognized worldwide'"
+  ></app-banner>
+  
+<section
+  class="flex justify-center items-start py-10 px-6   mt-20"
+>
+  <div
+    class="w-full max-w-6xl bg-white rounded-2xl shadow-xl p-8 border-4 border-transparent bg-clip-border"
+    style="border-image: linear-gradient(135deg, #7a004a, #ff77a9) 1"
+  >
+    <!-- Header -->
+    <h2
+      class="text-center text-3xl font-semibold mb-10 bg-gradient-to-r from-[#7a004a] to-gray-700 bg-clip-text text-transparent"
+    >
+      Elegant Filter Panel
+    </h2>
+
+    <!-- Filters Row -->
+    <div
+      class="flex flex-wrap justify-center gap-6 mb-8 text-gray-700 text-base"
+    >
+      <!-- Country -->
+      <div class="w-full md:w-60">
+        <label class="block mb-2 font-medium text-gray-600">Country</label>
+        <select
+          class="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#7a004a] focus:outline-none"
+        >
+          <option>Select Country</option>
+          <option>USA</option>
+          <option>China</option>
+          <option>Japan</option>
+          <option>Germany</option>
+          <option>India</option>
+          <option>France</option>
+        </select>
+      </div>
+
+      <!-- Brand -->
+      <div class="w-full md:w-60">
+        <label class="block mb-2 font-medium text-gray-600">Continent</label>
+        <select
+          class="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#7a004a] focus:outline-none"
+        >
+          <option>Select Brand</option>
+          <option>Moët & Chandon</option>
+          <option>Dom Pérignon</option>
+          <option>Krug</option>
+          <option>Bollinger</option>
+          <option>Taittinger</option>
+          <option>Château Margaux</option>
+        </select>
+      </div>
+
+      <!-- ABV -->
+      <div class="w-full md:w-60">
+        <label class="block mb-2 font-medium text-gray-600">Country</label>
+        <select
+          class="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#7a004a] focus:outline-none"
+        >
+          <option>Select ABV</option>
+          <option>0–20%</option>
+          <option>20–40%</option>
+          <option>40%+</option>
+        </select>
+      </div>
+
+      <!-- Apply Button -->
+      <div class="w-full md:w-auto flex items-end">
+        <button
+          class="px-8 py-2 font-medium text-white rounded-lg bg-gradient-to-r from-[#7a004a] to-[#ff77a9] hover:brightness-110 transition-all shadow-md"
+        >
+          Apply Filters
+        </button>
+      </div>
+    </div>
+
+    <!-- Selected Filters Summary -->
+    <!-- <div class="mt-8 border-t border-gray-200 pt-6">
+      <h3 class="text-lg font-semibold text-gray-700 mb-4">
+        Selected Filters:
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        <span
+          class="px-4 py-1.5 bg-[#fce7f3] text-[#7a004a] rounded-full text-sm font-medium flex items-center shadow-sm"
+        >
+          USA
+          <button
+            class="ml-2 text-gray-500 hover:text-[#7a004a] font-bold text-lg leading-none"
+          >
+            ×
+          </button>
+        </span>
+
+        <span
+          class="px-4 py-1.5 bg-[#fce7f3] text-[#7a004a] rounded-full text-sm font-medium flex items-center shadow-sm"
+        >
+          Dom Pérignon
+          <button
+            class="ml-2 text-gray-500 hover:text-[#7a004a] font-bold text-lg leading-none"
+          >
+            ×
+          </button>
+        </span>
+
+        <span
+          class="px-4 py-1.5 bg-[#fce7f3] text-[#7a004a] rounded-full text-sm font-medium flex items-center shadow-sm"
+        >
+          40%+
+          <button
+            class="ml-2 text-gray-500 hover:text-[#7a004a] font-bold text-lg leading-none"
+          >
+            ×
+          </button>
+        </span>
+      </div>
+    </div> -->
+  </div>
+</section>
+
+
+
+<section class="flex justify-center items-center px-4 mt-[100px]">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
+
+    <!-- Loop through Tangible Heritage cards -->
+    @for (card of cards; track $index) {
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-lg w-full relative transition-transform duration-300 hover:scale-[1.02]" >
+        
+        <!-- Image Section -->
+        <div class="relative">
+          <img [src]="card.img" alt="Card image" class="w-full h-40 object-cover">
+          <img 
+            [src]="card.badge"
+            class="absolute top-[-0.5rem] left-3 w-10 h-10 mt-2" 
+            alt="Badge">
+        </div>
+
+        <!-- Content Section -->
+        <div class="p-6">
+          <h2 class="text-2xl font-bold text-gray-800 mb-2">Northeastern Artisan Cooperatives</h2>
+          <!-- <p class="text-[#7a004a] font-semibold text-sm mb-3">Tangible Heritage</p> -->
+
+          <!-- Country and Year -->
+          <div class="flex items-center text-gray-600 text-sm space-x-4 mb-5">
+            <div class="flex items-center space-x-2">
+              <i class="fa-solid fa-flag text-[#3077a7]"></i>
+              <span>{{ card.countryName || 'N/A' }}</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i class="fa-solid fa-calendar-days text-[#3077a7]"></i>
+              <span>{{ card.haritageData || 'N/A' }}</span>
+            </div>
+          </div>
+
+          <!-- Read More Button -->
+          <div class="flex justify-start">
+            <button
+              class="px-4 py-2 rounded-full text-white text-sm font-medium bg-[#7a004a] hover:bg-[#5c0037] border border-[#7a004a] transition-colors duration-300 shadow-sm"
+           routerLink="/aboutTangiblePage" >
+              {{ card.btn || 'Read More' }}
+            </button>
+          </div>
+        </div>
+      </div>
+    }
+
+  </div>
+</section>

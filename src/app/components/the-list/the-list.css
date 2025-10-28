@@ -114,3 +114,20 @@
 }
 
 
+.five-in-row > .criteria-card {
+  flex: 1 1 calc(20% - 1rem); /* 5 cards per row */
+  max-width: calc(20% - 1rem);
+  margin: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .five-in-row > .criteria-card {
+    flex: 1 1 calc(33.33% - 1rem); /* 3 cards per row on tablets */
+  }
+}
+
+@media (max-width: 640px) {
+  .five-in-row > .criteria-card {
+    flex: 1 1 calc(50% - 1rem); /* 2 cards per row on mobile */
+  }
+}

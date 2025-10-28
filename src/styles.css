@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
-body {
-  font-family: 'Noto Sans', sans-serif;
+* {
+  font-family: 'Noto Sans', sans-serif !important;
 }
+
 
 :root {
   --primary-color: #7a004a;

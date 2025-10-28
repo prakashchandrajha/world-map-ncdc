@@ -21,7 +21,7 @@
 <div class="boxes-section w-full min-h-screen flex flex-col items-center justify-center py-10">
   <div class="px-4 md:px-[2rem] xl:px-[6rem] flex flex-col lg:flex-row gap-10 w-full">
     <!-- Left Column: Boxes -->
-<div class="lg:w-[50%] xl:w-[50%] flex flex-col space-y-6" >
+<div class="lg:w-[50%] xl:w-[50%] flex flex-col space-y-6 cursor-pointer" >
       <!-- Top Box -->
       <div class="heritage-box bg-[#7a004a] text-white rounded-xl p-20 flex items-start space-x-4 w-full" routerLink="/tangible">
         <img src="../../../assets/images/Logo.png" alt="Icon" class="w-20 h-20 object-contain flex-shrink-0">
@@ -153,65 +153,103 @@ Shared Standards
     Evaluation Criteria
   </h1>
 <!-- From Uiverse.io by carlosepcc -->
-<section class="criteria-cards flex flex-wrap justify-center mt-12">
+<section class="criteria-cards flex flex-wrap  five-in-row justify-center mt-12 ">
   <!-- Card -->
   <div class="criteria-card card text-gray-300 w-[clamp(260px,80%,300px)] min-h-[300px] flex flex-col justify-between hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
-    <div class="px-6 py-8 flex-grow">
-      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-3 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
-      <div class="uppercase font-bold text-lg">Cooperative Cultural Value</div>
-      <div class="text-gray-400 mt-6">
-        <p class="font-bold text-sm">Influence on Cooperative Identity, Traditions, or Ways of Life</p>
-      </div>
+  <div class="px-6 py-8 flex-grow">
+    
+    <!-- Replaced div icon with image -->
+    <div class="w-10 h-10 rounded-full rounded-tl-none mb-3 overflow-hidden bg-[#7a004a] flex items-center justify-center group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all">
+      <img src="../../../assets/images/book_5.png" alt="icon" class="w-6 h-6 object-contain" />
     </div>
-    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
-    <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
+    
+    <div class="uppercase font-bold text-lg">Historical Significance 
+and Legacy</div>
+    <div class="text-gray-400 mt-6">
+      <p class="font-bold text-sm">Contribution to the Origins or Milestones of the Cooperative Movement</p>
+    </div>
   </div>
 
+  <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
+  <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
+</div>
+<div class="criteria-card card text-gray-300 w-[clamp(260px,80%,300px)] min-h-[300px] flex flex-col justify-between hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
+  <div class="px-6 py-8 flex-grow">
+    
+    <!-- Replaced div icon with image -->
+    <div class="w-10 h-10 rounded-full rounded-tl-none mb-3 overflow-hidden bg-[#7a004a] flex items-center justify-center group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all">
+      <img src="../../../assets/images/star.png" alt="icon" class="w-6 h-6 object-contain" />
+    </div>
+    
+    <div class="uppercase font-bold text-lg">Cooperative Cultural Value</div>
+    <div class="text-gray-400 mt-6">
+      <p class="font-bold text-sm">Influence on Cooperative Identity, Traditions, or Ways 
+of Life</p>
+    </div>
+  </div>
+
+  <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
+  <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
+</div>
+
+<div class="criteria-card card text-gray-300 w-[clamp(260px,80%,300px)] min-h-[300px] flex flex-col justify-between hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
+  <div class="px-6 py-8 flex-grow">
+    
+    <!-- Replaced div icon with image -->
+    <div class="w-10 h-10 rounded-full rounded-tl-none mb-3 overflow-hidden bg-[#7a004a] flex items-center justify-center group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all">
+      <img src="../../../assets/images/school.png" alt="icon" class="w-6 h-6 object-contain" />
+    </div>
+    
+    <div class="uppercase font-bold text-lg">Cooperative Cultural Value</div>
+    <div class="text-gray-400 mt-6">
+      <p class="font-bold text-sm">Influence on Cooperative Identity, Traditions, or Ways of Life</p>
+    </div>
+  </div>
+
+  <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
+  <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
+</div>
+
+<div class="criteria-card card text-gray-300 w-[clamp(260px,80%,300px)] min-h-[300px] flex flex-col justify-between hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
+  <div class="px-6 py-8 flex-grow">
+    
+    <!-- Replaced div icon with image -->
+    <div class="w-10 h-10 rounded-full rounded-tl-none mb-3 overflow-hidden bg-[#7a004a] flex items-center justify-center group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all">
+      <img src="../../../assets/images/nest_eco_leaf.png" alt="icon" class="w-6 h-6 object-contain" />
+    </div>
+    
+    <div class="uppercase font-bold text-lg">Educational and Inspirational Role</div>
+    <div class="text-gray-400 mt-6">
+      <p class="font-bold text-sm">Ability to Teach and Pass on Cooperative Values to 
+Future Generations</p>
+    </div>
+  </div>
+
+  <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
+  <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
+</div>
+<div class="criteria-card card text-gray-300 w-[clamp(260px,80%,300px)] min-h-[300px] flex flex-col justify-between hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
+  <div class="px-6 py-8 flex-grow">
+    
+    <!-- Replaced div icon with image -->
+    <div class="w-10 h-10 rounded-full rounded-tl-none mb-3 overflow-hidden bg-[#7a004a] flex items-center justify-center group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all">
+      <img src="../../../assets/images/language (1).png" alt="icon" class="w-6 h-6 object-contain" />
+    </div>
+    
+    <div class="uppercase font-bold text-lg">Sustainability 
+and Continuity</div>
+    <div class="text-gray-400 mt-6">
+      <p class="font-bold text-sm">Evidence of Lasting Impact and Relevance in Today’s Societies</p>
+    </div>
+  </div>
+
+  <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
+  <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
+</div>
+
+
   <!-- Card 2 -->
-  <div class="criteria-card card text-gray-300 w-[clamp(260px,80%,300px)] min-h-[300px] flex flex-col justify-between hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
-    <div class="px-6 py-8 flex-grow">
-      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-3 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
-      <div class="uppercase font-bold text-lg">Global <br> Recognition</div>
-      <div class="text-gray-400 mt-6">
-        <p class="font-bold text-sm">Contribution to Cooperative Practices Beyond the Immediate Community</p>
-      </div>
-    </div>
-    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
-    <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
-  </div>
-  <div class="criteria-card card text-gray-300 w-[clamp(260px,80%,300px)] min-h-[300px] flex flex-col justify-between hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
-    <div class="px-6 py-8 flex-grow">
-      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-3 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
-      <div class="uppercase font-bold text-lg">Global <br> Recognition</div>
-      <div class="text-gray-400 mt-6">
-        <p class="font-bold text-sm">Contribution to Cooperative Practices Beyond the Immediate Community</p>
-      </div>
-    </div>
-    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
-    <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
-  </div>
-  <div class="criteria-card card text-gray-300 w-[clamp(260px,80%,300px)] min-h-[300px] flex flex-col justify-between hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
-    <div class="px-6 py-8 flex-grow">
-      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-3 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
-      <div class="uppercase font-bold text-lg">Global <br> Recognition</div>
-      <div class="text-gray-400 mt-6">
-        <p class="font-bold text-sm">Contribution to Cooperative Practices Beyond the Immediate Community</p>
-      </div>
-    </div>
-    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
-    <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
-  </div>
-  <div class="criteria-card card text-gray-300 w-[clamp(260px,80%,300px)] min-h-[300px] flex flex-col justify-between hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative">
-    <div class="px-6 py-8 flex-grow">
-      <div class="card-icon bg-[#7a004a] w-10 h-10 rounded-full rounded-tl-none mb-3 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all"></div>
-      <div class="uppercase font-bold text-lg">Global <br> Recognition</div>
-      <div class="text-gray-400 mt-6">
-        <p class="font-bold text-sm">Contribution to Cooperative Practices Beyond the Immediate Community</p>
-      </div>
-    </div>
-    <div class="h-2 w-full bg-gradient-to-l via-[#7a004a] group-hover:blur-xl blur-2xl rounded transition-all absolute bottom-0"></div>
-    <div class="h-0.5 group-hover:w-full bg-gradient-to-l via-[#7a004a] group-hover:via-[#7a004a] w-[70%] m-auto rounded transition-all"></div>
-  </div>
+ 
 </section>
 
 
@@ -226,9 +264,9 @@ Shared Standards
 
 
 
-<section class="px-4">
+<section class="px-6">
     <div
-        class="bg-gradient-to-br from-sky-400 via-sky-400 to-violet-400 p-6 sm:p-10 rounded-2xl w-full text-white flex items-center justify-between max-w-2xl mx-auto mt-20">
+        class="bg-gradient-to-br from-sky-400 via-sky-400 to-violet-400 p-6 sm:p-10 rounded-2xl w-full text-white flex items-center justify-between max-w-4xl mx-auto mt-20">
 
         <!-- Left content: image with circular background -->
         <div class="flex-shrink-0 mr-6 relative w-40 h-40">
@@ -242,10 +280,118 @@ Shared Standards
 
         <!-- Right content: title + text -->
         <div class="flex flex-col gap-4">
-            <h2 class="text-3xl font-semibold text-white">Black Friday Sale</h2>
-            <p class="text-gray-200 text-lg">Get 20% off on every product during this Black Friday. Don't miss out on the amazing deals!</p>
+            <h2 class="text-3xl font-semibold text-white">Rooted in 
+cooperative 
+principles</h2>
+            <p class="text-gray-200 text-lg">GEmbodies core cooperative values: democracy, equality, equity, solidarity, and self-help. Demonstrates shared ownership or governance.</p>
         </div>
     </div>
+    <div
+        class="bg-gradient-to-br from-sky-400 via-sky-400 to-violet-400 p-6 sm:p-10 rounded-2xl w-full text-white flex items-center justify-between max-w-4xl mx-auto mt-20">
+
+        <!-- Left content: image with circular background -->
+        <div class="flex-shrink-0 mr-6 relative w-40 h-40">
+            <!-- Circle background -->
+            <div class="absolute top-1/2 left-1/2 w-20 h-20 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+
+            <!-- Image -->
+            <img src="../../../assets/images/globe_book.png" alt="Promo Image"
+                class=" object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        </div>
+
+        <!-- Right content: title + text -->
+        <div class="flex flex-col gap-4">
+            <h2 class="text-3xl font-semibold text-white">Cultural 
+and social 
+significance</h2>
+            <p class="text-gray-200 text-lg">Holds importance for a community’s identity, memory, or continuity. Contributes to social cohesion, mutual support, or cultural expression.</p>
+        </div>
+    </div>
+    <div
+        class="bg-gradient-to-br from-sky-400 via-sky-400 to-violet-400 p-6 sm:p-10 rounded-2xl w-full text-white flex items-center justify-between max-w-4xl mx-auto mt-20">
+
+        <!-- Left content: image with circular background -->
+        <div class="flex-shrink-0 mr-6 relative w-40 h-40">
+            <!-- Circle background -->
+            <div class="absolute top-1/2 left-1/2 w-20 h-20 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+
+            <!-- Image -->
+            <img src="../../../assets/images/account_balance.png" alt="Promo Image"
+                class=" object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        </div>
+
+        <!-- Right content: title + text -->
+        <div class="flex flex-col gap-4">
+            <h2 class="text-3xl font-semibold text-white">Historical 
+or heritage 
+value</h2>
+            <p class="text-gray-200 text-lg">Represents milestones in cooperative development. Preserves stories, traditions, or knowledge tied to cooperative evolution.</p>
+        </div>
+    </div>
+    <div
+        class="bg-gradient-to-br from-sky-400 via-sky-400 to-violet-400 p-6 sm:p-10 rounded-2xl w-full text-white flex items-center justify-between max-w-4xl mx-auto mt-20">
+
+        <!-- Left content: image with circular background -->
+        <div class="flex-shrink-0 mr-6 relative w-40 h-40">
+            <!-- Circle background -->
+            <div class="absolute top-1/2 left-1/2 w-20 h-20 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+
+            <!-- Image -->
+            <img src="../../../assets/images/family_history.png" alt="Promo Image"
+                class=" object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        </div>
+
+        <!-- Right content: title + text -->
+        <div class="flex flex-col gap-4">
+            <h2 class="text-3xl font-semibold text-white">Transmission 
+across 
+generations</h2>
+            <p class="text-gray-200 text-lg">Actively practiced, preserved, or interpreted by communities. Provides educational value, inspiring younger generations.</p>
+        </div>
+    </div>
+    <div
+        class="bg-gradient-to-br from-sky-400 via-sky-400 to-violet-400 p-6 sm:p-10 rounded-2xl w-full text-white flex items-center justify-between max-w-4xl mx-auto mt-20">
+
+        <!-- Left content: image with circular background -->
+        <div class="flex-shrink-0 mr-6 relative w-40 h-40">
+            <!-- Circle background -->
+            <div class="absolute top-1/2 left-1/2 w-20 h-20 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+
+            <!-- Image -->
+            <img src="../../../assets/images/trophy.png" alt="Promo Image"
+                class=" object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        </div>
+
+        <!-- Right content: title + text -->
+        <div class="flex flex-col gap-4">
+            <h2 class="text-3xl font-semibold text-white">Continuity and 
+innovation</h2>
+            <p class="text-gray-200 text-lg">Demonstrates adaptation of cooperative practices to changing contexts. Balances preservation with creativity and renewal.</p>
+        </div>
+    </div>
+    <div
+        class="bg-gradient-to-br from-sky-400 via-sky-400 to-violet-400 p-6 sm:p-10 rounded-2xl w-full text-white flex items-center justify-between max-w-4xl mx-auto mt-20">
+
+        <!-- Left content: image with circular background -->
+        <div class="flex-shrink-0 mr-6 relative w-40 h-40">
+            <!-- Circle background -->
+            <div class="absolute top-1/2 left-1/2 w-20 h-20 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+
+            <!-- Image -->
+            <img src="../../../assets/images/diversity_1.png" alt="Promo Image"
+                class=" object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        </div>
+
+        <!-- Right content: title + text -->
+        <div class="flex flex-col gap-4">
+            <h2 class="text-3xl font-semibold text-white">Community 
+ownership and 
+participation</h2>
+            <p class="text-gray-200 text-lg">Named and governed with active member involvement. Reflects collective consent and participation in 
+its recognition.</p>
+        </div>
+    </div>
+   
 </section>
 
 

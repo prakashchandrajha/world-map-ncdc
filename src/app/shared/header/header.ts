@@ -12,6 +12,7 @@ import { filter } from 'rxjs';
 })
 export class Header {
 isHome = false;
+isMenuOpen = false;
 
   constructor(private router: Router) {
     this.router.events

@@ -1,4 +1,8 @@
-<div class="relative w-full h-[320px] mt-24 bg-gradient-to-r from-[#7a004a] via-[#520035] to-[#1a0011] overflow-hidden rounded-2xl shadow-lg">
+<div class="relative w-full h-[320px] mt-19 bg-gradient-to-r from-[#7a004a] via-[#520035] to-[#1a0011] overflow-hidden rounded-2xl shadow-lg"
+[ngStyle]="{
+    'background': gradientBackground
+  }"
+>
 
   <!-- Soft circular white glow (bottom-left) -->
   <div class="absolute bottom-[-120px] left-[-120px] w-[400px] h-[400px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.25)_0%,transparent_70%)] blur-3xl"></div>
@@ -11,18 +15,17 @@
 
   <!-- Center Light Image -->
   <div class="absolute inset-0 flex items-center justify-center z-0 animate-spin-slow opacity-50">
-    <img src="/assets/images/aaa.png" 
-         alt="Light Glow" 
-         class="w-[200px] h-[260px] opacity-30  object-contain mix-blend-screen" />
+     <img
+      [src]="centerImage"
+      alt="Center Graphic"
+      class="w-[200px] h-[260px] opacity-30 object-contain mix-blend-screen"
+    />
   </div>
 
   <!-- Text content on Left Side -->
   <div class="relative z-10 flex flex-col justify-center h-full pl-12 text-left text-white">
-    <h2 class="text-3xl font-semibold tracking-wide leading-snug">
-      Cultural<br>
-      Heritage of<br>
-      Cooperativism
-    </h2>
+    <h2 class="text-3xl font-semibold tracking-wide leading-snug" [innerHTML]="titleText"></h2>
+    <h2 class=" font-semibold tracking-wide leading-snug" [innerHTML]="titleText2"></h2>
   </div>
 </div>
 

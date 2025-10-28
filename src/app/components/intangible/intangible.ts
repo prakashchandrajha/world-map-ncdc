@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Banner } from "../../shared/banner/banner";
 
 @Component({
   selector: 'app-intangible',
-  imports: [RouterLink],
+  imports: [RouterLink, Banner],
   templateUrl: './intangible.html',
   styleUrl: './intangible.css'
 })

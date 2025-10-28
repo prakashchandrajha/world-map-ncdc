@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Banner } from '../../shared/banner/banner';
 
 @Component({
   selector: 'app-tangible',
-  imports: [RouterLink],
+  imports: [RouterLink,Banner],
   templateUrl: './tangible.html',
   styleUrl: './tangible.css'
 })

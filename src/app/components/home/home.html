@@ -1,42 +1,50 @@
 <!-- hero banner -->
-<section>
-  <div class="relative w-full h-screen bg-gradient-to-r from-[#7a004a] via-[#520035] to-[#1a0011] overflow-hidden flex flex-col items-center justify-center px-6 md:px-24">
+<section class="font-[Poppins]">
+  <div
+    class="relative w-full min-h-screen bg-gradient-to-r from-[#7a004a] via-[#520035] to-[#1a0011] overflow-hidden flex flex-col items-center justify-center px-4 sm:px-8 md:px-16 lg:px-24"
+  >
+    <!-- ✨ Decorative glowing shades -->
+    <div class="absolute -bottom-20 -left-20 w-[220px] sm:w-[280px] md:w-[320px] h-[220px] sm:h-[280px] md:h-[320px] bg-white/10 rounded-full blur-3xl"></div>
+    <div class="absolute -top-20 -right-20 w-[280px] sm:w-[340px] md:w-[400px] h-[280px] sm:h-[340px] md:h-[400px] bg-gradient-to-br from-[#d31c75]/30 via-[#7a004a]/20 to-transparent rounded-full blur-3xl"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06)_0%,transparent_70%)]"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.04)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.04)_50%,rgba(255,255,255,0.04)_75%,transparent_75%,transparent)] opacity-20 bg-[length:40px_40px]"></div>
 
-  <!-- Decorative glowing shades -->
-  <div class="absolute -bottom-20 -left-20 w-[320px] h-[320px] bg-white/10 rounded-full blur-3xl"></div>
-  <div class="absolute -top-20 -right-20 w-[400px] h-[400px] bg-gradient-to-br from-[#d31c75]/30 via-[#7a004a]/20 to-transparent rounded-full blur-3xl"></div>
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06)_0%,transparent_70%)]"></div>
-  <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.04)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.04)_50%,rgba(255,255,255,0.04)_75%,transparent_75%,transparent)] opacity-20 bg-[length:40px_40px]"></div>
+    <!-- ✨ Content -->
+    <div class="relative z-10 w-full flex flex-col items-center animate-fadeInUp">
 
-  <!-- Content -->
-  <div class="relative z-10 w-full flex flex-col items-center animate-fadeInUp">
+      <!-- 🖼️ Background Image -->
+      <img
+        src="assets/images/ikl.png"
+        alt="Logo Background"
+        class="object-contain w-[280px] sm:w-[380px] md:w-[600px] lg:w-[900px] xl:w-[1200px] max-w-full animate-zoomIn"
+      />
 
-    <!-- Background Image -->
-    <img 
-      src="assets/images/ikl.png" 
-      alt="Logo Background"
-      class="object-contain w-[1400px] md:w-[1400px] animate-zoomIn "
-    >
+      <!-- 🎯 Center Button -->
+      <div class="flex justify-center items-center mt-6">
+        <button
+          class="px-6 py-3 rounded-full bg-gradient-to-r from-[#7a004a] to-[#ff8fc1] text-white font-semibold text-sm sm:text-base hover:scale-105 transition-transform duration-300"
+        >
+          Explore The Map
+        </button>
+      </div>
 
-    <!-- Center Button -->
-    <div class="flex justify-center items-center">
-      <button class="px-6 py-3 rounded-full bg-gradient-to-r from-[#7a004a] to-[#ff8fc1] text-white font-semibold hover:scale-105 transition-transform duration-300 
-                     mt-4 mb-4 ml-2 mr-2">
-        Explore The Map
-      </button>
+      <!-- 📝 Bottom-Left Text -->
+   <h1
+  class="hidden sm:block absolute bottom-8 sm:bottom-12 left-6 sm:left-10 md:left-16 text-left 
+         text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold leading-snug sm:leading-tight 
+         bg-clip-text text-transparent bg-gradient-to-r from-white to-white 
+         max-w-[85%] sm:max-w-[70%] md:max-w-[50%]"
+>
+  Preserving <br />
+  cooperative <br />
+  cultural wisdom <br />
+  across generations.
+</h1>
+
     </div>
-     <h1
-    class="absolute bottom-10 left-50 text-4xl leading-[48px] md:text-5xl md:leading-[58px] lg:text-[20px] lg:leading-[30px] font-bold 
-           bg-clip-text text-transparent bg-gradient-to-r from-[#ffffff] to-white">
-    Preserving <br>
-cooperative <br>
-cultural wisdom <br>
-across generations.
-  </h1>
-
   </div>
-</div>
 </section>
+
 
 
 

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 

@@ -267,30 +267,46 @@ The Cooperative Principles translate these values into practices that carry forw
 </section>
 
 
-<section class="bg-gray-50 py-16 font-[Poppins]">
+<section class="bg-gray-50 py-20 font-[Poppins]">
   <div class="text-center mb-16">
     <h2
       class="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-[#7a004a] to-[#c7007f] bg-clip-text text-transparent"
     >
       It must also demonstrate:
     </h2>
+  </div>
 
-    <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-5 gap-10 px-6 text-center">
-      <div
-        *ngFor="let item of COOPERATIVE_PRINCIPLES"
-        class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-transform hover:scale-105"
-      >
-        <div class="relative mb-5 flex justify-center">
-          <div
-            class="absolute w-16 h-16 bg-gradient-to-br from-[#7a004a] to-[#ff77a9] rounded-full blur-xl opacity-50"
-          ></div>
-          <i class="{{ item.icon }} text-4xl text-[#7a004a] relative z-10"></i>
+  <div
+    class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-5 gap-10 px-6 text-center"
+  >
+    <div
+      *ngFor="let item of COOPERATIVE_PRINCIPLES"
+      class="bg-white rounded-2xl shadow-md hover:shadow-2xl border border-gray-100 p-8 transition-all duration-300 hover:-translate-y-2"
+    >
+      <!-- Icon Container -->
+      <div class="relative mb-6 flex justify-center">
+        <div
+          class="absolute w-20 h-20 bg-gradient-to-br from-[#7a004a]/30 to-[#c7007f]/30 rounded-full blur-2xl opacity-60"
+        ></div>
+        <div
+          class="relative w-20 h-20 rounded-full flex items-center justify-center bg-gradient-to-br from-[#7a004a] to-[#c7007f] ring-4 ring-white shadow-lg"
+        >
+          <img
+            [src]="'../../../assets/images/' + item.icon + '.png'"
+            alt=""
+            class="w-10 h-10 object-contain brightness-0 invert"
+          />
         </div>
-        <p class="text-gray-700 text-sm">{{ item.title }}</p>
       </div>
+
+      <!-- Text -->
+      <p class="text-gray-700 text-sm font-medium leading-snug">
+        {{ item.title }}
+      </p>
     </div>
   </div>
 </section>
+
 
 
 

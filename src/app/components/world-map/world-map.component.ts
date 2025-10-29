@@ -50,8 +50,8 @@ export class WorldMapComponent implements OnInit {
 
     // Custom icon for markers
     const customIcon = L.icon({
-      iconUrl: 'assets/images/ii.png',
-      iconSize: [25, 41],
+      iconUrl: 'assets/images/Ellipse 32.png',
+      iconSize: [15, 20],
       iconAnchor: [12, 41],
       popupAnchor: [1, -34],
       shadowSize: [41, 41]

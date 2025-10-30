@@ -35,9 +35,9 @@
          bg-clip-text text-transparent bg-gradient-to-r from-white to-white 
          max-w-[85%] sm:max-w-[70%] md:max-w-[50%]"
 >
-  Preserving <br />
-  cooperative <br />
-  cultural wisdom <br />
+  Preserving and Celebrating  <br />
+  Cooperative Cultural Heritage – Sites, Traditions and  <br />
+  Practices that connect communities around the world  <br />
   across generations.
 </h1>
 
@@ -70,23 +70,196 @@
 
 
 
-      <h4 class="text-[#7a004a] text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
-        What is the <br>
-        Cooperative <br>
-        Cultural <br>
-        Heritage?
+      <h4 class="text-[#7a004a] text-3xl sm:text-4xl md:text-4xl font-bold leading-tight mb-6">
+        What is the Cooperative Cultural Heritage Programme? 
       </h4>
-      <p class="text-pink-800 text-xl leading-[27px]  font-normal sm:text-[24px] mb-8 md:mb-12 ">
-        A global initiative dedicated to preserving and celebrating cooperative cultural traditions that connect communities around the world, promoting the exchange of ancestral knowledge and sustainable practices.
+    <div class="max-w-3xl mx-auto text-center font-[Poppins] px-4">
+  <p class="text-pink-800 text-xl leading-[27px] font-normal sm:text-[16px] mb-8 md:mb-12">
+    The ICA Cooperative Cultural Heritage Programme celebrates the world’s 
+    cooperative story from historic buildings and monuments to traditions and practices 
+    that bring people together. These are the places and ideas that have stood the test of 
+    time, inspiring solidarity, trust, and shared purpose across generations.
+  </p>
 
-      </p>
-      <button class="w-full flex items-center  justify-between outline-gray-600 max-w-[350px] text-xl  font-bold sm:text-lg  rounded-[38px] bg-[#7a004a] text-white py-4 px-6 sm:px-9"><span>
-Read More        
-        </span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#fff" height="20px" width="20px" version="1.1" viewBox="0 0 330 330" xml:space="preserve"><path id="XMLID_27_" d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255  s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0  c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"></path></svg></button>
+  <!-- Hidden additional text -->
+  <div
+    *ngIf="showMore"
+    class="text-pink-800 text-xl leading-[27px] font-normal sm:text-[16px] mb-8 md:mb-12"
+  >
+    Born in the United Nations International Year of Cooperatives, this global initiative is 
+    uncovering and honouring the most inspiring examples of cooperative heritage — the 
+    landmarks and living traditions that remind us what people can achieve when they 
+    work together. <br /><br />
+    The definition of cooperatives according to the ICA Statement on the Cooperative 
+    Identity recognizes the ability of members to meet their economic, social and cultural 
+    needs and aspirations through their cooperatives, and the CCH Programme initiates a 
+    concrete process which aims to bring together the enterprise of 1 billion co-operators 
+    in meeting their cultural goals.
+
+    <br><br>
+    This  ambitious undertaking by the ICA establishes a Cooperative Cultural Heritage 
+Inscription in recognition of the cooperative movement's enduring legacy and its 
+unique contribution to global human history and through its contuining service, to 
+sustainable development. This initiative aims to systematically identify, document, 
+and safeguard the tangible and intangible manifestations of cooperative values and 
+principles across continents. The Programme also guarantees concerted efforts to 
+build a purposeful journey for youth, exchanges among the people of various 
+cooperative regions worldwide, and more! 
+  </div>
+
+  <!-- Read More button -->
+  <button
+    (click)="toggleReadMore()"
+    class="w-full flex items-center justify-between outline-gray-600 max-w-[350px] 
+           text-xl font-bold sm:text-lg rounded-[38px] bg-[#7a004a] text-white py-4 px-6 sm:px-9 
+           transition-all duration-300 hover:bg-[#9b0060] mx-auto"
+  >
+    <span>{{ showMore ? 'Read Less' : 'Read More' }}</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#fff"
+      height="20px"
+      width="20px"
+      viewBox="0 0 330 330"
+    >
+      <path
+        d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213
+           C232.322,253.535,236.161,255,240,255  
+           s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75
+           c-5.857-5.857-15.355-5.857-21.213,0  
+           c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15
+           c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+      ></path>
+    </svg>
+  </button>
+</div>
+
+
     </div>
   </div>
 </section>
 
+
+<!-- 
+	Why a Cooperative Cultural Heritage List?  -->
+<section class="mx-auto  max-w-[1440px] min-w-[280px] py-8 px-4 sm:px-8 md:px-10 lg:0px-20 ">
+  <div
+    class="w-full rounded-[50px] sm:rounded-[60px] md:rounded-[70px] lg:rounded-[80px]    flex flex-col lg:flex-row  items-center  py-6 sm:py-9 md:py-11 lg:py-14  px-2  sm:px-4 md:px-8 xl:px-16">
+    <img class="w-full lg:w-1/2 xl:w-full max-w-[550px] lg:order-2" src="../../../assets/images/plmko.png" alt="">
+    <div class="text-center md:text-left">
+
+ 
+
+
+
+
+      <h4 class="text-[#7a004a] text-3xl sm:text-4xl md:text-4xl font-bold leading-tight mb-6">
+        Why a Cooperative Cultural Heritage List?
+      </h4>
+    <div class="max-w-3xl mx-auto text-center font-[Poppins] px-4">
+  <p class="text-pink-800 text-xl leading-[27px] font-normal sm:text-[16px] mb-8 md:mb-12">
+    The Cooperative Cultural Heritage List seeks to recognize and preserve the most 
+    significant elements of cooperative heritage, ensuring that future generations 
+    can learn from and build upon them. Being inscribed on this list highlights a site,
+     settlement, tradition, or institution as a living example of the cooperative spirit,
+      with lessons that remain relevant in today’s rapidly changing world.
+  </p>
+
+  <!-- Hidden additional text -->
+  <div
+    *ngIf="showMore"
+    class="text-pink-800 text-xl leading-[27px] font-normal sm:text-[16px] mb-8 md:mb-12"
+  >
+    The ICA Cooperative Cultural Heritage List is expected to highlight both iconic sites of origin and practices that are contemporary, creative and that embody the spirit of cooperation, creating a balanced and meaningful global map of cooperative identity, which must be the sum of all “our” (cooperative) experiences.
+
+
+  </div>
+
+  <!-- Read More button -->
+  <button
+    (click)="toggleReadMore()"
+    class="w-full flex items-center justify-between outline-gray-600 max-w-[350px] 
+           text-xl font-bold sm:text-lg rounded-[38px] bg-[#7a004a] text-white py-4 px-6 sm:px-9 
+           transition-all duration-300 hover:bg-[#9b0060] mx-auto"
+  >
+    <span>{{ showMore ? 'Read Less' : 'Read More' }}</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#fff"
+      height="20px"
+      width="20px"
+      viewBox="0 0 330 330"
+    >
+      <path
+        d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213
+           C232.322,253.535,236.161,255,240,255  
+           s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75
+           c-5.857-5.857-15.355-5.857-21.213,0  
+           c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15
+           c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+      ></path>
+    </svg>
+  </button>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- 
+	Why a Cooperative Cultural Heritage List?  -->
+<section class="mx-auto  max-w-[1440px] min-w-[280px] py-8 px-4 sm:px-8 md:px-10 lg:0px-20 ">
+  <div
+    class="w-full rounded-[50px] sm:rounded-[60px] md:rounded-[70px] lg:rounded-[80px]    flex flex-col lg:flex-row  items-center  py-6 sm:py-9 md:py-11 lg:py-14  px-2  sm:px-4 md:px-8 xl:px-16">
+    <img class="w-full lg:w-1/2 xl:w-full max-w-[550px] lg:order-2" src="../../../assets/images/plmko.png" alt="">
+    <div class="text-center md:text-left">
+
+ 
+
+
+
+
+      <h4 class="text-[#7a004a] text-3xl sm:text-4xl md:text-4xl font-bold leading-tight mb-6">
+        Did you know that the Idea and Practice of Organizing Shared Interests was inscribed as the Intangible Cultural Heritage of Humanity in 2016?
+      </h4>
+    <div class="max-w-3xl mx-auto text-center font-[Poppins] px-4">
+
+
+
+  <!-- Read More button -->
+  <button
+    (click)="toggleReadMore()"
+    class="w-full flex items-center justify-between outline-gray-600 max-w-[350px] 
+           text-xl font-bold sm:text-lg rounded-[38px] bg-[#7a004a] text-white py-4 px-6 sm:px-9 
+           transition-all duration-300 hover:bg-[#9b0060] mx-auto"
+  >
+    <span>{{ showMore ? 'Read Less' : 'Read More' }}</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#fff"
+      height="20px"
+      width="20px"
+      viewBox="0 0 330 330"
+    >
+      <path
+        d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213
+           C232.322,253.535,236.161,255,240,255  
+           s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75
+           c-5.857-5.857-15.355-5.857-21.213,0  
+           c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15
+           c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+      ></path>
+    </svg>
+  </button>
+</div>
+
+
+    </div>
+  </div>
+</section>
 
 
 <!-- 3 circle -->
@@ -106,7 +279,7 @@ Read More
           </div>
         </div>
         <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Countries</p>
-                <p class="mt-3 text-[30px] font-bold text-[#7a004a] tracking-tight">47</p>
+                <p class="mt-3 text-[30px] font-bold text-[#7a004a] tracking-tight">25</p>
 
       </div>
 
@@ -121,7 +294,7 @@ Read More
             <img src="../../../assets/images/inventory_2.png" alt="Supabase" class="h-10 w-10 object-contain">
           </div>
         </div>
-        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Items</p>
+        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Sites</p>
                 <p class="mt-3 text-[30px] font-bold text-[#7a004a] tracking-tight">152</p>
 
       </div>

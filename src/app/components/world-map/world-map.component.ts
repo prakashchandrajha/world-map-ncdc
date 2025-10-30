@@ -51,7 +51,7 @@ export class WorldMapComponent implements OnInit {
     // Custom icon for markers
     const customIcon = L.icon({
       iconUrl: 'assets/images/Ellipse 32.png',
-      iconSize: [15, 20],
+      iconSize: [10, 15],
       iconAnchor: [12, 41],
       popupAnchor: [1, -34],
       shadowSize: [41, 41]
@@ -59,15 +59,28 @@ export class WorldMapComponent implements OnInit {
 
     // Add markers for various locations
     const locations = [
-      { id: 'statue-of-unity', name: 'Statue of Unity', lat: 21.8380, lng: 73.7191, country: 'India', description: 'World\'s tallest statue' },
-      { id: 'golden-temple', name: 'Golden Temple', lat: 31.6200, lng: 74.8765, country: 'India', description: 'Most important Sikh gurdwara' },
-      { id: 'eiffel-tower', name: 'Eiffel Tower', lat: 48.8584, lng: 2.2945, country: 'France', description: 'Iconic iron lattice tower' },
-      { id: 'statue-of-liberty', name: 'Statue of Liberty', lat: 40.6892, lng: -74.0445, country: 'USA', description: 'Neoclassical sculpture' },
-      { id: 'great-wall', name: 'Great Wall of China', lat: 40.4319, lng: 116.5704, country: 'China', description: 'Series of fortifications' },
-      { id: 'sydney-opera', name: 'Sydney Opera House', lat: -33.8568, lng: 151.2153, country: 'Australia', description: 'Performing arts center' },
-      { id: 'pyramids', name: 'Pyramids of Giza', lat: 29.9792, lng: 31.1342, country: 'Egypt', description: 'Ancient Egyptian pyramids' },
-      { id: 'machu-picchu', name: 'Machu Picchu', lat: -13.1631, lng: -72.5450, country: 'Peru', description: '15th-century Inca citadel' },
-    ];
+  { id: 'maison-alphonse-desjardins', name: 'Maison Alphonse-Desjardins', lat: 46.80942, lng: -71.18206, country: 'Canada' },
+  { id: 'amal-cooperative-tamanar', name: 'Amal Cooperative (Women’s cooperatives in the Argan sector)', lat: 31.4000, lng: -9.7000, country: 'Morocco' },
+  { id: 'amul-dairy', name: 'Amul Dairy (Kaira District Milk Union)', lat: 22.55267, lng: 72.9715, country: 'India' },
+  { id: 'americas-credit-union-museum', name: 'America’s Credit Union Museum', lat: 42.9933, lng: -71.4758, country: 'USA' },
+  { id: 'greenbelt-museum', name: 'Greenbelt Museum & Housing Cooperative', lat: 38.998318, lng: -76.896332, country: 'USA' },
+  { id: 'moshi-cooperative-university', name: 'Moshi Cooperative University (MoCU)', lat: -3.3400, lng: 37.3500, country: 'Tanzania' },
+  { id: 'sunchales-monumento-cooperativismo', name: 'Sunchales – Monumento Nacional al Cooperativismo', lat: -31.633, lng: -61.500, country: 'Argentina' },
+  { id: 'theodor-amstad-monument', name: 'Theodor Amstad Square and Monument to Cooperativism', lat: -29.3804, lng: -51.1087, country: 'Brazil' },
+  { id: 'national-cooperative-museum', name: 'National Co-operative Museum', lat: 51.9156, lng: 4.3970, country: 'Netherlands' },
+  { id: 'samuel-jurkovic-museum', name: 'The Co-operative Museum of Samuel Jurkovič', lat: 48.4917, lng: 17.7050, country: 'Slovak Republic' },
+  { id: 'obisesan-building', name: 'Obisesan Building/Hall', lat: 7.3964, lng: 3.9167, country: 'Nigeria' },
+  { id: 'naruto-toyohiko-memorial-museum', name: 'Naruto City Kagawa Toyohiko Memorial Museum', lat: 34.1633, lng: 134.4988, country: 'Japan' },
+  { id: 'maktab-koperasi-malaysia', name: 'Maktab Koperasi Malaysia (Alor Setar branch)', lat: 6.1179, lng: 100.3669, country: 'Malaysia' },
+  { id: 'cooperative-university-kenya', name: 'The Co-operative University of Kenya', lat: -1.2804, lng: 36.8163, country: 'Kenya' },
+  { id: 'adamant-food-coop', name: 'Adamant Food Co-op', lat: 44.3341, lng: -72.7790, country: 'USA' },
+  { id: 'uralungal-labour-contract-cooperative', name: 'Uralungal Labour Contract Cooperative Headquarters', lat: 11.6094, lng: 75.6150, country: 'India' },
+  { id: 'workers-assembly-halls-denmark', name: 'Workers’ Assembly Halls', lat: 55.684833, lng: 12.570250, country: 'Denmark' },
+  { id: 'levigliani-village', name: 'The Village of Levigliani', lat: 44.0722, lng: 10.2387, country: 'Italy' },
+  { id: 'marinaleda-cooperative', name: 'Marinaleda Cooperative', lat: 37.3292, lng: -5.0161, country: 'Spain' },
+  { id: 'rochdale-pioneer-museum', name: 'Rochdale Pioneer Museum and Heritage Trust', lat: 53.6141, lng: -2.1561, country: 'UK' },
+  { id: 'kibbutz-degania-alef', name: 'Kibbutz Degania Alef', lat: 32.8154, lng: 35.5630, country: 'Israel' }
+];
 
     // Add markers with popups and click handlers
     locations.forEach(location => {
@@ -77,7 +90,7 @@ export class WorldMapComponent implements OnInit {
          <div class=\"custom-popup bg-white p-4 rounded-lg shadow-lg max-w-sm\">
   <h3 class=\"text-xl font-semibold text-gray-800 mb-2\">${location.name}</h3>
   <p class=\"text-sm text-gray-600 mb-1\"><span class=\"font-medium text-gray-700\">Country:</span> ${location.country}</p>
-  <p class=\"text-sm text-gray-600 mb-1\">${location.description}</p>
+
   <p class=\"text-sm text-gray-600 mb-4\">
     <span class=\"font-medium text-gray-700\">Coordinates:</span> 
     ${location.lat.toFixed(4)}, ${location.lng.toFixed(4)}

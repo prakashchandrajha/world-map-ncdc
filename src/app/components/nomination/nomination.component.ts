@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Banner } from '../../../../shared/banner/banner';
+import { Banner } from '../../shared/banner/banner';
 
 @Component({
   selector: 'app-nomination',

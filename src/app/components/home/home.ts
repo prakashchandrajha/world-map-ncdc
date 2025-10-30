@@ -3,6 +3,14 @@ import { WorldMapComponent } from "../world-map/world-map.component";
 import { Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { HomeService } from '../../services/home.service';
+
+interface HeritageSection {
+  title: string;
+  image: string;
+  shortText: string;
+  fullText: string;
+}
 
 @Component({
   selector: 'app-home',
@@ -11,19 +19,18 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.css'
 })
 export class Home {
+  cards: any[] = [];
+  tangibleButtons: string[] = [];
+
+  constructor(private homeService: HomeService) {
+    this.cards = this.homeService.getHomeCards();
+    this.tangibleButtons = this.homeService.getTangibleButtons();
+  }
 
 
-  cards:any=[
-    {img:'../../../assets/images/aunty1.png',badge:'../../../assets/images/b1 (1).png',title:'Intangible Heritage',desc:'Traditions, cultural practices, and knowledge passed down through generations',btn:'Cooming Soon'},
-    {img:'../../../assets/images/uni2.png',badge:'../../../assets/images/b1 (2).png',title:'Tangible Heritage',desc:'Places, monuments, and physical structures that represent the cooperative cultural legacy.',btn:'read more'}
-    
-  ]
+  showMore = false;
 
-
-  tangibleButtons: string[] = [
-  'Monuments',
-  'Historic buildings',
-  'Archaeological sites',
-  '...',
-];
+  toggleReadMore() {
+    this.showMore = !this.showMore;
+  }
 }

@@ -1,0 +1,23 @@
+<div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-lg w-full relative">
+  <div class="relative">
+    <img [src]="card.img" alt="Card image" class="w-full h-40 object-cover">
+
+    <!-- Badge -->
+    <img [src]="card.badge"
+      class="absolute top-[-0.5rem] left-3 text-white text-xs font-semibold px-3 py-1 mb-24"
+      alt="Badge">
+  </div>
+
+  <div class="p-6">
+    <h2 class="text-2xl font-bold text-gray-800 mb-2">{{ card.title }}</h2>
+    <p class="text-gray-700 leading-tight mb-4">
+      {{ card.desc || 'Description not available' }}
+    </p>
+
+    <div class="flex justify-between items-center">
+      <button class="px-4 py-2 rounded-full text-white font-semibold bg-[#7a004a] hover:bg-[#5c0037] transition-colors duration-300" routerLink="/aboutTangiblePage">
+        {{ card.btn }}
+      </button>
+    </div>
+  </div>
+</div>

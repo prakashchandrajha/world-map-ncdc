@@ -395,7 +395,7 @@ Cultural Heritage.
       <button
         class="py-2 border-[2.5px] border-[#7a004a] text-[#7a004a] font-semibold rounded-full px-8
                hover:bg-[#7a004a] hover:text-white transition-colors duration-300"
-        (click)="openModal(sections[0])"
+        (click)="openPrinciplesModal()"
       >
         Read More
       </button>
@@ -405,9 +405,9 @@ Cultural Heritage.
 
 <!-- Modal -->
 <div
-  *ngIf="selectedSection"
+  *ngIf="isPrinciplesModalOpen"
   class="fixed inset-0 flex items-center justify-center z-50 bg-white/70 animate-fadeIn pt-20"
-  (click)="closeModalOutside($event)"
+  (click)="closePrinciplesModal()"
 >
   <div
     class="relative max-w-2xl w-[80%] bg-white rounded-3xl border border-gray-300
@@ -416,7 +416,7 @@ Cultural Heritage.
   >
     <!-- Close Button -->
     <button
-      (click)="closeModal()"
+      (click)="closePrinciplesModal()"
       class="absolute top-3 right-3 text-gray-400 text-3xl hover:text-[#7a004a] transition-all duration-300"
     >
       ✕
@@ -426,7 +426,7 @@ Cultural Heritage.
     <h3
       class="text-2xl sm:text-3xl font-semibold mb-6 text-center bg-gradient-to-r from-[#ff80b5] to-[#7a004a] bg-clip-text text-transparent"
     >
-      {{ selectedSection.title }}
+      Principles for Identifying Cooperative Cultural Heritage
     </h3>
 
     <!-- Modal Content -->

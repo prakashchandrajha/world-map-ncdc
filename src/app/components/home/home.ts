@@ -122,6 +122,15 @@ along with a Statement of Recognition, in a post launch (November 2025) exercise
       this.closeModal();
     }
   }
+  isPrinciplesModalOpen = false;
+
+  openPrinciplesModal() {
+    this.isPrinciplesModalOpen = true;
+  }
+
+  closePrinciplesModal() {
+    this.isPrinciplesModalOpen = false;
+  }
 
 
    // ✅ Modal controls

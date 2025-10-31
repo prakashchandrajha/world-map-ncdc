@@ -19,57 +19,70 @@
     </h2>
 
     <!-- Filters Row -->
-    <div
-      class="flex flex-wrap justify-center gap-6 mb-8 text-gray-700 text-base"
+   <div class="flex flex-wrap justify-center gap-6 mb-8 text-gray-700 text-base">
+  <!-- Year -->
+  <div class="w-full md:w-60">
+    <label class="block mb-2 font-medium text-gray-600">Year</label>
+    <select
+      class="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#7a004a] focus:outline-none"
     >
-      <!-- Country -->
-      <div class="w-full md:w-60">
-        <label class="block mb-2 font-medium text-gray-600">Country</label>
-        <select
-          class="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#7a004a] focus:outline-none"
-        >
-          <option>Select Country</option>
-          <option>USA</option>
-          <option>China</option>
-          <option>Japan</option>
-          <option>Germany</option>
-          <option>India</option>
-          <option>France</option>
-        </select>
-      </div>
+      <option value="">Select Year</option>
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+      <option value="2022">2022</option>
+      <option value="2021">2021</option>
+      <option value="2020">2020</option>
+    </select>
+  </div>
 
-      <!-- Brand -->
-      <div class="w-full md:w-60">
-        <label class="block mb-2 font-medium text-gray-600">Continent</label>
-        <select
-          class="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#7a004a] focus:outline-none"
-        >
-        
-        </select>
-      </div>
+  <!-- Continent -->
+  <div class="w-full md:w-60">
+    <label class="block mb-2 font-medium text-gray-600">Continent</label>
+    <select
+      class="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#7a004a] focus:outline-none"
+    >
+      <option value="">Select Continent</option>
+      <option value="Africa">Africa</option>
+      <option value="Antarctica">Antarctica</option>
+      <option value="Asia">Asia</option>
+      <option value="Europe">Europe</option>
+      <option value="North America">North America</option>
+      <option value="South America">South America</option>
+      <option value="Oceania">Oceania</option>
+    </select>
+  </div>
 
-      <!-- ABV -->
-      <div class="w-full md:w-60">
-        <label class="block mb-2 font-medium text-gray-600">Country</label>
-        <select
-          class="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#7a004a] focus:outline-none"
-        >
-          <option>xyz</option>
-          <option></option>
-          <option></option>
-          <option></option>
-        </select>
-      </div>
+  <!-- Country -->
+  <div class="w-full md:w-60">
+    <label class="block mb-2 font-medium text-gray-600">Country</label>
+    <select
+      class="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#7a004a] focus:outline-none"
+    >
+      <option value="">Select Country</option>
+      <option value="USA">USA</option>
+      <option value="China">China</option>
+      <option value="Japan">Japan</option>
+      <option value="Germany">Germany</option>
+      <option value="India">India</option>
+      <option value="France">France</option>
+      <option value="Brazil">Brazil</option>
+      <option value="Australia">Australia</option>
+      <option value="Canada">Canada</option>
+      <option value="UK">UK</option>
+    </select>
+  </div>
 
-      <!-- Apply Button -->
-      <div class="w-full md:w-auto flex items-end">
-        <button
-          class="px-8 py-2 font-medium text-white rounded-lg bg-gradient-to-r from-[#7a004a] to-[#ff77a9] hover:brightness-110 transition-all shadow-md"
-        >
-          Apply Filters
-        </button>
-      </div>
-    </div>
+  <!-- Apply Button -->
+  <div class="w-full md:w-auto flex items-end">
+    <button
+      class="px-8 py-2 font-medium text-white rounded-lg bg-gradient-to-r from-[#7a004a] to-[#ff77a9] hover:brightness-110 transition-all shadow-md"
+    >
+      Apply Filters
+    </button>
+  </div>
+</div>
+
 
     <!-- Selected Filters Summary -->
     <!-- <div class="mt-8 border-t border-gray-200 pt-6">

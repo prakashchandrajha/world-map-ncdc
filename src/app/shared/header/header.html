@@ -1,11 +1,10 @@
 <header
-  [ngClass]="isHome 
-    ? 'fixed inset-x-0 top-0 z-30 w-full bg-transparent py-4 px-6 transition-all duration-300' 
+  [ngClass]="isHome
+    ? 'fixed inset-x-0 top-0 z-30 w-full bg-transparent py-4 px-6 transition-all duration-300'
     : 'fixed inset-x-0 top-0 z-30 w-full bg-white shadow-lg backdrop-blur-md py-4 px-6 transition-all duration-300'"
   class="font-[Poppins]"
 >
   <div class="flex items-center justify-between w-full">
-
     <!-- Left: Logo -->
     <div class="flex items-center">
       <a routerLink="/" aria-current="page" class="flex items-center cursor-pointer">
@@ -16,36 +15,40 @@
         />
       </a>
     </div>
-
     <!-- Right: Desktop Navigation -->
     <nav
       class="hidden md:flex mr-2 items-center rounded-full p-[1px] bg-gradient-to-r from-[#ff9ebd] via-[#ff80aa] to-[#ff4c91] shadow-md"
     >
       <div class="flex items-center justify-center rounded-full bg-white backdrop-blur-md py-2 px-8">
         <ul class="flex items-center space-x-6">
-
           <li><a routerLink="/about" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">About</a></li>
-          <li><a routerLink="/list" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Sites & Elements</a></li>
+          <!-- Sites & Elements Dropdown for Desktop -->
+          <li class="relative group">
+            <button class="text-pink-900 text-lg font-medium hover:text-[#d31c75] flex items-center">
+              <span>Sites & Elements</span>
+              <i class="fa-solid fa-chevron-down ml-1 text-sm"></i>
+            </button>
+            <ul class="absolute hidden group-hover:flex flex-col bg-white shadow-lg rounded-lg left-0  w-48 text-gray-800 border border-pink-200 overflow-hidden z-50 ">
+              <li><a routerLink="/list" class="block px-4 py-2 hover:bg-[#ffe4ed]">Guideline</a></li>
+              <li><a routerLink="/tangible" class="block px-4 py-2 hover:bg-[#ffe4ed]">Tangible</a></li>
+              <li><a routerLink="/intangible" class="block px-4 py-2 hover:bg-[#ffe4ed]">Intangible</a></li>
+            </ul>
+          </li>
           <li><a routerLink="/criteria" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Criteria and Nominations</a></li>
           <li><a routerLink="/member" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Members</a></li>
-          <li><a routerLink="/member" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Events</a></li>
-          <!-- <li><a routerLink="/nomination" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Nominations</a></li> -->
-
+          <li><a routerLink="/events" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Events</a></li>
           <!-- 🔍 Search -->
           <li>
             <button class="text-[#d31c75] text-xl hover:scale-110 transition-all">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </li>
-
           <!-- 🌐 Language Dropdown -->
           <li class="relative group">
             <button class="text-[#d31c75] text-xl hover:scale-110 transition-all">
               <i class="fa-solid fa-language"></i>
             </button>
-            <ul
-              class="absolute hidden group-hover:flex flex-col bg-white shadow-lg rounded-lg right-0 w-40 text-gray-800 border border-pink-200 overflow-hidden z-50"
-            >
+            <ul class="absolute hidden group-hover:flex flex-col bg-white shadow-lg rounded-lg right-0 mt-2 w-40 text-gray-800 border border-pink-200 overflow-hidden z-50">
               <li><a href="#" class="block px-4 py-2 hover:bg-[#ffe4ed]">English</a></li>
               <li><a href="#" class="block px-4 py-2 hover:bg-[#ffe4ed]">हिन्दी</a></li>
               <li><a href="#" class="block px-4 py-2 hover:bg-[#ffe4ed]">Português</a></li>
@@ -55,7 +58,6 @@
         </ul>
       </div>
     </nav>
-
     <!-- Mobile Menu Button -->
     <button
       class="md:hidden text-[#d31c75] text-3xl focus:outline-none"
@@ -64,7 +66,6 @@
       <i [ngClass]="isMenuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
     </button>
   </div>
-
   <!-- Mobile Dropdown Menu -->
   <div
     *ngIf="isMenuOpen"
@@ -72,10 +73,21 @@
   >
     <ul class="flex flex-col space-y-4 text-center">
       <li><a routerLink="/about" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">About</a></li>
-      <li><a routerLink="/list" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Sites & Elements</a></li>
+      <!-- Sites & Elements Dropdown for Mobile -->
+      <li class="relative">
+        <button (click)="toggleDropdown()" class="flex justify-between items-center w-full text-pink-900 text-lg font-medium hover:text-[#d31c75]">
+          <span>Sites & Elements</span>
+          <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300" [class.rotate-180]="dropdownOpen"></i>
+        </button>
+        <div *ngIf="dropdownOpen" class="mt-2 flex flex-col bg-pink-50 border border-pink-200 rounded-lg shadow-md transition-all duration-300 overflow-hidden">
+          <a routerLink="/guideline" class="block px-4 py-2 hover:bg-pink-100 hover:text-[#d31c75]" (click)="closeDropdown()">Guideline</a>
+          <a routerLink="/tangible" class="block px-4 py-2 hover:bg-pink-100 hover:text-[#d31c75]" (click)="closeDropdown()">Tangible</a>
+          <a routerLink="/intangible" class="block px-4 py-2 hover:bg-pink-100 hover:text-[#d31c75]" (click)="closeDropdown()">Intangible</a>
+        </div>
+      </li>
       <li><a routerLink="/criteria" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Criteria</a></li>
       <li><a routerLink="/member" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Members</a></li>
-      <li><a routerLink="/nomination" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Nominations</a></li>
+      <li><a routerLink="/events" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Events</a></li>
       <li><a href="#" class="text-[#d31c75] font-medium"><i class="fa-solid fa-magnifying-glass"></i> Search</a></li>
       <li><a href="#" class="text-[#d31c75] font-medium"><i class="fa-solid fa-language"></i> Language</a></li>
     </ul>

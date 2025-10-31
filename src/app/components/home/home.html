@@ -59,207 +59,95 @@
 
 
 <!-- what is cooperative culture haritage with img on right side -->
-<section class="mx-auto  max-w-[1440px] min-w-[280px] py-8 px-4 sm:px-8 md:px-10 lg:0px-20 ">
+<section
+  *ngFor="let section of sections"
+  class="mx-auto max-w-[1440px] min-w-[280px] py-8 px-4 sm:px-8 md:px-10 lg:px-20"
+>
   <div
-    class="w-full rounded-[50px] sm:rounded-[60px] md:rounded-[70px] lg:rounded-[80px]    flex flex-col lg:flex-row  items-center  py-6 sm:py-9 md:py-11 lg:py-14  px-2  sm:px-4 md:px-8 xl:px-16">
-    <img class="w-full lg:w-1/2 xl:w-full max-w-[550px] lg:order-2" src="../../../assets/images/plmko.png" alt="">
-    <div class="text-center md:text-left">
-
- 
-
-
-
-
-      <h4 class="text-[#7a004a] text-3xl sm:text-4xl md:text-4xl font-bold leading-tight mb-6">
-        What is the Cooperative Cultural Heritage Programme? 
-      </h4>
-    <div class="max-w-3xl mx-auto text-center font-[Poppins] px-4">
-  <p class="text-pink-800 text-xl leading-[27px] font-normal sm:text-[16px] mb-8 md:mb-12">
-    The ICA Cooperative Cultural Heritage Programme celebrates the world’s 
-    cooperative story from historic buildings and monuments to traditions and practices 
-    that bring people together. These are the places and ideas that have stood the test of 
-    time, inspiring solidarity, trust, and shared purpose across generations.
-  </p>
-
-  <!-- Hidden additional text -->
-  <div
-    *ngIf="showMore"
-    class="text-pink-800 text-xl leading-[27px] font-normal sm:text-[16px] mb-8 md:mb-12"
+    class="w-full rounded-[50px] sm:rounded-[60px] md:rounded-[70px] lg:rounded-[80px]
+    flex flex-col lg:flex-row items-center py-6 sm:py-9 md:py-11 lg:py-14 px-2 sm:px-4 md:px-8 xl:px-16"
   >
-    Born in the United Nations International Year of Cooperatives, this global initiative is 
-    uncovering and honouring the most inspiring examples of cooperative heritage — the 
-    landmarks and living traditions that remind us what people can achieve when they 
-    work together. <br /><br />
-    The definition of cooperatives according to the ICA Statement on the Cooperative 
-    Identity recognizes the ability of members to meet their economic, social and cultural 
-    needs and aspirations through their cooperatives, and the CCH Programme initiates a 
-    concrete process which aims to bring together the enterprise of 1 billion co-operators 
-    in meeting their cultural goals.
+    <img
+      class="w-full lg:w-1/2 xl:w-full max-w-[550px] lg:order-2"
+      [src]="section.img"
+      alt=""
+    />
+    <div class="text-center md:text-left">
+      <h4
+        class="text-[#7a004a] text-2xl sm:text-2xl md:text-3xl font-bold leading-tight mb-6"
+      >
+        {{ section.title }}
+      </h4>
 
-    <br><br>
-    This  ambitious undertaking by the ICA establishes a Cooperative Cultural Heritage 
-Inscription in recognition of the cooperative movement's enduring legacy and its 
-unique contribution to global human history and through its contuining service, to 
-sustainable development. This initiative aims to systematically identify, document, 
-and safeguard the tangible and intangible manifestations of cooperative values and 
-principles across continents. The Programme also guarantees concerted efforts to 
-build a purposeful journey for youth, exchanges among the people of various 
-cooperative regions worldwide, and more! 
-  </div>
+      <div class="max-w-3xl mx-auto text-center px-4">
+        <p
+          class="text-pink-800 text-xl leading-[27px] font-normal sm:text-[16px] mb-8 md:mb-12"
+        >
+          {{ section.desc }}
+        </p>
 
-  <!-- Read More button -->
-  <button
-    (click)="toggleReadMore()"
-    class="w-full flex items-center justify-between outline-gray-600 max-w-[350px] 
+        <button
+          (click)="openModal(section)"
+          class="w-full flex items-center justify-between outline-gray-600 max-w-[350px]
            text-xl font-bold sm:text-lg rounded-[38px] bg-[#7a004a] text-white py-4 px-6 sm:px-9 
            transition-all duration-300 hover:bg-[#9b0060] mx-auto"
-  >
-    <span>{{ showMore ? 'Read Less' : 'Read More' }}</span>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#fff"
-      height="20px"
-      width="20px"
-      viewBox="0 0 330 330"
-    >
-      <path
-        d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213
-           C232.322,253.535,236.161,255,240,255  
-           s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75
-           c-5.857-5.857-15.355-5.857-21.213,0  
-           c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15
-           c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
-      ></path>
-    </svg>
-  </button>
-</div>
-
-
+        >
+          <span>Read More</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#fff"
+            height="20px"
+            width="20px"
+            viewBox="0 0 330 330"
+          >
+            <path
+              d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213
+               C232.322,253.535,236.161,255,240,255  
+               s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75
+               c-5.857-5.857-15.355-5.857-21.213,0  
+               c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15
+               c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+            ></path>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>
 
-
-<!-- 
-	Why a Cooperative Cultural Heritage List?  -->
-<section class="mx-auto  max-w-[1440px] min-w-[280px] py-8 px-4 sm:px-8 md:px-10 lg:0px-20 ">
+<!-- Modal -->
+<div
+  *ngIf="selectedSection"
+  class="fixed inset-0 flex items-center justify-center z-50 bg-black/60 backdrop-blur-sm animate-fadeIn"
+>
+  <!-- Modal box -->
   <div
-    class="w-full rounded-[50px] sm:rounded-[60px] md:rounded-[70px] lg:rounded-[80px]    flex flex-col lg:flex-row  items-center  py-6 sm:py-9 md:py-11 lg:py-14  px-2  sm:px-4 md:px-8 xl:px-16">
-    <img class="w-full lg:w-1/2 xl:w-full max-w-[550px] lg:order-2" src="../../../assets/images/plmko.png" alt="">
-    <div class="text-center md:text-left">
-
- 
-
-
-
-
-      <h4 class="text-[#7a004a] text-3xl sm:text-4xl md:text-4xl font-bold leading-tight mb-6">
-        Why a Cooperative Cultural Heritage List?
-      </h4>
-    <div class="max-w-3xl mx-auto text-center font-[Poppins] px-4">
-  <p class="text-pink-800 text-xl leading-[27px] font-normal sm:text-[16px] mb-8 md:mb-12">
-    The Cooperative Cultural Heritage List seeks to recognize and preserve the most 
-    significant elements of cooperative heritage, ensuring that future generations 
-    can learn from and build upon them. Being inscribed on this list highlights a site,
-     settlement, tradition, or institution as a living example of the cooperative spirit,
-      with lessons that remain relevant in today’s rapidly changing world.
-  </p>
-
-  <!-- Hidden additional text -->
-  <div
-    *ngIf="showMore"
-    class="text-pink-800 text-xl leading-[27px] font-normal sm:text-[16px] mb-8 md:mb-12"
+    class="relative max-w-3xl w-[90%] bg-white/20 backdrop-blur-lg border border-white/30 rounded-3xl 
+           shadow-2xl p-8 font-[Poppins] text-white animate-slideUp"
   >
-    The ICA Cooperative Cultural Heritage List is expected to highlight both iconic sites of origin and practices that are contemporary, creative and that embody the spirit of cooperation, creating a balanced and meaningful global map of cooperative identity, which must be the sum of all “our” (cooperative) experiences.
-
-
-  </div>
-
-  <!-- Read More button -->
-  <button
-    (click)="toggleReadMore()"
-    class="w-full flex items-center justify-between outline-gray-600 max-w-[350px] 
-           text-xl font-bold sm:text-lg rounded-[38px] bg-[#7a004a] text-white py-4 px-6 sm:px-9 
-           transition-all duration-300 hover:bg-[#9b0060] mx-auto"
-  >
-    <span>{{ showMore ? 'Read Less' : 'Read More' }}</span>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#fff"
-      height="20px"
-      width="20px"
-      viewBox="0 0 330 330"
+    <!-- Close Button -->
+    <button
+      (click)="closeModal()"
+      class="absolute top-3 right-3 text-white text-3xl hover:scale-110 transition-all duration-300"
     >
-      <path
-        d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213
-           C232.322,253.535,236.161,255,240,255  
-           s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75
-           c-5.857-5.857-15.355-5.857-21.213,0  
-           c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15
-           c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
-      ></path>
-    </svg>
-  </button>
+      ✕
+    </button>
+
+    <!-- Title -->
+    <h3
+      class="text-2xl sm:text-3xl font-semibold mb-6 text-center bg-gradient-to-r from-[#ff80b5] to-[#7a004a] bg-clip-text text-transparent"
+    >
+      {{ selectedSection.title }}
+    </h3>
+
+    <!-- Modal Content -->
+    <div
+      class="text-white/90 text-[16px] leading-[28px] space-y-4 overflow-y-auto max-h-[70vh] scrollbar-thin scrollbar-thumb-[#7a004a]/60 scrollbar-track-transparent px-2"
+      [innerHTML]="selectedSection.moreText"
+    ></div>
+  </div>
 </div>
 
-
-    </div>
-  </div>
-</section>
-
-
-
-<!-- 
-	Why a Cooperative Cultural Heritage List?  -->
-<section class="mx-auto  max-w-[1440px] min-w-[280px] py-8 px-4 sm:px-8 md:px-10 lg:0px-20 ">
-  <div
-    class="w-full rounded-[50px] sm:rounded-[60px] md:rounded-[70px] lg:rounded-[80px]    flex flex-col lg:flex-row  items-center  py-6 sm:py-9 md:py-11 lg:py-14  px-2  sm:px-4 md:px-8 xl:px-16">
-    <img class="w-full lg:w-1/2 xl:w-full max-w-[550px] lg:order-2" src="../../../assets/images/plmko.png" alt="">
-    <div class="text-center md:text-left">
-
- 
-
-
-
-
-      <h4 class="text-[#7a004a] text-3xl sm:text-4xl md:text-4xl font-bold leading-tight mb-6">
-        Did you know that the Idea and Practice of Organizing Shared Interests was inscribed as the Intangible Cultural Heritage of Humanity in 2016?
-      </h4>
-    <div class="max-w-3xl mx-auto text-center font-[Poppins] px-4">
-
-
-
-  <!-- Read More button -->
-  <button
-    (click)="toggleReadMore()"
-    class="w-full flex items-center justify-between outline-gray-600 max-w-[350px] 
-           text-xl font-bold sm:text-lg rounded-[38px] bg-[#7a004a] text-white py-4 px-6 sm:px-9 
-           transition-all duration-300 hover:bg-[#9b0060] mx-auto"
-  >
-    <span>{{ showMore ? 'Read Less' : 'Read More' }}</span>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#fff"
-      height="20px"
-      width="20px"
-      viewBox="0 0 330 330"
-    >
-      <path
-        d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213
-           C232.322,253.535,236.161,255,240,255  
-           s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75
-           c-5.857-5.857-15.355-5.857-21.213,0  
-           c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15
-           c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
-      ></path>
-    </svg>
-  </button>
-</div>
-
-
-    </div>
-  </div>
-</section>
 
 
 <!-- 3 circle -->
@@ -400,105 +288,96 @@ cooperative regions worldwide, and more!
     <p class="font-heading mt-2 text-3xl leading-8 font-semibold tracking-tight sm:text-4xl
               text-transparent bg-clip-text 
               bg-gradient-to-r from-[#6f003f] to-gray-300">
-        Criteria for Identifying <br>
+        Principles for Identifying Cooperative  <br>
         Cultural Heritage
     </p>
     <p class="mt-4 max-w-2xl text-lg lg:mx-auto text-[#9a2d60]">
-        Contribute to the preservation of cooperative cultural heritage. Does your community have traditions or places that deserve recognition?
+        The criteria and the first (2025) standards employed in identifying the Cooperative 
+Cultural Heritage.  
     </p>
 </div>
 
-<section class="flex justify-center items-center bg-white mt-[50px]">
+<section class="flex justify-center items-center bg-white mt-[50px] font-[Poppins]">
   <div
-    class="w-[1000px] h-[380px] cursor-pointer group bg-gradient-to-br transition-all duration-1000 flex flex-col relative overflow-hidden rounded-2xl shadow-lg">
-
+    class="w-[1000px] h-[380px] group bg-gradient-to-br transition-all duration-1000 flex flex-col relative overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+  >
+    <!-- Circles Section -->
     <div class="grow m-4 flex items-center justify-center -mb-4 px-3">
-      
-      <!-- Circle 1 -->
-      <div class="flex flex-col items-center">
-        <div
-          class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
+      <ng-container *ngFor="let service of services; let last = last">
+        <!-- Circle Item -->
+        <div class="flex flex-col items-center">
           <div
-            class="h-14 w-14 rounded-full flex items-center justify-center  overflow-hidden">
-            <img src="../../../assets/images/handshake.png" alt="Svelte" class="h-10 w-10 object-contain">
+            class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300"
+          >
+            <div class="h-14 w-14 rounded-full flex items-center justify-center overflow-hidden">
+              <img
+                [src]="service.icon"
+                [alt]="service.title"
+                class="h-10 w-10 object-contain"
+              />
+            </div>
           </div>
+          <p
+            *ngIf="service.title"
+            class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight text-center"
+          >
+            {{ service.title }}
+          </p>
         </div>
-        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Cooperative <br>Principles</p>
 
-      </div>
-
-      <div class="h-[1px] grow bg-zinc-400 mx-4 mb-10"></div>
-
-      <!-- Circle 2 -->
-      <div class="flex flex-col items-center">
-        <div
-          class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
-          <div
-            class="h-14 w-14 rounded-full flex items-center justify-center  overflow-hidden">
-            <img src="../../../assets/images/military_tech.png" alt="Supabase" class="h-10 w-10 object-contain">
-          </div>
-        </div>
-        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Cultural <br>Significance</p>
-
-      </div>
-
-      <div class="h-[1px] grow bg-zinc-400 mx-4 mb-10"></div>
-
-      <!-- Circle 3 -->
-      <div class="flex flex-col items-center">
-        <div
-          class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
-          <div
-            class="h-14 w-14 rounded-full flex items-center justify-center  overflow-hidden">
-            <img src="../../../assets/images/family_history.png" alt="Vercel" class="h-10 w-10 object-contain">
-          </div>
-        </div>
-        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Generational <br>Transmission</p>
-        
-        
-      </div>
-      <div class="h-[1px] grow bg-zinc-400 mx-4 mb-10"></div>
-
-      <!-- Circle 3 -->
-      <div class="flex flex-col items-center">
-        <div
-          class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
-          <div
-            class="h-14 w-14 rounded-full flex items-center justify-center  overflow-hidden">
-            <img src="../../../assets/images/diamond.png" alt="Vercel" class="h-10 w-10 object-contain">
-          </div>
-        </div>
-        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Innovative <br> Continuity</p>
-        
-      </div>
-      <div class="h-[1px] grow bg-zinc-400 mx-4 mb-10"></div>
-
-      <!-- Circle 3 -->
-      <div class="flex flex-col items-center mb-10">
-        <div
-          class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
-          <div
-            class="h-14 w-14 rounded-full flex items-center justify-center  overflow-hidden">
-            <img src="../../../assets/images/Group 50.png" alt="Vercel" class="h-10 w-10 object-contain">
-          </div>
-        </div>
-        
-      </div>
-      
-
+        <!-- Divider -->
+        <div *ngIf="!last" class="h-[1px] grow bg-zinc-400 mx-4 mb-10"></div>
+      </ng-container>
     </div>
 
-    <div class="flex flex-col justify-between items-end mt-auto p-4 pt-0 text-black">
-      <div class="h-4 w-full"></div>
+    <!-- Read More Button -->
+    <div class="flex justify-center items-end mt-auto p-4 pt-0">
+      <button
+        class="py-2 border-[2.5px] border-[#7a004a] text-[#7a004a] font-semibold rounded-full px-8 
+               hover:bg-[#7a004a] hover:text-white transition-colors duration-300"
+        (click)="openModal(services[0])"
+      >
+        Read More
+      </button>
     </div>
-<!-- From Uiverse.io by vinodjangid07 --> 
-<button class="py-2 border border-[5.5px] border-[#7a004a] text-[#7a004a] font-semibold rounded-full hover:bg-[#7a004a] hover:text-white transition-colors duration-300">
-  Read More
-</button>
-
-
   </div>
 </section>
+
+<!-- Modal -->
+<div
+  *ngIf="selectedSection"
+  class="fixed inset-0 flex items-center justify-center z-50 bg-black/60 backdrop-blur-sm animate-fadeIn"
+  (click)="closeModalOutside($event)"
+>
+  <div
+    class="relative max-w-3xl w-[90%] bg-white/20 backdrop-blur-lg border border-white/30 rounded-3xl 
+           shadow-2xl p-8 font-[Poppins] text-white animate-slideUp"
+    (click)="$event.stopPropagation()"
+  >
+    <!-- Close Button -->
+    <button
+      (click)="closeModal()"
+      class="absolute top-3 right-3 text-white text-3xl hover:scale-110 transition-all duration-300"
+    >
+      ✕
+    </button>
+
+    <!-- Title -->
+    <h3
+      class="text-2xl sm:text-3xl font-semibold mb-6 text-center bg-gradient-to-r from-[#ff80b5] to-[#7a004a] bg-clip-text text-transparent"
+    >
+      {{ selectedSection.title }}
+    </h3>
+
+    <!-- Modal Content -->
+    <div
+      class="text-white/90 text-[16px] leading-[28px] space-y-4 overflow-y-auto max-h-[70vh] scrollbar-thin 
+             scrollbar-thumb-[#7a004a]/60 scrollbar-track-transparent px-2"
+      [innerHTML]="selectedSection.moreText"
+    ></div>
+  </div>
+</div>
+
             
 
         </div>

@@ -11,14 +11,23 @@ import { filter } from 'rxjs';
   styleUrl: './header.css'
 })
 export class Header {
-isHome = false;
-isMenuOpen = false;
+ isHome = false;
+  isMenuOpen = false;
+  dropdownOpen = false;
 
   constructor(private router: Router) {
     this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
+      .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
         this.isHome = event.urlAfterRedirects === '/' || event.url === '/home';
       });
+  }
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+
+  closeDropdown() {
+    this.dropdownOpen = false;
   }
 }

@@ -26,7 +26,7 @@
           <li class="relative group">
             <button class="text-pink-900 text-lg font-medium hover:text-[#d31c75] flex items-center">
               <span>Sites & Elements</span>
-              <i class="fa-solid fa-chevron-down ml-1 text-sm"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 ml-1"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
             </button>
             <ul class="absolute hidden group-hover:flex flex-col bg-white shadow-lg rounded-lg left-0  w-48 text-gray-800 border border-pink-200 overflow-hidden z-50 ">
               <li><a routerLink="/list" class="block px-4 py-2 hover:bg-[#ffe4ed]">Guideline</a></li>
@@ -40,13 +40,15 @@
           <!-- 🔍 Search -->
           <li>
             <button class="text-[#d31c75] text-xl hover:scale-110 transition-all">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" /></svg>
             </button>
           </li>
           <!-- 🌐 Language Dropdown -->
           <li class="relative group">
             <button class="text-[#d31c75] text-xl hover:scale-110 transition-all">
-              <i class="fa-solid fa-language"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM8.25 4.533A9.72 9.72 0 006 6.75v.263l3.303 3.303A5.983 5.983 0 018.25 4.533zM15.75 4.533A9.72 9.72 0 0118 6.75v.263l-3.303 3.303A5.983 5.983 0 0015.75 4.533zM4.5 12a7.5 7.5 0 011.148-3.986l2.623 2.623A6.01 6.01 0 008.25 12H4.5zm1.148 3.986l2.623-2.623A6.01 6.01 0 018.25 12h3.75a.75.75 0 010 1.5H8.25a4.5 4.5 0 00-2.602 7.123l-2.623-2.623A7.5 7.5 0 014.5 12zm13.852 3.986a7.5 7.5 0 01-1.148-3.986l-2.623-2.623A6.01 6.01 0 0015.75 12h3.75a.75.75 0 010 1.5h-3.75a4.5 4.5 0 002.602 7.123l2.623-2.623zM19.5 12a7.5 7.5 0 01-1.148 3.986l-2.623-2.623A6.01 6.01 0 0015.75 12h3.75z" clip-rule="evenodd" />
+              </svg>
             </button>
             <ul class="absolute hidden group-hover:flex flex-col bg-white shadow-lg rounded-lg right-0 mt-2 w-40 text-gray-800 border border-pink-200 overflow-hidden z-50">
               <li><a href="#" class="block px-4 py-2 hover:bg-[#ffe4ed]">English</a></li>
@@ -63,7 +65,8 @@
       class="md:hidden text-[#d31c75] text-3xl focus:outline-none"
       (click)="isMenuOpen = !isMenuOpen"
     >
-      <i [ngClass]="isMenuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+      <svg *ngIf="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+      <svg *ngIf="isMenuOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
     </button>
   </div>
   <!-- Mobile Dropdown Menu -->
@@ -77,7 +80,7 @@
       <li class="relative">
         <button (click)="toggleDropdown()" class="flex justify-between items-center w-full text-pink-900 text-lg font-medium hover:text-[#d31c75]">
           <span>Sites & Elements</span>
-          <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300" [class.rotate-180]="dropdownOpen"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 transition-transform duration-300" [class.rotate-180]="dropdownOpen"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
         </button>
         <div *ngIf="dropdownOpen" class="mt-2 flex flex-col bg-pink-50 border border-pink-200 rounded-lg shadow-md transition-all duration-300 overflow-hidden">
           <a routerLink="/guideline" class="block px-4 py-2 hover:bg-pink-100 hover:text-[#d31c75]" (click)="closeDropdown()">Guideline</a>
@@ -88,8 +91,8 @@
       <li><a routerLink="/criteria" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Criteria</a></li>
       <li><a routerLink="/member" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Members</a></li>
       <li><a routerLink="/events" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Events</a></li>
-      <li><a href="#" class="text-[#d31c75] font-medium"><i class="fa-solid fa-magnifying-glass"></i> Search</a></li>
-      <li><a href="#" class="text-[#d31c75] font-medium"><i class="fa-solid fa-language"></i> Language</a></li>
+      <li><a href="#" class="text-[#d31c75] font-medium flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 inline-block mr-1"><path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" /></svg> Search</a></li>
+      <li><a href="#" class="text-[#d31c75] font-medium flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 inline-block mr-1"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM8.25 4.533A9.72 9.72 0 006 6.75v.263l3.303 3.303A5.983 5.983 0 018.25 4.533zM15.75 4.533A9.72 9.72 0 0118 6.75v.263l-3.303 3.303A5.983 5.983 0 0015.75 4.533zM4.5 12a7.5 7.5 0 011.148-3.986l2.623 2.623A6.01 6.01 0 008.25 12H4.5zm1.148 3.986l2.623-2.623A6.01 6.01 0 018.25 12h3.75a.75.75 0 010 1.5H8.25a4.5 4.5 0 00-2.602 7.123l-2.623-2.623A7.5 7.5 0 014.5 12zm13.852 3.986a7.5 7.5 0 01-1.148-3.986l-2.623-2.623A6.01 6.01 0 0015.75 12h3.75a.75.75 0 010 1.5h-3.75a4.5 4.5 0 002.602 7.123l2.623-2.623zM19.5 12a7.5 7.5 0 01-1.148 3.986l-2.623-2.623A6.01 6.01 0 0015.75 12h3.75z" clip-rule="evenodd" /></svg> Language</a></li>
     </ul>
   </div>
 </header>

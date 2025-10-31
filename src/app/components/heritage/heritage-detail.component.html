@@ -1,0 +1,254 @@
+<!-- Filter Section -->
+
+
+<!-- Cards Section -->
+<app-banner
+  [gradientBackground]="config.gradientBackground"
+  [titleText]="config.title"
+  [titleText2]="config.subtitle">
+</app-banner>
+<!-- Detail Section -->
+
+<section class="py-8 sm:py-10 px-4 sm:px-8 lg:px-16 font-[Poppins] min-h-[80vh]" [ngClass]="config.bgColor">
+  <!-- Back Button -->
+  <button
+    class="mb-6 px-4 py-2 font-semibold rounded-lg shadow hover:brightness-110 transition"
+    [ngClass]="config.buttonBg + ' ' + config.buttonHover"
+  >
+    ← Back to Previous Page
+  </button>
+
+  <!-- Title & Paragraph -->
+  <div class="mb-8 ml-0 sm:ml-10 lg:ml-16">
+    <h1 class="text-2xl sm:text-4xl font-bold mb-3" [ngClass]="config.primaryColor">
+      Northeastern Artisan<br />
+      Cooperatives
+    </h1>
+    <p class="text-base sm:text-lg max-w-3xl" [ngClass]="config.textColor">
+      A global initiative dedicated to preserving and promoting cooperative cultural traditions that connect communities around the world, fostering the exchange of ancestral knowledge and sustainable practices.
+    </p>
+  </div>
+
+  <!-- Main Layout -->
+  <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 ml-0 sm:ml-10 lg:ml-16">
+
+    <!-- Image & Thumbnails -->
+    <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
+      <img
+        src="../../../assets/images/Maskgroup.png"
+        alt="Example Image"
+        class="w-[250px] sm:w-[320px] lg:w-[580px] rounded-lg shadow-lg"
+      />
+
+      <div class="flex flex-wrap justify-center lg:justify-start gap-3 mt-4">
+        <img class="w-20 h-20 object-cover rounded-lg" src="../../../assets/images/t1.png" alt="">
+        <img class="w-20 h-20 object-cover rounded-lg" src="../../../assets/images/t2.png" alt="">
+        <img class="w-20 h-20 object-cover rounded-lg" src="../../../assets/images/t3.png" alt="">
+        <img class="w-20 h-20 object-cover rounded-lg" src="../../../assets/images/t4.png" alt="">
+      </div>
+    </div>
+
+    <!-- Info Card -->
+    <div
+      class="w-full lg:max-w-sm bg-white border border-l-4 border-gray-200 rounded-xl p-5 hover:shadow-md transition duration-300"
+      [ngClass]="config.borderColor"
+    >
+      <div class="space-y-3 text-sm text-gray-700">
+        <div class="flex items-center gap-2">
+          <img class="w-8 h-8" src="../../../assets/images/cntry.png" alt="Brazil Logo" />
+          <span class="font-medium">Brazil</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5" [ngClass]="config.secondaryColor"><path d="M10 3.75a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75z" /><path fill-rule="evenodd" d="M4.5 6.5a3.5 3.5 0 117 0 3.5 3.5 0 01-7 0zM5.25 6.5a2.75 2.75 0 105.5 0 2.75 2.75 0 00-5.5 0z" /><path d="M10.63 15.354a.75.75 0 01-.63-.63V12.5a.75.75 0 011.5 0v2.224a.75.75 0 01-.87.73z" /><path d="M8.25 12.5a.75.75 0 011.5 0v2.224a.75.75 0 01-1.5 0V12.5z" /><path fill-rule="evenodd" d="M5 10a.75.75 0 01.75.75v.01a.75.75 0 01-1.5 0V10.75A.75.75 0 015 10zM6.5 12.5a.75.75 0 00-1.5 0v.01a.75.75 0 001.5 0V12.5zM5 14a.75.75 0 01.75.75v.01a.75.75 0 01-1.5 0V14.75A.75.75 0 015 14zM15 10a.75.75 0 01.75.75v.01a.75.75 0 01-1.5 0V10.75A.75.75 0 0115 10zm-1.5 2.5a.75.75 0 00-1.5 0v.01a.75.75 0 001.5 0V12.5zM15 14a.75.75 0 01.75.75v.01a.75.75 0 01-1.5 0V14.75A.75.75 0 0115 14z" /></svg>
+          <span class="font-medium">Craftsmanship</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5" [ngClass]="config.primaryColor"><path fill-rule="evenodd" d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zM4.5 6.75a1.25 1.25 0 011.25-1.25h8.5a1.25 1.25 0 011.25 1.25v8.5a1.25 1.25 0 01-1.25 1.25h-8.5a1.25 1.25 0 01-1.25-1.25v-8.5z" clip-rule="evenodd" /></svg>
+          <span class="font-medium">2010</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-red-500"><path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.976 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.757.433c.1.052.194.101.282.14l.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" clip-rule="evenodd" /></svg>
+          <span class="font-medium">-8.706º S, -34.156º W</span>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="text-center mt-5">
+        <button
+          class="rounded-md px-4 py-1.5 text-xs font-medium transition"
+          [ngClass]="config.buttonBg + ' ' + config.buttonHover"
+        >
+          View More
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="py-8 sm:py-10 px-4 sm:px-6 font-[Poppins]" [ngClass]="config.bgColor">
+  <div
+    class="flex flex-col md:flex-row items-start justify-center gap-8 md:gap-10 max-w-6xl mx-auto lg:ml-[70px]"
+  >
+    <!-- Left -->
+    <div class="md:w-1/2">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4 leading-tight" [ngClass]="config.primaryColor">
+        History and Context
+      </h2>
+      <p class="leading-relaxed text-sm sm:text-base" [ngClass]="config.textColor">
+        The artisan cooperatives of Brazil's Northeast represent a unique form of
+        social and economic organization dating back to the colonial period. Over the
+        centuries, these communities have developed a cooperative system based on
+        solidarity, knowledge sharing, and the preservation of traditional artisanal
+        techniques.
+      </p>
+      <p class="leading-relaxed text-sm sm:text-base mt-3" [ngClass]="config.textColor">
+        The cooperative tradition emerged from the need for small artisans to organize
+        in order to face the region's economic and social challenges. By joining forces,
+        they not only survived but also thrived, keeping cultural traditions alive that
+        might otherwise have been lost.
+      </p>
+    </div>
+
+    <!-- Right -->
+    <div class="md:w-1/2 flex flex-col items-center gap-4">
+      <p class="font-medium mb-2" [ngClass]="config.primaryColor">You Might Like</p>
+      <div
+        class="flex items-center gap-4 bg-white shadow-md rounded-lg p-4 w-full max-w-xs hover:shadow-lg transition transform hover:-translate-y-1"
+        [ngClass]="config.borderColor"
+      >
+        <img class="w-12 h-12 rounded-md" src="../../../assets/images/t1.png" alt="">
+        <div>
+          <h4 class="font-semibold text-gray-800 text-sm">Northeastern Artisan Cooperatives</h4>
+          <p class="text-xs text-gray-500">Brazil</p>
+        </div>
+      </div>
+
+      <div
+        class="flex items-center gap-4 bg-white shadow-md rounded-lg p-4 w-full max-w-xs hover:shadow-lg transition transform hover:-translate-y-1"
+        [ngClass]="config.borderColor"
+      >
+        <img class="w-12 h-12 rounded-md" src="../../../assets/images/t2.png" alt="">
+        <div>
+          <h4 class="font-semibold text-gray-800 text-sm">Rural Cooperative Traditions</h4>
+          <p class="text-xs text-gray-500">Brazil</p>
+        </div>
+      </div>
+
+      <div
+        class="flex items-center gap-4 bg-white shadow-md rounded-lg p-4 w-full max-w-xs hover:shadow-lg transition transform hover:-translate-y-1"
+        [ngClass]="config.borderColor"
+      >
+        <img class="w-12 h-12 rounded-md" src="../../../assets/images/t3.png" alt="">
+        <div>
+          <h4 class="font-semibold text-gray-800 text-sm">Cooperative Weaving Techniques</h4>
+          <p class="text-xs text-gray-500">Brazil</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-10 px-6 font-[Poppins]" [ngClass]="config.bgColor">
+  <div class="max-w-6xl mx-auto ml-20 mb-8">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-3" [ngClass]="config.primaryColor">Criterion A</h2>
+  </div>
+
+  <!-- Two Boxes Inline -->
+  <div class="flex flex-col sm:flex-row ml-20 gap-6 mt-6">
+    <!-- Box 1 -->
+    <div
+      class="rounded-xl shadow-md hover:shadow-lg transition p-6 w-[280px] sm:w-[300px] text-center"
+      [ngClass]="config.primaryColor"
+    >
+      <h4 class="font-semibold text-lg mb-2">Cultural Value</h4>
+      <p class="text-sm opacity-90">
+        Reflects the traditional craftsmanship and artistic expressions that define local identity.
+      </p>
+    </div>
+
+    <!-- Box 2 -->
+    <div
+      class="rounded-xl shadow-md hover:shadow-lg transition p-6 w-[280px] sm:w-[300px] text-center"
+      [ngClass]="config.secondaryColor"
+    >
+      <h4 class="font-semibold text-lg mb-2">Community Impact</h4>
+      <p class="text-sm opacity-90">
+        Strengthens social bonds and fosters cooperative values within artisan groups.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-10 px-6 font-[Poppins]" [ngClass]="config.bgColor">
+  <div
+    class="flex flex-col lg:flex-row items-center justify-between max-w-6xl mx-auto lg:ml-[20px] gap-10"
+  >
+    <!-- Left: Text -->
+    <div class="lg:w-1/2">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4" [ngClass]="config.primaryColor">
+        The Essence of Tradition
+      </h2>
+      <p class="leading-relaxed text-sm sm:text-base" [ngClass]="config.textColor">
+        The artisans' work embodies centuries of inherited knowledge passed down through
+        generations. Each creation reflects the cultural identity, resilience, and deep
+        connection of the community to their natural environment.
+      </p>
+      <p class="leading-relaxed text-sm sm:text-base mt-3" [ngClass]="config.textColor">
+        Their craftsmanship not only sustains livelihoods but also preserves a legacy of
+        creativity and cooperation that continues to inspire new generations.
+      </p>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="lg:w-1/2 flex justify-center lg:justify-end">
+      <img
+        src="../../../assets/images/Maskgroup.png"
+        alt="Traditional Artisans"
+        class="w-[260px] sm:w-[320px] lg:w-[380px] rounded-xl shadow-lg hover:scale-105 transition duration-300"
+      />
+    </div>
+  </div>
+
+</section>
+
+<section class="py-10 px-4 sm:px-8 lg:px-16 font-[Poppins] min-h-[60vh]" [ngClass]="config.bgColor">
+  <!-- Title -->
+  <h2 class="text-2xl sm:text-4xl font-bold mb-6 ml-0 sm:ml-10 lg:ml-16" [ngClass]="config.primaryColor">
+    Learn More
+  </h2>
+
+  <!-- Points Section -->
+  <div class="ml-0 sm:ml-10 lg:ml-16 flex flex-col sm:flex-row gap-6 sm:gap-8">
+
+    <!-- Item 1 -->
+    <div class="flex items-start gap-4 bg-white rounded-xl shadow-sm hover:shadow-md transition p-4 w-full sm:w-1/3 border-l-4" [ngClass]="config.borderColor">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6 mt-1" [ngClass]="config.secondaryColor"><path d="M3.25 4A2.25 2.25 0 001 6.25v7.5A2.25 2.25 0 003.25 16h7.5A2.25 2.25 0 0013 13.75v-7.5A2.25 2.25 0 0010.75 4h-7.5zM14.5 5.5a.5.5 0 01.5.5v8a.5.5 0 01-1 0v-8a.5.5 0 01.5-.5z" /></svg>
+      <div>
+        <h3 class="text-lg font-semibold text-gray-800">Documentary on Cooperatives</h3>
+        <p class="text-gray-600 text-sm mt-1">Explore visual stories showcasing the heritage and craftsmanship of Brazilian cooperatives.</p>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="flex items-start gap-4 bg-white rounded-xl shadow-sm hover:shadow-md transition p-4 w-full sm:w-1/3 border-l-4" [ngClass]="config.borderColor">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6 mt-1" [ngClass]="config.secondaryColor"><path d="M8.5 9.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1zM7 9.5a.5.5 0 00-.5-.5h-1a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1zM11 9.5a.5.5 0 00-.5-.5h-1a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1z" /><path fill-rule="evenodd" d="M2 3a1 1 0 011-1h14a1 1 0 011 1v1.5a.5.5 0 01-.5.5h-2.5a.5.5 0 01-.5-.5V3H4v1.5a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5V3zm1 10.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1zm3.5.5a.5.5 0 00-.5-.5h-1a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1zM9 13.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1zm3.5.5a.5.5 0 00-.5-.5h-1a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1zM15 13.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1z" clip-rule="evenodd" /><path d="M4 18a1 1 0 001 1h10a1 1 0 001-1v-1a1 1 0 00-1-1H5a1 1 0 00-1 1v1z" /></svg>
+      <div>
+        <h3 class="text-lg font-semibold text-gray-800">Academic Study – Federal University</h3>
+        <p class="text-gray-600 text-sm mt-1">Research insights from the Federal University examining cooperative impact in rural Brazil.</p>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="flex items-start gap-4 bg-white rounded-xl shadow-sm hover:shadow-md transition p-4 w-full sm:w-1/3 border-l-4" [ngClass]="config.borderColor">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6 mt-1" [ngClass]="config.primaryColor"><path fill-rule="evenodd" d="M2 10a8 8 0 1116 0 8 8 0 01-16 0zm1.5 0a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z" clip-rule="evenodd" /><path d="M10 2.25a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 2.25zM3.5 10a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM10 17.75a.75.75 0 01-.75-.75v-1.5a.75.75 0 011.5 0v1.5a.75.75 0 01-.75.75zM16.5 10a.75.75 0 01-.75.75h-1.5a.75.75 0 010 1.5h1.5a.75.75 0 01.75-.75z" /></svg>
+      <div>
+        <h3 class="text-lg font-semibold text-gray-800">Official Cooperatives Portal</h3>
+        <p class="text-gray-600 text-sm mt-1">Visit Brazil's national portal for cooperatives, showcasing official data and development programs.</p>
+      </div>
+    </div>
+
+  </div>
+</section>

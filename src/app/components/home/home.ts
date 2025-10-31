@@ -20,9 +20,13 @@ interface HeritageSection {
 })
 export class Home implements OnInit {
   cards: any[] = [];
+
+ inTangibleButtons: string[] = [];
+
   tangibleButtons: string[] = [];
   sections: any[] = [];
   selectedSection: any = null;
+  selectedCard: any = null;
   services2: any[] = [];
 
   constructor(private homeService: HomeService) {}
@@ -31,6 +35,7 @@ export class Home implements OnInit {
     // Load data from service (DRY)
     this.cards = this.homeService.getHomeCards();
     this.tangibleButtons = this.homeService.getTangibleButtons();
+    this.inTangibleButtons = this.homeService.getInTangibleButtons();
     this.sections = this.homeService.getSectionData();
      // ✅ Load your new DRY services for "Principles for Identifying Cooperative Cultural Heritage"
     this.services2 = this.homeService.getPrinciplesServices();
@@ -43,6 +48,14 @@ export class Home implements OnInit {
 
   closeModal(): void {
     this.selectedSection = null;
+  }
+
+  openCardModal(card: any): void {
+    this.selectedCard = card;
+  }
+
+  closeCardModal(): void {
+    this.selectedCard = null;
   }
 
 
@@ -84,7 +97,7 @@ along with a Statement of Recognition, in a post launch (November 2025) exercise
       `,
     },
     {
-      title: '',
+      title: 'Unique Marque for Cooperatives Cultural Heritage',
       icon: '../../../assets/images/Group 50.png',
       moreText: `
         <p>This symbolizes unity, collaboration, and the shared strength that holds cooperatives together globally.</p>

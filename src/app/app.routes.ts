@@ -54,7 +54,7 @@ export const routes: Routes = [
             }
         }
     },
-    {path:'coomingSoon',component:CoomingsoonComponent},
+    {path:'comingSoon',component:CoomingsoonComponent},
     {path:'criteria',component:CriteriaComponent},
     {path:'nomination',component:NominationComponent},
     {path:'member',component:MembersComponent}

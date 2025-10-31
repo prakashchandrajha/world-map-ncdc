@@ -307,8 +307,21 @@ The Cooperative Principles translate these values into practices that carry forw
   </div>
 </section>
 
-
-
-
-
-
+<section class="bg-white py-16 font-[Poppins]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#7a004a]">
+        Criteria (Version 1.0 – 2025)
+      </h2>
+      <p class="text-gray-600 max-w-3xl mx-auto mt-4">
+        The following criteria are used to identify Cooperative Cultural Heritage. Please note that this list is based on the provided information and may be incomplete (criteria 6-10 are missing).
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let criterion of icaCchCriteria" class="bg-gray-50 rounded-lg shadow-lg p-6 border-l-4 border-[#7a004a] hover:shadow-xl transition-shadow duration-300">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">{{ criterion.title }}</h3>
+        <p class="text-gray-700 leading-relaxed">{{ criterion.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

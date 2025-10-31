@@ -11,8 +11,10 @@ import { CriteriaService } from '../../services/criteria.service';
 })
 export class CriteriaComponent {
   COOPERATIVE_PRINCIPLES: any[] = [];
+  icaCchCriteria: any[] = [];
 
   constructor(private criteriaService: CriteriaService) {
     this.COOPERATIVE_PRINCIPLES = this.criteriaService.getCooperativePrinciples();
+    this.icaCchCriteria = this.criteriaService.getIcaCchCriteria();
   }
 }

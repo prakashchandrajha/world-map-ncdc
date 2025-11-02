@@ -10,6 +10,8 @@ import { CoomingsoonComponent } from './components/coomingsoon/coomingsoon.compo
 import { CriteriaComponent } from './components/criteria/criteria.component';
 import { NominationComponent } from './components/nomination/nomination.component';
 import { MembersComponent } from './components/members/members.component';
+import { StandardsComponent } from './components/standards/standards.component';
+import { EventsComponent } from './components/events/events.component';
 
 export const routes: Routes = [
     {path:'',component:Home},
@@ -17,6 +19,9 @@ export const routes: Routes = [
     {path:'list',component:TheList},
     {path:'tangible',component:Tangible},
     {path:'intangible',component:Intangible},
+    {path:'standards',component:StandardsComponent},
+    {path:'events',component:EventsComponent},
+
     {
         path:'aboutTangiblePage',
         component:HeritageDetailComponent,

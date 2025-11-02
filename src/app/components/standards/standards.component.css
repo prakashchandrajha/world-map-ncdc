@@ -1,0 +1,122 @@
+/* cooperative-principles.component.scss */
+.principles-container {
+  font-family: 'Poppins', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #7a004a;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.principle-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(122, 0, 74, 0.05), 0 1px 3px rgba(122, 0, 74, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(122, 0, 74, 0.1), 0 6px 6px rgba(122, 0, 74, 0.05);
+  }
+}
+
+.card-header {
+  background: linear-gradient(135deg, #7a004a, #9c005d);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+  .principle-number {
+    background: white;
+    color: #7a004a;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  
+  .principle-title {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+  }
+}
+
+.card-content {
+  padding: 1.5rem;
+  
+  .principle-description {
+    color: #5d6d7e;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-section h1 {
+    font-size: 2rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    
+    .principle-title {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .principles-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .header-section {
+    margin-bottom: 2rem;
+    
+    h1 {
+      font-size: 1.75rem;
+    }
+  }
+}

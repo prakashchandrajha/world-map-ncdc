@@ -5,6 +5,7 @@ import { TheList } from './components/the-list/the-list';
 import { Tangible } from './components/tangible/tangible';
 import { Intangible } from './components/intangible/intangible';
 import { HeritageDetailComponent } from './components/heritage/heritage-detail.component';
+import { CooperativeDetailComponent } from './components/cooperative-detail/cooperative-detail.component';
 import { CoomingsoonComponent } from './components/coomingsoon/coomingsoon.component';
 import { CriteriaComponent } from './components/criteria/criteria.component';
 import { NominationComponent } from './components/nomination/nomination.component';
@@ -57,7 +58,8 @@ export const routes: Routes = [
     {path:'comingSoon',component:CoomingsoonComponent},
     {path:'criteria',component:CriteriaComponent},
     {path:'nomination',component:NominationComponent},
-    {path:'member',component:MembersComponent}
+    {path:'member',component:MembersComponent},
+    {path:'cooperative/:id',component:CooperativeDetailComponent}
 
 
 ];

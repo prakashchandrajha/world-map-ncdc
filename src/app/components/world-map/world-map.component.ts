@@ -110,7 +110,7 @@ export class WorldMapComponent implements OnInit {
           const button = document.querySelector(`[data-id="${location.id}"]`);
           if (button) {
             button.addEventListener('click', () => {
-              this.router.navigate(['/heritage-site', location.id]);
+              this.router.navigate(['/cooperative', location.id]);
             });
           }
         }, 100);

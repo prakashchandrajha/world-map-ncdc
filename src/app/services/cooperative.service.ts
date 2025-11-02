@@ -5,8 +5,7 @@ export interface CooperativeDetails {
   id: string;
   name: string;
   description: string; // HTML string for rich text
-  images: string[]; // Array of image URLs
-  officialUrl: string;
+  
   styles?: { [key: string]: string }; // Optional custom styles
   additionalFields?: any; // For extra data
 }
@@ -708,9 +707,153 @@ ul
 -->
 </style>
       `,
-      images: ['https://cdn-imgix.headout.com/tour/7064/TOUR-IMAGE/b2c74200-8da7-439a-95b6-9cad1aa18742-4445-dubai-img-worlds-of-adventure-tickets-02.jpeg?auto=format&w=600&q=90&fit=clip'],
-      officialUrl: 'https://www.desjardins.com/ca/about-us/desjardins/who-we-are/our-history-museum/visiting-maison-alphonse-desjardins/index.jsp'
     },
+    {
+      id: 'amal-cooperative-tamanar',
+      name: 'Al – Amal and other Women led cooperatives in the Argan Oil Sector in Morocco',
+      description: `
+      <section class="Al – Amal and other Women led cooperatives in the Argan Oil Sector in Morocco
+">
+
+<h1><a name="_Toc212818709"></a><a name="_Toc212894127">2.  Al – Amal and other
+Women led cooperatives in the Argan Oil Sector in Morocco</a></h1>
+
+<p class=MsoNormal><span style='font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Calibri",sans-serif'><img
+border=0 width=659 height=494 id="Picture 81" src="assets/images/sites_files/image002.jpg"> Photo
+courtesy </span><a href="https://worldartisanguild.com/women-s-co-op"><span
+style='font-family:"Calibri",sans-serif'>https://worldartisanguild.com/women-s-co-op</span></a><span
+style='font-family:"Calibri",sans-serif'> </span></p>
+
+<p class=MsoNormal><span style='font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<h2><strong><span style='font-family:"Aptos Display",sans-serif;font-weight:
+normal'>Seeds of Hope: Women, Argan, and the Cooperative Spirit of Morocco</span></strong></h2>
+
+<h3><strong><span style='font-weight:normal'>Where the Argan Trees Whisper</span></strong></h3>
+
+<p>In the sun-sculpted landscapes of southwestern Morocco, where ancient argan
+trees trace the contours of desert hills, a quiet revolution began. The argan
+tree, a symbol of endurance, had long been the lifeblood of these arid landsits
+oil prized for centuries for nourishment, healing, and beauty. Yet for
+generations, the women who harvested and cracked its hard nuts labored in
+silence, their work unrecognized and their potential untapped.</p>
+
+<p>Then, in the mid-1990s, under the guidance and mentorship of <strong><span
+style='font-weight:normal'>Professor Zoubida Charrouf</span></strong>, a new
+idea took root in the small town of <strong><span style='font-weight:normal'>Tamanar</span></strong>.
+The <strong><span style='font-weight:normal'>Amal Cooperative</span></strong>its
+name meaning <em>“Hope”</em>was born. It became the <strong><span
+style='font-weight:normal'>first argan oil cooperative fully managed by women</span></strong>,
+transforming an ancestral practice into a symbol of empowerment and
+sustainability.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3><strong><span style='font-weight:normal'>Amal Cooperative: The Dawn of a
+Movement</span></strong></h3>
+
+<p>Amal began as a modest gathering of women determined to turn their skill
+into self-sufficiency. Through training, fair wages, and shared ownership, they
+transformed their lives and, in time, their entire community. What had once
+been an informal cottage activity evolved into a model of ethical production
+and social solidarity.</p>
+
+<p>Visitors to Tamanar today can walk through the cooperative’s sunlit
+workrooms, where women sit in a rhythmic harmonycracking argan nuts, pressing
+oil, bottling Morocco’s famed <em>“liquid gold.”</em> Each gesture is both
+ancient and newly empowered, a dance of patience, precision, and pride. Amal’s
+success inspired dozens of similar initiatives, proving that economic equality
+could grow from the very soil of tradition.</p>
+
+<p>Amal’s story also lives on through its <strong><span style='font-weight:
+normal'>sister cooperatives in Tidzi and Mesti</span></strong>, spreading its
+mission across the argan forest. Together, they form a living network of
+resiliencewomen working for women, protecting their ecosystem, and securing a
+sustainable future for their families.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3><strong><span style='font-weight:normal'>Targanine: A Beacon of Quality and
+Ethics</span></strong></h3>
+
+<p>Standing alongside Amal is <strong><span style='font-weight:normal'>Targanine</span></strong>,
+a pioneering federation of women’s cooperatives in the Essaouira region.
+Targanine gathers hundreds of women from surrounding villages, united by a
+commitment to quality, traceability, and environmental stewardship.</p>
+
+<p>Here, fair trade principles meet ecological awareness. The cooperative
+ensures that every bottle of argan oil represents not exploitation, but
+empowermentproviding income, preserving biodiversity, and reinforcing the role
+of women as stewards of their land. Through Targanine, Moroccan argan oil
+gained international recognition not just for its purity, but for the human
+values infused within it.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3><strong><span style='font-weight:normal'>Al Amal of Ighrem: Hope in the
+Anti-Atlas</span></strong></h3>
+
+<p>Further south, beneath the ochre slopes of the Anti-Atlas Mountains in <strong><span
+style='font-weight:normal'>Ighrem</span></strong>, another chapter unfolded.
+Founded in <strong><span style='font-weight:normal'>1991</span></strong>, the <strong><span
+style='font-weight:normal'>Al Amal Cooperative</span></strong> emerged from a
+community of predominantly Berber women living amid vast argan groves
+shimmering under desert light.</p>
+
+<p>Before its creation, opportunities were few. Women carried the weight of
+domestic life without access to education or income. But through the
+cooperative, they found both livelihood and voice. The production and trade of
+argan oil became a means to build <strong><span style='font-weight:normal'>confidence,
+education, and solidarity</span></strong>a pathway from dependency to dignity.</p>
+
+<p>Today, Al Amal stands as proof that even in the most remote villages, <strong><span
+style='font-weight:normal'>collective action can transform circumstance into
+strength</span></strong>. Families have been uplifted, children educated, and
+the once-quiet village economy now hums with activity and pride.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3><strong><span style='font-weight:normal'>The Argan Tree’s Living Legacy</span></strong></h3>
+
+<p>Across Tamanar, Essaouira, and Ighrem, the argan cooperatives are more than
+producersthey are custodians of a legacy. They embody the balance between people
+and nature, tradition and innovation, self-reliance and community care.</p>
+
+<p>Through the hands of these women, the argan tree continues to whisper its
+timeless message: that <strong><span style='font-weight:normal'>hope, when
+shared, becomes power</span></strong>and from the heart of the Moroccan desert,
+that power can bloom into prosperity.</p>
+
+<p class=MsoNormal><span style='font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Calibri",sans-serif'>Video </span><a
+href="https://www.youtube.com/watch?v=w6nOO-KJQ44"><span style='font-family:
+"Calibri",sans-serif'>https://www.youtube.com/watch?v=w6nOO-KJQ44</span></a><span
+style='font-family:"Calibri",sans-serif'> </span></p>
+
+<p class=MsoNormal><span style='font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Calibri",sans-serif'>Link to
+UNESCO Inscription : Argan, practices and know-how concerning the argan tree </span><a
+href="https://ich.unesco.org/en/RL/argan-practices-and-know-how-concerning-the-argan-tree-00955"><span
+style='font-family:"Calibri",sans-serif'>https://ich.unesco.org/en/RL/argan-practices-and-know-how-concerning-the-argan-tree-00955</span></a><span
+style='font-family:"Calibri",sans-serif'> </span></p>
+
+<p class=MsoNormal><span style='font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Calibri",sans-serif'>Link to UN
+Day of Argan Oil - <a href="https://www.un.org/en/observances/argania-day">https://www.un.org/en/observances/argania-day</a>
+</span></p>
+</section>
+
+      `,
+    },
+
+    
 
   ];
 

@@ -59,7 +59,7 @@ export class WorldMapComponent implements OnInit {
 
     // Add markers for various locations
     const locations = [
-  { id: 'maison-alphonse-desjardins', name: 'Maison Alphonse-Desjardins', lat: 46.80942, lng: -71.18206, country: 'Canada' },
+  { id: 'maison-alphonse-desjardins', name: 'Maison Alphonse-Desjardins', lat: 46.80942, lng: -71.18206, country: 'Canada',img:'/assets/images/11.png' },
   { id: 'amal-cooperative-tamanar', name: 'Amal Cooperative (Women’s cooperatives in the Argan sector)', lat: 31.4000, lng: -9.7000, country: 'Morocco' },
   { id: 'amul-dairy', name: 'Amul Dairy (Kaira District Milk Union)', lat: 22.55267, lng: 72.9715, country: 'India' },
   { id: 'americas-credit-union-museum', name: 'America’s Credit Union Museum', lat: 42.9933, lng: -71.4758, country: 'USA' },
@@ -88,13 +88,12 @@ export class WorldMapComponent implements OnInit {
         .addTo(this.map!)
         .bindPopup(`
          <div class=\"custom-popup bg-white p-4 rounded-lg shadow-lg max-w-sm\">
-  <h3 class=\"text-xl font-semibold text-gray-800 mb-2\">${location.name}</h3>
-  <p class=\"text-sm text-gray-600 mb-1\"><span class=\"font-medium text-gray-700\">Country:</span> ${location.country}</p>
+  <h3 class="text-xl font-semibold text-gray-800 mb-2">${location.name}</h3>
+<p class="text-sm text-gray-600 mb-1">
+  <span class="font-medium text-gray-700">Country:</span> ${location.country}
+</p>
+<img src="${location.img}" alt="${location.name}" class="w-full h-32 object-cover rounded-lg" />
 
-  <p class=\"text-sm text-gray-600 mb-4\">
-    <span class=\"font-medium text-gray-700\">Coordinates:</span> 
-    ${location.lat.toFixed(4)}, ${location.lng.toFixed(4)}
-  </p>
   <button 
     class=\"view-details-btn mt-4 bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded transition duration-300 ease-in-out\"
     data-id=\"${location.id}\"

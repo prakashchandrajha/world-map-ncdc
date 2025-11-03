@@ -86,9 +86,9 @@
                 <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM8.25 4.533A9.72 9.72 0 006 6.75v.263l3.303 3.303A5.983 5.983 0 018.25 4.533zM15.75 4.533A9.72 9.72 0 0118 6.75v.263l-3.303 3.303A5.983 5.983 0 0015.75 4.533zM4.5 12a7.5 7.5 0 011.148-3.986l2.623 2.623A6.01 6.01 0 008.25 12H4.5zm1.148 3.986l2.623-2.623A6.01 6.01 0 018.25 12h3.75a.75.75 0 010 1.5H8.25a4.5 4.5 0 00-2.602 7.123l-2.623-2.623A7.5 7.5 0 014.5 12zm13.852 3.986a7.5 7.5 0 01-1.148-3.986l-2.623-2.623A6.01 6.01 0 0015.75 12h3.75a.75.75 0 010 1.5h-3.75a4.5 4.5 0 002.602 7.123l2.623-2.623zM19.5 12a7.5 7.5 0 01-1.148 3.986l-2.623-2.623A6.01 6.01 0 0015.75 12h3.75z" clip-rule="evenodd" />
               </svg>
             </button>
-            <ul class="absolute hidden group-hover:flex flex-col bg-white shadow-lg rounded-lg right-0 mt-2 w-40 text-gray-800 border border-pink-200 overflow-hidden z-50">
-              <li><a href="#" (click)="switchLanguage('en')" class="block px-4 py-2 hover:bg-[#ffe4ed]">English</a></li>
-              <li><a href="#" (click)="switchLanguage('fr')" class="block px-4 py-2 hover:bg-[#ffe4ed]">Français</a></li>
+            <ul class="absolute hidden group-hover:flex flex-col bg-white shadow-lg rounded-lg right-0  w-40 text-gray-800 border border-pink-200 overflow-hidden z-50">
+              <li><a href="#" (click)="switchLanguage('en'); $event.preventDefault()" class="block px-4 py-2 hover:bg-[#ffe4ed]">English</a></li>
+              <li><a href="#" (click)="switchLanguage('fr'); $event.preventDefault()" class="block px-4 py-2 hover:bg-[#ffe4ed]">Français</a></li>
             </ul>
           </li>
         </ul>

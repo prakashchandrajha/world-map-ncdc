@@ -1,0 +1,84 @@
+{
+    "home": {
+      "title": "Préserver et célébrer le patrimoine culturel coopératif – Sites, traditions et pratiques qui relient les communautés du monde entier à travers les générations.",
+      "explore": "Explorer la carte",
+      "whatIs": {
+        "title": "Qu’est-ce que le patrimoine culturel coopératif?",
+        "desc": "Le patrimoine culturel coopératif (PCC) désigne le patrimoine matériel et immatériel créé, entretenu et transmis par les organisations coopératives. Il comprend un large éventail d’expressions culturelles, de la conception architecturale des bâtiments coopératifs aux chansons, histoires et traditions transmises de génération en génération de membres de coopératives. Le PCC est un patrimoine vivant en constante évolution, et il joue un rôle important dans la formation de l’identité des communautés coopératives du monde entier.",
+        "readMore": "En savoir plus"
+      },
+      "stats": {
+        "countries": "Des pays",
+        "sites": "Des sites",
+        "moreToCome": "Plus à venir!"
+      },
+      "heritage": {
+        "tangible": {
+          "title": "Patrimoine matériel de la coopération",
+          "desc": "Le patrimoine matériel comprend les artefacts et les sites physiques associés à l’histoire du mouvement coopératif. Cela peut inclure tout, du premier magasin coopératif au siège social moderne d’une fédération coopérative. Ces sites et artefacts fournissent un lien tangible avec le passé et aident à préserver la mémoire du mouvement coopératif pour les générations futures.",
+          "buttons": [
+            "Monuments",
+            "Musées",
+            "Bibliothèques",
+            "Archives",
+            "Artefacts"
+          ],
+          "readMore": "En savoir plus"
+        },
+        "intangible": {
+          "title": "Patrimoine immatériel de la coopération",
+          "desc": "Le patrimoine immatériel comprend les traditions, les pratiques et les expressions de la culture qui sont transmises de génération en génération de membres de coopératives. Cela peut inclure tout, des chansons et des histoires racontées sur le mouvement coopératif aux structures de gouvernance et aux processus décisionnels uniques utilisés par les coopératives. Le patrimoine immatériel est un patrimoine vivant en constante évolution, et il joue un rôle important dans la formation de l’identité des communautés coopératives du monde entier.",
+          "buttons": [
+            "Rituels",
+            "Festivals",
+            "Pratiques sociales",
+            "Traditions orales",
+            "Arts du spectacle"
+          ],
+          "readMore": "À venir en 2026"
+        }
+      },
+      "principles": {
+        "title": "Principes d’identification du patrimoine culturel coopératif",
+        "desc": "Les critères et les premières normes (2025) utilisés pour l’identification du patrimoine culturel coopératif.",
+        "readMore": "En savoir plus",
+        "modal": {
+          "title": "Principes d’identification du patrimoine culturel coopératif",
+          "text": "Un ensemble de treize normes internationales sur le patrimoine culturel coopératif a été élaboré par le groupe de travail de l’ACI sur le PCC à l’automne 2025. Ces normes, les premières du genre, s’appuieront sur les expériences jusqu’en 2026, date à laquelle l’ACI vise à répertorier au moins 50 sites du PCC et 15 éléments immatériels du PCC (à l’aide d’un ensemble de critères distincts) de toutes les régions, représentant tous les secteurs de l’ACI, sélectionnés dans le cadre d’un processus de nomination, ouvert aux membres de l’ACI et à leurs mandants. Un label unique ACI-PCC sera accordé aux sites sélectionnés qui répondent aux 13 critères ainsi qu’une déclaration de reconnaissance, dans un exercice post-lancement (novembre 2025).",
+          "link": "Accéder à la Charte et aux normes de l’ACI-PCC (version 1.0 – 2025)",
+          "charter": {
+            "title": "Charte sur la reconnaissance des sites du patrimoine culturel coopératif",
+            "preamble": {
+              "title": "Préambule",
+              "p1": "Reconnaissant que les coopératives ne sont pas seulement des entreprises, mais aussi des vecteurs de culture, d’histoire et d’identité, cette Charte établit un cadre pour la reconnaissance et la sauvegarde des sites du patrimoine culturel coopératif.",
+              "p2": "Ces critères visent à garantir que le patrimoine coopératif est préservé, célébré et intégré dans des récits culturels plus larges tout en continuant à inspirer les générations présentes et futures conformément aux valeurs de démocratie, d’équité, de solidarité et de durabilité.",
+              "p3": "Cette Charte affirme l’engagement du mouvement coopératif à reconnaître, préserver et promouvoir son patrimoine culturel. En adoptant ces critères, les sites du patrimoine coopératif deviendront des symboles vivants de solidarité, d’éducation et de coopération internationale."
+            }
+          }
+        }
+      },
+      "services": [
+        {
+          "title": "Identité coopérative internationale",
+          "moreText": "<p>Un ensemble de treize normes internationales sur le patrimoine culturel coopératif a été élaboré par le groupe de travail de l’ACI sur le PCC à l’automne 2025. Ces normes, les premières du genre, s’appuieront sur les expériences jusqu’en 2026, date à laquelle l’ACI vise à répertorier au moins 50 sites du PCC et 15 éléments immatériels du PCC (à l’aide d’un ensemble de critères distincts) de toutes les régions, représentant tous les secteurs de l’ACI, sélectionnés dans le cadre d’un processus de nomination, ouvert aux membres de l’ACI et à leurs mandants. Un label unique ACI-PCC sera accordé aux sites sélectionnés qui répondent aux 13 critères ainsi qu’une déclaration de reconnaissance, dans un exercice post-lancement (novembre 2025).</p>"
+        },
+        {
+          "title": "Importance culturelle et héritage",
+          "moreText": "<p>Cela représente l’impact culturel et le riche héritage laissé par les mouvements coopératifs dans diverses communautés.</p>"
+        },
+        {
+          "title": "Transmission intergénérationnelle",
+          "moreText": "<p>Les connaissances et les valeurs coopératives sont transmises de génération en génération, garantissant ainsi la durabilité et la pertinence à long terme.</p>"
+        },
+        {
+          "title": "Continuité innovante et inclusive",
+          "moreText": "<p>L’innovation et l’inclusivité stimulent la croissance des coopératives tout en maintenant l’équité et un objectif commun.</p>"
+        },
+        {
+          "title": "Marque unique pour le patrimoine culturel des coopératives",
+          "moreText": "<p>Cela symbolise l’unité, la collaboration et la force partagée qui unit les coopératives du monde entier.</p>"
+        }
+      ]
+    }
+  }
+  

@@ -17,10 +17,12 @@ export class TranslationService {
   loadLanguage(lang: string): void {
     const generalTranslations$ = this.http.get(`/assets/i18n/${lang}.json`);
     const aboutTranslations$ = this.http.get(`/assets/i18n/about.${lang}.json`);
+    const homeTranslations$ = this.http.get(`/assets/i18n/home.${lang}.json`);
 
-    forkJoin([generalTranslations$, aboutTranslations$]).subscribe({
-      next: ([generalData, aboutData]: [any, any]) => {
-        this.translations = { ...generalData, ...aboutData };
+
+    forkJoin([generalTranslations$, aboutTranslations$, homeTranslations$]).subscribe({
+      next: ([generalData, aboutData, homeData]: [any, any, any]) => {
+        this.translations = { ...generalData, ...aboutData, ...homeData };
         this.currentLanguage.next(lang);
       },
       error: (err) => {

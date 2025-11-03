@@ -1,3 +1,5 @@
+import { TranslationService } from '../../services/translation.service';
+import { Subscription } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { WorldMapComponent } from "../world-map/world-map.component";
 import { Title } from '@angular/platform-browser';
@@ -29,7 +31,9 @@ export class Home implements OnInit {
   selectedCard: any = null;
   services2: any[] = [];
 
-  constructor(private homeService: HomeService) {}
+  private languageSubscription: Subscription = new Subscription();
+
+  constructor(private homeService: HomeService, private translationService: TranslationService) {}
 
   ngOnInit(): void {
     // Load data from service (DRY)
@@ -39,6 +43,19 @@ export class Home implements OnInit {
     this.sections = this.homeService.getSectionData();
      // ✅ Load your new DRY services for "Principles for Identifying Cooperative Cultural Heritage"
     this.services2 = this.homeService.getPrinciplesServices();
+
+    // Force re-render when language changes
+    this.languageSubscription = this.translationService.currentLanguage$.subscribe(() => {
+      // Trigger change detection for template updates
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.languageSubscription.unsubscribe();
+  }
+
+  translate(key: string): string {
+    return this.translationService.translate(key);
   }
 
   // Handles modal open/close
@@ -59,51 +76,7 @@ export class Home implements OnInit {
   }
 
 
-   services = [
-    {
-      title: 'International Cooperative Identity',
-      icon: '../../../assets/images/handshake.png',
-      moreText: `
-        <p>A thirteen point set of international standards on Cooperative Cultural Heritage was 
-drawn up by the ICA Working Group on CCH in fall 2025. These standards, the first 
-of its kind, will build on experiences through 2026, by which time, the ICA aims to 
-list at least 50 CCH sites and 15 CCH intangible elements (through a separate set of 
-criterions) from across all the regions, representing all ICA sectors, selected through a 
-nomination process, open to the members of the ICA and their constituents. A unique 
-ICA-CCH label will be granted to the selected sites that meet all the 13 criterions 
-along with a Statement of Recognition, in a post launch (November 2025) exercise. 
-</p>
-      `,
-    },
-    {
-      title: 'Cultural Significance and Legacy',
-      icon: '../../../assets/images/military_tech.png',
-      moreText: `
-        <p>This represents the cultural impact and rich legacy left behind by cooperative movements in various communities.</p>
-      `,
-    },
-    {
-      title: 'Intergenerational Transmission',
-      icon: '../../../assets/images/family_history.png',
-      moreText: `
-        <p>Cooperative knowledge and values are passed across generations, ensuring long-term sustainability and relevance.</p>
-      `,
-    },
-    {
-      title: 'Innovative and Inclusive Continuity',
-      icon: '../../../assets/images/diamond.png',
-      moreText: `
-        <p>Innovation and inclusivity drive cooperative growth while maintaining fairness and shared purpose.</p>
-      `,
-    },
-    {
-      title: 'Unique Marque for Cooperatives Cultural Heritage',
-      icon: '../../../assets/images/Group 50.png',
-      moreText: `
-        <p>This symbolizes unity, collaboration, and the shared strength that holds cooperatives together globally.</p>
-      `,
-    },
-  ];
+
 
   selectedSection2: any = null;
 

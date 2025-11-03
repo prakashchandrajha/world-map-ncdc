@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { filter } from 'rxjs';
 import { HeritageService } from '../../services/heritage.service';
 import { HeritageCard } from '../../components/heritage/heritage-card.component';
+import { TranslationService } from '../../services/translation.service';
 
 
 @Component({
@@ -14,19 +15,24 @@ import { HeritageCard } from '../../components/heritage/heritage-card.component'
   styleUrl: './header.css'
 })
 export class Header {
- isHome = false;
+  isHome = false;
   isMenuOpen = false;
   dropdownOpen = false;
   isSearchOpen = false;
   searchQuery = '';
   filteredResults: HeritageCard[] = [];
+  currentLanguage = 'en';
 
-  constructor(private router: Router, private heritageService: HeritageService) {
+  constructor(private router: Router, private heritageService: HeritageService, private translationService: TranslationService) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
         this.isHome = event.urlAfterRedirects === '/' || event.url === '/home';
       });
+
+    this.translationService.currentLanguage$.subscribe(lang => {
+      this.currentLanguage = lang;
+    });
   }
 
   toggleDropdown() {
@@ -59,5 +65,13 @@ export class Header {
   selectResult(card: HeritageCard) {
     this.router.navigate(['/tangible'], { queryParams: { search: card.title } });
     this.toggleSearch();
+  }
+
+  switchLanguage(lang: string) {
+    this.translationService.loadLanguage(lang);
+  }
+
+  translate(key: string): string {
+    return this.translationService.translate(key);
   }
 }

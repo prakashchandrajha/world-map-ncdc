@@ -1,4 +1,114 @@
 {
+  "theList": {
+    "banner": {
+      "title": "Directives de l'ACI",
+      "title2": "Normes de l'ACI pour le patrimoine culturel coopératif <br> basées sur la Déclaration sur l'identité coopérative"
+    },
+    "expression": {
+      "title": "Expression du patrimoine <br> culturel coopératif",
+      "description": "Une expression du patrimoine culturel coopératif est une pratique, un lieu, une tradition,<br> une institution ou un système distinctif qui incarne les valeurs, l'identité et l'héritage de la coopération.",
+      "tangible": {
+        "title": "Tangible :",
+        "description": "Bâtiments, établissements, archives, paysages, ..."
+      },
+      "intangible": {
+        "title": "Immatériel :",
+        "description": "Pratiques, traditions, connaissances, compétences, expressions, ..."
+      },
+      "recognition": {
+        "title": "Chaque élément du patrimoine est reconnu parce que :",
+        "points": [
+          "Il incarne les principes coopératifs (démocratie, équité, solidarité, soutien mutuel).",
+          "Il détient une signification culturelle, sociale ou historique pour une communauté ou une région.",
+          "Il transmet l'identité coopérative à travers les générations.",
+          "Il démontre la continuité et l'innovation, reliant les traditions passées aux besoins présents et futurs."
+        ]
+      }
+    },
+    "selection": {
+      "title": "Comment les expressions culturelles <br> seront-elles sélectionnées ?",
+      "description": "La sélection suivra des normes claires et transparentes pour refléter la <br> diversité et la richesse de la tradition coopérative mondiale.",
+      "process": {
+        "step1": {
+          "title": "Nominations participatives",
+          "subtitle": "Les organisations membres de l'ACI <br> peuvent nommer des éléments"
+        },
+        "step2": {
+          "title": "Évaluation approfondie",
+          "subtitle": "Analyse basée sur des <br> normes partagées"
+        },
+        "step3": {
+          "title": "Inclusion sur la liste du <br> patrimoine culturel coopératif",
+          "subtitle": "Inclusion sur la liste du <br> patrimoine culturel coopératif"
+        }
+      }
+    },
+    "criteria": {
+      "title": "Critères d'évaluation",
+      "cards": [
+        {
+          "title": "Importance historique et héritage",
+          "description": "Contribution aux origines ou aux jalons du mouvement coopératif"
+        },
+        {
+          "title": "Valeur culturelle coopérative",
+          "description": "Influence sur l'identité coopérative, les traditions ou les modes de vie"
+        },
+        {
+          "title": "Rôle éducatif et inspirant",
+          "description": "Capacité à enseigner et transmettre les valeurs coopératives aux générations futures"
+        },
+        {
+          "title": "Durabilité et continuité",
+          "description": "Preuve d'impact durable et de pertinence dans les sociétés d'aujourd'hui"
+        }
+      ]
+    },
+    "identification": {
+      "title": "Critères d'identification",
+      "description": "Une expression culturelle devrait répondre à la plupart ou à tous les <br> critères fondamentaux suivants",
+      "criteria": [
+        {
+          "title": "Enraciné dans les principes coopératifs",
+          "description": "Incarne les valeurs coopératives fondamentales : démocratie, égalité, équité, solidarité et entraide. Démontre la propriété ou la gouvernance partagée."
+        },
+        {
+          "title": "Importance culturelle et sociale",
+          "description": "Détient une importance pour l'identité, la mémoire ou la continuité d'une communauté. Contribue à la cohésion sociale, au soutien mutuel ou à l'expression culturelle."
+        },
+        {
+          "title": "Valeur historique ou patrimoniale",
+          "description": "Représente des jalons dans le développement coopératif. Préserve les histoires, les traditions ou les connaissances liées à l'évolution coopérative."
+        },
+        {
+          "title": "Transmission à travers les générations",
+          "description": "Activement pratiqué, préservé ou interprété par les communautés. Fournit une valeur éducative, inspirant les jeunes générations."
+        },
+        {
+          "title": "Continuité et innovation",
+          "description": "Démontre l'adaptation des pratiques coopératives à des contextes changeants. Équilibre la préservation avec la créativité et le renouvellement."
+        },
+        {
+          "title": "Propriété communautaire et participation",
+          "description": "Nommé et gouverné avec l'implication active des membres. Reflète le consentement collectif et la participation à sa reconnaissance."
+        }
+      ]
+    },
+    "checklist": {
+      "title": "Liste de contrôle pour l'évaluation",
+      "description": "Utilisez le quiz ci-dessous pour évaluer si votre patrimoine répond aux <br> critères pour devenir un patrimoine culturel coopératif.",
+      "assessment": {
+        "title": "Évaluation du patrimoine culturel coopératif",
+        "subtitle": "Nature du bien culturel",
+        "options": [
+          "Tangible (site, bâtiment, paysage, archive, infrastructure)",
+          "Immatériel (valeurs, gouvernance, traditions, rituels, connaissances)"
+        ],
+        "description": "Explorez l'importance de la préservation du patrimoine culturel à travers les initiatives coopératives. Cliquez pour en savoir plus ou participer à l'évaluation.",
+        "button": "Lire"
+      }
+    }
+  },
   "about": "À propos",
   "sitesElements": "Sites et Éléments",
   "guidelines": "Directives",

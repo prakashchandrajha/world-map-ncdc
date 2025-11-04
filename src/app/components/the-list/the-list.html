@@ -2,22 +2,22 @@
 <app-banner
 [gradientBackground]="'linear-gradient(to right, #7a004a, #7a004a)'"
 
-  [titleText]="'ICA Guidelines'"
-  [titleText2]="'ICA Standards for Cooperative Cultural Heritage <br> based on  the Statement on the Cooperative Identity'"
+  [titleText]="translate('theList.banner.title')"
+  [titleText2]="translate('theList.banner.title2')"
 ></app-banner>
 
 
 
 
 <h1 class="text-center text-5xl md:text-3xl font-bold bg-gradient-to-r from-[#7a004a] to-gray-200 text-transparent bg-clip-text">
-  Expression of Cooperative <br> Cultural Heritage
+  <span [innerHTML]="translate('theList.expression.title')"></span>
 </h1>
 
 
-<p class="text-center text-2xl text-black mt-10">
-  An expression of Cooperative Cultural Heritage is a distinctive practice, place, tradition,<br> institution, or system that embodies the values, identity, and legacy of cooperation.
-</p>
 
+<p class="text-center text-2xl text-black mt-10">
+  <span [innerHTML]="translate('theList.expression.description')"></span>
+</p>
 <div class="boxes-section w-full min-h-screen flex flex-col items-center justify-center py-10">
   <div class="px-4 md:px-[2rem] xl:px-[6rem] flex flex-col lg:flex-row gap-10 w-full">
     <!-- Left Column: Boxes -->
@@ -26,16 +26,16 @@
       <div class="heritage-box bg-[#7a004a] text-white rounded-xl p-20 flex items-start space-x-4 w-full" routerLink="/tangible">
         <img src="../../../assets/images/Logo.png" alt="Icon" class="w-20 h-20 object-contain flex-shrink-0">
         <div class="min-w-0">
-          <h2 class="text-2xl font-bold mb-1 truncate">Tangible:</h2>
-          <p class="text-lg break-words">Buildings, settlements, archives, landscapes, ...</p>
+          <h2 class="text-2xl font-bold mb-1 truncate"><span [innerHTML]="translate('theList.expression.tangible.title')"></span></h2>
+          <p class="text-lg break-words"><span [innerHTML]="translate('theList.expression.tangible.description')"></span></p>
         </div>
       </div>
       <!-- Bottom Box -->
       <div class="heritage-box bg-gradient-to-r from-sky-400 to-blue-300 text-gray-800 rounded-xl p-20 flex items-start space-x-4 w-full" >
         <img src="../../../assets/images/Logo.png" alt="Icon" class="w-20 h-20 object-contain flex-shrink-0">
         <div class="min-w-0">
-          <h2 class="text-2xl font-bold mb-1 truncate">Intangible:</h2>
-          <p class="text-lg break-words">Practices, traditions, knowledge, skills, expressions, ...</p>
+          <h2 class="text-2xl font-bold mb-1 truncate"><span [innerHTML]="translate('theList.expression.intangible.title')"></span></h2>
+          <p class="text-lg break-words"><span [innerHTML]="translate('theList.expression.intangible.description')"></span></p>
         </div>
       </div>
     </div>
@@ -43,24 +43,24 @@
     <!-- Right Column: Blog List -->
     <div class="lg:w-[50%] xl:w-[50%] flex flex-col items-stretch justify-center">
       <h2 class="text-center text-[#7a004a] text-3xl font-bold mb-6">
-        Each heritage element is recognized because:
+        <span [innerHTML]="translate('theList.expression.recognition.title')"></span>
       </h2>
       <div class="flex flex-col gap-6">
         <div class="flex items-start gap-4">
           <span class="text-[#7a004a] text-3xl font-bold">1.</span>
-          <p class="text-black text-lg">Embodies cooperative principles (democracy, fairness, solidarity, mutual support).</p>
+          <p class="text-black text-lg"><span [innerHTML]="translate('theList.expression.recognition.points[0]')"></span></p>
         </div>
         <div class="flex items-start gap-4">
           <span class="text-[#7a004a] text-3xl font-bold">2.</span>
-          <p class="text-black text-lg">Holds cultural, social, or historical significance for a community or region.</p>
+          <p class="text-black text-lg"><span [innerHTML]="translate('theList.expression.recognition.points[1]')"></span></p>
         </div>
         <div class="flex items-start gap-4">
           <span class="text-[#7a004a] text-3xl font-bold">3.</span>
-          <p class="text-black text-lg">Conveys cooperative identity across generations.</p>
+          <p class="text-black text-lg"><span [innerHTML]="translate('theList.expression.recognition.points[2]')"></span></p>
         </div>
         <div class="flex items-start gap-4">
           <span class="text-[#7a004a] text-3xl font-bold">4.</span>
-          <p class="text-black text-lg">Demonstrates continuity and innovation, connecting past traditions with present and future needs.</p>
+          <p class="text-black text-lg"><span [innerHTML]="translate('theList.expression.recognition.points[3]')"></span></p>
         </div>
       </div>
     </div>
@@ -68,11 +68,11 @@
 </div>
 
 <h1 class="selection-title text-center text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#7a004a] to-gray-200 text-transparent bg-clip-text">
-  How will the cultural  <br> expressions be selected?
+  <span [innerHTML]="translate('theList.selection.title')"></span>
 </h1>
 
 <p class="selection-description text-center text-2xl text-black mt-10">
-  The selection will follow clear and transparent standards to reflect the <br> diversity and richness of the global cooperative tradition.
+  <span [innerHTML]="translate('theList.selection.description')"></span>
 </p>
 
 <section class="process-section w-full flex justify-center items-center bg-gray-100 h-[500px] mt-[50px]">
@@ -90,12 +90,12 @@
             <img src="../../../assets/images/language.png" alt="Svelte" class="h-10 w-10 object-contain">
           </div>
         </div>
-        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Participatory Nominations</p>
+        <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight"><span [innerHTML]="translate('theList.selection.process.step1.title')"></span></p>
         <div class="flex flex-col items-center mt-3">
-  <p class="text-[12px] font-bold text-[#7a004a] tracking-tight text-center">
-    ICA member organizations <br> can nominate elements
-  </p>
-  
+   <p class="text-[12px] font-bold text-[#7a004a] tracking-tight text-center">
+     <span [innerHTML]="translate('theList.selection.process.step1.subtitle')"></span>
+   </p>
+
 </div>
 
       </div>
@@ -111,13 +111,12 @@
             <img src="../../../assets/images/inventory_2.png" alt="Supabase" class="h-10 w-10 object-contain">
           </div>
         </div>
-       <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Thorough Evaluation</p>
-        <div class="flex flex-col items-center mt-3">
-  <p class="text-[12px] font-bold text-[#7a004a] tracking-tight text-center">
-    Analysis Based on <br>
-Shared Standards
-  </p>
-  
+       <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight"><span [innerHTML]="translate('theList.selection.process.step2.title')"></span></p>
+          <div class="flex flex-col items-center mt-3">
+    <p class="text-[12px] font-bold text-[#7a004a] tracking-tight text-center">
+      <span [innerHTML]="translate('theList.selection.process.step2.subtitle')"></span>
+    </p>
+
 </div>
       </div>
 
@@ -132,12 +131,12 @@ Shared Standards
             <img src="../../../assets/images/account_circle.png" alt="Vercel" class="h-10 w-10 object-contain">
           </div>
         </div>
-       <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">Participatory Nominations</p>
-        <div class="flex flex-col items-center mt-3">
-  <p class="text-[12px] font-bold text-[#7a004a] tracking-tight text-center">
-    Inclusion on the <br> Cooperative Cultural br Heritage List
-  </p>
-  
+       <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight"><span [innerHTML]="translate('theList.selection.process.step3.title')"></span></p>
+          <div class="flex flex-col items-center mt-3">
+    <p class="text-[12px] font-bold text-[#7a004a] tracking-tight text-center">
+      <span [innerHTML]="translate('theList.selection.process.step3.subtitle')"></span>
+    </p>
+
 </div>
       </div>
 
@@ -150,7 +149,7 @@ Shared Standards
 </section>
 
 <h1 class="criteria-title text-4xl md:text-5xl font-bold text-[#7a004a] mt-1.5 ml-10">
-    Evaluation Criteria
+    <span [innerHTML]="translate('theList.criteria.title')"></span>
   </h1>
 <!-- From Uiverse.io by carlosepcc -->
 <section class="criteria-cards flex flex-wrap  five-in-row justify-center mt-12 ">
@@ -163,10 +162,9 @@ Shared Standards
       <img src="../../../assets/images/book_5.png" alt="icon" class="w-6 h-6 object-contain" />
     </div>
     
-    <div class="uppercase font-bold text-lg">Historical Significance 
-and Legacy</div>
+    <div class="uppercase font-bold text-lg"><span [innerHTML]="translate('theList.criteria.cards[0].title')"></span></div>
     <div class="text-gray-400 mt-6">
-      <p class="font-bold text-sm">Contribution to the Origins or Milestones of the Cooperative Movement</p>
+      <p class="font-bold text-sm"><span [innerHTML]="translate('theList.criteria.cards[0].description')"></span></p>
     </div>
   </div>
 
@@ -181,10 +179,9 @@ and Legacy</div>
       <img src="../../../assets/images/star.png" alt="icon" class="w-6 h-6 object-contain" />
     </div>
     
-    <div class="uppercase font-bold text-lg">Cooperative Cultural Value</div>
+    <div class="uppercase font-bold text-lg">{{ translate('theList.criteria.cards[1].title') }}</div>
     <div class="text-gray-400 mt-6">
-      <p class="font-bold text-sm">Influence on Cooperative Identity, Traditions, or Ways 
-of Life</p>
+      <p class="font-bold text-sm">{{ translate('theList.criteria.cards[1].description') }}</p>
     </div>
   </div>
 
@@ -199,10 +196,9 @@ of Life</p>
     <div class="w-10 h-10 rounded-full rounded-tl-none mb-3 overflow-hidden bg-[#7a004a] flex items-center justify-center group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#7a004a] transition-all">
       <img src="../../../assets/images/school.png" alt="icon" class="w-6 h-6 object-contain" />
     </div>
-    
-    <div class="uppercase font-bold text-lg">Cooperative Cultural Value</div>
+    <div class="uppercase font-bold text-lg"><span [innerHTML]="translate('theList.criteria.cards[1].title')"></span></div>
     <div class="text-gray-400 mt-6">
-      <p class="font-bold text-sm">Influence on Cooperative Identity, Traditions, or Ways of Life</p>
+      <p class="font-bold text-sm"><span [innerHTML]="translate('theList.criteria.cards[1].description')"></span></p>
     </div>
   </div>
 
@@ -218,10 +214,9 @@ of Life</p>
       <img src="../../../assets/images/nest_eco_leaf.png" alt="icon" class="w-6 h-6 object-contain" />
     </div>
     
-    <div class="uppercase font-bold text-lg">Educational and Inspirational Role</div>
+    <div class="uppercase font-bold text-lg"><span [innerHTML]="translate('theList.criteria.cards[2].title')"></span></div>
     <div class="text-gray-400 mt-6">
-      <p class="font-bold text-sm">Ability to Teach and Pass on Cooperative Values to 
-Future Generations</p>
+      <p class="font-bold text-sm"><span [innerHTML]="translate('theList.criteria.cards[2].description')"></span></p>
     </div>
   </div>
 
@@ -236,10 +231,9 @@ Future Generations</p>
       <img src="../../../assets/images/language (1).png" alt="icon" class="w-6 h-6 object-contain" />
     </div>
     
-    <div class="uppercase font-bold text-lg">Sustainability 
-and Continuity</div>
+    <div class="uppercase font-bold text-lg"><span [innerHTML]="translate('theList.criteria.cards[3].title')"></span></div>
     <div class="text-gray-400 mt-6">
-      <p class="font-bold text-sm">Evidence of Lasting Impact and Relevance in Today’s Societies</p>
+      <p class="font-bold text-sm"><span [innerHTML]="translate('theList.criteria.cards[3].description')"></span></p>
     </div>
   </div>
 
@@ -255,11 +249,11 @@ and Continuity</div>
 
 
 <h1 class="selection-title text-center text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#e61692] to-gray-200 text-transparent bg-clip-text">
-   Identification Criteria
+   <span [innerHTML]="translate('theList.identification.title')"></span>
 </h1>
 
 <p class="selection-description text-center text-2xl text-black mt-10">
-  A cultural expression should meet most or all of the following <br> fundamental criteria
+  <span [innerHTML]="translate('theList.identification.description')"></span>
 </p>
 
 
@@ -280,10 +274,8 @@ and Continuity</div>
 
         <!-- Right content: title + text -->
         <div class="flex flex-col gap-4">
-            <h2 class="text-3xl font-semibold text-white">Rooted in 
-cooperative 
-principles</h2>
-            <p class="text-gray-200 text-lg">GEmbodies core cooperative values: democracy, equality, equity, solidarity, and self-help. Demonstrates shared ownership or governance.</p>
+            <h2 class="text-3xl font-semibold text-white"><span [innerHTML]="translate('theList.identification.criteria[0].title')"></span></h2>
+            <p class="text-gray-200 text-lg"><span [innerHTML]="translate('theList.identification.criteria[0].description')"></span></p>
         </div>
     </div>
     <div
@@ -301,10 +293,8 @@ principles</h2>
 
         <!-- Right content: title + text -->
         <div class="flex flex-col gap-4">
-            <h2 class="text-3xl font-semibold text-white">Cultural 
-and social 
-significance</h2>
-            <p class="text-gray-200 text-lg">Holds importance for a community’s identity, memory, or continuity. Contributes to social cohesion, mutual support, or cultural expression.</p>
+            <h2 class="text-3xl font-semibold text-white"><span [innerHTML]="translate('theList.identification.criteria[1].title')"></span></h2>
+            <p class="text-gray-200 text-lg"><span [innerHTML]="translate('theList.identification.criteria[1].description')"></span></p>
         </div>
     </div>
     <div
@@ -322,10 +312,8 @@ significance</h2>
 
         <!-- Right content: title + text -->
         <div class="flex flex-col gap-4">
-            <h2 class="text-3xl font-semibold text-white">Historical 
-or heritage 
-value</h2>
-            <p class="text-gray-200 text-lg">Represents milestones in cooperative development. Preserves stories, traditions, or knowledge tied to cooperative evolution.</p>
+            <h2 class="text-3xl font-semibold text-white"><span [innerHTML]="translate('theList.identification.criteria[2].title')"></span></h2>
+            <p class="text-gray-200 text-lg"><span [innerHTML]="translate('theList.identification.criteria[2].description')"></span></p>
         </div>
     </div>
     <div
@@ -343,10 +331,8 @@ value</h2>
 
         <!-- Right content: title + text -->
         <div class="flex flex-col gap-4">
-            <h2 class="text-3xl font-semibold text-white">Transmission 
-across 
-generations</h2>
-            <p class="text-gray-200 text-lg">Actively practiced, preserved, or interpreted by communities. Provides educational value, inspiring younger generations.</p>
+            <h2 class="text-3xl font-semibold text-white"><span [innerHTML]="translate('theList.identification.criteria[3].title')"></span></h2>
+            <p class="text-gray-200 text-lg"><span [innerHTML]="translate('theList.identification.criteria[3].description')"></span></p>
         </div>
     </div>
     <div
@@ -364,9 +350,8 @@ generations</h2>
 
         <!-- Right content: title + text -->
         <div class="flex flex-col gap-4">
-            <h2 class="text-3xl font-semibold text-white">Continuity and 
-innovation</h2>
-            <p class="text-gray-200 text-lg">Demonstrates adaptation of cooperative practices to changing contexts. Balances preservation with creativity and renewal.</p>
+            <h2 class="text-3xl font-semibold text-white"><span [innerHTML]="translate('theList.identification.criteria[4].title')"></span></h2>
+            <p class="text-gray-200 text-lg"><span [innerHTML]="translate('theList.identification.criteria[4].description')"></span></p>
         </div>
     </div>
     <div
@@ -384,11 +369,8 @@ innovation</h2>
 
         <!-- Right content: title + text -->
         <div class="flex flex-col gap-4">
-            <h2 class="text-3xl font-semibold text-white">Community 
-ownership and 
-participation</h2>
-            <p class="text-gray-200 text-lg">Named and governed with active member involvement. Reflects collective consent and participation in 
-its recognition.</p>
+            <h2 class="text-3xl font-semibold text-white"><span [innerHTML]="translate('theList.identification.criteria[5].title')"></span></h2>
+            <p class="text-gray-200 text-lg"><span [innerHTML]="translate('theList.identification.criteria[5].description')"></span></p>
         </div>
     </div>
    
@@ -397,10 +379,10 @@ its recognition.</p>
 
 
 <h1 class="selection-title text-center text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#e61692] to-gray-200 text-transparent bg-clip-text">
-Checklist for evaluation</h1>
+<span [innerHTML]="translate('theList.checklist.title')"></span></h1>
 
 <p class="selection-description text-center text-2xl text-black mt-10">
-  Use the quiz below to assess whether your heritage meets the <br> criteria to become a Cooperative Cultural Heritage.
+  <span [innerHTML]="translate('theList.checklist.description')"></span>
 </p>
 <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-visible">
   <div class="md:flex items-center relative">
@@ -421,35 +403,35 @@ Checklist for evaluation</h1>
     <div class="p-8 text-center">
       <!-- Main heading -->
       <h3 class="uppercase tracking-wide text-lg text-[#7a004a] font-bold mb-2">
-        Cooperative Cultural Heritage Assessment
+        <span [innerHTML]="translate('theList.checklist.assessment.title')"></span>
       </h3>
 
       <!-- Sub-heading for radio buttons (theme-colored) -->
       <h4 class="text-sm font-semibold text-[#7a004a] mb-3">
-        Nature of the cultural asset
+        <span [innerHTML]="translate('theList.checklist.assessment.subtitle')"></span>
       </h4>
 
       <!-- Radio buttons -->
       <div class="flex flex-col space-y-3 mb-4">
         <label class="inline-flex items-center justify-center space-x-2 cursor-pointer">
           <input type="radio" name="heritage" class="text-[#7a004a] focus:ring-[#7a004a]">
-          <span class="text-gray-700 text-sm">Tangible (site, building, landscape, archive, infrastructure)</span>
+          <span class="text-gray-700 text-sm"><span [innerHTML]="translate('theList.checklist.assessment.options[0]')"></span></span>
         </label>
         <label class="inline-flex items-center justify-center space-x-2 cursor-pointer">
           <input type="radio" name="heritage" class="text-[#7a004a] focus:ring-[#7a004a]">
-          <span class="text-gray-700 text-sm">Intangible (values, governance, traditions, rituals, knowledge)</span>
+          <span class="text-gray-700 text-sm"><span [innerHTML]="translate('theList.checklist.assessment.options[1]')"></span></span>
         </label>
       </div>
 
       <!-- Description -->
       <p class="mt-2 text-slate-500 text-sm">
-        Explore the importance of preserving cultural heritage through cooperative initiatives. Click to learn more or participate in the assessment.
+        <span [innerHTML]="translate('theList.checklist.assessment.description')"></span>
       </p>
-      <button class="px-6 py-2 mt-2 rounded-lg text-white font-semibold 
-               bg-gradient-to-r from-[#7a004a] via-[#9c2b6a] to-[#ff77a9] 
-               hover:from-[#9c2b6a] hover:via-[#ff77a9] hover:to-[#7a004a] 
+      <button class="px-6 py-2 mt-2 rounded-lg text-white font-semibold
+               bg-gradient-to-r from-[#7a004a] via-[#9c2b6a] to-[#ff77a9]
+               hover:from-[#9c2b6a] hover:via-[#ff77a9] hover:to-[#7a004a]
                transition-all duration-300">
-  Read Me
+  <span [innerHTML]="translate('theList.checklist.assessment.button')"></span>
 </button>
 
     </div>

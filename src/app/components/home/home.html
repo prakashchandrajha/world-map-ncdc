@@ -10,7 +10,7 @@
     <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.04)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.04)_50%,rgba(255,255,255,0.04)_75%,transparent_75%,transparent)] opacity-20 bg-[length:40px_40px]"></div>
 
     <!-- ✨ Content -->
-    <div class="relative z-10 w-full flex flex-col items-center animate-fadeInUp">
+    <div class=" ml-10 relative z-10 w-full flex flex-col items-center animate-fadeInUp">
 
       <!-- 🖼️ Background Image -->
       <img
@@ -18,25 +18,32 @@
         alt="Logo Background"
         class="object-contain w-[280px] sm:w-[380px] md:w-[600px] lg:w-[900px] xl:w-[1200px] max-w-full animate-zoomIn"
       />
+      
 
       <!-- 🎯 Center Button -->
-      <div class="flex justify-center items-center mt-6">
-        <button
-          class="px-6 py-3 rounded-full bg-gradient-to-r from-[#7a004a] to-[#ff8fc1] text-white font-semibold text-sm sm:text-base hover:scale-105 transition-transform duration-300"
-        >
-          {{translate('home.explore')}}
-        </button>
-      </div>
+     <div class="flex justify-center items-center mt-6">
+  <button
+    class="px-6 py-3 rounded-full border-2 border-white text-white font-semibold text-sm sm:text-base 
+           bg-transparent hover:bg-white hover:text-[#7a004a] hover:scale-105 
+           transition-all duration-300"
+  >
+    {{ translate('home.explore') }}
+  </button>
+</div>
+
+
+
 
       <!-- 📝 Bottom-Left Text -->
    <h1
   class="hidden sm:block absolute bottom-8 sm:bottom-12 left-6 sm:left-10 md:left-16 text-left 
-         text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold leading-snug sm:leading-tight 
+         text-[18px] font-bold leading-snug sm:leading-tight 
          bg-clip-text text-transparent bg-gradient-to-r from-white to-white 
          max-w-[85%] sm:max-w-[70%] md:max-w-[50%]"
 >
-{{translate('home.title')}}
+  {{ translate('home.title') }}
 </h1>
+
 
     </div>
   </div>

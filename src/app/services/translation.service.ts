@@ -42,8 +42,17 @@ export class TranslationService {
   private getNestedValue(obj: any, path: string): any {
     if (!obj || typeof obj !== 'object') return undefined;
     return path.split('.').reduce((current, key) => {
-      if (current && typeof current === 'object' && key in current) {
-        return current[key];
+      if (current && typeof current === 'object') {
+        // Handle array access like [0], [1], etc.
+        if (key.includes('[') && key.includes(']')) {
+          const arrayKey = key.substring(0, key.indexOf('['));
+          const index = parseInt(key.substring(key.indexOf('[') + 1, key.indexOf(']')));
+          if (current[arrayKey] && Array.isArray(current[arrayKey]) && current[arrayKey][index] !== undefined) {
+            return current[arrayKey][index];
+          }
+        } else if (key in current) {
+          return current[key];
+        }
       }
       return undefined;
     }, obj);

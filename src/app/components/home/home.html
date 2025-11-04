@@ -363,16 +363,16 @@
           >
             <div class="h-14 w-14 rounded-full flex items-center justify-center overflow-hidden">
               <img
-                [src]="'../../../assets/images/' + (service === 0 ? 'handshake.png' : (service === 1 ? 'military_tech.png' : (service === 2 ? 'family_history.png' : (service === 3 ? 'diamond.png' : 'Group 50.png'))))"
-                [alt]="translate('home.services[' + service + '].title')"
-                class="h-10 w-10 object-contain"
-              />
+                  [src]="'../../../assets/images/' + (service === 0 ? 'handshake.png' : (service === 1 ? 'military_tech.png' : (service === 2 ? 'family_history.png' : (service === 3 ? 'diamond.png' : 'Group 50.png'))))"
+                  [alt]="translate('home.services.' + service + '.title')"
+                  class="h-10 w-10 object-contain"
+                />
             </div>
           </div>
           <p
             class="mt-3 text-[12px] font-bold text-[#7a004a] tracking-tight text-center"
           >
-            {{ translate('home.services[' + service + '].title') }}
+            {{ translate('home.services.' + service + '.title') }}
           </p>
         </div>
 

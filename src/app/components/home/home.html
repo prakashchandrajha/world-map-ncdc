@@ -133,12 +133,12 @@
     <h3
       class="text-2xl sm:text-3xl font-bold mb-6 text-center text-[#7a004a]"
     >
-      {{ selectedSection.title }}
+      {{ translate('home.sections.' + selectedSection.key + '.title') }}
     </h3>
     <!-- Modal Content -->
     <div
       class="prose prose-lg max-w-none text-gray-700 leading-[1.8] space-y-4 px-2 sm:px-4"
-      [innerHTML]="selectedSection.moreText"
+      [innerHTML]="translate('home.sections.' + selectedSection.key + '.moreText')"
     ></div>
   </div>
 </div>

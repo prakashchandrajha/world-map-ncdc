@@ -78,7 +78,20 @@
           "title": "Marque unique pour le patrimoine culturel des coopératives",
           "moreText": "<p>Cela symbolise l’unité, la collaboration et la force partagée qui unit les coopératives du monde entier.</p>"
         }
-      ]
+      ],
+      "sections": {
+        "programme": {
+          "title": "Qu'est-ce que le programme de patrimoine culturel coopératif?",
+          "moreText": "Né dans l'Année internationale des coopératives des Nations Unies, cette initiative mondiale découvre et honore les exemples les plus inspirants du patrimoine coopératif - les repères et les traditions vivantes qui nous rappellent ce que les gens peuvent accomplir lorsqu'ils travaillent ensemble.\n\nLa définition des coopératives selon la Déclaration de l'ACI sur l'identité coopérative reconnaît la capacité des membres à satisfaire leurs besoins et aspirations économiques, sociaux et culturels par le biais de leurs coopératives, et le programme PCC lance un processus concret qui vise à réunir l'entreprise de 1 milliard de coopérateurs pour atteindre leurs objectifs culturels.\n\nCette entreprise ambitieuse de l'ACI établit une inscription du patrimoine culturel coopératif en reconnaissance de l'héritage durable du mouvement coopératif et de sa contribution unique à l'histoire humaine mondiale et, par son service continu, au développement durable. Cette initiative vise à identifier, documenter et sauvegarder systématiquement les manifestations tangibles et intangibles des valeurs et principes coopératifs à travers les continents. Le programme garantit également des efforts concertés pour construire un voyage significatif pour la jeunesse, des échanges entre les peuples des diverses régions coopératives du monde, et plus encore!"
+        },
+        "list": {
+          "title": "Pourquoi une liste du patrimoine culturel coopératif?",
+          "moreText": "Être inscrit sur cette liste met en évidence un site, un établissement, une tradition ou une institution comme un exemple vivant de l'esprit coopératif, avec des leçons qui restent pertinentes dans le monde en rapide évolution d'aujourd'hui.\n\nLa liste du patrimoine culturel coopératif de l'ACI devrait mettre en évidence à la fois les sites emblématiques d'origine et les pratiques contemporaines, créatives et qui incarnent l'esprit de la coopération, créant une carte mondiale équilibrée et significative de l'identité coopérative, qui doit être la somme de toutes nos expériences coopératives."
+        },
+        "didYouKnow": {
+          "title": "Saviez-vous que l'idée et la pratique d'organiser les intérêts partagés ont été inscrites au patrimoine culturel immatériel de l'humanité en 2016?",
+          "moreText": ""
+        }
+      }
     }
   }
-  

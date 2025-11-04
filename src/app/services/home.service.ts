@@ -36,8 +36,9 @@ export class HomeService {
   getSectionData() {
     return [
       {
+        key: 'programme',
         title: 'What is the Cooperative Cultural Heritage Programme?',
-        desc: `The ICA Cooperative Cultural Heritage Programme celebrates the world’s
+        desc: `The ICA Cooperative Cultural Heritage Programme celebrates the world's
         cooperative story from historic buildings and monuments to traditions and practices
         that bring people together. These are the places and ideas that have stood the test of
         time, inspiring solidarity, trust, and shared purpose across generations.`,
@@ -51,15 +52,17 @@ This  ambitious undertaking by the ICA establishes a Cooperative Cultural Herita
         `
       },
       {
+        key: 'list',
         title: 'Why a Cooperative Cultural Heritage List?',
         desc: `The Cooperative Cultural Heritage List seeks to recognize and preserve the most significant elements of cooperative heritage, ensuring that future generations can learn from and build upon them. `,
         moreText: `
-        Being inscribed on this list highlights a site, settlement, tradition, or institution as a living example of the cooperative spirit, with lessons that remain relevant in today’s rapidly changing world.
+        Being inscribed on this list highlights a site, settlement, tradition, or institution as a living example of the cooperative spirit, with lessons that remain relevant in today's rapidly changing world.
 
-The ICA Cooperative Cultural Heritage List is expected to highlight both iconic sites of origin and practices that are contemporary, creative and that embody the spirit of cooperation, creating a balanced and meaningful global map of cooperative identity, which must be the sum of all “our” (cooperative) experiences.
+The ICA Cooperative Cultural Heritage List is expected to highlight both iconic sites of origin and practices that are contemporary, creative and that embody the spirit of cooperation, creating a balanced and meaningful global map of cooperative identity, which must be the sum of all "our" (cooperative) experiences.
 `
       },
       {
+        key: 'didYouKnow',
         title: 'Did you know that the Idea and Practice of Organizing Shared Interests was inscribed as the Intangible Cultural Heritage of Humanity in 2016?',
         desc: ``,
         moreText: ``

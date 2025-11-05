@@ -10,14 +10,52 @@
                bg-gradient-to-r from-[#7a004a] via-[#d66ea0] to-[#f4c2d9] rounded-full shadow-md"></span>
 </h1>
 
-<p>Explore the World Map : Discover the inaugural list of Cooperative Cultural Heritage 
+<p class="text-[#7a004a]">Explore the World Map : Discover the inaugural list of Cooperative Cultural Heritage 
 sites across the world and be inspired to nominate your sites and practices of 
 cooperative cultural significance. </p>
 
 </div>
 
 <!-- Map Section with margins -->
-<div class="max-w-8xl mx-auto px-4 my-8">
+<div class="max-w-8xl mx-auto px-4 my-8 relative">
+  <!-- Continent Filter in top left corner -->
+  <div class="absolute top-4 left-4 z-[1000] bg-white rounded-lg shadow-lg border border-gray-200 mt-20">
+    <div class="p-3 cursor-pointer hover:bg-gray-50 rounded-t-lg " (click)="toggleFilter() ">
+      <div class="flex items-center justify-between">
+  <div class="flex items-center gap-2">
+    <!-- Filter SVG Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" 
+         class="w-5 h-5 text-[#7a004a]" 
+         fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" 
+            d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L14 13.414V19a1 1 0 01-1.447.894l-4-2A1 1 0 018 17v-3.586L3.293 6.707A1 1 0 013 6V4z" />
+    </svg>
+
+    <span class="text-sm font-semibold text-gray-800">Filter</span>
+  </div>
+
+  <span class="text-lg font-bold text-[#7a004a]" [class.rotate-180]="isFilterExpanded">
+    ▼
+  </span>
+</div>
+
+    </div>
+    <div class="overflow-hidden transition-all duration-300 ease-in-out" [style.max-height]="isFilterExpanded ? '200px' : '0px'">
+      <div class="p-3 border-t border-gray-200">
+        <div class="space-y-2">
+          <div class="flex items-center space-x-2 cursor-pointer hover:bg-gray-50 p-1 rounded" *ngFor="let continent of ['Africa', 'Asia', 'Europe', 'North America', 'South America']" (click)="onContinentClick(continent)">
+            <input
+              type="checkbox"
+              [checked]="selectedContinents.includes(continent)"
+              (change)="onContinentFilterChange(continent, $event.target.checked); $event.stopPropagation()"
+              class="w-4 h-4 text-[#7a004a] bg-gray-100 border-gray-300 rounded focus:ring-[#7a004a] focus:ring-2"
+            />
+            <span class="text-sm text-gray-700">{{ continent }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="map" class="h-[600px] w-full rounded-lg shadow-lg border border-gray-200"></div>
   <div class="flex justify-end mb-40 mr-10">
   <span class="relative inline-flex items-center justify-center rounded-full px-[3px] py-[2px]">

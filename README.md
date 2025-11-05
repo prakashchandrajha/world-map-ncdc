@@ -232,6 +232,72 @@ ng e2e
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
+## Translation Strategy
+
+### Using Google Cloud Translation API
+
+Since you want to use Google Cloud Translation API for your static content, here's the optimal approach to minimize costs while providing translations to users worldwide.
+
+#### Cost-Effective Implementation Strategy
+
+1. **One-Time Translation During Build**:
+   - Use Google Cloud Translation API once during development/build to translate all static content
+   - Generate complete translation files (`fr.json`, `es.json`, `de.json`, etc.) from your source `en.json`
+   - Store translations as static JSON files in `src/assets/i18n/`
+
+2. **Static File Serving**:
+   - Deploy pre-translated JSON files with your application
+   - All users load the same translations from your web server
+   - Zero runtime API calls - no costs for user interactions
+
+3. **Build-Time Translation Script**:
+   ```bash
+   # Example build script (translate.js)
+   const { TranslationServiceClient } = require('@google-cloud/translate');
+   const fs = require('fs');
+
+   async function translateContent() {
+     const client = new TranslationServiceClient();
+     const sourceContent = JSON.parse(fs.readFileSync('src/assets/i18n/en.json'));
+
+     const targetLanguages = ['fr', 'es', 'de', 'it', 'pt'];
+
+     for (const lang of targetLanguages) {
+       const translated = {};
+       for (const [key, text] of Object.entries(sourceContent)) {
+         const [translation] = await client.translateText({
+           parent: `projects/${projectId}/locations/global`,
+           contents: [text],
+           targetLanguageCode: lang,
+           sourceLanguageCode: 'en',
+         });
+         translated[key] = translation;
+       }
+       fs.writeFileSync(`src/assets/i18n/${lang}.json`, JSON.stringify(translated, null, 2));
+     }
+   }
+   ```
+
+#### Cost Optimization Benefits
+- **Single API Hit per Language**: Only translate each string once, regardless of user count
+- **No Runtime Costs**: All users get translations from static files
+- **Predictable Costs**: Translation costs occur only during development/deployment
+- **Global Scalability**: 1000+ users can access translations without additional API calls
+
+#### Google Cloud Translation API Setup
+1. Enable Google Cloud Translation API in your GCP project
+2. Set up authentication (service account key)
+3. Install client library: `npm install @google-cloud/translate`
+4. Run translation script during build process
+
+#### Integration with TranslationService
+Your existing `TranslationService` works perfectly:
+- Loads static JSON files on language change
+- No modifications needed for API integration
+- Maintains same user experience
+
+This approach ensures Google Translation API is used efficiently - once for translation, then served statically to all users worldwide.
+
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

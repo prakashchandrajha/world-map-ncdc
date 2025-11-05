@@ -1,0 +1,126 @@
+{
+  "theList": {
+    "banner": {
+      "title": "ICA Guidelines",
+      "title2": "ICA Standards for Cooperative Cultural Heritage <br> based on the Statement on the Cooperative Identity"
+    },
+    "expression": {
+      "title": "Expression of Cooperative <br> Cultural Heritage",
+      "description": "An expression of Cooperative Cultural Heritage is a distinctive practice, place, tradition,<br> institution, or system that embodies the values, identity, and legacy of cooperation.",
+      "tangible": {
+        "title": "Tangible:",
+        "description": "Buildings, settlements, archives, landscapes, ..."
+      },
+      "intangible": {
+        "title": "Intangible:",
+        "description": "Practices, traditions, knowledge, skills, expressions, ..."
+      },
+      "recognition": {
+        "title": "Each heritage element is recognized because:",
+        "points": [
+          "Embodies cooperative principles (democracy, fairness, solidarity, mutual support).",
+          "Holds cultural, social, or historical significance for a community or region.",
+          "Conveys cooperative identity across generations.",
+          "Demonstrates continuity and innovation, connecting past traditions with present and future needs."
+        ]
+      }
+    },
+    "selection": {
+      "title": "How will the cultural <br> expressions be selected?",
+      "description": "The selection will follow clear and transparent standards to reflect the <br> diversity and richness of the global cooperative tradition.",
+      "process": {
+        "step1": {
+          "title": "Participatory Nominations",
+          "subtitle": "ICA member organizations <br> can nominate elements"
+        },
+        "step2": {
+          "title": "Thorough Evaluation",
+          "subtitle": "Analysis Based on <br> Shared Standards"
+        },
+        "step3": {
+          "title": "Inclusion on the <br> Cooperative Cultural Heritage List",
+          "subtitle": "Inclusion on the <br> Cooperative Cultural Heritage List"
+        }
+      }
+    },
+    "criteria": {
+      "title": "Evaluation Criteria",
+      "cards": [
+        {
+          "title": "Historical Significance and Legacy",
+          "description": "Contribution to the Origins or Milestones of the Cooperative Movement"
+        },
+        {
+          "title": "Cooperative Cultural Value",
+          "description": "Influence on Cooperative Identity, Traditions, or Ways of Life"
+        },
+        {
+          "title": "Educational and Inspirational Role",
+          "description": "Ability to Teach and Pass on Cooperative Values to Future Generations"
+        },
+        {
+          "title": "Sustainability and Continuity",
+          "description": "Evidence of Lasting Impact and Relevance in Today's Societies"
+        }
+      ]
+    },
+    "identification": {
+      "title": "Identification Criteria",
+      "description": "A cultural expression should meet most or all of the following <br> fundamental criteria",
+      "criteria": [
+        {
+          "title": "Rooted in cooperative principles",
+          "description": "Embodies core cooperative values: democracy, equality, equity, solidarity, and self-help. Demonstrates shared ownership or governance."
+        },
+        {
+          "title": "Cultural and social significance",
+          "description": "Holds importance for a community's identity, memory, or continuity. Contributes to social cohesion, mutual support, or cultural expression."
+        },
+        {
+          "title": "Historical or heritage value",
+          "description": "Represents milestones in cooperative development. Preserves stories, traditions, or knowledge tied to cooperative evolution."
+        },
+        {
+          "title": "Transmission across generations",
+          "description": "Actively practiced, preserved, or interpreted by communities. Provides educational value, inspiring younger generations."
+        },
+        {
+          "title": "Continuity and innovation",
+          "description": "Demonstrates adaptation of cooperative practices to changing contexts. Balances preservation with creativity and renewal."
+        },
+        {
+          "title": "Community ownership and participation",
+          "description": "Named and governed with active member involvement. Reflects collective consent and participation in its recognition."
+        }
+      ]
+    },
+    "checklist": {
+      "title": "Checklist for evaluation",
+      "description": "Use the quiz below to assess whether your heritage meets the <br> criteria to become a Cooperative Cultural Heritage.",
+      "assessment": {
+        "title": "Cooperative Cultural Heritage Assessment",
+        "subtitle": "Nature of the cultural asset",
+        "options": [
+          "Tangible (site, building, landscape, archive, infrastructure)",
+          "Intangible (values, governance, traditions, rituals, knowledge)"
+        ],
+        "description": "Explore the importance of preserving cultural heritage through cooperative initiatives. Click to learn more or participate in the assessment.",
+        "button": "Read Me"
+      }
+    }
+  },
+  "about": "About",
+  "sitesElements": "Sites & Elements",
+  "guidelines": "Guidelines",
+  "tangible": "Tangible",
+  "criteriaPrinciples": "Criteria and Principles",
+  "standards": "Standards",
+  "criteriaNominations": "Criteria and Nominations",
+  "nominationForm": "Nomination Form",
+  "members": "Members",
+  "events": "Events",
+  "search": "Search",
+  "language": "Language",
+  "searchPlaceholder": "Search tangible heritage...",
+  "noResults": "No results found"
+}

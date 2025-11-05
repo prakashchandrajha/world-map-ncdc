@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { filter } from 'rxjs';
+import { filter, Subscription } from 'rxjs';
 import { HeritageService } from '../../services/heritage.service';
 import { HeritageCard } from '../../components/heritage/heritage-card.component';
+import { TranslationService } from '../../services/translation.service';
 
 
 @Component({
@@ -13,20 +14,41 @@ import { HeritageCard } from '../../components/heritage/heritage-card.component'
   templateUrl: './header.html',
   styleUrl: './header.css'
 })
-export class Header {
- isHome = false;
+export class Header implements OnInit, OnDestroy {
+  isHome = false;
   isMenuOpen = false;
   dropdownOpen = false;
+  criteriaDropdownOpen = false;
   isSearchOpen = false;
+  isMobileSearchOpen = false;
+  isMobileLanguageOpen = false;
   searchQuery = '';
   filteredResults: HeritageCard[] = [];
+  currentLanguage = 'en';
+  private languageSubscription: Subscription = new Subscription();
 
-  constructor(private router: Router, private heritageService: HeritageService) {
+  constructor(
+    private router: Router,
+    private heritageService: HeritageService,
+    private translationService: TranslationService,
+    private cdr: ChangeDetectorRef
+  ) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
         this.isHome = event.urlAfterRedirects === '/' || event.url === '/home';
       });
+  }
+
+  ngOnInit(): void {
+    this.languageSubscription = this.translationService.currentLanguage$.subscribe(lang => {
+      this.currentLanguage = lang;
+      this.cdr.detectChanges();
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.languageSubscription.unsubscribe();
   }
 
   toggleDropdown() {
@@ -35,6 +57,30 @@ export class Header {
 
   closeDropdown() {
     this.dropdownOpen = false;
+  }
+
+  toggleCriteriaDropdown() {
+    this.criteriaDropdownOpen = !this.criteriaDropdownOpen;
+  }
+
+  closeCriteriaDropdown() {
+    this.criteriaDropdownOpen = false;
+  }
+
+  toggleMobileSearch() {
+    this.isMobileSearchOpen = !this.isMobileSearchOpen;
+    if (!this.isMobileSearchOpen) {
+      this.searchQuery = '';
+      this.filteredResults = [];
+    }
+  }
+
+  toggleMobileLanguage() {
+    this.isMobileLanguageOpen = !this.isMobileLanguageOpen;
+  }
+
+  closeMobileLanguage() {
+    this.isMobileLanguageOpen = false;
   }
 
   toggleSearch() {
@@ -59,5 +105,13 @@ export class Header {
   selectResult(card: HeritageCard) {
     this.router.navigate(['/tangible'], { queryParams: { search: card.title } });
     this.toggleSearch();
+  }
+
+  switchLanguage(lang: string) {
+    this.translationService.loadLanguage(lang);
+  }
+
+  translate(key: string): string {
+    return this.translationService.translate(key);
   }
 }

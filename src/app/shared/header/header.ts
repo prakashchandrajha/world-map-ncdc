@@ -18,7 +18,10 @@ export class Header implements OnInit, OnDestroy {
   isHome = false;
   isMenuOpen = false;
   dropdownOpen = false;
+  criteriaDropdownOpen = false;
   isSearchOpen = false;
+  isMobileSearchOpen = false;
+  isMobileLanguageOpen = false;
   searchQuery = '';
   filteredResults: HeritageCard[] = [];
   currentLanguage = 'en';
@@ -54,6 +57,30 @@ export class Header implements OnInit, OnDestroy {
 
   closeDropdown() {
     this.dropdownOpen = false;
+  }
+
+  toggleCriteriaDropdown() {
+    this.criteriaDropdownOpen = !this.criteriaDropdownOpen;
+  }
+
+  closeCriteriaDropdown() {
+    this.criteriaDropdownOpen = false;
+  }
+
+  toggleMobileSearch() {
+    this.isMobileSearchOpen = !this.isMobileSearchOpen;
+    if (!this.isMobileSearchOpen) {
+      this.searchQuery = '';
+      this.filteredResults = [];
+    }
+  }
+
+  toggleMobileLanguage() {
+    this.isMobileLanguageOpen = !this.isMobileLanguageOpen;
+  }
+
+  closeMobileLanguage() {
+    this.isMobileLanguageOpen = false;
   }
 
   toggleSearch() {

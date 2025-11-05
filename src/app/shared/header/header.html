@@ -6,7 +6,7 @@
 >
   <div class="flex items-center justify-between w-full">
     <!-- Left: Logo -->
-    <div class="flex items-center">
+    <div class="flex items-center md:ml-60">
       <a routerLink="/" aria-current="page" class="flex items-center cursor-pointer">
         <img
           [src]="isHome ? '/assets/images/ww.png' : '/assets/images/icc_logo.png'"
@@ -15,16 +15,24 @@
         />
       </a>
     </div>
+    <!-- Mobile Menu Button -->
+    <button
+      class="md:hidden text-[#d31c75] text-2xl focus:outline-none"
+      (click)="isMenuOpen = !isMenuOpen"
+    >
+      <svg *ngIf="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+      <svg *ngIf="isMenuOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+    </button>
     <!-- Right: Desktop Navigation -->
     <nav
-      class="hidden md:flex mr-2 items-center rounded-full p-[1px] bg-gradient-to-r from-[#ff9ebd] via-[#ff80aa] to-[#ff4c91] shadow-md"
+      class="mr-60 hidden md:flex items-center rounded-full p-[1px] bg-gradient-to-r from-[#ff9ebd] via-[#ff80aa] to-[#ff4c91] shadow-md"
     >
-      <div class="flex items-center justify-center rounded-full bg-white backdrop-blur-md py-2 px-8">
-        <ul class="flex items-center space-x-6">
-          <li><a routerLink="/about" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">{{ translate('About') }}</a></li>
+      <div class="flex items-center justify-center rounded-full bg-white backdrop-blur-md py-1 px-4">
+        <ul class="flex items-center space-x-4">
+          <li><a routerLink="/about" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">{{ translate('About') }}</a></li>
           <!-- Sites & Elements Dropdown for Desktop -->
           <li class="relative group">
-            <button class="text-pink-900 text-lg font-medium hover:text-[#d31c75] flex items-center">
+            <button class="text-pink-900 text-sm font-medium hover:text-[#d31c75] flex items-center">
               <span>{{ translate('sitesElements') }}</span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 ml-1"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
             </button>
@@ -38,7 +46,7 @@
 
 
           <li class="relative group">
-            <button class="text-pink-900 text-lg font-medium hover:text-[#d31c75] flex items-center">
+            <button class="text-pink-900 text-sm font-medium hover:text-[#d31c75] flex items-center">
               <span>{{ translate('criteriaPrinciples') }}</span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 ml-1"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
             </button>
@@ -52,8 +60,8 @@
 
 
 
-          <li><a routerLink="/member" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">{{ translate('members') }}</a></li>
-          <li><a routerLink="/events" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">{{ translate('events') }}</a></li>
+          <li><a routerLink="/member" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">{{ translate('members') }}</a></li>
+          <li><a routerLink="/events" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">{{ translate('events') }}</a></li>
           <!-- 🔍 Search -->
           <li class="relative">
             <button (click)="toggleSearch()" class="text-[#d31c75] text-xl hover:scale-110 transition-all">
@@ -94,39 +102,77 @@
         </ul>
       </div>
     </nav>
-    <!-- Mobile Menu Button -->
-    <button
-      class="md:hidden text-[#d31c75] text-3xl focus:outline-none"
-      (click)="isMenuOpen = !isMenuOpen"
-    >
-      <svg *ngIf="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
-      <svg *ngIf="isMenuOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
-    </button>
   </div>
   <!-- Mobile Dropdown Menu -->
   <div
     *ngIf="isMenuOpen"
-    class="md:hidden mt-4 rounded-xl bg-white shadow-lg border border-pink-200 p-4 transition-all duration-300"
+    class="md:hidden mt-4 rounded-xl bg-white shadow-lg border border-pink-200 p-1 transition-all duration-300"
   >
-    <ul class="flex flex-col space-y-4 text-center">
-      <li><a routerLink="/about" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">{{ translate('about') }}</a></li>
+    <ul class="flex flex-col space-y-1 text-center">
+      <li><a routerLink="/about" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">{{ translate('about') }}</a></li>
       <!-- Sites & Elements Dropdown for Mobile -->
       <li class="relative">
-        <button (click)="toggleDropdown()" class="flex justify-between items-center w-full text-pink-900 text-lg font-medium hover:text-[#d31c75]">
+        <button (click)="toggleDropdown()" class="flex justify-between items-center w-full text-pink-900 text-sm font-medium hover:text-[#d31c75]">
           <span>{{ translate('sitesElements') }}</span>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 transition-transform duration-300" [class.rotate-180]="dropdownOpen"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3 transition-transform duration-300" [class.rotate-180]="dropdownOpen"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
         </button>
-        <div *ngIf="dropdownOpen" class="mt-2 flex flex-col bg-pink-50 border border-pink-200 rounded-lg shadow-md transition-all duration-300 overflow-hidden">
-          <a routerLink="/guideline" class="block px-4 py-2 hover:bg-pink-100 hover:text-[#d31c75]" (click)="closeDropdown()">{{ translate('guidelines') }}</a>
-          <a routerLink="/tangible" class="block px-4 py-2 hover:bg-pink-100 hover:text-[#d31c75]" (click)="closeDropdown()">{{ translate('tangible') }}</a>
-          <a routerLink="/intangible" class="block px-4 py-2 hover:bg-pink-100 hover:text-[#d31c75]" (click)="closeDropdown()">Intangible</a>
+        <div *ngIf="dropdownOpen" class="mt-1 flex flex-col bg-pink-50 border border-pink-200 rounded-lg shadow-md transition-all duration-300 overflow-hidden">
+          <a routerLink="/guideline" class="block px-2 py-1 hover:bg-pink-100 hover:text-[#d31c75]" (click)="closeDropdown()">{{ translate('guidelines') }}</a>
+          <a routerLink="/tangible" class="block px-2 py-1 hover:bg-pink-100 hover:text-[#d31c75]" (click)="closeDropdown()">{{ translate('tangible') }}</a>
+          <a routerLink="/intangible" class="block px-2 py-1 hover:bg-pink-100 hover:text-[#d31c75]" (click)="closeDropdown()">Intangible</a>
         </div>
       </li>
-      <li><a routerLink="/criteria" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">Criteria</a></li>
-      <li><a routerLink="/member" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">{{ translate('members') }}</a></li>
-      <li><a routerLink="/events" class="text-pink-900 text-lg font-medium hover:text-[#d31c75]">{{ translate('events') }}</a></li>
-      <li><a href="#" class="text-[#d31c75] font-medium flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 inline-block mr-1"><path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" /></svg> {{ translate('search') }}</a></li>
-      <li><a href="#" class="text-[#d31c75] font-medium flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 inline-block mr-1"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM8.25 4.533A9.72 9.72 0 006 6.75v.263l3.303 3.303A5.983 5.983 0 018.25 4.533zM15.75 4.533A9.72 9.72 0 0118 6.75v.263l-3.303 3.303A5.983 5.983 0 0015.75 4.533zM4.5 12a7.5 7.5 0 011.148-3.986l2.623 2.623A6.01 6.01 0 008.25 12H4.5zm1.148 3.986l2.623-2.623A6.01 6.01 0 018.25 12h3.75a.75.75 0 010 1.5H8.25a4.5 4.5 0 00-2.602 7.123l-2.623-2.623A7.5 7.5 0 014.5 12zm13.852 3.986a7.5 7.5 0 01-1.148-3.986l-2.623-2.623A6.01 6.01 0 0015.75 12h3.75a.75.75 0 010 1.5h-3.75a4.5 4.5 0 002.602 7.123l2.623-2.623zM19.5 12a7.5 7.5 0 01-1.148 3.986l-2.623-2.623A6.01 6.01 0 0015.75 12h3.75z" clip-rule="evenodd" /></svg> {{ translate('language') }}</a></li>
+      <!-- Criteria & Principles Dropdown for Mobile -->
+      <li class="relative">
+        <button (click)="toggleCriteriaDropdown()" class="flex justify-between items-center w-full text-pink-900 text-sm font-medium hover:text-[#d31c75]">
+          <span>{{ translate('criteriaPrinciples') }}</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3 transition-transform duration-300" [class.rotate-180]="criteriaDropdownOpen"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
+        </button>
+        <div *ngIf="criteriaDropdownOpen" class="mt-1 flex flex-col bg-pink-50 border border-pink-200 rounded-lg shadow-md transition-all duration-300 overflow-hidden">
+          <a routerLink="/standards" class="block px-2 py-1 hover:bg-pink-100 hover:text-[#d31c75]" (click)="closeCriteriaDropdown()">{{ translate('standards') }}</a>
+          <a routerLink="/criteria" class="block px-2 py-1 hover:bg-pink-100 hover:text-[#d31c75]" (click)="closeCriteriaDropdown()">{{ translate('criteriaNominations') }}</a>
+          <a routerLink="/nomination" class="block px-2 py-1 hover:bg-pink-100 hover:text-[#d31c75]" (click)="closeCriteriaDropdown()">{{ translate('nominationForm') }}</a>
+        </div>
+      </li>
+      <li><a routerLink="/member" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">{{ translate('members') }}</a></li>
+      <li><a routerLink="/events" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">{{ translate('events') }}</a></li>
+      <!-- Mobile Search -->
+      <li class="relative">
+        <button (click)="toggleMobileSearch()" class="text-[#d31c75] text-sm font-medium flex items-center justify-center w-full hover:text-[#7a004a]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 inline-block mr-1"><path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" /></svg>
+          {{ translate('search') }}
+        </button>
+        <!-- Mobile Search Box -->
+        <div *ngIf="isMobileSearchOpen" class="mt-1 w-full">
+          <input
+            type="text"
+            [(ngModel)]="searchQuery"
+            (input)="onSearchInput()"
+            placeholder="{{ translate('searchPlaceholder') }}"
+            class="w-full px-2 py-1 border border-pink-200 rounded focus:outline-none focus:ring-2 focus:ring-[#d31c75] text-sm"
+          />
+          <div *ngIf="filteredResults.length > 0" class="mt-1 max-h-40 overflow-y-auto bg-white border border-pink-200 rounded shadow-md">
+            <div *ngFor="let result of filteredResults" (click)="selectResult(result)" class="px-2 py-1 hover:bg-[#ffe4ed] cursor-pointer border-b border-gray-100 last:border-b-0 text-sm">
+              <div class="font-medium text-gray-800">{{ result.title }}</div>
+              <div class="text-xs text-gray-600">{{ result.countryName }} - {{ result.haritageData }}</div>
+            </div>
+          </div>
+          <div *ngIf="searchQuery && filteredResults.length === 0" class="mt-1 px-2 py-1 text-gray-500 text-sm">
+            {{ translate('noResults') }}
+          </div>
+        </div>
+      </li>
+      <!-- Mobile Language -->
+      <li class="relative">
+        <button (click)="toggleMobileLanguage()" class="text-[#d31c75] text-sm font-medium flex items-center justify-center w-full hover:text-[#7a004a]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 inline-block mr-1"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM8.25 4.533A9.72 9.72 0 006 6.75v.263l3.303 3.303A5.983 5.983 0 018.25 4.533zM15.75 4.533A9.72 9.72 0 0118 6.75v.263l-3.303 3.303A5.983 5.983 0 0015.75 4.533zM4.5 12a7.5 7.5 0 011.148-3.986l2.623 2.623A6.01 6.01 0 008.25 12H4.5zm1.148 3.986l2.623-2.623A6.01 6.01 0 018.25 12h3.75a.75.75 0 010 1.5H8.25a4.5 4.5 0 00-2.602 7.123l-2.623-2.623A7.5 7.5 0 014.5 12zm13.852 3.986a7.5 7.5 0 01-1.148-3.986l-2.623-2.623A6.01 6.01 0 0015.75 12h3.75a.75.75 0 010 1.5h-3.75a4.5 4.5 0 002.602 7.123l2.623-2.623zM19.5 12a7.5 7.5 0 01-1.148 3.986l-2.623-2.623A6.01 6.01 0 0015.75 12h3.75z" clip-rule="evenodd" /></svg>
+          {{ translate('language') }}
+        </button>
+        <div *ngIf="isMobileLanguageOpen" class="mt-1 flex flex-col bg-pink-50 border border-pink-200 rounded-lg shadow-md transition-all duration-300 overflow-hidden">
+          <a href="#" (click)="switchLanguage('en'); closeMobileLanguage(); $event.preventDefault()" class="block px-2 py-1 hover:bg-pink-100 hover:text-[#d31c75]">English</a>
+          <a href="#" (click)="switchLanguage('fr'); closeMobileLanguage(); $event.preventDefault()" class="block px-2 py-1 hover:bg-pink-100 hover:text-[#d31c75]">Français</a>
+        </div>
+      </li>
     </ul>
   </div>
 </header>

@@ -142,7 +142,7 @@ isImageVisible = true;
         setTimeout(() => {
           this.currentImage = this.imageSequence[index];
           this.isImageVisible = true; // Show the new image, re-triggering animation
-        }, 50); // A small delay to allow DOM update
+        }, 200); // A small delay to allow DOM update
       }
       
       // Stop when we reach the last image

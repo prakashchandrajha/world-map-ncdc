@@ -10,6 +10,8 @@ export interface HeritageCard {
   btn: string;
   title: string;
   desc?: string;
+  siteId?: string;
+  type?: 'tangible' | 'intangible';
 }
 
 @Component({
@@ -21,4 +23,12 @@ export interface HeritageCard {
 export class HeritageCardComponent {
   @Input() card!: HeritageCard;
   @Input() desc?: string;
+
+  getDetailRoute(): string[] {
+    if (this.card.siteId && this.card.type) {
+      const route = this.card.type === 'tangible' ? '/aboutTangiblePage' : '/aboutInTangiblePage';
+      return [route, this.card.siteId];
+    }
+    return ['/aboutTangiblePage']; // fallback
+  }
 }

@@ -130,21 +130,9 @@ constructor(private router: Router, private sitesService: SitesService) {}
     // Load sites from service
     this.sites = this.sitesService.getSites();
 
-    // Add markers with popups and click handlers
+    // Add markers with click handlers
     this.sites.forEach(site => {
       const marker = L.marker([site.lat, site.lng], { icon: customIcon })
-        .bindPopup(`
-         <div class=\"custom-popup bg-white p-4 rounded-lg shadow-lg max-w-sm\">
-  <h3 class="text-xl font-semibold text-gray-800 mb-2">${site.name}</h3>
-<p class="text-sm text-gray-600 mb-1">
-  <span class="font-medium text-gray-700">Country:</span> ${site.country}
-</p>
-<p class="text-sm text-gray-600 mb-3">
-  <span class="font-medium text-gray-700">Type:</span> ${site.type}
-</p>
-<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="openSiteModal('${site.id}')">View Details</button>
-</div>
-        `)
         .on('click', () => {
           this.openModal(site);
         });

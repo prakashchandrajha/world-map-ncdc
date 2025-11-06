@@ -256,7 +256,7 @@ export class SitesService {
       }
     },
     // Add the rest of the sites from the locations array with their content
-    // Example intangible site
+    // Intangible sites
     {
       id: 'cooperative-principles-tradition',
       name: 'Cooperative Principles Tradition',
@@ -330,6 +330,162 @@ export class SitesService {
             resources: [
               'ICA Cooperative Principles',
               'History of Cooperative Thought'
+            ]
+          }
+        }
+      }
+    },
+    {
+      id: 'cooperative-education-practices',
+      name: 'Cooperative Education Practices',
+      lat: 0,
+      lng: 0,
+      country: 'Global',
+      continent: 'Global',
+      type: 'intangible',
+      content: {
+        pageTitle: 'Cooperative Education Practices',
+        pageSubtitle: 'Knowledge Transmission in Cooperative Movements',
+        mainImage: 'assets/images/Mask group.png',
+        thumbnails: [
+          'assets/images/t1.png',
+          'assets/images/t2.png',
+          'assets/images/t3.png',
+          'assets/images/t4.png'
+        ],
+        infoCard: {
+          country: 'Global',
+          countryFlag: 'assets/images/cntry.png',
+          theme: 'Educational Heritage',
+          entryYear: 2025,
+          coordinates: 'Global'
+        },
+        sections: {
+          legacy: {
+            title: 'Legacy',
+            content: `Traditional methods of teaching cooperative values and practices through generations.`
+          },
+          criteria: {
+            title: 'Criteria',
+            items: [
+              {
+                heading: 'Knowledge Preservation',
+                description: 'Methods for transmitting cooperative knowledge and skills.'
+              },
+              {
+                heading: 'Community Learning',
+                description: 'Participatory education approaches in cooperative communities.'
+              },
+              {
+                heading: 'Cultural Continuity',
+                description: 'Maintaining cooperative traditions through education.'
+              }
+            ]
+          },
+          virtualExperience: {
+            title: 'Virtual Experience',
+            content: `Experience traditional cooperative teaching methods and learning approaches.`,
+            image: 'assets/images/Maskgroup.png'
+          },
+          community: {
+            title: 'Community',
+            content: `Supports ongoing cooperative development through education.`
+          },
+          aditionalData: {
+            title: 'Additional Data',
+            content: `Essential for sustaining cooperative movements.`
+          },
+          aditionalData2: {
+            title: 'Recognition',
+            content: `Recognized as vital intangible heritage.`
+          },
+          aditionalDat3: {
+            title: 'Practice',
+            content: `Continues in cooperative training programs worldwide.`
+          },
+          learnMore: {
+            title: 'Learn More',
+            resources: [
+              'Cooperative Education Methods',
+              'Knowledge Transmission in Cooperatives'
+            ]
+          }
+        }
+      }
+    },
+    {
+      id: 'cooperative-festivals-traditions',
+      name: 'Cooperative Festivals and Traditions',
+      lat: 0,
+      lng: 0,
+      country: 'Global',
+      continent: 'Global',
+      type: 'intangible',
+      content: {
+        pageTitle: 'Cooperative Festivals and Traditions',
+        pageSubtitle: 'Cultural Celebrations of Cooperative Heritage',
+        mainImage: 'assets/images/Mask group.png',
+        thumbnails: [
+          'assets/images/t1.png',
+          'assets/images/t2.png',
+          'assets/images/t3.png',
+          'assets/images/t4.png'
+        ],
+        infoCard: {
+          country: 'Global',
+          countryFlag: 'assets/images/cntry.png',
+          theme: 'Cultural Celebrations',
+          entryYear: 2025,
+          coordinates: 'Global'
+        },
+        sections: {
+          legacy: {
+            title: 'Legacy',
+            content: `Festivals and traditions that celebrate cooperative achievements and values.`
+          },
+          criteria: {
+            title: 'Criteria',
+            items: [
+              {
+                heading: 'Community Celebration',
+                description: 'Events that bring cooperative communities together.'
+              },
+              {
+                heading: 'Cultural Expression',
+                description: 'Traditional ways of expressing cooperative identity.'
+              },
+              {
+                heading: 'Knowledge Sharing',
+                description: 'Opportunities for sharing cooperative experiences.'
+              }
+            ]
+          },
+          virtualExperience: {
+            title: 'Virtual Experience',
+            content: `Participate in virtual cooperative festivals and cultural celebrations.`,
+            image: 'assets/images/Maskgroup.png'
+          },
+          community: {
+            title: 'Community',
+            content: `Strengthens cooperative identity and solidarity.`
+          },
+          aditionalData: {
+            title: 'Additional Data',
+            content: `Includes harvest festivals, cooperative anniversaries, and cultural events.`
+          },
+          aditionalData2: {
+            title: 'Recognition',
+            content: `Celebrated as living cooperative heritage.`
+          },
+          aditionalDat3: {
+            title: 'Participation',
+            content: `Open to cooperative members and the wider community.`
+          },
+          learnMore: {
+            title: 'Learn More',
+            resources: [
+              'Cooperative Cultural Festivals',
+              'Traditional Cooperative Celebrations'
             ]
           }
         }

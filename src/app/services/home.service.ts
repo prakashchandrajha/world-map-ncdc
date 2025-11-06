@@ -61,12 +61,7 @@ This  ambitious undertaking by the ICA establishes a Cooperative Cultural Herita
 The ICA Cooperative Cultural Heritage List is expected to highlight both iconic sites of origin and practices that are contemporary, creative and that embody the spirit of cooperation, creating a balanced and meaningful global map of cooperative identity, which must be the sum of all "our" (cooperative) experiences.
 `
       },
-      {
-        key: 'didYouKnow',
-        title: 'Did you know that the Idea and Practice of Organizing Shared Interests was inscribed as the Intangible Cultural Heritage of Humanity in 2016?',
-        desc: ``,
-        moreText: ``
-      }
+     
     ];
   }
 

@@ -31,6 +31,11 @@ export class Home implements OnInit {
   selectedCard: any = null;
   services2: any[] = [];
 
+  imageIndex = 0;
+currentImage = '1st.png';
+imageSequence = ['1st.png', '2nd.png', '3rd.png', '4th.png'];
+isAnimating = true;
+
   private languageSubscription: Subscription = new Subscription();
 
   constructor(private homeService: HomeService, private translationService: TranslationService) {}
@@ -43,6 +48,8 @@ export class Home implements OnInit {
     this.sections = this.homeService.getSectionData();
      // ✅ Load your new DRY services for "Principles for Identifying Cooperative Cultural Heritage"
     this.services2 = this.homeService.getPrinciplesServices();
+
+    this.startImageSequence();
 
     // Force re-render when language changes
     this.languageSubscription = this.translationService.currentLanguage$.subscribe(() => {
@@ -122,10 +129,29 @@ export class Home implements OnInit {
     this.modalText = '';
   }
 
+   startImageSequence() {
+  let index = 0;
+  const interval = setInterval(() => {
+    index++;
+    if (index < this.imageSequence.length) {
+      this.currentImage = this.imageSequence[index];
+      
+      // Stop when we reach the last image
+      if (index === this.imageSequence.length - 1) {
+        this.isAnimating = false;
+        clearInterval(interval);
+      }
+    }
+  }, 2000); // Change image every 2 seconds
+}
+
   closeModalOutside3(event: MouseEvent) {
     const target = event.target as HTMLElement;
     if (target.classList.contains('fixed')) {
       this.closeModal();
     }
   }
+
+
+ // Change image every 2 seconds
 }

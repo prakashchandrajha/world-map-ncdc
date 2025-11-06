@@ -13,11 +13,12 @@
     <!-- 🖼️ Background Image -->
     <div class="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
       <img
-        [src]="'assets/images/' + currentImage"
-        alt="Slideshow Image"
-        class="object-contain max-w-full animate-fadeIn"
-        [class.smaller-first]="currentImage === '1st.png'"
-      />
+  *ngIf="isImageVisible"
+  [src]="'assets/images/' + currentImage"
+  alt="Slideshow Image"
+  class="object-contain max-w-full animate-fadeIn"
+  [class.smaller-first]="currentImage === '1st.png'"
+/>
     </div>
 
     <!-- 📝 Bottom Content -->

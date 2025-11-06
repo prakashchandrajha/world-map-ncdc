@@ -35,6 +35,7 @@ export class Home implements OnInit {
 currentImage = '1st.png';
 imageSequence = ['1st.png', '2nd.png', '3rd.png', '4th.png'];
 isAnimating = true;
+isImageVisible = true;
 
   private languageSubscription: Subscription = new Subscription();
 
@@ -134,7 +135,15 @@ isAnimating = true;
   const interval = setInterval(() => {
     index++;
     if (index < this.imageSequence.length) {
-      this.currentImage = this.imageSequence[index];
+      if (index >= 2) { // For 3rd and 4th image (index 2 and 3)
+        this.currentImage = this.imageSequence[index];
+      } else {
+        this.isImageVisible = false; // Hide the image
+        setTimeout(() => {
+          this.currentImage = this.imageSequence[index];
+          this.isImageVisible = true; // Show the new image, re-triggering animation
+        }, 50); // A small delay to allow DOM update
+      }
       
       // Stop when we reach the last image
       if (index === this.imageSequence.length - 1) {
@@ -142,7 +151,7 @@ isAnimating = true;
         clearInterval(interval);
       }
     }
-  }, 800); // Change image every 2 seconds
+  }, 800); // Change image every 800ms
 }
 
   closeModalOutside3(event: MouseEvent) {

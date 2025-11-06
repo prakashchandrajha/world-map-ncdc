@@ -6,7 +6,7 @@
 
 <section class="ml-4 sm:ml-8 md:ml-16 lg:ml-32 xl:ml-[340px]">
   <!-- Back Button -->
-  <section class="py-8 sm:py-10 px-4 sm:px-8 lg:px-16 font-[Poppins] min-h-[80vh]">
+  <section class="py-4 sm:py-6 px-4 sm:px-8 lg:px-16 font-[Poppins] min-h-[60vh]">
     <button
       class="ml-2 sm:ml-4 md:ml-8 lg:ml-15 mb-6 px-4 py-2 font-semibold rounded-lg shadow hover:brightness-110 transition"
       [ngClass]="config.buttonBg + ' ' + config.buttonHover"
@@ -80,8 +80,8 @@
   </section>
 
   <!-- Legacy Section -->
-  <section class="py-8 sm:py-10 px-4 sm:px-6 font-[Poppins]">
-    <div class="flex flex-col md:flex-row items-start justify-center gap-8 md:gap-10 max-w-6xl mx-auto ml-4 sm:ml-8 md:ml-16 lg:ml-[70px]">
+  <section class="py-4 sm:py-6 px-4 sm:px-8 lg:px-16 font-[Poppins]">
+    <div class="flex flex-col md:flex-row items-start justify-center gap-8 md:gap-10 max-w-6xl mx-auto ml-0 sm:ml-10 lg:ml-16">
       <div class="md:w-1/2">
         <h2 class="text-3xl sm:text-4xl font-bold mb-4 leading-tight" [ngClass]="config.primaryColor">
           {{ content.sections.legacy.title }}
@@ -127,13 +127,13 @@
   </section>
 
   <!-- Criteria -->
-  <section class="py-10 px-6 font-[Poppins]">
-    <div class="max-w-6xl mx-auto ml-4 sm:ml-8 md:ml-16 lg:ml-20 mb-8">
+  <section class="py-6 px-4 sm:px-8 lg:px-16 font-[Poppins]">
+    <div class="max-w-6xl mx-auto ml-0 sm:ml-10 lg:ml-16 mb-8">
       <h2 class="text-3xl sm:text-4xl font-bold mb-3" [ngClass]="config.primaryColor">
         {{ content.sections.criteria.title }}
       </h2>
     </div>
-    <div class="flex flex-col sm:flex-row ml-4 sm:ml-8 md:ml-16 lg:ml-20 gap-6 mt-6">
+    <div class="flex flex-col sm:flex-row ml-4 sm:ml-8 md:ml-16 lg:ml-20 gap-6 mt-4">
       <div
         *ngFor="let item of content.sections.criteria.items"
         class="w-full sm:w-[250px] bg-gradient-to-r from-[#7a004a] to-[#7a004a] text-white rounded-2xl shadow-md hover:shadow-lg transition duration-300 p-6"
@@ -145,16 +145,16 @@
   </section>
 
   <!-- Community -->
-  <section class="px-6 py-8">
-    <div class="max-w-4xl mx-auto ml-4 sm:ml-8 md:ml-16 lg:ml-20">
+  <section class="px-4 sm:px-8 lg:px-16 py-4">
+    <div class="max-w-4xl mx-auto ml-0 sm:ml-10 lg:ml-16">
       <h1 class="text-3xl font-bold mb-4" [ngClass]="config.primaryColor">{{ content.sections.community.title }}</h1>
       <p class="text-gray-700">{{ content.sections.community.content }}</p>
     </div>
   </section>
 
   <!-- Virtual Experience -->
-  <section class="ml-2 sm:ml-4 md:ml-8 lg:ml-13 px-6 py-8">
-    <div class="flex flex-col lg:flex-row items-center justify-between max-w-6xl mx-auto ml-2 sm:ml-4 md:ml-8 lg:ml-[20px] gap-10">
+  <section class="ml-2 sm:ml-4 md:ml-8 lg:ml-13 px-4 sm:px-8 lg:px-16 py-4">
+    <div class="flex flex-col lg:flex-row items-center justify-between max-w-6xl mx-auto ml-0 sm:ml-10 lg:ml-16 gap-10">
       <div class="lg:w-1/2">
         <h2 class="text-3xl sm:text-4xl font-bold mb-4" [ngClass]="config.primaryColor">
           {{ content.sections.virtualExperience.title }}
@@ -174,8 +174,8 @@
   </section>
 
   <!-- Learn More -->
-  <section class="mr-1 sm:mr-2 lg:mr-2.5 px-6 py-8">
-    <div class="max-w-2xl mx-auto ml-4 sm:ml-8 md:ml-16 lg:ml-20">
+  <section class="mr-1 sm:mr-2 lg:mr-2.5 px-4 sm:px-8 lg:px-16 py-4">
+    <div class="max-w-2xl mx-auto ml-0 sm:ml-10 lg:ml-16">
       <h1 class="text-3xl font-bold mb-4" [ngClass]="config.primaryColor">{{ content.sections.learnMore.title }}</h1>
       <ul class="list-disc pl-5 text-gray-700">
         <li *ngFor="let resource of content.sections.learnMore.resources">{{ resource }}</li>

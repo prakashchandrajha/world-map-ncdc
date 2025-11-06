@@ -142,7 +142,7 @@ isAnimating = true;
         clearInterval(interval);
       }
     }
-  }, 2000); // Change image every 2 seconds
+  }, 800); // Change image every 2 seconds
 }
 
   closeModalOutside3(event: MouseEvent) {

@@ -31,14 +31,14 @@ export class SitesService {
         pageSubtitle: 'Preserving the Spirit of Cooperation: The Alphonse Desjardins Historical Society',
         mainImage: 'assets/images/Mask group.png',
         thumbnails: [
-          'assets/images/t1.png',
-          'assets/images/t2.png',
-          'assets/images/t3.png',
-          'assets/images/t4.png'
+          'assets/images/sites_files/sub-icon/Alphonce-Desjardins1.png',
+          'assets/images/sites_files/sub-icon/Alphonce-Desjardins2.png',
+          'assets/images/sites_files/sub-icon/Alphonce-Desjardins3.png',
+          'assets/images/sites_files/sub-icon/Alphonce-Desjardins4.png'
         ],
         infoCard: {
           country: 'Canada',
-          countryFlag: 'assets/images/cntry.png',
+          countryFlag: 'assets/images/sites_files/country-img/canada.png',
           theme: 'Financial Group',
           entryYear: 2025,
           coordinates: '46.80942 N, -71.18206 W'
@@ -79,8 +79,10 @@ Through this digital journey, one can witness history as though standing alongsi
             content: `The services of the Alphonse Desjardins Historical Society extend well beyond the walls of its archives. They are available to Desjardins Group officers, employees, and members, as well as to cooperators in Canada and abroad  and indeed to the general public. Whether one is a researcher exploring the roots of cooperative banking or a visitor seeking inspiration, the Society offers a wealth of knowledge and a warm invitation to discover how ordinary people, united by shared purpose, can transform their communities.`
           },
           aditionalData: {
-            title: 'Additional Data',
-            content: `Listed as a National Historic Site of Canada.`
+            title: 'Why It Matters Today',
+            content: `The Alphonse Desjardins Historical Society is far more than a custodian of the past. It is a reminder that the cooperative model  rooted in trust, solidarity, and shared responsibility  remains one of the most humane and resilient approaches to economic life. In a world often defined by competition and inequality, the Society keeps alive the message that financial systems can and should serve people first.
+
+Through its commitment to education, preservation, and interpretation, the Society ensures that the legacy of Alphonse and Dorimène Desjardins continues to inspire new generations to believe in the enduring power of cooperation.`
           },
           aditionalData2: {
             title: 'Recognition',
@@ -91,11 +93,10 @@ Through this digital journey, one can witness history as though standing alongsi
             content: `Open to the public with guided tours available.`
           },
           learnMore: {
-            title: 'Why It Matters Today',
+            title: 'Learn More',
             resources: [
-              `The Alphonse Desjardins Historical Society is far more than a custodian of the past. It is a reminder that the cooperative model  rooted in trust, solidarity, and shared responsibility  remains one of the most humane and resilient approaches to economic life. In a world often defined by competition and inequality, the Society keeps alive the message that financial systems can and should serve people first.
-
-Through its commitment to education, preservation, and interpretation, the Society ensures that the legacy of Alphonse and Dorimène Desjardins continues to inspire new generations to believe in the enduring power of cooperation.`,
+              'PDF report on Maison Alphonce Desjardins',
+              'virtual tour'
               
             ]
           }

@@ -1,11 +1,308 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+interface EventItem {
+  id: number;
+  date: string;
+  month: string;
+  year: string;
+  title: string;
+  content: string;
+}
 
 @Component({
   selector: 'app-events',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './events.component.html',
   styleUrl: './events.component.css'
 })
 export class EventsComponent {
+  openEventId: number | null = null;
 
+  events: EventItem[] = [
+    {
+      id: 1,
+      date: '12',
+      month: 'Nov',
+      year: '2025',
+      title: 'Launch of the World Map on Cooperativa Cultural Heritage, Brasilia, Brazil',
+      content: ''
+    },
+    {
+      id: 2,
+      date: '1',
+      month: 'OCT',
+      year: '2025',
+      title: 'UNESCO Declares its Ambition to include Culture as a Stand alone Goal',
+      content: `
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          At the end of the three-day global conference in Barcelona, ministers of culture from around the world adopted a shared declaration that put culture front and centre anchoring it as a human right, global public good and vital pillar of sustainable development. The document insists that for societies to thrive justly, peacefully and resiliently culture must be woven through every policy, from education and creative economies to climate, heritage, digital life and crisis recovery. Notably, it calls for:
+        </p>
+
+        <div class="bg-red-50 rounded-lg p-6 mb-6">
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start">
+              <span class="text-[#7a004a] font-bold mr-2">•</span>
+              <span>Upholding the right of all people to participate in cultural life.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#7a004a] font-bold mr-2">•</span>
+              <span>Integrating culture into the post-2030 global development agenda—potentially even as its own goal.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#7a004a] font-bold mr-2">•</span>
+              <span>Elevating cultural rights, diversity (especially of Indigenous peoples, people of African descent, minorities and vulnerable groups), and restitution of cultural property.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#7a004a] font-bold mr-2">•</span>
+              <span>Merging culture with education, lifelong learning, arts-and-heritage when shaping skills, technology, climate action and inclusive economies.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#7a004a] font-bold mr-2">•</span>
+              <span>Recognising the creative and cultural sectors as engines of innovation, decent work and inclusive growth.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#7a004a] font-bold mr-2">•</span>
+              <span>Linking culture deeply to the climate crisis, digital transformation (including AI), crisis response and heritage in emergencies.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-4">
+          <p class="text-gray-700">
+            <span class="font-semibold">Click here and read the full declaration.</span>
+          </p>
+        </div>
+      `
+    },
+    {
+      id: 3,
+      date: '23',
+      month: 'SEP',
+      year: '2025',
+      title: 'ICA Official Pre-Event to UNESCO Mondiacult',
+      content: `
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          On 26 September 2025, during the MONDIACULT 2025 – the United Nations Educational, Scientific and Cultural Organization (UNESCO) World Conference on Cultural Policies and Sustainable Development held in Barcelona – a hybrid side-event was hosted by ICA together with CICOPA, Abacus Cooperative and ASETT (Arizmendiarrieta Social Economy Think Tank).
+        </p>
+
+        <div class="bg-green-50 rounded-lg p-6 mb-6">
+          <h4 class="font-bold text-gray-800 mb-4">The session, titled "Cooperatives in Culture for Diversity, Cultural Rights and Decent Work," positioned cooperatives as dynamic cultural actors and essential stakeholders in cultural policy, creativity, and social economics.</h4>
+
+          <h5 class="font-semibold text-gray-700 mb-3">Key themes included:</h5>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start">
+              <span class="text-[#7a004a] font-bold mr-2">•</span>
+              <span>The role of cooperatives as innovative, equitable, rights-based models in cultural and creative industries, fostering diversity of voices and ownership.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#7a004a] font-bold mr-2">•</span>
+              <span>Education and lifelong learning as foundational elements of cooperative identity, linked to cultural literacy, democratic participation and diversity.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#7a004a] font-bold mr-2">•</span>
+              <span>The mapping and recognition of cooperative cultural heritage sites as living expressions of cultural identity, diversity and resilience across generations.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-purple-50 rounded-lg p-6 mb-6">
+          <h5 class="font-semibold text-gray-700 mb-3">Speakers included prominent cooperative leaders, policymakers and international experts such as:</h5>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700">
+            <li class="flex items-center">
+              <span class="text-[#7a004a] font-bold mr-2">•</span>
+              <span>Maravillas Rojo (President of Abacus Cooperative)</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-[#7a004a] font-bold mr-2">•</span>
+              <span>Nadia Quevedo (Commissioner for Economic Promotion, Barcelona City Council)</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-[#7a004a] font-bold mr-2">•</span>
+              <span>Iñigo Albuzuri (ICA Board Member & Director of ASETT)</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-[#7a004a] font-bold mr-2">•</span>
+              <span>Simel Esim (Head of the ILO Cooperative, Social and Solidarity Economy Unit, Chair of UN TFSSE)</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          By convening this event, the cooperative movement reaffirmed its commitment to culture as an integral dimension of sustainable development, embracing cooperative values of solidarity, equity and inclusion. The session helped position cooperatives firmly within global cultural-policy dialogues and strengthened efforts to ensure the cooperative enterprise form is recognised not just economically but culturally and socially.
+        </p>
+
+        <div class="bg-gray-50 rounded-lg p-4">
+          <p class="text-[#7a004a] font-semibold">Read more</p>
+        </div>
+      `
+    },
+    {
+      id: 4,
+      date: 'JUN',
+      month: '',
+      year: '2025',
+      title: 'ICA organizes the first physical meeting of the Cultural Heritage Working Group',
+      content: `
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          The International Cooperative Alliance (ICA) advanced a landmark initiative to establish international standards for identifying, validating, and recognising cooperative cultural-heritage sites worldwide. As reported by Nizwe Piesse, these proposed standards formed the foundation for selecting an inaugural list of 25 "undisputed" cooperative heritage sites, to be showcased on a global digital map.
+        </p>
+
+        <div class="space-y-4 text-gray-700 leading-relaxed">
+          <p>
+            The standards were designed to provide clear criteria and a consistent process through which ICA member organisations could nominate sites with deep connections to the cooperative movement's cultural legacy. They reflected the movement's commitment to viewing heritage not only through an economic lens, but also in terms of education, inclusion, sustainability, and collective memory. Through this initiative, the ICA positioned itself as a key steward of cooperative cultural heritage, laying the groundwork for broader recognition and international collaboration.
+          </p>
+
+          <p>
+            By developing these standards, the ICA ensured reliability and comparability across regional and cultural contexts, allowing diverse cooperative traditions to be evaluated against common benchmarks. The anticipated launch of the standards and the accompanying digital heritage map aimed to increase global visibility for cooperative heritage as a vital part of the world's intangible cultural heritage.
+          </p>
+
+          <p>
+            This effort encouraged cooperative organisations across all regions to engage in the nomination process and contributed to establishing cooperative heritage as an essential pillar within global heritage dialogues and sustainable development discussions.
+          </p>
+        </div>
+      `
+    },
+    {
+      id: 5,
+      date: 'FEB',
+      month: '',
+      year: '2025',
+      title: 'Launch of the Programme of the ICA Working Group on Cooperative Cultural Heritage',
+      content: `
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          In February, 2025, the International Cooperative Alliance (ICA) announced the formation of a new global working group: the Cooperative Cultural Heritage Working Group (CCH-WG). This initiative marks a significant step in the cooperative movement's efforts to identify, document and promote cooperative heritage sites, traditions and practices around the world.
+        </p>
+
+        <div class="bg-yellow-50 rounded-lg p-6 mb-6">
+          <p class="text-gray-700 mb-4">
+            Rooted in the cooperative idea's earlier recognition by United Nations Educational, Scientific and Cultural Organization (UNESCO) in 2016 as part of the Intangible Cultural Heritage of Humanity, the CCH-WG seeks to bring this cultural dimension into sharper focus. Chaired by ICA Director General Jeroen Douglas and mentored by Organization of Brazilian Cooperatives (OCB), the working group comprises expert cooperators from all ICA regions and includes a dedicated technical team from ICA and OCB.
+          </p>
+        </div>
+
+        <div class="bg-blue-50 rounded-lg p-6">
+          <h4 class="font-bold text-gray-800 mb-4">For 2025, the CCH-WG has set three major deliverables:</h4>
+          <ol class="space-y-3 text-gray-700">
+            <li class="flex items-start">
+              <span class="bg-[#7a004a] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">1</span>
+              <span>A digital map showcasing 25 undisputed geographic sites of cooperative cultural heritage.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-[#7a004a] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">2</span>
+              <span>A set of standards to guide the selection of future cooperative cultural heritage sites.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-[#7a004a] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">3</span>
+              <span>A global communications campaign to publicly launch and promote the working group's work and programme.</span>
+            </li>
+          </ol>
+        </div>
+
+        <p class="text-gray-700 mt-6 leading-relaxed">
+          The initiative invites organisations wishing to feature their cooperative sites on the map to contact the CCH-WG by a given deadline (31 May 2025) via the ICA global office. Through this effort, the cooperative movement demonstrates its commitment to preserving cooperative memory and culture—and ensuring that cooperative heritage becomes a vital component of the global cultural narrative.
+        </p>
+      `
+    },
+    {
+      id: 6,
+      date: '26',
+      month: 'SEP',
+      year: '2022',
+      title: 'Mondiacult 2022: Cooperatives Enhance a Resilient Cultural Sector',
+      content: `
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          At UNESCO's Mondiacult 2022 Conference on Cultural Policies and Sustainable Development, the International Cooperative Alliance (ICA) organized a side event titled "Cooperatives are Key Stakeholders in Advancing SDGs Through the Culture and Creative Sector." Held in Brussels and online, and hosted with CICOPA and Cooperatives of the Americas, the session gathered over 200 participants, highlighting the cooperative model's contribution to cultural resilience and sustainable development.
+        </p>
+
+        <div class="space-y-4 text-gray-700 leading-relaxed">
+          <p>
+            The event celebrated the 2016 UNESCO recognition of the cooperative idea and practice as part of humanity's Intangible Cultural Heritage. Discussions focused on four themes: the role of cooperatives in safeguarding cultural heritage, promoting decent work in the creative sector, advancing cooperative education, and fostering sustainable cultural ecosystems.
+          </p>
+
+          <div class="bg-green-50 rounded-lg p-4">
+            <p class="text-gray-700">
+              Speakers included ICA President Ariel Guarco, who emphasized partnerships with UNESCO to embed cooperative values in education, and Iñigo Albuzuri, President of CICOPA, who underscored cooperatives' role in preserving and transmitting cultural heritage. Christine Merkel of the German Commission for UNESCO urged cooperatives to take bold action in shaping future cultural policies.
+            </p>
+          </div>
+
+          <p>
+            Participants called for stronger international networking among cultural cooperatives and reaffirmed the cooperative movement's commitment to inclusivity, sustainability, and solidarity in the global cultural landscape.
+          </p>
+
+          <p>
+            By engaging in Mondiacult 2022, the ICA highlighted that cooperatives are not only economic actors but also cultural bearers, ensuring that cooperative values continue to inspire creative, equitable, and resilient societies worldwide.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-4 mt-4">
+          <p class="text-[#7a004a] font-semibold">Read more</p>
+        </div>
+      `
+    },
+    {
+      id: 7,
+      date: '20',
+      month: 'NOV',
+      year: '2021',
+      title: 'Cooperatives and Cultural Heritage at the World Cooperative Congress',
+      content: `
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          At the World Cooperative Congress 2021 in Seoul, delegates engaged in a thought-provoking afternoon panel titled "Co-op culture & cultural heritage", part of the Congress's first key theme: Examining Our Cooperative Identity. The session opened with facilitator Stefania Marcone referencing the landmark 2016 decision by UNESCO, which formally recognised cooperatives as part of the Intangible Cultural Heritage of Humanity.
+        </p>
+
+        <div class="space-y-6">
+          <div class="bg-purple-50 rounded-lg p-6">
+            <p class="text-gray-700 mb-4">
+              In his presentation, Thomas Mende (Vice President, DZ Bank) outlined the cooperative movement's role in securing that recognition, stressing that the award was for all cooperatives worldwide, not just for the German organisations that led the application.
+            </p>
+            <p class="text-gray-700">
+              Then, Thomas Knubben (Director, Institute of Cultural Management) explored the concept of "cultural cooperatives" operating across sectors—from media and arts venues to heritage breweries. He described how cooperative culture plays out on three levels: macro (shifting attitudes), meso (shaping laws and education) and micro (everyday cooperative practice).
+            </p>
+          </div>
+
+          <div class="bg-blue-50 rounded-lg p-6">
+            <h4 class="font-bold text-gray-800 mb-4">Panelists brought diverse international experiences:</h4>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-[#7a004a] font-bold mr-2">•</span>
+                <span>12-year-old Filipino student Cerge S. Perualila spoke about embedding cooperative values through co-ops in her school.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-[#7a004a] font-bold mr-2">•</span>
+                <span>In Morocco, Ouim Aziz described a women's cooperative tackling environmental challenges.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-[#7a004a] font-bold mr-2">•</span>
+                <span>In Kyrgyzstan, Dinara Chochunbaeva shared insights from women's felting cooperatives that preserve cultural traditions.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-[#7a004a] font-bold mr-2">•</span>
+                <span>In Wales, lifelong cooperative activist David Smith called attention to the lack of awareness about the cooperative heritage of Robert Owen and suggested establishing a global annual "Robert Owen Day" to strengthen cooperative education.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-green-50 rounded-lg p-6">
+            <p class="text-gray-700">
+              Companying these voices, Hyeonggeun Yoon (CEO, Hansalim Cooperative) reflected on South Korea's rice-field communities, mutual assistance traditions, and the need to revive regional cooperative cultures in addressing food insecurity and climate challenges.
+            </p>
+            <p class="text-gray-700 mt-3">
+              Meanwhile, Giovanna Barni (President, CoopCulture & Culturmedia) stressed how culture within the cooperative sector contributes to quality employment, audience engagement and territorial sustainability.
+            </p>
+            <p class="text-gray-700 mt-3">
+              Finally, Christine Merkel (German Commission for UNESCO) closed the session by highlighting how "culture for social good" is now emerging more clearly and urged the global cooperative movement to map cultural cooperative activity and contribute meaningfully to UNESCO's next world conference.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-4 mt-4">
+          <p class="text-[#7a004a] font-semibold">Read more</p>
+        </div>
+      `
+    }
+  ];
+
+  toggleEvent(eventId: number): void {
+    this.openEventId = this.openEventId === eventId ? null : eventId;
+  }
 }

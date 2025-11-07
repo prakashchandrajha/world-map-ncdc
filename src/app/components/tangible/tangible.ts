@@ -38,7 +38,7 @@ export class Tangible implements OnInit {
       countryName: site.country,
       haritageData: site.content.infoCard.entryYear.toString(),
       btn: 'Read More',
-      title: site.name,
+      title: site.siteName,
       desc: site.content.pageSubtitle,
       siteId: site.id,
       type: site.type

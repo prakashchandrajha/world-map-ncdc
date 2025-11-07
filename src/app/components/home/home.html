@@ -1,7 +1,8 @@
 <!-- hero banner -->
 <section class="">
   <div
-    class="relative w-full min-h-screen bg-gradient-to-r from-[#7a004a] via-[#520035] to-[#1a0011] overflow-hidden flex flex-col items-center justify-center px-4 sm:px-8 md:px-16 lg:px-24"
+    class="relative w-full min-h-screen bg-gradient-to-r from-[#7a004a] via-[#520035] to-[#1a0011] 
+           overflow-hidden flex flex-col justify-end items-center px-4 sm:px-8 md:px-16 lg:px-24 pb-16"
   >
     <!-- ✨ Decorative glowing shades -->
     <div class="absolute -bottom-20 -left-20 w-[220px] sm:w-[280px] md:w-[320px] h-[220px] sm:h-[280px] md:h-[320px] bg-white/10 rounded-full blur-3xl"></div>
@@ -9,45 +10,42 @@
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06)_0%,transparent_70%)]"></div>
     <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.04)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.04)_50%,rgba(255,255,255,0.04)_75%,transparent_75%,transparent)] opacity-20 bg-[length:40px_40px]"></div>
 
-    <!-- ✨ Content -->
-    <div class=" ml-10 relative z-10 w-full flex flex-col items-center animate-fadeInUp">
-
-      <!-- 🖼️ Background Image -->
+    <!-- 🖼️ Background Image -->
+    <div class="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
       <img
-        src="assets/images/ikl.png"
-        alt="Logo Background"
-        class="object-contain w-[280px] sm:w-[380px] md:w-[600px] lg:w-[900px] xl:w-[1200px] max-w-full animate-zoomIn"
-      />
-      
+  *ngIf="isImageVisible"
+  [src]="'assets/images/' + currentImage"
+  alt="Slideshow Image"
+  class="object-contain max-w-full animate-fadeIn"
+  [class.smaller-first]="currentImage === '1st.png'"
+/>
+    </div>
 
-      <!-- 🎯 Center Button -->
-     <div class="flex justify-center items-center mt-6">
-  <button
-    class="px-6 py-3 rounded-full border-2 border-white text-white font-semibold text-sm sm:text-base 
-           bg-transparent hover:bg-white hover:text-[#7a004a] hover:scale-105 
-           transition-all duration-300"
-  >
-    {{ translate('home.explore') }}
-  </button>
-</div>
+    <!-- 📝 Bottom Content -->
+    <div class="relative z-10 w-full flex flex-col items-center text-center space-y-6">
+      <!-- Explore Button -->
+      <div class="flex justify-center items-center">
+        <button
+          class="px-6 py-3 rounded-full border-2 border-white text-white font-semibold text-sm sm:text-base 
+                 bg-transparent hover:bg-white hover:text-[#7a004a] hover:scale-105 
+                 transition-all duration-300"
+        >
+          {{ translate('home.explore') }}
+        </button>
+      </div>
 
-
-
-
-      <!-- 📝 Bottom-Left Text -->
-   <h1
-  class="hidden sm:block absolute bottom-8 sm:bottom-12 left-6 sm:left-10 md:left-16 text-left 
-         text-[18px] font-bold leading-snug sm:leading-tight 
-         bg-clip-text text-transparent bg-gradient-to-r from-white to-white 
-         max-w-[85%] sm:max-w-[70%] md:max-w-[50%]"
+      <!-- Bottom Left Title -->
+     <h1
+  class=" text-white text-[18px] sm:text-[20px] md:text-[18px] font-bold leading-snug sm:leading-tight 
+         text-center w-full sm:max-w-[70%] md:max-w-[70%] px-4 sm:px-10 md:px-40 mx-auto "
 >
   {{ translate('home.title') }}
 </h1>
 
-
     </div>
   </div>
 </section>
+
 
 
 
@@ -167,7 +165,7 @@
           class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
           <div
             class="h-14 w-14 rounded-full flex items-center justify-center border border-zinc-400 bg-white overflow-hidden">
-            <img src="../../../assets/images/language.png" alt="Svelte" class="h-10 w-10 object-contain">
+            <img src="../../../assets/images/language.png" alt="Svelte" class="h-10 w-10 object-contain animate-fadeIn">
           </div>
         </div>
         <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">{{translate('home.stats.countries')}}</p>
@@ -183,7 +181,7 @@
           class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
           <div
             class="h-14 w-14 rounded-full flex items-center justify-center border border-zinc-400 bg-white overflow-hidden">
-            <img src="../../../assets/images/inventory_2.png" alt="Supabase" class="h-10 w-10 object-contain">
+            <img src="../../../assets/images/inventory_2.png" alt="Supabase" class="h-10 w-10 object-contain animate-fadeIn">
           </div>
         </div>
         <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">{{translate('home.stats.sites')}}</p>
@@ -199,7 +197,7 @@
           class="h-20 w-20 rounded-full flex items-center justify-center border-2 border-[#7a004a] transition duration-300">
           <div
             class="h-14 w-14 rounded-full flex items-center justify-center border border-zinc-400 bg-white overflow-hidden">
-            <img src="../../../assets/images/account_circle.png" alt="Vercel" class="h-10 w-10 object-contain">
+            <img src="../../../assets/images/account_circle.png" alt="Vercel" class="h-10 w-10 object-contain animate-fadeIn">
           </div>
         </div>
         <p class="mt-3 text-[15px] font-bold text-[#7a004a] tracking-tight">{{translate('home.stats.moreToCome')}}</p>
@@ -225,7 +223,7 @@
     @for (card of cards; track $index) {
       <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-lg w-full relative">
         <div class="relative">
-          <img [src]="card.img" alt="Card image" class="w-full h-40 object-cover">
+          <img [src]="card.img" alt="Card image" class="w-full h-40 object-cover animate-fadeIn">
 
           <!-- Badge -->
           <img [src]="card.badge"
@@ -372,7 +370,7 @@
               <img
                   [src]="'../../../assets/images/' + (service === 0 ? 'handshake.png' : (service === 1 ? 'military_tech.png' : (service === 2 ? 'family_history.png' : (service === 3 ? 'diamond.png' : 'Group 50.png'))))"
                   [alt]="translate('home.services.' + service + '.title')"
-                  class="h-10 w-10 object-contain"
+                  class="h-10 w-10 object-contain animate-fadeIn"
                 />
             </div>
           </div>

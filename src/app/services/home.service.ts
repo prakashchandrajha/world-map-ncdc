@@ -8,7 +8,11 @@ export class HomeService {
   getHomeCards() {
     return [
         {img:'../../../assets/images/uni2.png',badge:'../../../assets/images/b1 (2).png',title:'Tangible Heritage of Cooperation',desc:'Physical sites, Landscapes, Buildings, Archives, and infrastructure directly associated with cooperative heritage.',btn:'read more', moreText: 'Physical places, buildings, settlements, and infrastructure that embody the history and legacy of cooperative enterprise. These include cooperative stores, factories, housing complexes, agricultural facilities, and landscapes directly associated with cooperative activity. Tangible CCH represents the material foundations of cooperation, visible in the built environment and cultural landscapes shaped by cooperative governance.'},
-         {img:'../../../assets/images/aunty1.png',badge:'../../../assets/images/b1 (1).png',title:'Intangible Heritage of Cooperation',desc:'Traditions, governance systems, cultural values, and collective practices underpinning cooperation and Cooperative Culture passed down throigh generations. (Launch in 2026)',btn:'Coming Soon'},
+         {img:'../../../assets/images/aunty1.png',badge:'../../../assets/images/b1 (1).png',title:'Intangible Heritage of Cooperation',desc:'Traditions, governance systems, cultural values, and collective practices underpinning cooperation and Cooperative Culture passed down throigh generations. (Launch in 2026)',btn:'Coming Soon',moreText: `The traditions, practices, values, and governance systems that underpin cooperative life. These intangible elements include democratic decision-making, community self-help, intergenerational solidarity, and cultural expressions tied to cooperative enterprises.
+
+This includes evident transmission and practice of cooperative principles, rituals of democratic participation, oral histories, solidarity practices, and community-based knowledge. Intangible CCH captures the living cultural dimension of cooperation, how people organize, govern, and sustain social and economic life together.
+
+These elements, more often than not, inscribed by the United Nations Education, Scientific and Cultural Organization (UNESCO) as intangible culture of humanity are not only cultural treasures but also living cooperative practices. They demonstrate that cooperation is not just an economic model but a deeply rooted cultural tradition, embedded in food, festivals, governance, and resource use.`},
 
     ];
   }

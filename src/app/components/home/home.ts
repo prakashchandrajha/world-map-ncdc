@@ -1,6 +1,6 @@
 import { TranslationService } from '../../services/translation.service';
 import { Subscription } from 'rxjs';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { WorldMapComponent } from "../world-map/world-map.component";
 import { Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
@@ -20,7 +20,7 @@ interface HeritageSection {
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
-export class Home implements OnInit {
+export class Home implements OnInit, OnDestroy {
   cards: any[] = [];
 
  inTangibleButtons: string[] = [];
@@ -39,7 +39,11 @@ isImageVisible = true;
 
   private languageSubscription: Subscription = new Subscription();
 
-  constructor(private homeService: HomeService, private translationService: TranslationService) {}
+  constructor(
+    private homeService: HomeService,
+    private translationService: TranslationService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
     // Load data from service (DRY)
@@ -55,6 +59,7 @@ isImageVisible = true;
     // Force re-render when language changes
     this.languageSubscription = this.translationService.currentLanguage$.subscribe(() => {
       // Trigger change detection for template updates
+      this.cdr.detectChanges();
     });
   }
 

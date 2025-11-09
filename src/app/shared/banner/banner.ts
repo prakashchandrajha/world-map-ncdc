@@ -8,15 +8,12 @@ import { Component, Input } from '@angular/core';
   styleUrl: './banner.css'
 })
 export class Banner {
-/** Example: 'linear-gradient(to right, #7a004a, #520035, #1a0011)' */
-  @Input() gradientBackground: string = 'linear-gradient(to right, #7a004a, #520035, #1a0011)';
+ /** Background image for the banner */
+  @Input() centerImage: string = 'assets/images/banner.png';
 
-  /** Example: '/assets/images/aaa.png' */
-  @Input() centerImage: string = '/assets/images/aaa.png';
-
-  /** Example: 'Cultural<br>Heritage of<br>Cooperativism' */
+  /** Main text (supports <br>) */
   @Input() titleText: string = 'Cultural<br>Heritage of<br>Cooperativism';
 
-  /** Example: 'Cultural<br>Heritage of<br>Cooperativism' */
-  @Input() titleText2: string = '';
+  /** Secondary text (optional) */
+  @Input() titleText2: string = 'Preserving<br>Tradition and<br>Innovation';
 }

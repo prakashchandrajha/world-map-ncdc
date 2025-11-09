@@ -1,6 +1,6 @@
 
 <app-banner
-[gradientBackground]="'linear-gradient(to right, #7a004a, #7a004a)'"
+
 
   [titleText]="translate('theList.banner.title')"
   [titleText2]="translate('theList.banner.title2')"
@@ -378,65 +378,7 @@
 
 
 
-<h1 class="selection-title text-center text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#e61692] to-gray-200 text-transparent bg-clip-text">
-<span [innerHTML]="translate('theList.checklist.title')"></span></h1>
 
-<p class="selection-description text-center text-2xl text-black mt-10">
-  <span [innerHTML]="translate('theList.checklist.description')"></span>
-</p>
-<div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-visible">
-  <div class="md:flex items-center relative">
-
-    <!-- Image Section -->
-    <div class="relative md:shrink-0 flex justify-center items-end p-0">
-      <!-- Gradient behind image -->
-      <div class="absolute inset-2 bg-gradient-to-br from-[#7a004a] via-[#9c2b6a] to-[#ff77a9] rounded-xl opacity-90"></div>
-      <!-- Image (touches bottom, smaller height) -->
-      <img
-        src="../../../assets/images/ujm.png"
-        alt="Cultural Heritage"
-        class="relative z-10 h-60 w-60 object-contain transform transition-transform duration-500 scale-120  "
-      >
-    </div>
-
-    <!-- Text Section -->
-    <div class="p-8 text-center">
-      <!-- Main heading -->
-      <h3 class="uppercase tracking-wide text-lg text-[#7a004a] font-bold mb-2">
-        <span [innerHTML]="translate('theList.checklist.assessment.title')"></span>
-      </h3>
-
-      <!-- Sub-heading for radio buttons (theme-colored) -->
-      <h4 class="text-sm font-semibold text-[#7a004a] mb-3">
-        <span [innerHTML]="translate('theList.checklist.assessment.subtitle')"></span>
-      </h4>
-
-      <!-- Radio buttons -->
-      <div class="flex flex-col space-y-3 mb-4">
-        <label class="inline-flex items-center justify-center space-x-2 cursor-pointer">
-          <input type="radio" name="heritage" class="text-[#7a004a] focus:ring-[#7a004a]">
-          <span class="text-gray-700 text-sm"><span [innerHTML]="translate('theList.checklist.assessment.options[0]')"></span></span>
-        </label>
-        <label class="inline-flex items-center justify-center space-x-2 cursor-pointer">
-          <input type="radio" name="heritage" class="text-[#7a004a] focus:ring-[#7a004a]">
-          <span class="text-gray-700 text-sm"><span [innerHTML]="translate('theList.checklist.assessment.options[1]')"></span></span>
-        </label>
-      </div>
-
-      <!-- Description -->
-      <p class="mt-2 text-slate-500 text-sm">
-        <span [innerHTML]="translate('theList.checklist.assessment.description')"></span>
-      </p>
-      <button class="px-6 py-2 mt-2 rounded-lg text-white font-semibold
-               bg-gradient-to-r from-[#7a004a] via-[#9c2b6a] to-[#ff77a9]
-               hover:from-[#9c2b6a] hover:via-[#ff77a9] hover:to-[#7a004a]
-               transition-all duration-300">
-  <span [innerHTML]="translate('theList.checklist.assessment.button')"></span>
-</button>
-
-    </div>
-  </div>
-</div>
 
 
 

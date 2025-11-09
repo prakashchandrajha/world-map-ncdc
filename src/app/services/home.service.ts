@@ -8,7 +8,7 @@ export class HomeService {
   getHomeCards() {
     return [
         {img:'../../../assets/images/uni2.png',badge:'../../../assets/images/b1 (2).png',title:'Tangible Heritage of Cooperation',desc:'Physical sites, Landscapes, Buildings, Archives, and infrastructure directly associated with cooperative heritage.',btn:'read more', moreText: 'Physical places, buildings, settlements, and infrastructure that embody the history and legacy of cooperative enterprise. These include cooperative stores, factories, housing complexes, agricultural facilities, and landscapes directly associated with cooperative activity. Tangible CCH represents the material foundations of cooperation, visible in the built environment and cultural landscapes shaped by cooperative governance.'},
-         {img:'../../../assets/images/aunty1.png',badge:'../../../assets/images/b1 (1).png',title:'Intangible Heritage of Cooperation',desc:'Traditions, governance systems, cultural values, and collective practices underpinning cooperation and Cooperative Culture passed down throigh generations. (Launch in 2026)',btn:'Coming Soon',moreText: `The traditions, practices, values, and governance systems that underpin cooperative life. These intangible elements include democratic decision-making, community self-help, intergenerational solidarity, and cultural expressions tied to cooperative enterprises.
+         {img:'../../../assets/images/aunty1.png',badge:'../../../assets/images/b1 (1).png',title:'Intangible Heritage of Cooperation',desc:'Traditions, governance systems, cultural values, and collective practices underpinning cooperation and Cooperative Culture passed down through generations. (Launch in 2026)',btn:'Coming Soon',moreText: `The traditions, practices, values, and governance systems that underpin cooperative life. These intangible elements include democratic decision-making, community self-help, intergenerational solidarity, and cultural expressions tied to cooperative enterprises.
 
 This includes evident transmission and practice of cooperative principles, rituals of democratic participation, oral histories, solidarity practices, and community-based knowledge. Intangible CCH captures the living cultural dimension of cooperation, how people organize, govern, and sustain social and economic life together.
 
@@ -17,24 +17,6 @@ These elements, more often than not, inscribed by the United Nations Education, 
     ];
   }
 
-  getTangibleButtons(): string[] {
-    return [
-      'Buildings',
-      'Sites',
-      'Museums',
-      'Assembly Halls',
-      'Villages & Cities'
-    ];
-  }
-    getInTangibleButtons(): string[] {
-    return [
-      'Customs',
-      'Oral ',
-      'Artistic traditions',
-      'Natural Resources',
-      'Community centred practices'
-    ];
-  }
 
 
   getSectionData() {
@@ -67,50 +49,9 @@ This  ambitious undertaking by the ICA establishes a Cooperative Cultural Herita
 
 The ICA Cooperative Cultural Heritage List is expected to highlight both iconic sites of origin and practices that are contemporary, creative and that embody the spirit of cooperation, creating a balanced and meaningful global map of cooperative identity, which must be the sum of all "our" (cooperative) experiences.
 `
-      },
-      {
-        key: 'list',
-        title3: 'Did you know that the Idea and Practice of Organizing Shared Interests was inscribed as the Intangible Cultural Heritage of Humanity in 2016?',
-        desc3: `The Cooperative Cultural Heritage List seeks to recognize and preserve the most significant elements of cooperative heritage, ensuring that future generations can learn from and build upon them. `,
-        designType: 'designC',
-    
-      },
-     
+      }
     ];
   }
 
 
-  // ✅ NEW — DRY service data for circles
-  getPrinciplesServices() {
-    return [
-      { title: 'International Cooperative Identity', icon: '../../../assets/images/handshake.png' },
-      { title: 'Cultural Significance and Legacy', icon: '../../../assets/images/military_tech.png' },
-      { title: 'Intergenerational Transmission', icon: '../../../assets/images/family_history.png' },
-      { title: 'Innovative and Inclusive Continuity', icon: '../../../assets/images/diamond.png' },
-      { title: '', icon: '../../../assets/images/Group 50.png' },
-    ];
-  }
-
-  // ✅ NEW — Object holding modal text content
-  PrinciplesForIdentifyingCooperativeCulturalHeritage: Record<string, string> = {
-    'International Cooperative Identity': `
-      <p>es, values, and vision that unite cooperatives across the globe.</p>
-    `,
-    'Cultural Significance and Legacy': `
-      <p>This represents the cultural impact and rich legacy left behind by cooperative movements in various communities.</p>
-    `,
-    'Intergenerational Transmission': `
-      <p>Cooperative knowledge and values are passed across generations, ensuring long-term sustainability and relevance.</p>
-    `,
-    'Innovative and Inclusive Continuity': `
-      <p>Innovation and inclusivity drive cooperative growth while maintaining fairness and shared purpose.</p>
-    `,
-    '': `
-      <p>This symbolizes unity, collaboration, and the shared strength that holds cooperatives together globally.</p>
-    `,
-  };
-
-  getPrinciplesText(title: string): string {
-    return this.PrinciplesForIdentifyingCooperativeCulturalHeritage[title] || '';
-  }
 }

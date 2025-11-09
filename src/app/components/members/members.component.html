@@ -1,24 +1,57 @@
 <app-banner></app-banner>
+
+<section class="font-[Poppins] bg-gradient-to-r from-[#8D1558]/10 to-[#B5ACA1]/10 py-16 text-center">
+  <div class="max-w-4xl mx-auto px-6">
+    <!-- Title -->
+    <h1
+      class="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-[linear-gradient(90deg,#8D1558_-9.89%,#B5ACA1_126.07%)] mb-6"
+    >
+      The CCH-WG Members
+    </h1>
+
+    <!-- Group Image -->
+    <div class="flex justify-center">
+      <img
+        src="../../../assets/images/mem/grp.jpg"
+        alt="CCH-WG Group"
+        class="rounded-2xl shadow-xl w-full sm:w-[80%] md:w-[70%] object-cover object-center hover:scale-105 transition-transform duration-700"
+      />
+    </div>
+
+    <!-- Caption -->
+    <p class="mt-6 text-gray-700 max-w-3xl mx-auto leading-relaxed">
+      Working Group members and participants of the Workshop on
+      <span class="font-semibold text-[#8D1558]">Cooperative Cultural Heritage</span>
+      at the Rochdale Pioneers’ Museum on <span class="font-semibold">30 June 2025</span>.
+    </p>
+  </div>
+</section>
 <section class="py-12 bg-gray-50 font-[Poppins]">
-  <div *ngFor="let member of members" class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 px-6 mb-8">
+  <div *ngFor="let member of filteredMembers" class="max-w-5xl mx-auto flex flex-col md:flex-row items-start gap-8 px-6 mb-12">
 
     <!-- Image Section -->
     <div class="flex-shrink-0">
       <img
         [src]="member.image"
         alt="Profile Image"
-        class="w-40 h-40 rounded-full object-cover shadow-lg border-4 border-[#7a004a]"
+        class="w-40 h-40 rounded-full object-cover object-top shadow-lg border-4 border-[#7a004a]"
       />
     </div>
 
     <!-- Text Section -->
-    <div>
+    <div class="flex-1">
       <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
         {{ member.name }}
       </h2>
-      <p class="text-gray-600 leading-relaxed max-w-lg">
-        {{ member.title }}<br>
-        <em>{{ member.organization }}</em>
+      <p class="text-lg font-semibold text-[#7a004a] mb-3">
+        {{ member.title }}
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        {{ member.description }}
+      </p>
+      <p class="text-gray-600 italic">
+        {{ member.organization }}
+        <span *ngIf="member.country" class="text-gray-500">({{ member.country }})</span>
       </p>
     </div>
 

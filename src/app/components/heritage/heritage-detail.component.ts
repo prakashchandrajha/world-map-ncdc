@@ -38,6 +38,8 @@ export interface HeritageContent {
     aditionalData: { title: string; content: string };
     aditionalData2: { title: string; content: string };
     aditionalDat3: { title: string; content: string };
+    aditionalDat4: { title: string; content: string };
+    aditionalDat5: { title: string; content: string };
     learnMore: { title: string; resources: string[] };
   };
 }

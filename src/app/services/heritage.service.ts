@@ -1,12 +1,32 @@
 import { Injectable } from '@angular/core';
 import { HeritageCard } from '../components/heritage/heritage-card.component';
+import { SitesService, Site } from './sites.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HeritageService {
 
+  constructor(private sitesService: SitesService) {}
+
   getTangibleCards(): HeritageCard[] {
+    // Get tangible sites from sites service and convert to cards
+    const tangibleSites = this.sitesService.getSitesByType('tangible');
+    return tangibleSites.map((site: Site) => ({
+      img: site.content.mainImage,
+      badge: '../../../assets/images/b1 (2).png',
+      countryName: site.country,
+      haritageData: site.coopYear?.toString() || site.content.infoCard.entryYear.toString(),
+      btn: 'Read More',
+      title: site.siteName,
+      desc: site.content.pageSubtitle,
+      siteId: site.id,
+      type: site.type,
+      continent: site.continent,
+      coopYear: site.coopYear
+    }));
+
+    // Fallback to static data if service not available
     return [
       {
         img: '../../../assets/images/t1.png',

@@ -11,6 +11,7 @@ import { NominationComponent } from './components/nomination/nomination.componen
 import { MembersComponent } from './components/members/members.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { EventsComponent } from './components/events/events.component';
+import { CriteriaAndNominationsComponent } from './components/criteria-and-nominations/criteria-and-nominations.component';
 
 
 export const routes: Routes = [
@@ -21,6 +22,8 @@ export const routes: Routes = [
   { path: 'intangible', component: Intangible },
   { path: 'standards', component: StandardsComponent },
   { path: 'events', component: EventsComponent },
+
+  {path:'criteriaAndNomination',component:CriteriaAndNominationsComponent},
 
   // Tangible Heritage Detail Page
   {

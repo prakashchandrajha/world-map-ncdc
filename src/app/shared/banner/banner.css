@@ -1,8 +1,9 @@
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+:host {
+  display: block;
+  font-family: 'Poppins', sans-serif;
 }
-.animate-spin-slow {
-  animation: spin 60s linear infinite; /* slower spin */
+
+/* Optional: Text shadow for readability */
+h2 {
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
 }

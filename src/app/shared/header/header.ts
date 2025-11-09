@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { filter, Subscription } from 'rxjs';
 import { HeritageService } from '../../services/heritage.service';
 import { HeritageCard } from '../../components/heritage/heritage-card.component';
-import { TranslationService } from '../../services/translation.service';
 
 
 @Component({
@@ -24,13 +23,11 @@ export class Header implements OnInit, OnDestroy {
   isMobileLanguageOpen = false;
   searchQuery = '';
   filteredResults: HeritageCard[] = [];
-  currentLanguage = 'en';
-  private languageSubscription: Subscription = new Subscription();
+  isHeaderHidden = false;
 
   constructor(
     private router: Router,
     private heritageService: HeritageService,
-    private translationService: TranslationService,
     private cdr: ChangeDetectorRef
   ) {
     this.router.events
@@ -41,14 +38,10 @@ export class Header implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.languageSubscription = this.translationService.currentLanguage$.subscribe(lang => {
-      this.currentLanguage = lang;
-      this.cdr.detectChanges();
-    });
+    this.setupScrollListener();
   }
 
   ngOnDestroy(): void {
-    this.languageSubscription.unsubscribe();
   }
 
   toggleDropdown() {
@@ -107,11 +100,13 @@ export class Header implements OnInit, OnDestroy {
     this.toggleSearch();
   }
 
-  switchLanguage(lang: string) {
-    this.translationService.loadLanguage(lang);
+  private setupScrollListener() {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Hide header when scrolling down, show when near top (within 50px)
+      this.isHeaderHidden = scrollTop > 50;
+    });
   }
 
-  translate(key: string): string {
-    return this.translationService.translate(key);
-  }
 }

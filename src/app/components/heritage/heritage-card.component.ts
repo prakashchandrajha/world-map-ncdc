@@ -11,6 +11,8 @@ export interface HeritageCard {
   title: string;
   desc?: string;
   siteId?: string;
+  continent?:string;
+  coopYear?:number;
   type?: 'tangible' | 'intangible';
 }
 

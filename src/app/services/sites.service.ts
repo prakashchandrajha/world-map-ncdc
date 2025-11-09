@@ -5,6 +5,7 @@ export interface Site {
   id: string;
   name: string;
   siteName:string;
+  coopYear:number;
   lat: number;
   lng: number;
   country: string;
@@ -24,6 +25,7 @@ export class SitesService {
       id: 'maison-alphonse-desjardins',
       name: 'Maison Alphonse-Desjardins',
       siteName: 'Maison Alphonce-Desjardins',
+      coopYear:1990,
       lat: 46.80942,
       lng: -71.18206,
       country: 'Canada',
@@ -118,6 +120,7 @@ Through its commitment to education, preservation, and interpretation, the Socie
     {
       id: 'theodor-amstad-monument',
       name: 'Linha Imperial e Monumento A Força Cooperativa, in Nova Petrópolis',
+      coopYear:1991,
       siteName:'The Square of Flowers and Solidarity',
       lat: -29.3804,
       lng: -51.1087,
@@ -224,6 +227,7 @@ Rooted in the migrations, settlements, and cooperative experiments that shaped s
     {
       id: 'amul-dairy',
       name: 'Dairy Plants of Anand Milk United Limited (AMUL) and the Verghese Kurien Museum',
+      coopYear:1992,
       siteName:'Dairy Plants of Anand Milk United Limited (AMUL) and the Verghese Kurien (Dairy) Museum Anand',
       lat: 22.55267,
       lng: 72.9715,
@@ -337,6 +341,7 @@ In Anand, the cradle of the White Revolution, that story continues to be toldnot
     {
       id: 'ilo-cooperative-geneva',
       name: 'International Labour Organization (ILO) Cooperative, Social and Solidarity Economy Unit',
+      coopYear:1993,
       siteName:'International Labour Organization (ILO) Cooperative, Social and Solidarity Economy Unit, Geneva, Switzerland',
       lat: 46.2268,
       lng: 6.1400,
@@ -441,6 +446,7 @@ For any effort to chart the world’s cooperative cultural heritage, the ILO Coo
     {
       id: 'ardelaine-france',
       name: 'Ardelaine and the Spirit of Collective Work',
+      coopYear:1995,
       siteName:'Weaving a Future Together: Ardelaine and the Spirit of Collective Work, France',
       lat: 46.2268,
       lng: 6.1400,
@@ -542,6 +548,7 @@ In a world dominated by globalised supply-chains, anonymous capital and remote o
     {
       id: 'america-credit-union-museum',
       name: 'America’s Credit Union Museum',
+      coopYear:1996,
       siteName: 'America’s Credit Union Museum',
       lat: 42.9955,
       lng: 71.4637,
@@ -642,6 +649,7 @@ Among its most powerful projects is “Unsung Heroes,” a storytelling initiati
     {
       id: 'site-morocco',
       name: 'Al – Amal and other Women led cooperatives in the Argan Oil Sector in Morocco',
+      coopYear:1997,
       siteName: 'Al – Amal and other Women led cooperatives in the Argan Oil Sector in Morocco',
       lat: 30.88,
       lng: 8.10,
@@ -740,6 +748,7 @@ Through the hands of these women, the argan tree continues to whisper its timele
     {
       id: 'site-argentina-sunchales',
       name: 'Sunchales – National Capital of Cooperativism Santa Fe, Argentina',
+      coopYear:1998,
       siteName: 'Sunchales – National Capital of Cooperativism Santa Fe, Argentina',
       lat: 30.9442,
       lng: 61.5615,
@@ -845,6 +854,7 @@ Over time, these cooperatives expanded into large-scale enterprises. Among the m
     {
       id: 'site-moshi-tanzania',
       name: 'Moshi Co-operative University: Where Education Meets Empowerment, Tanzania',
+      coopYear:1999,
       siteName: 'Moshi Co-operative University: Where Education Meets Empowerment, Tanzania',
       lat: - 3.3333,
       lng: 37.3333,
@@ -945,6 +955,7 @@ From its beginnings as a small college in 1963 to its present role as a national
     {
       id: 'site-manchester',
       name: 'The Rochdale Pioneers’ Musuem, Rochdale and the National Cooperative Archive, Manchester, United Kingdom',
+      coopYear:1992,
       siteName: 'The Rochdale Pioneers’ Musuem, Rochdale and the National Cooperative Archive, Manchester, United Kingdom',
       lat: 53.6168,
       lng: 2.1553,
@@ -1044,6 +1055,7 @@ In Toad Lane’s quiet rooms and Holyoake House’s reading halls, the same mess
 {
   id: 'federation-southern-coops',
   name: 'The Federation of Southern Cooperatives / Land Assistance Fund ',
+  coopYear:2000,
   siteName:'Rural Training and Research Center, Epes, Alabama',
   lat: 32.7553,
   lng: -88.1261,
@@ -1149,6 +1161,7 @@ For anyone mapping the world’s cooperative cultural heritage, the Federation s
 {
   id: 'maktab-koperasi-malaysia',
   name: 'Maktab Koperasi Malaysia,  Institut Koperasi Malaysia (IKMa) and Cooperative Archive, Petaling Jaya, Malaysia ',
+  coopYear:1990,
   siteName:'Institut Koperasi Malaysia: Educating a Nation in Cooperation',
   lat: 3.1000,
   lng: 101.6400,
@@ -1252,6 +1265,7 @@ Its enduring message remains clear: cooperation, when informed by knowledge and 
 {
   id: 'obisesan-house-nigeria',
   name: 'Obisesan House: The Heart of Nigeria’s Cooperative Legacy ,Ibadan, Nigeria' ,
+  coopYear:2001,
   siteName:'Obisesan House: The Heart of Nigeria’s Cooperative Legacy ,Ibadan, Nigeria',
   lat: 7.3776,
   lng: 3.9059,
@@ -1348,6 +1362,7 @@ In its solid structure and storied history, one finds the essence of Nigeria’s
 {
   id: 'nationaal-cooperatie-museum',
   name: 'Nationaal Coöperatie Museum – The Soul of Dutch Cooperation,Schiedam, Netherlands ',
+  coopYear:2003,
   siteName:'Nationaal Coöperatie Museum, Schiedam, Netherlands',
   lat: 51.9156,
   lng: 4.3971,
@@ -1445,6 +1460,7 @@ Amid the timeless calm of Schiedam’s canals, the museum stands as both a house
 {
   id: 'kagawa-toyohiko-museum',
   name: 'Naruto City Kagawa Toyohiko Memorial Museum: A Sanctuary of Cooperation and Compassion',
+  coopYear:1998,
   siteName:'Naruto City Kagawa Toyohiko Memorial Museum: A Sanctuary of Cooperation and Compassion',
   lat: 34.2007,
   lng: 134.6186,
@@ -1547,6 +1563,7 @@ In the gentle rhythm of the Naruto tides and the quiet grace of the museum itsel
 {
   id: 'jurkovic-museum-slovakia',
   name: 'Co-operative Museum of Samuel Jurkovič –Slovakia’s House of Shared Purpose- Sobotište, Slovakia',
+  coopYear:1990,
   siteName:'Co-operative Museum of Samuel Jurkovič, Sobotište, Slovakia',
   lat: 48.7833,
   lng: 17.4333,
@@ -1639,6 +1656,7 @@ The Co-operative Museum of Samuel Jurkovič is thus not only a repository of his
 {
   id: 'adamant-food-coop',
   name: 'Adamant Food Co-op (1935), Adamant, Vermont (USA) - The oldest continuously operating food co-op in the United States',
+  coopYear:2025,
   siteName:'Oldest Continuously Operating Food Co-op in the United States',
   lat: 44.3167,
   lng: -72.5333,
@@ -1728,9 +1746,11 @@ Nearly a century after those first eleven families took a collective leap of fai
       }
     }
   }
-},{
+},
+{
   id: 'coop-university-kenya',
   name: 'The Co-operative University of Kenya, Nurturing Knowledge Through Cooperation,Nairobi, Kenya',
+  coopYear:1980,
   siteName:'Co-operative University of Kenya, Nairobi, Kenya',
   lat: -1.3060,
   lng: 36.6853,
@@ -1822,6 +1842,7 @@ The Co-operative University of Kenya is more than an academic institution; it is
 {
   id: 'levigliani-italy',
   name: 'Levigliani: A Living Model of Cooperative Stewardship in Tuscany, Italy',
+  coopYear:1990,
   siteName:'Levigliani, Apuan Alps, Italy',
   lat: 44.0270,
   lng: 10.3129,
@@ -1918,6 +1939,7 @@ In every sense, Levigliani is more than a village , it is a living cooperative, 
 {
   id: 'kibbutz-degania-alef',
   name: 'Kibbutz Degania Alef: The Mother of the Kibbutzim',
+  coopYear:1990,
   siteName:'Kibbutz Degania Alef, Sea of Galilee, Israel',
   lat: 32.7247,
   lng: 35.5700,
@@ -2011,6 +2033,7 @@ In the words of its founders, “We came not to take, but to build.” Degania A
 {
   id: 'holy-land-handicraft-coop',
   name: 'Holy Land Handicraft Cooperative Society: Crafting Heritage and Community in Palestine',
+  coopYear:1890,
   siteName:'Holy Land Handicraft Cooperative Society, Beit Sahour, Palestine',
   lat: 31.7067,
   lng: 35.2167,
@@ -2102,6 +2125,7 @@ Through the work of its artisans, the HLHCS tells a story that transcends border
 {
   id: 'marinaleda-spain',
   name: 'Marinaleda – A Cooperative Vision in Andalusia',
+  coopYear:1970,
   siteName:'Marinaleda, Andalusia, Spain',
   lat: 37.3670,
   lng: -5.1380,
@@ -2196,6 +2220,7 @@ In an era marked by inequality, social fragmentation, and ecological strain, thi
 {
   id: 'arctic-coop-canada',
   name: 'Arctic Co-operatives Limited: A Northern Model of Self-Reliance and Shared Strength',
+  coopYear:2019,
   siteName:'Arctic Co-operatives Limited, Northern Canada',
   lat: 49.8954,
   lng: -97.1385,
@@ -2289,6 +2314,7 @@ In a world where communities often struggle to balance prosperity with heritage,
 {
   id: 'arbejdermuseet-denmark',
   name: 'Arbejdermuseet – The Workers’ Assembly Hall, Copenhagen, Denmark: A Monument to Solidarity and Collective Power',
+  coopYear:1990,
   siteName:'The Workers’ Assembly Hall (Arbejdermuseet), Copenhagen, Denmark',
   lat: 55.6761,
   lng: 12.5683,
@@ -2381,6 +2407,7 @@ Standing in the heart of Copenhagen, the Workers’ Assembly Hall is both a monu
 {
   id: 'rochdale-road-singapore',
   name: 'Rochdale Road, Thrift Drive and Kadayanallur Street, Singapore: A Living Trace of Cooperative Vision',
+  coopYear:1990,
   siteName:'Rochdale Road, Singapore',
   lat: 1.3533,
   lng: 103.8829,
@@ -2473,6 +2500,7 @@ In a nation celebrated for its urban efficiency, Rochdale Road reminds us of a q
 {
   id: 'ulccs-india',
   name: 'Headquarter House of the Uralungal Labour Contract Co-operative Society (ULCCS): Building Dignity, Brick by Brick',
+  coopYear:1990,
   siteName:'ULCCS Headquarters, Vadakara, Kerala, India',
   lat: 11.6033,
   lng: 75.5843,
@@ -2571,6 +2599,7 @@ From the dusty paths of 1920s Kerala to the global stage of social enterprise, U
 {
   id: 'national-coop-museum-bulgaria',
   name: 'National Cooperative Museum, Bulgaria: A Living Testament to Unity and Progress',
+  coopYear:1990,
   siteName:'National Cooperative Museum, Bulgaria',
   lat: 42.6977,
   lng: 23.3219,
@@ -2663,6 +2692,7 @@ It is an enduring image of unity, trust, and shared strength , the very principl
 {
   id: 'werstas-pellervo-finland',
   name: 'Finnish Labour Museum Werstas & Pellervo Confederation of Finnish Cooperatives',
+  coopYear:1990,
   siteName:'Finnish Labour Museum Werstas, Tampere, Finland',
   lat: 61.4981,
   lng: 23.7600,
@@ -2758,6 +2788,7 @@ In the story Werstas tells,of factory and co-op, of labour and democracy,lies th
 {
   id: 'otalora-mondragon-spain',
   name: 'Otalora Cooperative Development Centre of the Mondragon Corporation, Spain',
+  coopYear:1990,
   siteName:'Otalora Cooperative Development Centre, Arrasate-Mondragón, Spain',
   lat: 43.0645,
   lng: -2.4939,
@@ -2848,6 +2879,7 @@ As a site for cooperative cultural heritage, Mondragon and Otalora embody the be
 {
   id: 'ceramica-imola-italy',
   name: 'Cooperativa Ceramica d’Imola – Imola, Italy',
+  coopYear:1990,
   siteName:'Cooperativa Ceramica d’Imola, Imola, Italy',
   lat: 44.3524,
   lng: 11.7161,
@@ -2940,6 +2972,7 @@ For the global cooperative movement, Imola remains an emblem of enduring solidar
 {
   id: 'birthplaces-germany',
   name: 'Birthplaces of Cooperation in Germany: Delitzsch and Flammersfeld',
+  coopYear:1990,
   siteName:'Deutsches Genossenschaftsmuseum (Delitzsch) and Deutsches Raiffeisenmuseum (Flammersfeld), Germany',
   lat: 51.0753,
   lng: 10.0034,

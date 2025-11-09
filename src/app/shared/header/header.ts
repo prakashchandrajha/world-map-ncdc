@@ -23,6 +23,7 @@ export class Header implements OnInit, OnDestroy {
   isMobileLanguageOpen = false;
   searchQuery = '';
   filteredResults: HeritageCard[] = [];
+  isHeaderHidden = false;
 
   constructor(
     private router: Router,
@@ -37,6 +38,7 @@ export class Header implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.setupScrollListener();
   }
 
   ngOnDestroy(): void {
@@ -98,5 +100,13 @@ export class Header implements OnInit, OnDestroy {
     this.toggleSearch();
   }
 
- 
+  private setupScrollListener() {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Hide header when scrolling down, show when near top (within 50px)
+      this.isHeaderHidden = scrollTop > 50;
+    });
+  }
+
 }

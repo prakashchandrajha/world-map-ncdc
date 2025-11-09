@@ -4,4 +4,9 @@ header {
   left: 0 !important;
   right: 0 !important;
   z-index: 30 !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+
+header.hide {
+  transform: translateY(-100%) !important;
 }

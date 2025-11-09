@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CriteriaAndNominationsService, Criterion } from '../../services/criteria-and-nominations.service';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-criteria-and-nominations',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './criteria-and-nominations.component.html',
   styleUrl: './criteria-and-nominations.component.css'
 })

@@ -1,8 +1,6 @@
 <header
   class="fixed inset-x-0 top-0 z-30 w-full font-[Poppins] py-4 px-6 transition-all duration-300 bg-transparent"
-  [ngClass]="!isHome
-    ? 'bg-white/90 shadow-lg backdrop-blur-md'
-    : ''"
+  [ngClass]="[!isHome ? 'bg-white/90 shadow-lg backdrop-blur-md' : '', isHeaderHidden ? 'hide' : '']"
 >
   <div class="flex items-center justify-between w-full">
     <!-- Left: Logo -->

@@ -1,8 +1,8 @@
 <header
-  [ngClass]="isHome
-    ? 'fixed inset-x-0 top-0 z-30 w-full bg-transparent py-4 px-6 transition-all duration-300'
-    : 'fixed inset-x-0 top-0 z-30 w-full bg-white shadow-lg backdrop-blur-md py-4 px-6 transition-all duration-300'"
-  class="font-[Poppins]"
+  class="fixed inset-x-0 top-0 z-30 w-full font-[Poppins] py-4 px-6 transition-all duration-300 bg-transparent"
+  [ngClass]="!isHome
+    ? 'bg-white/90 shadow-lg backdrop-blur-md'
+    : ''"
 >
   <div class="flex items-center justify-between w-full">
     <!-- Left: Logo -->
@@ -25,14 +25,35 @@
     </button>
     <!-- Right: Desktop Navigation -->
     <nav
-      class="mr-60 hidden md:flex items-center rounded-full p-[1px] bg-gradient-to-r from-[#ff9ebd] via-[#ff80aa] to-[#ff4c91] shadow-md"
+      [ngClass]="isHome
+        ? 'mr-60 hidden md:flex items-center rounded-full p-[1px] bg-gradient-to-r from-white/20 via-white/30 to-white/20 shadow-md'
+        : 'mr-60 hidden md:flex items-center rounded-full p-[1px] bg-gradient-to-r from-[#ff9ebd] via-[#ff80aa] to-[#ff4c91] shadow-md'"
     >
-      <div class="flex items-center justify-center rounded-full bg-white backdrop-blur-md py-1 px-4">
+      <div
+        [ngClass]="isHome
+          ? 'flex items-center justify-center rounded-full bg-transparent backdrop-blur-md py-1 px-4'
+          : 'flex items-center justify-center rounded-full bg-white backdrop-blur-md py-1 px-4'"
+      >
         <ul class="flex items-center space-x-4">
-          <li><a routerLink="/about" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">About</a></li>
-                              <li><a routerLink="/tangible" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">Sites & Elements </a></li>
+          <li><a
+            routerLink="/about"
+            [ngClass]="isHome
+              ? 'text-white text-sm font-medium hover:text-pink-200 drop-shadow-lg'
+              : 'text-pink-900 text-sm font-medium hover:text-[#d31c75]'"
+          >About</a></li>
+          <li><a
+            routerLink="/tangible"
+            [ngClass]="isHome
+              ? 'text-white text-sm font-medium hover:text-pink-200 drop-shadow-lg'
+              : 'text-pink-900 text-sm font-medium hover:text-[#d31c75]'"
+          >Sites & Elements </a></li>
 
-                    <li><a routerLink="/criteriaAndNomination" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">Criteria & Nominations </a></li>
+          <li><a
+            routerLink="/criteriaAndNomination"
+            [ngClass]="isHome
+              ? 'text-white text-sm font-medium hover:text-pink-200 drop-shadow-lg'
+              : 'text-pink-900 text-sm font-medium hover:text-[#d31c75]'"
+          >Criteria & Nominations </a></li>
 
           <!-- Sites & Elements Dropdown for Desktop -->
           
@@ -43,8 +64,18 @@
 
 
 
-          <li><a routerLink="/member" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">Members</a></li>
-          <li><a routerLink="/events" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">Events</a></li>
+          <li><a
+            routerLink="/member"
+            [ngClass]="isHome
+              ? 'text-white text-sm font-medium hover:text-pink-200 drop-shadow-lg'
+              : 'text-pink-900 text-sm font-medium hover:text-[#d31c75]'"
+          >Members</a></li>
+          <li><a
+            routerLink="/events"
+            [ngClass]="isHome
+              ? 'text-white text-sm font-medium hover:text-pink-200 drop-shadow-lg'
+              : 'text-pink-900 text-sm font-medium hover:text-[#d31c75]'"
+          >Events</a></li>
           <!-- 🔍 Search -->
           <li class="relative">
             <button (click)="toggleSearch()" class="text-[#d31c75] text-xl hover:scale-110 transition-all">
@@ -80,7 +111,12 @@
     class="md:hidden mt-4 rounded-xl bg-white shadow-lg border border-pink-200 p-1 transition-all duration-300"
   >
     <ul class="flex flex-col space-y-1 text-center">
-      <li><a routerLink="/about" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">About</a></li>
+      <li><a
+        routerLink="/about"
+        [ngClass]="isHome
+          ? 'text-white text-sm font-medium hover:text-pink-200 drop-shadow-lg'
+          : 'text-pink-900 text-sm font-medium hover:text-[#d31c75]'"
+      >About</a></li>
       <!-- Sites & Elements Dropdown for Mobile -->
       <li class="relative">
         <button (click)="toggleDropdown()" class="flex justify-between items-center w-full text-pink-900 text-sm font-medium hover:text-[#d31c75]">

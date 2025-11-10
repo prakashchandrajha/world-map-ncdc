@@ -38,42 +38,33 @@
             [ngClass]="isHome
               ? 'text-white text-sm font-medium hover:text-pink-200 drop-shadow-lg'
               : 'text-pink-900 text-sm font-medium hover:text-[#d31c75]'"
-          >About</a></li>
+          >{{ 'header.about' | translate }}</a></li>
           <li><a
             routerLink="/tangible"
             [ngClass]="isHome
               ? 'text-white text-sm font-medium hover:text-pink-200 drop-shadow-lg'
               : 'text-pink-900 text-sm font-medium hover:text-[#d31c75]'"
-          >Sites & Elements </a></li>
+          >{{ 'header.sites_and_elements' | translate }}</a></li>
 
           <li><a
             routerLink="/criteriaAndNomination"
             [ngClass]="isHome
               ? 'text-white text-sm font-medium hover:text-pink-200 drop-shadow-lg'
               : 'text-pink-900 text-sm font-medium hover:text-[#d31c75]'"
-          >Criteria & Nominations </a></li>
-
-          <!-- Sites & Elements Dropdown for Desktop -->
-          
-
-
-
-          
-
-
+          >{{ 'header.criteria_and_nominations' | translate }}</a></li>
 
           <li><a
             routerLink="/member"
             [ngClass]="isHome
               ? 'text-white text-sm font-medium hover:text-pink-200 drop-shadow-lg'
               : 'text-pink-900 text-sm font-medium hover:text-[#d31c75]'"
-          >Members</a></li>
+          >{{ 'header.members' | translate }}</a></li>
           <li><a
             routerLink="/events"
             [ngClass]="isHome
               ? 'text-white text-sm font-medium hover:text-pink-200 drop-shadow-lg'
               : 'text-pink-900 text-sm font-medium hover:text-[#d31c75]'"
-          >Events</a></li>
+          >{{ 'header.events' | translate }}</a></li>
           <!-- 🔍 Search -->
           <li class="relative">
             <button (click)="toggleSearch()" class="text-[#d31c75] text-xl hover:scale-110 transition-all">
@@ -100,6 +91,12 @@
             </div>
           </li>
         </ul>
+        <div class="flex space-x-2 ml-4">
+          <button (click)="changeLanguage('en')" class="text-sm text-pink-900">EN</button>
+          <button (click)="changeLanguage('es')" class="text-sm text-pink-900">ES</button>
+          <button (click)="changeLanguage('fr')" class="text-sm text-pink-900">FR</button>
+          <button (click)="changeLanguage('pt')" class="text-sm text-pink-900">PT</button>
+        </div>
       </div>
     </nav>
   </div>
@@ -114,11 +111,11 @@
         [ngClass]="isHome
           ? 'text-white text-sm font-medium hover:text-pink-200 drop-shadow-lg'
           : 'text-pink-900 text-sm font-medium hover:text-[#d31c75]'"
-      >About</a></li>
+      >{{ 'header.about' | translate }}</a></li>
       <!-- Sites & Elements Dropdown for Mobile -->
       <li class="relative">
         <button (click)="toggleDropdown()" class="flex justify-between items-center w-full text-pink-900 text-sm font-medium hover:text-[#d31c75]">
-          <span>Sites & Elements</span>
+          <span>{{ 'header.sites_and_elements' | translate }}</span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3 transition-transform duration-300" [class.rotate-180]="dropdownOpen"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
         </button>
         <div *ngIf="dropdownOpen" class="mt-1 flex flex-col bg-pink-50 border border-pink-200 rounded-lg shadow-md transition-all duration-300 overflow-hidden">
@@ -130,7 +127,7 @@
       <!-- Criteria & Principles Dropdown for Mobile -->
       <li class="relative">
         <button (click)="toggleCriteriaDropdown()" class="flex justify-between items-center w-full text-pink-900 text-sm font-medium hover:text-[#d31c75]">
-          <span>Criteria and Nomination</span>
+          <span>{{ 'header.criteria_and_nominations' | translate }}</span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3 transition-transform duration-300" [class.rotate-180]="criteriaDropdownOpen"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
         </button>
         <div *ngIf="criteriaDropdownOpen" class="mt-1 flex flex-col bg-pink-50 border border-pink-200 rounded-lg shadow-md transition-all duration-300 overflow-hidden">
@@ -139,8 +136,8 @@
           <a routerLink="/nomination" class="block px-2 py-1 hover:bg-pink-100 hover:text-[#d31c75]" (click)="closeCriteriaDropdown()">Nomination Form</a>
         </div>
       </li>
-      <li><a routerLink="/member" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">Members</a></li>
-      <li><a routerLink="/events" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">Events</a></li>
+      <li><a routerLink="/member" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">{{ 'header.members' | translate }}</a></li>
+      <li><a routerLink="/events" class="text-pink-900 text-sm font-medium hover:text-[#d31c75]">{{ 'header.events' | translate }}</a></li>
       <!-- Mobile Search -->
       <li class="relative">
         <button (click)="toggleMobileSearch()" class="text-[#d31c75] text-sm font-medium flex items-center justify-center w-full hover:text-[#7a004a]">

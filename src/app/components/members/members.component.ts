@@ -19,16 +19,16 @@ export class MembersComponent implements OnInit {
       {
         name: 'Márcio Lopes de Freitas',
         title: 'Mentor, President, Organization of Brazilian Cooperatives (Brazil)',
-        description: 'Longtime leader in the Brazilian cooperative movement. Anchors the group\'s guidance and strategic direction.Strong advocate for the defense of cooperative heritage worldwide. Guides the group\'s mission to elevate cooperative cultural heritage.',
+        // description: 'Longtime leader in the Brazilian cooperative movement. Anchors the group\'s guidance and strategic direction.Strong advocate for the defense of cooperative heritage worldwide. Guides the group\'s mission to elevate cooperative cultural heritage.',
         organization: 'Organization of Brazilian Cooperatives',
         country: 'Brazil',
         category: 'workingGroup',
         image: '../../../../../assets/images/m1.jpg'
       },
       {
-        name: 'Jeroen Douglas',
-        title: 'Ex-officio, ICA Director-General',
-        description: 'Provides overall leadership and authority to the Working Group. Ensures alignment with the ICA\'s global mission and policies.Brings the ICA\'s international perspective to cooperative heritage.Supports the strategic growth of cooperative cultural recognition.',
+        name: 'Mr Jeroen Douglas',
+        title: '(Ex-officio) Director General',
+        // description: 'Provides overall leadership and authority to the Working Group. Ensures alignment with the ICA\'s global mission and policies.Brings the ICA\'s international perspective to cooperative heritage.Supports the strategic growth of cooperative cultural recognition.',
         organization: 'International Cooperative Alliance',
         country: '',
         category: 'workingGroup',

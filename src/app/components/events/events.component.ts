@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Banner } from "../../shared/banner/banner";
 
 interface EventItem {
   id: number;
@@ -12,7 +13,7 @@ interface EventItem {
 
 @Component({
   selector: 'app-events',
-  imports: [CommonModule],
+  imports: [CommonModule, Banner],
   templateUrl: './events.component.html',
   styleUrl: './events.component.css'
 })

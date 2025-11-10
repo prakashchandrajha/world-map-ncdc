@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { Header } from "./shared/header/header";
 import { Footer } from "./shared/footer/footer";
 import { WorldMapComponent } from "./components/world-map/world-map.component";
+import { Toolkit } from "./components/toolkit/toolkit";
 
 @Component({
   selector: 'app-root',

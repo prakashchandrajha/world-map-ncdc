@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Banner } from '../../shared/banner/banner';
 import { SitesService, Site } from '../../services/sites.service';
 
@@ -46,7 +46,7 @@ export interface HeritageContent {
 
 @Component({
   selector: 'app-heritage-detail',
-  imports: [CommonModule, Banner],
+  imports: [CommonModule, Banner, RouterLink],
   templateUrl: './heritage-detail.component.html',
   styleUrl: './heritage-detail.component.css'
 })

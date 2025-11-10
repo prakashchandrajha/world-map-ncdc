@@ -558,13 +558,13 @@ In a world dominated by globalised supply-chains, anonymous capital and remote o
       content: {
         pageTitle: 'America’s Credit Union Museum, Manchester, New Hampshire, USA The House Where Cooperation Took Root',
         pageSubtitle: 'A Historic Home with a Living Legacy',
-        mainImage: 'assets/images/sites_files/americacreditunion.jpg',
+        mainImage: 'assets/images/sites_files/am.jpg',
         thumbnails: [
-          'assets/images/sites_files/sub-icon/image006.jpg'
+          'assets/images/sites_files/America’sCreditUnionMuseum.jpg'
         ],
         infoCard: {
           country: 'United States of America',
-          countryFlag: 'assets/images/sites_files/country-img/americaflag.jpg',
+          countryFlag: 'assets/images/sites_files/country-img/Flag_of_the_United_States.svg',
           theme: 'Financial Group',
           entryYear: 2025,
           coordinates: '42.9955 N, 71.4637 W'
@@ -659,7 +659,7 @@ Among its most powerful projects is “Unsung Heroes,” a storytelling initiati
       content: {
         pageTitle: 'Al – Amal and other Women led cooperatives in the Argan Oil Sector in Morocco',
         pageSubtitle: 'Seeds of Hope: Women, Argan, and the Cooperative Spirit of Morocco',
-        mainImage: 'assets/images/sites_files/main_morocco.jpg',
+        mainImage: 'assets/images/sites_files/amal.jpg',
         thumbnails: [
           
         ],

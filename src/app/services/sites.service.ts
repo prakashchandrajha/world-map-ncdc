@@ -2226,7 +2226,7 @@ In an era marked by inequality, social fragmentation, and ecological strain, thi
   lng: -97.1385,
   country: 'Canada',
   continent: 'North America',
-  type: 'intangible',
+  type: 'tangible',
   content: {
     pageTitle: 'Arctic Co-operatives Limited: A Northern Model of Self-Reliance and Shared Strength',
     pageSubtitle: 'Cooperation Rooted in Tradition',
@@ -2978,7 +2978,7 @@ For the global cooperative movement, Imola remains an emblem of enduring solidar
   lng: 10.0034,
   country: 'Germany',
   continent: 'Europe',
-  type: 'intangible',
+  type: 'tangible',
   content: {
     pageTitle: 'Deutsches Genossenschaftsmuseum (Delitzsch) and Deutsches Raiffeisenmuseum (Flammersfeld), Germany',
     pageSubtitle: 'The Urban Beginning – Schulze-Delitzsch and the Birth of the Modern Cooperative ',

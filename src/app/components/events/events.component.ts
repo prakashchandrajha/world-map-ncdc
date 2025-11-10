@@ -96,7 +96,7 @@ The session, titled “Cooperatives in Culture for Diversity, Cultural Rights an
 
 Key themes included:
   </p>
-    <img src="assets/images/1octeve.png" alt="Description 1" class="w-[300px] h-auto rounded-lg shadow-md">
+    <img src="assets/images/evee.png" alt="Description 1" class="w-[300px] h-auto rounded-lg shadow-md">
 
 </div>
 
@@ -290,7 +290,7 @@ Key themes included:
           </p>
          
         
- <div class="bg-gray-50 rounded-lg p-4 text-center hover:bg-gray-100 transition-all duration-300 cursor-pointer">
+ <div class="bg-gray-50 rounded-lg  text-center hover:bg-gray-100 transition-all duration-300 cursor-pointer">
     <a href="https://icaworldcoopcongress.coop/stories/coop-culture-cultural-heritage/" class="text-[#7a004a] font-semibold">Read more</a>
   </div>
            

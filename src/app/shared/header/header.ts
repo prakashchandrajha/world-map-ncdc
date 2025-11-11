@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef, HostListener, ElementRef } from '@angular/core';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { filter, Subscription } from 'rxjs';
@@ -18,8 +18,6 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class Header implements OnInit, OnDestroy {
   isHome = false;
   isMenuOpen = false;
-  dropdownOpen = false;
-  criteriaDropdownOpen = false;
   isSearchOpen = false;
   isMobileSearchOpen = false;
   isMobileLanguageOpen = false;
@@ -32,7 +30,8 @@ export class Header implements OnInit, OnDestroy {
     private router: Router,
     private heritageService: HeritageService,
     private cdr: ChangeDetectorRef,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private elementRef: ElementRef
   ) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
@@ -50,22 +49,6 @@ export class Header implements OnInit, OnDestroy {
 
   changeLanguage(lang: string) {
     this.translate.use(lang);
-  }
-
-  toggleDropdown() {
-    this.dropdownOpen = !this.dropdownOpen;
-  }
-
-  closeDropdown() {
-    this.dropdownOpen = false;
-  }
-
-  toggleCriteriaDropdown() {
-    this.criteriaDropdownOpen = !this.criteriaDropdownOpen;
-  }
-
-  closeCriteriaDropdown() {
-    this.criteriaDropdownOpen = false;
   }
 
   toggleMobileSearch() {
@@ -115,6 +98,16 @@ export class Header implements OnInit, OnDestroy {
   selectResult(card: HeritageCard) {
     this.router.navigate(['/tangible'], { queryParams: { search: card.title } });
     this.toggleSearch();
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event) {
+    if (!this.elementRef.nativeElement.contains(event.target)) {
+      this.isSearchOpen = false;
+      this.isLanguageDropdownOpen = false;
+      this.isMobileSearchOpen = false;
+      this.isMobileLanguageOpen = false;
+    }
   }
 
   private setupScrollListener() {

@@ -137,7 +137,7 @@ export class MembersComponent implements OnInit {
         organization: 'Organization of Brazilian Cooperatives',
         country: '',
         category: 'technicalTeam',
-        image: '../../../../../assets/images/m13.jpg'
+        image: '../../../../../assets/images/mem/baduu.png'
       },
       {
         name: 'Mr. Iago Carvalho',

@@ -23,6 +23,7 @@ export class Header implements OnInit, OnDestroy {
   isSearchOpen = false;
   isMobileSearchOpen = false;
   isMobileLanguageOpen = false;
+  isLanguageDropdownOpen = false;
   searchQuery = '';
   filteredResults: HeritageCard[] = [];
   isHeaderHidden = false;
@@ -81,6 +82,14 @@ export class Header implements OnInit, OnDestroy {
 
   closeMobileLanguage() {
     this.isMobileLanguageOpen = false;
+  }
+
+  toggleLanguageDropdown() {
+    this.isLanguageDropdownOpen = !this.isLanguageDropdownOpen;
+  }
+
+  closeLanguageDropdown() {
+    this.isLanguageDropdownOpen = false;
   }
 
   toggleSearch() {

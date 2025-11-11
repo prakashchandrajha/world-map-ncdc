@@ -3,10 +3,11 @@ import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { Banner } from "../../shared/banner/banner";
 import { AboutService } from '../../services/about.service';
 import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about',
-  imports: [CommonModule, Banner, RouterLink],
+  imports: [CommonModule, Banner, RouterLink, TranslateModule],
   templateUrl: './about.html',
   styleUrl: './about.css'
 })

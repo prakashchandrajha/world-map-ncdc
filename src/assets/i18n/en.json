@@ -5,5 +5,30 @@
     "criteria_and_nominations": "Criteria & Nominations",
     "members": "Members",
     "events": "Events"
+  },
+  "about": {
+    "title": "About the Programme",
+    "breadcrumb": "Home / About",
+    "what_is_cch_title": "What is Cooperative Cultural Heritage?",
+    "what_is_cch_description": "Cooperative Cultural Heritage (CCH) refers to the collective legacy of cooperatives that have shaped societies, economies, and cultures across the world. It encompasses both Tangible Elements such as sites, institutions, museums and legacy enterprises, and intangible traditions, including elements of local practice & traditions that safeguard cooperative values, practices, and governance systems passed down through generations. Together, these elements tell the story of how cooperation has contributed to sustainable livelihoods, community resilience, social justice, and cultural identity.",
+    "ica_programme_title": "ICA Cooperative Cultural Heritage (CCH) Programme",
+    "ica_programme_desc1": "The ICA's ambitious undertaking to establish a Cooperative Cultural Heritage (CCH) inscription program signifies a recognition of the cooperative movement's enduring legacy and its unique contribution to global human history and, through its continuing service, to sustainable development.",
+    "ica_programme_desc2": "This initiative aims to systematically identify, document, and safeguard the tangible and intangible manifestations of cooperative principles across continents.",
+    "ica_programme_desc3": "In 2025, the ICA-CCH programme launched information about twenty-five physical sites that embody the culture of cooperation at the local and national levels.",
+    "three_goals_title": "The Three Main Goals",
+    "goal1_title": "Digital World Map of CCH",
+    "goal1_description": "Identifying, through consultations with WG member, and recognizing, through a digital map of the world, 25 geographical sites of undisputed cooperative heritage at the inter/national level.",
+    "goal2_title": "International Standards",
+    "goal2_description": "Developing, through consultations with cultural heritage professionals and legal experts, the first version of international standards and exploring potential certification mechanisms concerning Cooperative Cultural Heritage.",
+    "goal3_title": "Global Advocacy",
+    "goal3_description": "Launching, a global communications and public-relations campaign to make widely known the contribution and potential of cooperatives to culture and sustainable development.",
+    "programme_desc1": "This programme serves the long-term goal of the ICA to facilitate the collection of information and key insights about those places and practices of cooperation that are not widely known.",
+    "programme_desc2": "The objective is indeed to go back to the first principles of the ICA, which is to make known the co-operators of the world, and their work, globally.",
+    "preserving_title": "Preserving Our Cooperative Legacy",
+    "preserving_desc1": "The Cooperative Cultural Heritage Programme represents a milestone in recognizing and preserving the rich history of cooperation that has shaped communities worldwide.",
+    "preserving_desc2": "Through systematic documentation and international recognition, we ensure that future generations can learn from and be inspired by the cooperative movement's enduring contributions to society.",
+    "members_title": "Our Members",
+    "members_description": "The Cooperative Cultural Heritage Programme brings together cooperative organizations, cultural institutions, and communities from around the world to preserve and celebrate cooperative heritage.",
+    "view_members": "View Members"
   }
 }

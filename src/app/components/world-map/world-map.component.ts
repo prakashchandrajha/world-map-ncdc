@@ -3,11 +3,12 @@ import * as L from 'leaflet';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { SitesService, Site } from '../../services/sites.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-world-map',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './world-map.component.html',
   styleUrls: ['./world-map.component.css']
 })

@@ -30,5 +30,37 @@
     "members_title": "Our Members",
     "members_description": "The Cooperative Cultural Heritage Programme brings together cooperative organizations, cultural institutions, and communities from around the world to preserve and celebrate cooperative heritage.",
     "view_members": "View Members"
+  },
+  "worldmap": {
+    "title": "Explore the Map (Edition 2025)",
+    "description": "Explore the World Map : Discover the inaugural list of Cooperative Cultural Heritage sites across the world and be inspired to nominate your sites and practices of cooperative cultural significance.",
+    "filter": "Filter",
+    "country": "Country:",
+    "continent": "Continent:",
+    "type": "Type:",
+    "coordinates": "Coordinates:",
+    "close": "Close",
+    "view_details": "View Details"
+  },
+  "tangible": {
+    "title": "List of Tangible<br>Cooperative<br>Cultural Heritage",
+    "subtitle": "Explore the cooperative traditions, practices, <br>and knowledge recognized worldwide",
+    "description": "Physical places, buildings, settlements, and infrastructure that embody the history and legacy of cooperative enterprise. These include cooperative stores, factories, housing complexes, agricultural facilities, and landscapes directly associated with cooperative activity. Tangible CCH represents the material foundations of cooperation, visible in the built environment and cultural landscapes shaped by cooperative governance.",
+    "year": "Year",
+    "all_years": "All Years",
+    "continent": "Continent",
+    "all_continents": "All Continents",
+    "country": "Country",
+    "all_countries": "All Countries",
+    "apply_filters": "Apply Filters"
+  },
+  "heritage_detail": {
+    "back_to_list": "← Back to list",
+    "view_more": "View More",
+    "you_might_like": "You Might Like",
+    "official_website": "Official Website :",
+    "northeastern_artisan": "Northeastern Artisan Cooperatives",
+    "rural_cooperative": "Rural Cooperative Traditions",
+    "cooperative_weaving": "Cooperative Weaving Techniques"
   }
 }

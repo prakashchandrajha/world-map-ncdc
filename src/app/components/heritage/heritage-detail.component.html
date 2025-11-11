@@ -12,7 +12,7 @@
       [ngClass]="config.buttonBg + ' ' + config.buttonHover"
       routerLink="/tangible"
     >
-      ← Back to list
+{{ 'heritage_detail.back_to_list' | translate }}
     </button>
     <div class="mb-8 ml-0 sm:ml-10 lg:ml-16 max-w-6xl">
       <h1 class="text-2xl sm:text-4xl font-bold mb-3" [ngClass]="config.primaryColor">
@@ -73,7 +73,7 @@
             class="rounded-md px-4 py-1 text-xs font-medium transition"
             [ngClass]="config.buttonBg + ' ' + config.buttonHover"
           >
-            View More
+{{ 'heritage_detail.view_more' | translate }}
           </button>
         </div>
       </div>
@@ -92,14 +92,14 @@
         </p>
       </div>
       <div class="md:w-1/2 flex flex-col items-center gap-4">
-        <p class="font-medium mb-2" [ngClass]="config.primaryColor">You Might Like</p>
+        <p class="font-medium mb-2" [ngClass]="config.primaryColor">{{ 'heritage_detail.you_might_like' | translate }}</p>
         <div
           class="flex items-center gap-4 bg-white shadow-md rounded-lg p-4 w-full max-w-xs hover:shadow-lg transition transform hover:-translate-y-1"
           [ngClass]="config.borderColor"
         >
           <img class="w-12 h-12 rounded-md" src="../../../assets/images/t1.png" alt="">
           <div>
-            <h4 class="font-semibold text-gray-800 text-sm">Northeastern Artisan Cooperatives</h4>
+            <h4 class="font-semibold text-gray-800 text-sm">{{ 'heritage_detail.northeastern_artisan' | translate }}</h4>
             <p class="text-xs text-gray-500">Brazil</p>
           </div>
         </div>
@@ -109,7 +109,7 @@
         >
           <img class="w-12 h-12 rounded-md" src="../../../assets/images/t2.png" alt="">
           <div>
-            <h4 class="font-semibold text-gray-800 text-sm">Rural Cooperative Traditions</h4>
+            <h4 class="font-semibold text-gray-800 text-sm">{{ 'heritage_detail.rural_cooperative' | translate }}</h4>
             <p class="text-xs text-gray-500">Brazil</p>
           </div>
         </div>
@@ -119,7 +119,7 @@
         >
           <img class="w-12 h-12 rounded-md" src="../../../assets/images/t3.png" alt="">
           <div>
-            <h4 class="font-semibold text-gray-800 text-sm">Cooperative Weaving Techniques</h4>
+            <h4 class="font-semibold text-gray-800 text-sm">{{ 'heritage_detail.cooperative_weaving' | translate }}</h4>
             <p class="text-xs text-gray-500">Brazil</p>
           </div>
         </div>
@@ -241,7 +241,7 @@
       rel="noopener noreferrer" 
       class="text-purple-900 hover:underline"
     >
-     <span>Official Website : </span> {{ resource }}
+{{ 'heritage_detail.official_website' | translate }} {{ resource }}
     </a>
   </li>
 </ul>

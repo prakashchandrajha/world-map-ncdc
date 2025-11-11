@@ -50,6 +50,7 @@
       <p class="text-lg font-semibold text-[#7a004a] mb-3">
         {{ member.title }}
       </p>
+     
       <p class="text-gray-700 leading-relaxed mb-4">
         {{ member.description }}
       </p>
@@ -57,6 +58,14 @@
         {{ member.organization }}
         <span *ngIf="member.country" class="text-gray-500">({{ member.country }})</span>
       </p>
+
+       @if(member.name === 'Mr.Jeroen Douglas') {
+  <h1 class="mt-15  text-4xl font-bold text-transparent bg-clip-text 
+             bg-gradient-to-r from-[#700e5b] via-[#6a0dad] to-[#a855f7]">
+    Joint Secretariat
+  </h1>
+}
+
     </div>
 
   </div>

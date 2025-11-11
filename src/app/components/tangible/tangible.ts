@@ -4,10 +4,11 @@ import { Banner } from '../../shared/banner/banner';
 import { HeritageCardComponent, HeritageCard } from '../heritage/heritage-card.component';
 import { SitesService, Site } from '../../services/sites.service';
 import { ActivatedRoute } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-tangible',
-  imports: [Banner, HeritageCardComponent, FormsModule],
+  imports: [Banner, HeritageCardComponent, FormsModule, TranslateModule],
   templateUrl: './tangible.html',
   styleUrl: './tangible.css'
 })

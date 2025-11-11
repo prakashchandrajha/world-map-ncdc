@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Banner } from '../../shared/banner/banner';
 import { SitesService, Site } from '../../services/sites.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 export interface HeritageDetailConfig {
   type: 'tangible' | 'intangible';
@@ -46,7 +47,7 @@ export interface HeritageContent {
 
 @Component({
   selector: 'app-heritage-detail',
-  imports: [CommonModule, Banner, RouterLink],
+  imports: [CommonModule, Banner, RouterLink, TranslateModule],
   templateUrl: './heritage-detail.component.html',
   styleUrl: './heritage-detail.component.css'
 })
@@ -54,17 +55,36 @@ export class HeritageDetailComponent implements OnInit {
   config!: HeritageDetailConfig;
   content!: HeritageContent;
 
-  constructor(private route: ActivatedRoute, private sitesService: SitesService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private sitesService: SitesService,
+    private translate: TranslateService
+  ) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       const id = params['id'];
       const site = this.sitesService.getSiteById(id);
       if (site) {
-        this.content = site.content;
         this.config = this.getConfigForType(site.type);
+
+        // Listen for language changes and update content accordingly
+        this.translate.onLangChange.subscribe(() => {
+          this.loadTranslatedContent(id);
+        });
+
+        // Load initial content
+        this.loadTranslatedContent(id);
       }
     });
+  }
+
+  private async loadTranslatedContent(id: string) {
+    const currentLang = this.translate.currentLang || 'en';
+    const translatedContent = await this.sitesService.getTranslatedSiteContent(id, currentLang);
+    if (translatedContent) {
+      this.content = translatedContent;
+    }
   }
 
   private getConfigForType(type: 'tangible' | 'intangible'): HeritageDetailConfig {

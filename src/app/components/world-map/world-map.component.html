@@ -100,7 +100,7 @@
       <h2 class="text-2xl font-bold text-gray-800 mb-4">{{ selectedSite.name }}</h2>
       <p class="text-gray-600 mb-2"><strong>{{ 'worldmap.country' | translate }}</strong> {{ selectedSite.country }}</p>
       <p class="text-gray-600 mb-2"><strong>{{ 'worldmap.continent' | translate }}</strong> {{ selectedSite.continent }}</p>
-      <p class="text-gray-600 mb-2"><strong>{{ 'worldmap.type' | translate }}</strong> {{ selectedSite.type }}</p>
+      <p class="text-gray-600 mb-2"><strong>{{ 'worldmap.type' | translate }}</strong> {{ selectedSite.type|uppercase }}</p>
       <p class="text-gray-600 mb-4"><strong>{{ 'worldmap.coordinates' | translate }}</strong> {{ selectedSite.lat }}, {{ selectedSite.lng }}</p>
       <div class="flex justify-end space-x-3">
         <button class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400" (click)="closeModal()">{{ 'worldmap.close' | translate }}</button>

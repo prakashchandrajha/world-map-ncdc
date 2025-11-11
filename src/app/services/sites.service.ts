@@ -668,7 +668,7 @@ Among its most powerful projects is “Unsung Heroes,” a storytelling initiati
         ],
         infoCard: {
           country: 'Morocco',
-          countryFlag: 'assets/images/sites_files/country-img/morocco-flag.png',
+          countryFlag: 'assets/images/sites_files/country-img/Flag_of_Morocco.svg',
           theme: 'Financial Group',
           entryYear: 2025,
           coordinates: '30.88 N, 8.10 W'

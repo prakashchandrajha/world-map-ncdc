@@ -74,7 +74,8 @@
     "intangible_title": "Intangible Heritage of Cooperation",
     "intangible_desc": "Knowledge, practices, and traditions that sustain cooperative values and principles across generations.",
     "intangible_examples": "Examples – Customs, Oral and Artistic traditions, Shared use of natural resources",
-    "did_you_know": "Did you know that the Idea and Practice of Organizing Shared Interests was inscribed <br /> as the Intangible Cultural Heritage of Humanity in 2016?",
+    "did_you_know": "Did you know that the Idea and Practice of Organizing Shared Interests was inscribed",
+    "did_you_know2":"as the Intangible Cultural Heritage of Humanity in 2016?",
     "principles_title": "Principles for Identifying Cooperative Cultural Heritage",
     "principles_desc": "These principles guide the identification and recognition of cooperative cultural heritage elements."
   },
@@ -94,5 +95,14 @@
     "nomination_email": "help@culturalheritage.coop",
     "nomination_contact": "if you need any assistance or support.",
     "access_form": "Access form"
+  },
+  "events": {
+    "title": "Cooperative Cultural <br> Heritage Events",
+    "description": "This page highlights events organized by the International Cooperative Alliance (ICA) and its member organizations dedicated to celebrating, exploring, and safeguarding cooperative cultural heritage. From conferences and exhibitions to workshops, anniversaries, and local heritage celebrations, these events bring together cooperators, researchers, and communities to share experiences and deepen understanding of the cooperative identity as a living cultural legacy.",
+    "have_event": "Have an event to share?",
+    "submit_description": "If your organization is hosting an event related to cooperative heritage — past, present, or future — you are invited to submit the details to be featured here. Sharing your event helps strengthen our global network and ensures that cooperative culture continues to inspire across borders.",
+    "contact_text": "Please write to:",
+    "contact_email": "events@culturalheritage.coop",
+    "read_more": "Read more"
   }
 }

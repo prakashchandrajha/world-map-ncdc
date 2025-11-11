@@ -1,9 +1,7 @@
 <!-- cooperative-events.component.html -->
 
-<app-banner 
-  
-  [titleText]="'Cooperative Cultural <br> Heritage Events'"
-  
+<app-banner
+  [titleText]="'events.title' | translate"
   ></app-banner>
 <div class="min-h-screen mt-20 bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8 ">
   <div class="max-w-6xl mx-auto">
@@ -15,7 +13,7 @@
       </h1> -->
       <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
         <p class="text-lg text-gray-700 leading-relaxed mb-6">
-          This page highlights events organized by the International Cooperative Alliance (ICA) and its member organizations dedicated to celebrating, exploring, and safeguarding cooperative cultural heritage. From conferences and exhibitions to workshops, anniversaries, and local heritage celebrations, these events bring together cooperators, researchers, and communities to share experiences and deepen understanding of the cooperative identity as a living cultural legacy.
+          {{ 'events.description' | translate }}
         </p>
         
         <!-- Submit Event Section -->
@@ -25,15 +23,15 @@
   </div>
   <div class="p-8">
     <div class="uppercase tracking-wide text-sm font-semibold text-[#7a004a]">
-  <h3 class="text-xl font-bold mb-3">Have an event to share?</h3>
+  <h3 class="text-xl font-bold mb-3">{{ 'events.have_event' | translate }}</h3>
 </div>
 
     <p class="mt-2 text-slate-600 leading-relaxed">
-      If your organization is hosting an event related to cooperative heritage — past, present, or future — you are invited to submit the details to be featured here. Sharing your event helps strengthen our global network and ensures that cooperative culture continues to inspire across borders.
+      {{ 'events.submit_description' | translate }}
     </p>
     <p class="mt-4 text-slate-700">
-      <span class="font-semibold">Please write to:</span> 
-      <a href="mailto:events@culturalheritage.coop" class="text-[#7a004a] font-medium hover:underline">events@culturalheritage.coop</a>
+      <span class="font-semibold">{{ 'events.contact_text' | translate }}</span>
+      <a href="mailto:events@culturalheritage.coop" class="text-[#7a004a] font-medium hover:underline">{{ 'events.contact_email' | translate }}</a>
     </p>
   </div>
 </div>

@@ -2,17 +2,15 @@
   <!-- Heading -->
 <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight mb-6 relative inline-block">
   <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#7a004a] via-[#d66ea0] to-[#f4c2d9]">
-   Explore the Map (Edition 2025)<br>
-    
+   {{ 'worldmap.title' | translate }}<br>
+
   </span>
   <!-- Underline -->
   <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-3/4 h-[4px] 
                bg-gradient-to-r from-[#7a004a] via-[#d66ea0] to-[#f4c2d9] rounded-full shadow-md"></span>
 </h1>
 
-<p class="text-[#7a004a]">Explore the World Map : Discover the inaugural list of Cooperative Cultural Heritage 
-sites across the world and be inspired to nominate your sites and practices of 
-cooperative cultural significance. </p>
+<p class="text-[#7a004a]">{{ 'worldmap.description' | translate }}</p>
 
 </div>
 
@@ -31,7 +29,7 @@ cooperative cultural significance. </p>
             d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L14 13.414V19a1 1 0 01-1.447.894l-4-2A1 1 0 018 17v-3.586L3.293 6.707A1 1 0 013 6V4z" />
     </svg>
 
-    <span class="text-sm font-semibold text-gray-800">Filter</span>
+    <span class="text-sm font-semibold text-gray-800">{{ 'worldmap.filter' | translate }}</span>
   </div>
 
   <span class="text-lg font-bold text-[#7a004a]" [class.rotate-180]="isFilterExpanded">
@@ -57,13 +55,14 @@ cooperative cultural significance. </p>
     </div>
   </div>
   <div id="map" class="h-[600px] w-full rounded-lg shadow-lg border border-gray-200"></div>
+  <!--
   <div class="flex justify-end mb-8 mr-10">
   <span class="relative inline-flex items-center justify-center rounded-full px-[3px] py-[2px]">
     <span class="absolute inset-0 rounded-full p-[1px] bg-gradient-to-r from-[#7a004a] to-[#c7007f]"></span>
     <span
       class="relative inline-flex items-center justify-center gap-4 rounded-full bg-white px-4 py-1 text-black"
     >
-      <!-- Intangible -->
+    
       
   <span class="flex items-center gap-1">
         <img
@@ -73,10 +72,10 @@ cooperative cultural significance. </p>
         />
         <p class="text-sm whitespace-nowrap">Tangible</p>
       </span>
-      <!-- Divider -->
+     
       <span class="w-[1px] h-4 bg-gray-300"></span>
 
-      <!-- Tangible -->
+      
     
       <span class="flex items-center gap-1">
         <img
@@ -89,7 +88,7 @@ cooperative cultural significance. </p>
     </span>
   </span>
 </div>
-
+-->
 
 
 </div>
@@ -99,13 +98,13 @@ cooperative cultural significance. </p>
   <div class="bg-white rounded-lg shadow-lg max-w-md w-full mx-4 border border-gray-200" (click)="$event.stopPropagation()">
     <div class="p-6">
       <h2 class="text-2xl font-bold text-gray-800 mb-4">{{ selectedSite.name }}</h2>
-      <p class="text-gray-600 mb-2"><strong>Country:</strong> {{ selectedSite.country }}</p>
-      <p class="text-gray-600 mb-2"><strong>Continent:</strong> {{ selectedSite.continent }}</p>
-      <p class="text-gray-600 mb-2"><strong>Type:</strong> {{ selectedSite.type }}</p>
-      <p class="text-gray-600 mb-4"><strong>Coordinates:</strong> {{ selectedSite.lat }}, {{ selectedSite.lng }}</p>
+      <p class="text-gray-600 mb-2"><strong>{{ 'worldmap.country' | translate }}</strong> {{ selectedSite.country }}</p>
+      <p class="text-gray-600 mb-2"><strong>{{ 'worldmap.continent' | translate }}</strong> {{ selectedSite.continent }}</p>
+      <p class="text-gray-600 mb-2"><strong>{{ 'worldmap.type' | translate }}</strong> {{ selectedSite.type|uppercase }}</p>
+      <p class="text-gray-600 mb-4"><strong>{{ 'worldmap.coordinates' | translate }}</strong> {{ selectedSite.lat }}, {{ selectedSite.lng }}</p>
       <div class="flex justify-end space-x-3">
-        <button class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400" (click)="closeModal()">Close</button>
-        <button class="px-6 py-2 bg-gradient-to-r from-[#7a004a] to-[#c7007f] text-white rounded hover:brightness-110" (click)="viewDetails()">View Details</button>
+        <button class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400" (click)="closeModal()">{{ 'worldmap.close' | translate }}</button>
+        <button class="px-6 py-2 bg-gradient-to-r from-[#7a004a] to-[#c7007f] text-white rounded hover:brightness-110" (click)="viewDetails()">{{ 'worldmap.view_details' | translate }}</button>
       </div>
     </div>
   </div>

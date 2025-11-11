@@ -12,6 +12,7 @@ import { MembersComponent } from './components/members/members.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { EventsComponent } from './components/events/events.component';
 import { CriteriaAndNominationsComponent } from './components/criteria-and-nominations/criteria-and-nominations.component';
+import { Toolkit } from './components/toolkit/toolkit';
 
 
 export const routes: Routes = [
@@ -22,6 +23,7 @@ export const routes: Routes = [
   { path: 'intangible', component: Intangible },
   { path: 'standards', component: StandardsComponent },
   { path: 'events', component: EventsComponent },
+   { path: 'toolkit', component:Toolkit },
 
   {path:'criteriaAndNomination',component:CriteriaAndNominationsComponent},
 

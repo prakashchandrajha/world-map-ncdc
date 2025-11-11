@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Banner } from "../../shared/banner/banner";
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 interface EventItem {
   id: number;
@@ -12,12 +14,52 @@ interface EventItem {
 
 @Component({
   selector: 'app-events',
-  imports: [CommonModule],
+  imports: [CommonModule, Banner, TranslateModule],
   templateUrl: './events.component.html',
   styleUrl: './events.component.css'
 })
-export class EventsComponent {
+export class EventsComponent implements OnInit {
   openEventId: number | null = null;
+
+  constructor(private translate: TranslateService) {}
+
+  ngOnInit(): void {
+    // Listen for language changes and reload data accordingly
+    this.translate.onLangChange.subscribe(() => {
+      this.loadTranslatedEvents();
+    });
+
+    // Load initial data
+    this.loadTranslatedEvents();
+  }
+
+  private async loadTranslatedEvents() {
+    const currentLang = this.translate.currentLang || 'en';
+    this.events = await Promise.all(this.events.map(async (event) => ({
+      ...event,
+      title: await this.translateText(event.title, currentLang),
+      content: await this.translateText(event.content, currentLang)
+    })));
+  }
+
+  private async translateText(text: string, targetLang: string): Promise<string> {
+    if (!text || text.trim() === '') return text;
+
+    try {
+      const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=AIzaSyC-U0ZsN3yMFgXUqrEu72N_3iAQZO2IkyU&q=${encodeURIComponent(text)}&target=${targetLang}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      const data = await response.json();
+      return data.data.translations[0].translatedText;
+    } catch (error) {
+      console.error('Translation error:', error);
+      return text; // Return original text if translation fails
+    }
+  }
 
   events: EventItem[] = [
     {
@@ -95,7 +137,7 @@ The session, titled “Cooperatives in Culture for Diversity, Cultural Rights an
 
 Key themes included:
   </p>
-    <img src="assets/images/1octeve.png" alt="Description 1" class="w-[300px] h-auto rounded-lg shadow-md">
+    <img src="assets/images/evee.png" alt="Description 1" class="w-[300px] h-auto rounded-lg shadow-md">
 
 </div>
 
@@ -289,7 +331,7 @@ Key themes included:
           </p>
          
         
- <div class="bg-gray-50 rounded-lg p-4 text-center hover:bg-gray-100 transition-all duration-300 cursor-pointer">
+ <div class="bg-gray-50 rounded-lg  text-center hover:bg-gray-100 transition-all duration-300 cursor-pointer">
     <a href="https://icaworldcoopcongress.coop/stories/coop-culture-cultural-heritage/" class="text-[#7a004a] font-semibold">Read more</a>
   </div>
            

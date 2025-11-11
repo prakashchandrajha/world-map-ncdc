@@ -15,5 +15,5 @@ export class Banner {
   @Input() titleText: string = 'Cultural<br>Heritage of<br>Cooperativism';
 
   /** Secondary text (optional) */
-  @Input() titleText2: string = 'Preserving<br>Tradition and<br>Innovation';
+  @Input() titleText2: string = '';
 }

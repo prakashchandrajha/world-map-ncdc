@@ -5,13 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { filter, Subscription } from 'rxjs';
 import { HeritageService } from '../../services/heritage.service';
 import { HeritageCard } from '../../components/heritage/heritage-card.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink,CommonModule,FormsModule],
+  imports: [RouterLink, CommonModule, FormsModule, TranslateModule],
   templateUrl: './header.html',
-  styleUrl: './header.css'
+  styleUrl: './header.css',
+  standalone: true,
 })
 export class Header implements OnInit, OnDestroy {
   isHome = false;
@@ -21,6 +23,7 @@ export class Header implements OnInit, OnDestroy {
   isSearchOpen = false;
   isMobileSearchOpen = false;
   isMobileLanguageOpen = false;
+  isLanguageDropdownOpen = false;
   searchQuery = '';
   filteredResults: HeritageCard[] = [];
   isHeaderHidden = false;
@@ -28,7 +31,8 @@ export class Header implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private heritageService: HeritageService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private translate: TranslateService
   ) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
@@ -42,6 +46,10 @@ export class Header implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+  }
+
+  changeLanguage(lang: string) {
+    this.translate.use(lang);
   }
 
   toggleDropdown() {
@@ -76,6 +84,14 @@ export class Header implements OnInit, OnDestroy {
     this.isMobileLanguageOpen = false;
   }
 
+  toggleLanguageDropdown() {
+    this.isLanguageDropdownOpen = !this.isLanguageDropdownOpen;
+  }
+
+  closeLanguageDropdown() {
+    this.isLanguageDropdownOpen = false;
+  }
+
   toggleSearch() {
     this.isSearchOpen = !this.isSearchOpen;
     if (!this.isSearchOpen) {
@@ -90,7 +106,8 @@ export class Header implements OnInit, OnDestroy {
       this.filteredResults = allTangible.filter(card =>
         card.title.toLowerCase().includes(this.searchQuery.toLowerCase())
       );
-    } else {
+    }
+    else {
       this.filteredResults = [];
     }
   }

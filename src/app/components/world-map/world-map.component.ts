@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
-import { CommonModule } from '@angular/common';
+import { CommonModule, UpperCasePipe } from '@angular/common';
 import { Router } from '@angular/router';
 import { SitesService, Site } from '../../services/sites.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { first } from 'rxjs';
 
 @Component({
   selector: 'app-world-map',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule,UpperCasePipe],
   templateUrl: './world-map.component.html',
   styleUrls: ['./world-map.component.css']
 })

@@ -93,7 +93,7 @@
         </ul>
         <div class="relative ml-4">
           <button (click)="toggleLanguageDropdown()" class="flex items-center space-x-1 text-sm text-pink-900 hover:text-[#d31c75]">
-            <img src="/assets/images/language.png" alt="Language" class="w-5 h-5" />
+            <img [src]="isHome ? '/assets/images/icon2home.png' : '/assets/images/language.png'" alt="Language" class="w-5 h-5" />
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3 transition-transform duration-300" [class.rotate-180]="isLanguageDropdownOpen">
               <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
             </svg>

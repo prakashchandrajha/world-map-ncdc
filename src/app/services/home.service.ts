@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HomeService {
+
+  constructor(private translate: TranslateService) {}
 
   getHomeCards() {
     return [
@@ -15,6 +18,59 @@ This includes evident transmission and practice of cooperative principles, ritua
 These elements, more often than not, inscribed by the United Nations Education, Scientific and Cultural Organization (UNESCO) as intangible culture of humanity are not only cultural treasures but also living cooperative practices. They demonstrate that cooperation is not just an economic model but a deeply rooted cultural tradition, embedded in food, festivals, governance, and resource use.`},
 
     ];
+  }
+
+  // Method to get translated home content
+  async getTranslatedHomeCards(lang: string) {
+    if (lang === 'en') {
+      return this.getHomeCards();
+    }
+
+    const cards = this.getHomeCards();
+    const translatedCards = await Promise.all(cards.map(async (card) => ({
+      ...card,
+      title: await this.translateText(card.title, lang),
+      desc: await this.translateText(card.desc, lang),
+      btn: await this.translateText(card.btn, lang),
+      moreText: await this.translateText(card.moreText, lang)
+    })));
+
+    return translatedCards;
+  }
+
+  async getTranslatedSectionData(lang: string) {
+    if (lang === 'en') {
+      return this.getSectionData();
+    }
+
+    const sections = this.getSectionData();
+    const translatedSections = await Promise.all(sections.map(async (section) => ({
+      ...section,
+      title: await this.translateText(section.title, lang),
+      desc: await this.translateText(section.desc, lang),
+      moreText: await this.translateText(section.moreText, lang)
+    })));
+
+    return translatedSections;
+  }
+
+  private async translateText(text: string, targetLang: string): Promise<string> {
+    if (!text || text.trim() === '') return text;
+
+    try {
+      const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=AIzaSyC-U0ZsN3yMFgXUqrEu72N_3iAQZO2IkyU&q=${encodeURIComponent(text)}&target=${targetLang}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      const data = await response.json();
+      return data.data.translations[0].translatedText;
+    } catch (error) {
+      console.error('Translation error:', error);
+      return text; // Return original text if translation fails
+    }
   }
 
 

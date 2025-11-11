@@ -3,10 +3,11 @@ import { WorldMapComponent } from "../world-map/world-map.component";
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { HomeService } from '../../services/home.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
-  imports: [WorldMapComponent,CommonModule,RouterLink],
+  imports: [WorldMapComponent,CommonModule,RouterLink,TranslateModule],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
@@ -22,15 +23,25 @@ export class Home implements OnInit, OnDestroy {
   isImageVisible = true;
 
   constructor(
-    private homeService: HomeService
+    private homeService: HomeService,
+    private translate: TranslateService
   ) {}
 
   ngOnInit(): void {
-    // Load data from service (DRY)
-    this.cards = this.homeService.getHomeCards();
-    this.sections = this.homeService.getSectionData();
+    // Listen for language changes and reload data accordingly
+    this.translate.onLangChange.subscribe(() => {
+      this.loadTranslatedData();
+    });
 
+    // Load initial data
+    this.loadTranslatedData();
     this.startImageSequence();
+  }
+
+  private async loadTranslatedData() {
+    const currentLang = this.translate.currentLang || 'en';
+    this.cards = await this.homeService.getTranslatedHomeCards(currentLang);
+    this.sections = await this.homeService.getTranslatedSectionData(currentLang);
   }
 
   ngOnDestroy(): void {

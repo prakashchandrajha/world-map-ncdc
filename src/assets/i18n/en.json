@@ -62,5 +62,20 @@
     "northeastern_artisan": "Northeastern Artisan Cooperatives",
     "rural_cooperative": "Rural Cooperative Traditions",
     "cooperative_weaving": "Cooperative Weaving Techniques"
+  },
+  "home": {
+    "hero_title": "Preserving cooperative cultural  wisdom across generations",
+    "hero_title2":"Celebrating Sites, Traditions and Practices of cooperation that connect communities around the world.",
+    "read_more": "Read More",
+    "close": "✕",
+    "tangible_title": "Tangible Heritage of Cooperation",
+    "tangible_desc": "Physical places, buildings, settlements, and infrastructure that embody the history and legacy of cooperative enterprise.",
+    "tangible_examples": "Examples – Buildings, Sites, Museums, Workplaces, Assembly Halls, Villages & Cities.",
+    "intangible_title": "Intangible Heritage of Cooperation",
+    "intangible_desc": "Knowledge, practices, and traditions that sustain cooperative values and principles across generations.",
+    "intangible_examples": "Examples – Customs, Oral and Artistic traditions, Shared use of natural resources",
+    "did_you_know": "Did you know that the Idea and Practice of Organizing Shared Interests was inscribed <br /> as the Intangible Cultural Heritage of Humanity in 2016?",
+    "principles_title": "Principles for Identifying Cooperative Cultural Heritage",
+    "principles_desc": "These principles guide the identification and recognition of cooperative cultural heritage elements."
   }
 }

@@ -41,7 +41,12 @@
    class=" text-white text-[18px] sm:text-[20px] md:text-[16px] font-bold leading-snug sm:leading-tight
           text-center w-full sm:max-w-[70%] md:max-w-[70%] px-4 sm:px-10 md:px-40 mx-auto "
 >
-Preserving cooperative cultural wisdom across generations <br>Celebrating Sites, Traditions and Practices of cooperation that connect communities around the world.</h1>
+{{ 'home.hero_title' | translate }}</h1>
+<h1
+   class=" text-white text-[18px] sm:text-[20px] md:text-[16px] font-bold leading-snug sm:leading-tight
+          text-center w-full sm:max-w-[70%] md:max-w-[70%] px-4 sm:px-10 md:px-40 mx-auto "
+>
+{{ 'home.hero_title2' | translate }}</h1>
 
     </div>
   </div>
@@ -92,7 +97,7 @@ Preserving cooperative cultural wisdom across generations <br>Celebrating Sites,
                  bg-gradient-to-r from-[#7a004a] to-[#ff77a9]
                  text-white py-3 px-8 sm:px-10
                  transition-all duration-300 hover:from-[#9b0060] hover:to-[#ff88b5] hover:shadow-lg">
-          <span>{{ section.moreText ? 'Read More' : 'Read More' }}</span>
+          <span>{{ 'home.read_more' | translate }}</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="20px" width="20px" viewBox="0 0 330 330">
             <path d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213
                      C232.322,253.535,236.161,255,240,255
@@ -164,7 +169,7 @@ Preserving cooperative cultural wisdom across generations <br>Celebrating Sites,
                  whitespace-nowrap"
         >
           <span class="font-['Noto_Sans'] font-normal">
-            Read More
+            {{ 'home.read_more' | translate }}
           </span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -206,7 +211,7 @@ Preserving cooperative cultural wisdom across generations <br>Celebrating Sites,
       (click)="closeModal()"
       class="absolute top-4 right-4 text-gray-400 text-3xl hover:text-[#7a004a] transition-all duration-300 bg-transparent border-none"
     >
-      ✕
+{{ 'home.close' | translate }}
     </button>
     <!-- Title -->
     <h3
@@ -252,9 +257,7 @@ Preserving cooperative cultural wisdom across generations <br>Celebrating Sites,
              text-[28px] sm:text-[32px] md:text-[28px]
              leading-snug max-w-[900px] mx-auto"
     >
-      Did you know that the Idea and Practice of Organizing Shared Interests was inscribed  
-      <br />
-      as the Intangible Cultural Heritage of Humanity in 2016?
+      {{ 'home.did_you_know' | translate }}
     </h2>
 
     <div class="mt-12 flex justify-center">
@@ -268,7 +271,7 @@ Preserving cooperative cultural wisdom across generations <br>Celebrating Sites,
                bg-gradient-to-r from-[#f7c3e210] to-[#b3006f10]
                transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#f7c3e250] hover:to-[#b3006f50] hover:shadow-md"
       >
-        Read More
+{{ 'home.read_more' | translate }}
       </a>
     </div>
   </div>
@@ -304,12 +307,12 @@ Preserving cooperative cultural wisdom across generations <br>Celebrating Sites,
               'text-[#3077a7]': card.title === 'Intangible Heritage of Cooperation'
             }"
           >
-            {{ card.title }}
+{{ card.title === 'Tangible Heritage of Cooperation' ? ('home.tangible_title' | translate) : ('home.intangible_title' | translate) }}
           </h2>
 
           <!-- Description -->
           <p class="text-gray-700 leading-tight mb-4 line-clamp-2 hover:line-clamp-none cursor-pointer transition-all duration-300">
-            {{ card.desc }}
+{{ card.title === 'Tangible Heritage of Cooperation' ? ('home.tangible_desc' | translate) : ('home.intangible_desc' | translate) }}
           </p>
 
           <!-- Examples Section -->
@@ -317,18 +320,18 @@ Preserving cooperative cultural wisdom across generations <br>Celebrating Sites,
   @if (card.title === 'Tangible Heritage of Cooperation') {
     <!-- Tangible Heritage Section -->
     <p class="text-sm text-[#7a004a] font-medium leading-snug">
-      <span class="font-semibold">Examples –</span> Buildings, Sites, Museums, Workplaces, Assembly Halls, Villages & Cities.
+      <span class="font-semibold">{{ 'home.tangible_examples' | translate }}</span>
     </p>
     <button
       routerLink="/tangible"
       class="mt-3 px-3 py-1 rounded-full text-white text-sm font-medium bg-[#7a004a] hover:bg-[#5c0037] border border-[#7a004a] w-full shadow-sm transition-colors duration-300"
     >
-      {{ card.btn }}
+{{ 'home.read_more' | translate }}
     </button>
   } @else {
     <!-- Intangible Heritage Section -->
     <p class="text-sm text-[#3077a7] font-medium leading-snug">
-      <span class="font-semibold">Examples –</span> Customs, Oral and Artistic traditions, Shared use of natural resources
+      <span class="font-semibold">{{ 'home.intangible_examples' | translate }}</span>
     </p>
     <button
       class="mt-3 px-3 py-1 rounded-full text-white text-sm font-medium bg-[#3077a7] hover:bg-[#0c50b8] border border-[#3077a7] w-full shadow-sm transition-colors duration-300"
@@ -389,10 +392,10 @@ Preserving cooperative cultural wisdom across generations <br>Celebrating Sites,
     <p class="font-heading mt-2 text-3xl leading-8 font-semibold tracking-tight sm:text-2xl
               text-transparent bg-clip-text
               bg-gradient-to-r from-[#6f003f] to-gray-300">
-       Principles for Identifying Cooperative Cultural Heritage
+{{ 'home.principles_title' | translate }}
     </p>
     <p class="mt-4 max-w-xl text-lg lg:mx-auto text-[#9a2d60]">
-        These principles guide the identification and recognition of cooperative cultural heritage elements.
+{{ 'home.principles_desc' | translate }}
     </p>
 </div>
 
@@ -414,7 +417,7 @@ Preserving cooperative cultural wisdom across generations <br>Celebrating Sites,
                hover:bg-[#7a004a] hover:text-white transition-colors duration-300"
         routerLink="/toolkit"
       >
-        Read More
+{{ 'home.read_more' | translate }}
       </button>
     </div>
   </div>

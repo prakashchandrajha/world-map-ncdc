@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Banner } from '../../shared/banner/banner';
 import { SitesService, Site } from '../../services/sites.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -54,9 +54,11 @@ export interface HeritageContent {
 export class HeritageDetailComponent implements OnInit {
   config!: HeritageDetailConfig;
   content!: HeritageContent;
+  suggestedCooperatives: Site[] = [];
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private sitesService: SitesService,
     private translate: TranslateService
   ) {}
@@ -75,6 +77,9 @@ export class HeritageDetailComponent implements OnInit {
 
         // Load initial content
         this.loadTranslatedContent(id);
+
+        // Load suggested cooperatives
+        this.suggestedCooperatives = this.getRandomSites(3, id);
       }
     });
   }
@@ -117,5 +122,17 @@ export class HeritageDetailComponent implements OnInit {
         buttonHover: 'hover:brightness-105'
       };
     }
+  }
+
+  navigateToCooperative(id: string) {
+    const route = this.config.type === 'tangible' ? 'aboutTangiblePage' : 'aboutInTangiblePage';
+    this.router.navigate([`/${route}`, id]);
+  }
+
+  private getRandomSites(count: number, excludeId: string): Site[] {
+    const allSites = this.sitesService.getSites();
+    const availableSites = allSites.filter(site => site.id !== excludeId);
+    const shuffled = availableSites.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
   }
 }

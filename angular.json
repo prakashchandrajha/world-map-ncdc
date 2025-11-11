@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "world-map-ncdc": {
+    "cooperative-culture-heritage": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -67,10 +67,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "world-map-ncdc:build:production"
+              "buildTarget": "cooperative-culture-heritage:build:production"
             },
             "development": {
-              "buildTarget": "world-map-ncdc:build:development"
+              "buildTarget": "cooperative-culture-heritage:build:development"
             }
           },
           "defaultConfiguration": "development"

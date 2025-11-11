@@ -106,4 +106,39 @@ export class CriteriaAndNominationsService {
   getCriterionById(id: number): Criterion | undefined {
     return this.criteriaData.find(c => c.id === id);
   }
+
+  // Method to get translated criteria
+  async getTranslatedCriteria(lang: string): Promise<Criterion[]> {
+    if (lang === 'en') {
+      return this.getCriteria();
+    }
+
+    const criteria = this.getCriteria();
+    const translatedCriteria = await Promise.all(criteria.map(async (criterion) => ({
+      ...criterion,
+      title: await this.translateText(criterion.title, lang),
+      description: await this.translateText(criterion.description, lang)
+    })));
+
+    return translatedCriteria;
+  }
+
+  private async translateText(text: string, targetLang: string): Promise<string> {
+    if (!text || text.trim() === '') return text;
+
+    try {
+      const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=AIzaSyC-U0ZsN3yMFgXUqrEu72N_3iAQZO2IkyU&q=${encodeURIComponent(text)}&target=${targetLang}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      const data = await response.json();
+      return data.data.translations[0].translatedText;
+    } catch (error) {
+      console.error('Translation error:', error);
+      return text; // Return original text if translation fails
+    }
+  }
 }

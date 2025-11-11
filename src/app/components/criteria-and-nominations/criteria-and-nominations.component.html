@@ -1,7 +1,6 @@
-<app-banner 
-  
-  [titleText]="'Criteria & Nominations'"
-  [titleText2]="'ICA Standards of Cooperative Cultural Heritage <br>based on the Statement on the Cooperative Identity'"
+<app-banner
+  [titleText]="'criteria.title' | translate"
+  [titleText2]="'criteria.subtitle' | translate"
   ></app-banner>
   
 <section class="mx-auto max-w-[1440px] min-w-[280px] py-6 px-3 sm:px-6 md:px-8 lg:px-16 font-[Poppins] mt-20">
@@ -30,12 +29,12 @@
           color: transparent;
         "
       >
-        Cooperative Cultural Heritage Assessment
+ {{ 'criteria.assessment_title' | translate }}
       </h4>
 
       <!-- Description -->
       <p class="font-normal text-[14px] sm:text-[15px] leading-relaxed text-[#8D1558] font-['Inter',sans-serif] mb-4 flex-1">
-        A thirteen-point set of international standards on Cooperative Cultural Heritage was drawn up by the ICA Working Group on CCH in fall 2025. These standards, the first of their kind, will build on experiences through 2026, by which time, the ICA aims to list at least 50 CCH sites and 15 CCH intangible elements (through a separate set of criteria) from across all regions, representing all ICA sectors, selected through a nomination process open to ICA members and their constituents. A unique ICA-CCH label will be granted to selected sites that meet all 13 criteria, along with a Statement of Recognition, in a post-launch (November 2025) exercise.
+{{ 'criteria.assessment_desc' | translate }}
       </p>
 
       <!-- Button: bottom-right aligned -->
@@ -55,14 +54,7 @@
 <!-- Paragraph Section -->
 <div class="px-8 sm:px-16 md:px-24 lg:px-32">
   <p class="mx-auto text-justify max-w-4xl leading-relaxed text-gray-800 font-[Poppins]">
-    The International Cooperative Alliance (ICA) invites its member organizations to take an active role in identifying, celebrating, and safeguarding the living legacy of cooperation around the world. The process of recognizing Cooperative Cultural Heritage Sites is not only an act of preservation but also a reaffirmation of the cooperative identity—rooted in values of democracy, solidarity, and collective progress.
-    <br><br>
-    This initiative seeks to shine a light on the spaces, institutions, and communities that embody the cooperative spirit across generations. From historic buildings and archives to contemporary centers of learning and community action, these sites serve as tangible witnesses to the cooperative movement’s profound contribution to social and cultural development.
-    <br><br>
-    They are places where the cooperative ethos has shaped livelihoods, fostered innovation, and strengthened communities through shared ownership and mutual aid.
-    Through a transparent and participatory nomination process, ICA member organizations are encouraged to identify and propose sites in their countries that meet the established criteria. These criteria ensure that recognized sites not only possess historical and cultural significance but also continue to nurture cooperative education, engagement, and sustainability in the present day. The nomination process provides an opportunity for members to document, interpret, and share their cooperative heritage with both local and global audiences.
-    <br><br>
-    Ultimately, this Charter and its recognition framework aim to weave cooperative heritage into the broader fabric of world culture making it visible, accessible, and celebrated as part of humanity’s shared story. Each nominated site becomes a living testament to cooperation as a force for social good, reminding us that the cooperative model is not only an economic structure but also a cultural tradition that connects past, present, and future generations.
+{{ 'criteria.description' | translate }}
   </p>
 </div>
 
@@ -70,28 +62,24 @@
 <section class="w-full bg-white py-10 px-4 sm:px-8 md:px-16 lg:px-24 font-[Poppins]">
   <!-- Title Center -->
   <h1 class="text-center text-3xl sm:text-4xl font-bold text-[#7a004a] mb-10">
-Charter of the Cooperative Cultural Heritage 
+{{ 'criteria.charter_title' | translate }}
  </h1>
 
   <!-- First Heading + Paragraph -->
   <div class="mb-10 ">
     <h2 class="text-left text-2xl sm:text-3xl font-semibold text-[#7a004a] mb-3 ml-2 sm:ml-4">
-Preamble    </h2>
+{{ 'criteria.preamble_title' | translate }}</h2>
     <p class="text-justify  text-gray-600 leading-relaxed ml-2 sm:ml-4 max-w-3xl">
-      Recognizing that cooperatives are not only enterprises but also bearers of culture, history, and identity, this Charter establishes a framework for the recognition and safeguarding of cooperative cultural heritage sites.
-
-These criteria aim to ensure that cooperative heritage is preserved, celebrated, and integrated into wider cultural narratives while continuing to inspire present and future generations in line with the values of democracy, equity, solidarity, and sustainability.
-
-This Charter affirms the commitment of the cooperative movement to recognize, preserve, and promote its cultural heritage. By adopting these criteria, cooperative heritage sites shall become living symbols of solidarity, education, and international cooperation.
+{{ 'criteria.preamble_desc' | translate }}
     </p>
   </div>
 
   <!-- Second Heading + Subheading -->
   <div>
     <h2 class="text-left text-2xl sm:text-3xl font-semibold text-[#7a004a] mb-2 ml-2 sm:ml-4">
-Evaluation Criteria    </h2>
+{{ 'criteria.evaluation_title' | translate }}</h2>
     <h3 class="text-left text-xl sm:text-2xl text-[#7a004a] font-medium ml-2 sm:ml-4">
-      Version 1.0 - 2025
+      {{ 'criteria.version' | translate }}
     </h3>
   </div>
 </section>
@@ -135,19 +123,19 @@ Evaluation Criteria    </h2>
     <!-- Content -->
     <div class="flex flex-col items-center">
       <h2 class="text-2xl font-semibold mb-4 text-[#8D1558]">
-        Nomination form
+{{ 'criteria.nomination_title' | translate }}
       </h2>
       <p class="text-gray-700 leading-relaxed mb-6 max-w-lg">
-        Access the form to nominate elements of Cooperative Cultural Heritage from your country. Please feel free to contact
-        <a href="mailto:help@culturalheritage.coop" class="text-[#8D1558] font-medium hover:underline">help@culturalheritage.coop</a>
-        if you need any assistance or support.
+{{ 'criteria.nomination_desc' | translate }}
+        <a href="mailto:help@culturalheritage.coop" class="text-[#8D1558] font-medium hover:underline">{{ 'criteria.nomination_email' | translate }}</a>
+        {{ 'criteria.nomination_contact' | translate }}
       </p>
 
       <a
         routerLink="/nomination"
         class="inline-flex items-center justify-center px-8 py-3 rounded-full font-medium bg-[#8D1558] text-white hover:bg-[#731147] transition-colors shadow-sm"
       >
-        Access form
+{{ 'criteria.access_form' | translate }}
       </a>
     </div>
   </div>

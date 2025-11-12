@@ -1,183 +1,314 @@
-<app-banner></app-banner>
- <div class="text-center px-6 py-6">
-  <h1 class="text-2xl md:text-3xl font-bold text-[#7a004a]">
-    Cooperative Cultural <br> Heritage Nomination Form
-  </h1>
-</div>
 
-<div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
-   
+  <app-banner></app-banner>
+  <div class="text-center px-6 py-6">
+    <h1 class="text-2xl md:text-3xl font-bold text-[#7a004a]">
+      ICA Cooperative Cultural Heritage <br> Nomination Form
+    </h1>
+  </div>
+  <div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+      <form class="p-6">
+        <!-- Section A -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section A: Nominating ICA Member Organization</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Name of Organization</label>
+              <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Country</label>
+              <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Contact Person</label>
+              <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Position</label>
+              <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Email</label>
+              <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Telephone</label>
+              <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+            </div>
+          </div>
+        </div>
 
-    <div class="p-6">
-      <!-- Section A -->
-      <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section A: Nominating ICA Member Organization</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-          <div>
-            <label class="block text-gray-700 font-medium mb-1">Organization Name</label>
+        <!-- Section B -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section B: Nomination Details</h2>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">Official Name of the Heritage Element (max. 230 characters)</label>
+            <textarea rows="2" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">Local Name (if applicable)</label>
             <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
           </div>
-          <div>
-            <label class="block text-gray-700 font-medium mb-1">Country</label>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">Other Names/Titles (if applicable)</label>
             <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
           </div>
-          <div>
-            <label class="block text-gray-700 font-medium mb-1">Contact Person</label>
-            <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+        </div>
+
+        <!-- Section C -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section C: Category of Heritage</h2>
+          <div class="mt-4 space-y-2">
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Tangible Cooperative Cultural Heritage (Physical Sites/Monuments/Museums etc.)</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Intangible Cooperative Cultural Heritage (Launching Soon)</span>
+            </label>
           </div>
-          <div>
-            <label class="block text-gray-700 font-medium mb-1">Position</label>
-            <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
-          </div>
-          <div>
-            <label class="block text-gray-700 font-medium mb-1">Email</label>
-            <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
-          </div>
-          <div>
-            <label class="block text-gray-700 font-medium mb-1">Phone</label>
-            <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+        </div>
+
+        <!-- Section D -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section D: Communities and Groups Concerned</h2>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">Identify the cooperative communities, groups, institutions, or networks responsible for safeguarding and transmitting this heritage. (Max. 500 words)</label>
+            <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
           </div>
         </div>
-      </div>
 
-      <!-- Section B -->
-      <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section B: Organization Member of the Nominating ACI</h2>
-        <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Official Name of the Heritage Element (English/French, max. 230 characters)</label>
-          <textarea rows="2" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+        <!-- Section E -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section E: Geographic Scope and Location</h2>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">Provide details on location (city, region, country) and area of influence (local, national, international). (Max. 500 words)</label>
+            <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
         </div>
-        <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Local Name (if applicable)</label>
-          <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
-        </div>
-        <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Other Names/Titles (if applicable)</label>
-          <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
-        </div>
-      </div>
 
-      <!-- Section C -->
-      <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section C: Nominating ACI Member Organization</h2>
-        <div class="mt-4 space-y-2">
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">1. Tangible Cooperative Cultural Heritage [not covered by points 2. and 3. below]
-</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">2. Cooperative Cultural Heritage Education / Museums / Archives</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">3. Creative Cooperative Cultural Heritage</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">4. Intangible Cooperative Cultural Heritage</span>
-          </label>
+        <!-- Section F -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section F: Description of the Heritage Element</h2>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">Provide a summary description (170–280 words) including historical background, core cooperative values, and relevance for community identity.</label>
+            <textarea rows="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
         </div>
-      </div>
 
-      <!-- Section D -->
-      <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section D: Interested Communities and Groups</h2>
-        <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Identify the cooperative communities, groups, institutions, or networks responsible for the safeguarding and transmission of this heritage. (Max. 200 words)</label>
-          <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+        <!-- Section G -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section G: Holders and Practitioners</h2>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">Who are the principal carriers of this heritage? (Members, leaders, educators, archivists, creative professionals, etc.) (170–280 words)</label>
+            <textarea rows="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
         </div>
-      </div>
 
-      <!-- Section E -->
-      <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section E: Geographical Scope and Location</h2>
-        <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Provide details on the location (city, region, country) and area of influence (local, national, international). (Max. 200 words)</label>
-          <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+        <!-- Section H -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section H: Knowledge Transmission</h2>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">Explain how knowledge and practices are transmitted today (education, oral traditions, cooperative schools, museums, archives, creative projects). (170–280 words)</label>
+            <textarea rows="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
         </div>
-      </div>
 
-      <!-- Section F -->
-      <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section F: Alignment with the ICA CCH Standards</h2>
-        <div class="mt-4 space-y-2">
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">1. Origins and Foundations of Cooperation</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">2. Living Traditions of Cooperation</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">3. Democracy in Practice</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">4. Shared Identity and Belonging</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">5. Continuity and Transmission</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">6. Innovation Rooted in Tradition</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">7. Solidarity Across Borders</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">8. Cultural Memory and Legacy</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">9. Community Well-being</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">10. Diversity of Cooperative Expressions</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">11. Resilience and Renewal</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">12. Universal Cultural Significance of Cooperation</span>
-          </label>
+        <!-- Section I -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section I: Social and Cultural Functions</h2>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">What role does this heritage play in the lives of communities (identity, cohesion, creativity, sustainability)? (170–280 words)</label>
+            <textarea rows="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
         </div>
-        <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Briefly explain how the element reflects the selected standards:</label>
-          <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+
+        <!-- Section J -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section J: Human Rights and Sustainability</h2>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">Confirm compliance with universal values of human rights, cultural diversity, and sustainable development principles. (170–280 words)</label>
+            <textarea rows="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
         </div>
-      </div>
 
-      <!-- Section G -->
-      <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section G: Description of the Heritage Element</h2>
-        <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Provide a summary description (170–280 words):</label>
-          <textarea rows="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+        <!-- Section K -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section K: Safeguarding Measures</h2>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">K.1 Past and Ongoing Efforts (170–280 words)</label>
+            <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">K.2 Proposed Measures for the Future (570–860 words)</label>
+            <textarea rows="8" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">K.3 Community Involvement in Safeguarding (170–280 words)</label>
+            <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
         </div>
-      </div>
 
-      <!-- Submit Button -->
-      <div class="flex justify-start mt-8">
-  <button
-    type="submit"
-    class="bg-[#7a004a] hover:bg-[#5a003a] text-white font-bold py-2 px-6 rounded-full focus:outline-none focus:shadow-outline transition"
-  >
-    Submit
-  </button>
-</div>
+        <!-- Section L -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section L: Contribution to Visibility and Dialogue</h2>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">L.1 Visibility of Cooperative Cultural Heritage (120–170 words)</label>
+            <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">L.2 Promotion of Dialogue Between Communities (120–170 words)</label>
+            <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">L.3 Respect for Diversity and Creativity (120–170 words)</label>
+            <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
+        </div>
 
+        <!-- Section M -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section M: Alignment with ICA CCH Standards (13 Point Criteria)</h2>
+          <div class="mt-4 space-y-2">
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Criterion 1. Historical Significance</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Criterion 2. Connection to Cooperative Pioneers or Communities</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Criterion 3. Archival, Architectural, or Symbolic Value</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Criterion 4. Active Cooperative Connection</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Criterion 5. Living Practice of Cooperation</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Criterion 6. Educational Mission</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Criterion 7. Research and Knowledge Sharing</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Criterion 8. Community and Member Engagement</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Criterion 9. Accessibility for All</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Criterion 10. Preservation and Safeguarding</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Criterion 11. Visibility and Symbolism</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Criterion 12. Sustainability and Inclusivity</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Criterion 13. Networking and International Solidarity</span>
+            </label>
+          </div>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">Briefly explain how the element reflects the selected standards (100 words per criterion):</label>
+            <textarea rows="8" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
+        </div>
+
+        <!-- Section N -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section N: Consent and Participation</h2>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">Document the free, prior, and informed consent of concerned communities or institutions. Attach letters, resolutions, or recorded statements. (170–280 words)</label>
+            <textarea rows="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
+        </div>
+
+        <!-- Section O -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section O: Documentation and Inventories</h2>
+          <div class="mt-4">
+            <label class="block text-gray-700 font-medium mb-1">If the element is already registered in any types of local/national heritage records, provide references or links. (170–280 words)</label>
+            <textarea rows="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          </div>
+        </div>
+
+        <!-- Section P -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section P: Supporting Materials</h2>
+          <div class="mt-4 space-y-2">
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Letters of consent from communities/institutions</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">High-resolution photos</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Video documentation (5–10 minutes)</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">Archival materials / publications</span>
+            </label>
+            <label class="flex items-center">
+              <input type="checkbox" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+              <span class="ml-2 block text-gray-700">References / bibliography</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Section Q -->
+        <div class="mb-8 border-b border-gray-200 pb-4">
+          <h2 class="text-xl font-semibold text-[#7a004a]">Section Q: Declaration and Signature</h2>
+          <div class="mt-4">
+            <p class="text-gray-700 mb-4">I hereby submit this nomination for consideration to the ICA Cooperative Cultural Heritage List.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-gray-700 font-medium mb-1">Your Name</label>
+                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium mb-1">Designation</label>
+                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium mb-1">Organization</label>
+                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium mb-1">Date</label>
+                <input type="date" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex justify-start mt-8">
+          <button type="submit" class="bg-[#7a004a] hover:bg-[#5a003a] text-white font-bold py-2 px-6 rounded-full focus:outline-none focus:shadow-outline transition">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   </div>
-</div>
+

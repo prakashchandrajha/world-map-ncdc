@@ -32,21 +32,6 @@
                 "glob": "**/*",
                 "input": "node_modules/leaflet/dist/images",
                 "output": "/images"
-              },
-              {
-                "glob": ".htaccess",
-                "input": "public",
-                "output": "/"
-              },
-              {
-                "glob": "web.config",
-                "input": "public",
-                "output": "/"
-              },
-              {
-                "glob": "_redirects",
-                "input": "public",
-                "output": "/"
               }
             ],
             "styles": [

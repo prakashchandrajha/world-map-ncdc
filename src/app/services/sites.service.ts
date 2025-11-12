@@ -961,7 +961,7 @@ From its beginnings as a small college in 1963 to its present role as a national
       siteName: 'The Rochdale Pioneers’ Musuem, Rochdale and the National Cooperative Archive, Manchester, United Kingdom',
       coopYear: 2025,
       lat: 53.6187,
-      lng: 2.1594,
+      lng: -2.1594,
       country: 'United Kingdom',
       continent: 'Europe',
       type: 'tangible',

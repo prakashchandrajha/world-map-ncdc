@@ -123,10 +123,10 @@ constructor(private router: Router, private sitesService: SitesService) {}
     // Custom icon for markers
     const customIcon = L.icon({
       iconUrl: 'assets/images/i2.png',
-      iconSize: [12, 15],
-      iconAnchor: [12, 41],
+      iconSize: [10, 10],
+      iconAnchor: [5, 5],
       popupAnchor: [0, -25],
-      shadowSize: [41, 41]
+      shadowSize: [10, 10]
     });
 
     // Load sites from service

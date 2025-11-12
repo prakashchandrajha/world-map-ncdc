@@ -47,7 +47,7 @@ export class SitesService {
         infoCard: {
           country: 'Canada',
           countryFlag: 'assets/images/sites_files/country-img/canada.png',
-          theme: 'Museum Celebrating Cooperatives and Pioneers',
+          theme: 'Museum Celebrating Cooperatives',
           entryYear: 2025,
           coordinates: '46.80942, -71.18206'
         },
@@ -93,12 +93,12 @@ Through this digital journey, one can witness history as though standing alongsi
 Through its commitment to education, preservation, and interpretation, the Society ensures that the legacy of Alphonse and Dorimène Desjardins continues to inspire new generations to believe in the enduring power of cooperation.`
           },
           aditionalData2: {
-            title: 'Recognition',
-            content: `Recognized by UNESCO for its role in cooperative heritage.`
+            title: '',
+            content: ``
           },
           aditionalDat3: {
-            title: 'Visitor Information',
-            content: `Open to the public with guided tours available.`
+            title: '',
+            content: ``
           },
                 aditionalDat4: {
         title: '',
@@ -142,9 +142,9 @@ Through its commitment to education, preservation, and interpretation, the Socie
         infoCard: {
           country: 'Brazil',
           countryFlag: 'assets/images/sites_files/country-img/brazil.png',
-          theme: 'Financial Group',
+          theme: 'Early Worker Cooperative',
           entryYear: 2025,
-          coordinates: '-29.3804, -51.1087";'
+          coordinates: '-29.3804, -51.1087'
         },
         sections: {
           legacy: {
@@ -248,7 +248,7 @@ Rooted in the migrations, settlements, and cooperative experiments that shaped s
         infoCard: {
           country: 'India',
           countryFlag: 'assets/images/sites_files/country-img/india.png',
-          theme: 'Milk Producers',
+          theme: 'Birthplace “White Revolution”',
           entryYear: 2025,
           coordinates: '22.55267, 72.9715'
         },
@@ -360,9 +360,9 @@ In Anand, the cradle of the White Revolution, that story continues to be toldnot
         infoCard: {
           country: 'Switzerland',
           countryFlag: 'assets/images/sites_files/country-img/Flag_of_Switzerland.svg',
-          theme: 'Financial Group',
+          theme: 'International Tripartite Organization',
           entryYear: 2025,
-          coordinates: '46.2268, 6.1400";'
+          coordinates: '46.2268, 6.1400'
         },
         sections: {
           legacy: {
@@ -465,9 +465,9 @@ For any effort to chart the world’s cooperative cultural heritage, the ILO Coo
         infoCard: {
           country: 'France',
           countryFlag: 'assets/images/sites_files/country-img/Flag_of_France.svg',
-          theme: 'Financial Group',
+          theme: 'Cooperative Employee Ownership',
           entryYear: 2025,
-          coordinates: '44.9378, 4.4964";'
+          coordinates: '44.9378, 4.4964'
         },
         sections: {
           legacy: {
@@ -565,7 +565,7 @@ In a world dominated by globalised supply-chains, anonymous capital and remote o
         infoCard: {
           country: 'United States of America',
           countryFlag: 'assets/images/sites_files/country-img/Flag_of_the_United_States.svg',
-          theme: 'Financial Group',
+          theme: 'Museum Celebrating Cooperatives',
           entryYear: 2025,
           coordinates: '42.9955, -71.4637'
         },
@@ -600,7 +600,7 @@ Once the home of Joseph Boivin, who volunteered as the first manager of the St. 
 With Boivin’s commitment and Desjardins’ mentorship, the St. Mary’s Cooperative Credit Association opened its doors in November 1908. The credit union’s guiding principle was simple yet revolutionary: people helping people. Members pooled their modest savings, made affordable loans, and discovered collective dignity through cooperation.
 
 That first act of faith became the cornerstone of a national tradition. The very walls of Boivin’s home,where ledgers were kept, coins counted, and decisions made,still resonate with the determination of those early pioneers.`,
-            image: 'assets/images/sites_files/americacreditunion.jpg'
+            image: 'assets/images/sites_files/am.jpg'
           },
           community: {
             title: 'A Museum with a Mission',
@@ -666,7 +666,7 @@ Among its most powerful projects is “Unsung Heroes,” a storytelling initiati
         infoCard: {
           country: 'Morocco',
           countryFlag: 'assets/images/sites_files/country-img/Flag_of_Morocco.svg',
-          theme: 'Financial Group',
+          theme: 'Women led Cooperative',
           entryYear: 2025,
           coordinates: '30.88, 8.10'
         },
@@ -700,7 +700,7 @@ Then, in the mid-1990s, under the guidance and mentorship of Professor Zoubida C
 
 Visitors to Tamanar today can walk through the cooperative’s sunlit workrooms, where women sit in a rhythmic harmonycracking argan nuts, pressing oil, bottling Morocco’s famed “liquid gold.” Each gesture is both ancient and newly empowered, a dance of patience, precision, and pride. Amal’s success inspired dozens of similar initiatives, proving that economic equality could grow from the very soil of tradition.
 Amal’s story also lives on through its sister cooperatives in Tidzi and Mesti, spreading its mission across the argan forest. Together, they form a living network of resiliencewomen working for women, protecting their ecosystem, and securing a sustainable future for their families.`,
-            image: 'assets/images/sites_files/main_morocco.jpg'
+            image: 'assets/images/sites_files/amal.jpg'
           },
           community: {
             title: 'Targanine: A Beacon of Quality and Ethics',
@@ -736,9 +736,8 @@ Through the hands of these women, the argan tree continues to whisper its timele
           learnMore: {
             title: 'Learn More',
             resources: [
-              'Video https://www.youtube.com/watch?v=w6nOO-KJQ44',
-              'Link to UNESCO Inscription : Argan, practices and know-how concerning the argan tree https://ich.unesco.org/en/RL/argan-practices-and-know-how-concerning-the-argan-tree-00955',
-              'Link to UN Day of Argan Oil - https://www.un.org/en/observances/argania-day'
+              'https://worldartisanguild.com/women-s-co-op',
+              'https://ich.unesco.org/en/RL/argan-practices-and-know-how-concerning-the-argan-tree-00955'
             ]
           }
         }
@@ -764,8 +763,8 @@ Through the hands of these women, the argan tree continues to whisper its timele
         ],
         infoCard: {
           country: 'Argentina',
-          countryFlag: 'assets/images/sites_files/country-img/argentina-flag.jpg',
-          theme: 'Financial Group',
+          countryFlag: 'assets/images/sites_files/country-img/Argentina.png',
+          theme: 'Landmark CooperativePioneers',
           entryYear: 2025,
           coordinates: '-30.9442, -61.5615'
         },
@@ -870,8 +869,8 @@ Over time, these cooperatives expanded into large-scale enterprises. Among the m
         ],
         infoCard: {
           country: 'Tanzania',
-          countryFlag: 'assets/images/sites_files/country-img/tanzania.jpg',
-          theme: 'Financial Group',
+          countryFlag: 'assets/images/sites_files/country-img/tanzania.png',
+          theme: 'Education Training Center',
           entryYear: 2025,
           coordinates: '-3.3333, 37.3333'
         },
@@ -972,8 +971,8 @@ From its beginnings as a small college in 1963 to its present role as a national
         ],
         infoCard: {
           country: 'Europe',
-          countryFlag: 'assets/images/sites_files/country-img/uk-flag.jpg',
-          theme: 'Financial Group',
+          countryFlag: 'assets/images/sites_files/country-img/ukflag.jpg',
+          theme: 'Landmark  Cooperative Pioneers',
           entryYear: 2025,
           coordinates: '53.6168, -2.1553'
         },
@@ -1072,8 +1071,8 @@ In Toad Lane’s quiet rooms and Holyoake House’s reading halls, the same mess
     ],
     infoCard: {
       country: 'United States of America',
-      countryFlag: 'assets/images/sites_files/country-img/americaflag.jpg',
-      theme: 'Financial Group',
+      countryFlag: 'assets/images/sites_files/country-img/america.png',
+      theme: 'EducationTraining Centre',
       entryYear: 2025,
       coordinates: '32.7553, -88.1261'
     },
@@ -1178,8 +1177,8 @@ For anyone mapping the world’s cooperative cultural heritage, the Federation s
     ],
     infoCard: {
       country: 'Nigeria',
-      countryFlag: 'assets/images/sites_files/country-img/nigeriaflag.jpg',
-      theme: 'Leadership and Administration',
+      countryFlag: 'assets/images/sites_files/country-img/Nigeria.png',
+      theme: 'LandmarkHall Cooperatives',
       entryYear: 2025,
       coordinates: '7.3776 , 3.9059 '
     },
@@ -1250,7 +1249,7 @@ In its solid structure and storied history, one finds the essence of Nigeria’s
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Odua Cooperative Conglomerate official website'
+          'https://oduacooperativeconglomerate.coop/'
         ]
       }
     }
@@ -1275,8 +1274,8 @@ In its solid structure and storied history, one finds the essence of Nigeria’s
       ],
     infoCard: {
       country: 'Netherlands',
-      countryFlag: 'assets/images/sites_files/country-img/netherlandflag.jpg',
-      theme: 'Historical Museum and Archive',
+      countryFlag: 'assets/images/sites_files/country-img/Netherland.png',
+      theme: 'Museum Celebrating Cooperatives',
       entryYear: 2025,
       coordinates: '51.9156, 4.3971 '
     },
@@ -1347,7 +1346,7 @@ Amid the timeless calm of Schiedam’s canals, the museum stands as both a house
       learnMore: {
         title: 'Learn More',
         resources: [
-          'https://www.cooperatiemuseum.nl'
+          'https://cooperatie-museum.nl/'
         ]
       }
     }
@@ -1373,10 +1372,10 @@ Amid the timeless calm of Schiedam’s canals, the museum stands as both a house
     ],
     infoCard: {
       country: 'Japan',
-      countryFlag: 'assets/images/sites_files/country-img/japanflag.jpg',
-      theme: 'Pioneer and Archive',
+      countryFlag: 'assets/images/sites_files/country-img/Japan.png',
+      theme: 'Museum Celebrating Pioneers',
       entryYear: 2025,
-      coordinates: '34.2007, 134.6186 E'
+      coordinates: '34.2007, 134.6186'
     },
     sections: {
       legacy: {
@@ -1450,7 +1449,7 @@ In the gentle rhythm of the Naruto tides and the quiet grace of the museum itsel
       learnMore: {
         title: 'Learn More',
         resources: [
-          'https://museum.city.naruto.tokushima.jp'
+          'https://www.kagawakan.com/'
         ]
       }
     }
@@ -1476,8 +1475,8 @@ In the gentle rhythm of the Naruto tides and the quiet grace of the museum itsel
     ],
     infoCard: {
       country: 'Slovakia',
-      countryFlag: 'assets/images/sites_files/country-img/slovakiaflag.jpg',
-      theme: 'Pioneer and Museum',
+      countryFlag: 'assets/images/sites_files/country-img/Slovakia.png',
+      theme: 'Museum Cooperative Pioneers',
       entryYear: 2025,
       coordinates: '48.7833, 17.4333 '
     },
@@ -1516,7 +1515,7 @@ The exhibits are not static. Multimedia displays, ambient sounds, and interactiv
         title: 'The Manor House and Its Meaning',
         content: `The museum’s home,the historic Sobotište manor,is itself a powerful metaphor for transformation. Once a seat of privilege, it now houses the history of a movement rooted in equality and shared progress. Its architecture evokes continuity and renewal, embodying the evolution of Slovak society from feudal hierarchy to democratic participation.
 The juxtaposition of aristocratic walls and cooperative artifacts invites reflection: here, where power once concentrated in the few, the story of empowerment for the many now takes centre stage. From agricultural associations of the 19th century to the complex credit and consumer cooperatives of the 20th, the museum traces how collective organization became a foundation for regional identity and economic resilience.`,
-        image: 'assets/images/sites_files/slovakiaBelowImg.png'
+        image: 'assets/images/sites_files/image025.jpg'
       },
       aditionalData: {
         title: 'A Living Classroom for All Generations',
@@ -1570,8 +1569,8 @@ The Co-operative Museum of Samuel Jurkovič is thus not only a repository of his
     ],
     infoCard: {
       country: 'United States of America',
-      countryFlag: 'assets/images/sites_files/country-img/americaflag.jpg',
-      theme: 'Consumer Cooperative',
+      countryFlag: 'assets/images/sites_files/country-img/america.png',
+      theme: 'LandmarkFood Cooperative',
       entryYear: 2025,
       coordinates: '44.3167, -72.5333'
     },
@@ -1662,8 +1661,8 @@ Nearly a century after those first eleven families took a collective leap of fai
     ],
     infoCard: {
       country: 'Kenya',
-      countryFlag: 'assets/images/sites_files/country-img/kenyaflag.jpg',
-      theme: 'Higher Education and Research',
+      countryFlag: 'assets/images/sites_files/country-img/Kenya.png',
+      theme: 'EducationTraining Centre',
       entryYear: 2025,
       coordinates: '1.3060, 36.6853'
     },
@@ -1754,8 +1753,8 @@ The Co-operative University of Kenya is more than an academic institution; it is
     ],
     infoCard: {
       country: 'Italy',
-      countryFlag: 'assets/images/sites_files/country-img/italyflag.jpg',
-      theme: 'Communal Stewardship and Worker Co-op',
+      countryFlag: 'assets/images/sites_files/country-img/Italy.png',
+      theme: 'Landmark Cooperative Town',
       entryYear: 2025,
       coordinates: '44.0270, 10.3129 '
     },
@@ -1826,7 +1825,7 @@ In every sense, Levigliani is more than a village , it is a living cooperative, 
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Cooperativa Sviluppo e Futuro Levigliani official website'
+          'https://www.coopsviluppoefuturolevigliani.it/index.php'
         ]
       }
     }
@@ -1852,8 +1851,8 @@ In every sense, Levigliani is more than a village , it is a living cooperative, 
     ],
     infoCard: {
       country: 'Israel',
-      countryFlag: 'assets/images/sites_files/country-img/israelflag.jpg',
-      theme: 'Communal Settlement',
+      countryFlag: 'assets/images/sites_files/country-img/Israel.png',
+      theme: 'Landmark First Kibbutz',
       entryYear: 2025,
       coordinates: '32.7247, 35.5700'
     },
@@ -1919,7 +1918,7 @@ In the words of its founders, “We came not to take, but to build.” Degania A
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Kibbutz Degania Alef official website'
+          'https://www.degania.org.il/'
         ]
       }
     }
@@ -1945,8 +1944,8 @@ In the words of its founders, “We came not to take, but to build.” Degania A
     ],
     infoCard: {
       country: 'Palestine',
-      countryFlag: 'assets/images/sites_files/country-img/palestineflag.jpg',
-      theme: 'Worker Cooperative and Fair Trade',
+      countryFlag: 'assets/images/sites_files/country-img/Palestine.jpg',
+      theme: 'Insipiring Cooperative Enterprise',
       entryYear: 2025,
       coordinates: '31.7067, 35.2167 '
     },
@@ -1984,7 +1983,7 @@ Today, these traditions live on in the cooperative’s workshops. Artisans colle
         content: `From its inception, the Holy Land Handicraft Cooperative Society has embraced fair trade principles as its moral and economic foundation. It is a guaranteed member of the World Fair Trade Organization (WFTO), committed to ethical production, equitable wages, and environmentally responsible practices.
 The cooperative operates as a network of around 35 member workshops and several collaborating enterprises across the Bethlehem–Beit Sahour region. Together, these artisans support a community of approximately 2,000 people, including women, youth, and persons with disabilities. Through their collective work, families are able to remain in their homeland, sustaining not only livelihoods but a shared sense of identity.
 By eliminating exploitative middlemen and ensuring transparency in pricing and production, HLHCS allows artisans to maintain control over their craft and creative direction. This structure transforms the act of making into a form of self-determination , a quiet assertion of dignity in the face of economic and social challenges.`,
-        image: 'assets/images/sites_files/palestineBelowImg.png'
+        image: 'assets/images/sites_files/image036.jpg'
       },
       aditionalData: {
         title: 'Beyond Commerce: A Living Ecosystem',
@@ -2037,8 +2036,8 @@ Through the work of its artisans, the HLHCS tells a story that transcends border
     ],
     infoCard: {
       country: 'Spain',
-      countryFlag: 'assets/images/sites_files/country-img/spainflag.jpg',
-      theme: 'Worker Cooperative and Direct Democracy',
+      countryFlag: 'assets/images/sites_files/country-img/Spain.png',
+      theme: 'Cooperative Enterprise Project',
       entryYear: 2025,
       coordinates: '37.3670, -5.1380'
     },
@@ -2106,7 +2105,7 @@ In an era marked by inequality, social fragmentation, and ecological strain, thi
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Marinaleda official website'
+          'https://www.marinaleda.coop'
         ]
       }
     }
@@ -2126,15 +2125,15 @@ In an era marked by inequality, social fragmentation, and ecological strain, thi
   content: {
     pageTitle: 'Arctic Co-operatives Limited: A Northern Model of Self-Reliance and Shared Strength',
     pageSubtitle: 'Cooperation Rooted in Tradition',
-    mainImage: 'assets/images/sites_files/image040.jpg',
+    mainImage: 'assets/images/sites_files/image041.jpg',
     thumbnails: [
-      'assets/images/sites_files/sub-icon/image041.jpg',
+      'assets/images/sites_files/sub-icon/image040.jpg',
      
     ],
     infoCard: {
       country: 'Canada',
       countryFlag: 'assets/images/sites_files/country-img/canada.png',
-      theme: 'Federation and Indigenous Cooperation',
+      theme: 'Inuit, Metis FirstNations',
       entryYear: 2025,
       coordinates: '49.8954, -97.1385 '
     },
@@ -2173,7 +2172,7 @@ Over time, ACL developed into a service federation that coordinates bulk purchas
         title: 'Modern Co-ops for Northern Resilience',
         content: `Today, the member co-ops extend far beyond the arts. They operate retail stores, hotels, construction firms, cable and internet providers, outfitters, and property rental services, forming the economic backbone of dozens of Arctic towns. Each cooperative remains locally owned and democratically governed, ensuring that decisions align with the priorities and values of the people they serve rather than distant investors.
 Through these enterprises, Arctic Co-operatives has strengthened local economies while preserving Indigenous traditions of collective leadership and mutual accountability. The federation’s commitment to training and education ensures that leadership and management skills are developed within the communities themselves , an investment in both capacity and confidence.`,
-        image: 'assets/images/sites_files/canadaBelowImg.png'
+        image: 'assets/images/sites_files/image041.jpg'
       },
       aditionalData: {
         title: 'Honoring Northern Art and Cultural Identity',
@@ -2226,8 +2225,8 @@ In a world where communities often struggle to balance prosperity with heritage,
     ],
     infoCard: {
       country: 'Denmark',
-      countryFlag: 'assets/images/sites_files/country-img/denmarkflag.jpg',
-      theme: 'Historical Landmark and Museum',
+      countryFlag: 'assets/images/sites_files/country-img/Denmark.png',
+      theme: 'Landmark Meeting Place',
       entryYear: 2025,
       coordinates: '55.6761, 12.5683 '
     },
@@ -2319,8 +2318,8 @@ Standing in the heart of Copenhagen, the Workers’ Assembly Hall is both a monu
     ],
     infoCard: {
       country: 'Singapore',
-      countryFlag: 'assets/images/sites_files/country-img/singaporeflag.jpg',
-      theme: 'Housing Cooperative and Legacy',
+      countryFlag: 'assets/images/sites_files/country-img/Singapore.png',
+      theme: 'Landmark International Cooperation',
       entryYear: 2025,
       coordinates: '1.3533, 103.8829'
     },
@@ -2361,7 +2360,7 @@ Today, Rochdale Road still exists as a tranquil street lined with homes original
         content: `Recognising Rochdale Road as part of Singapore’s Cooperative Cultural Heritage Map would highlight one of the region’s earliest experiments in cooperative housing,a forerunner to the broader ideals that would later shape the nation’s public housing policies: community, affordability, and shared responsibility.
 The surrounding area preserves other meaningful echoes of that cooperative and social spirit. Thrift Drive, an adjacent road, celebrates the cooperative virtue of saving and prudent resource management. Not far away, Kadayanallur Street honors the South Indian town from which many of Singapore’s Tamil Muslim settlers originated,a community that would later establish its own financial cooperative, the Singapore Kadayanallur Muslim Co-operative Thrift & Loan Society, in 1948.
 This institution provided credit and support to migrant workers, reflecting once again how cooperation could turn shared struggle into collective resilience.`,
-        image: 'assets/images/sites_files/singaporeBelowImg.png'
+        image: 'assets/images/sites_files/sub-icon/image045.jpg'
       },
       aditionalData: {
         title: 'A Modest Street with a Global Legacy',
@@ -2387,7 +2386,7 @@ In a nation celebrated for its urban efficiency, Rochdale Road reminds us of a q
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Singapore National Cooperative Federation'
+          'https://www.thenews.coop/singapores-co-operative-movement-a-thriving-sector-for-over-90-years/'
         ]
       }
     }
@@ -2414,8 +2413,8 @@ In a nation celebrated for its urban efficiency, Rochdale Road reminds us of a q
     ],
     infoCard: {
       country: 'Bulgaria',
-      countryFlag: 'assets/images/sites_files/country-img/bulgariaflag.jpg',
-      theme: 'Historical Archive and Cultural Center',
+      countryFlag: 'assets/images/sites_files/country-img/Bulgaria.png',
+      theme: 'Musuem of Cooperation',
       entryYear: 2025,
       coordinates: '42.6977, 23.3219'
     },
@@ -2454,7 +2453,7 @@ The seal embodies the Bulgarian cooperative spirit , one rooted not only in econ
         title: 'A Chronicle of National Transformation',
         content: `The museum’s collection extends far beyond objects. It captures how cooperation helped Bulgaria modernize its agriculture, establish credit unions, found consumer stores, and build cultural and educational institutions. During decades of political and economic upheaval, cooperatives served as a stabilizing force, safeguarding dignity and continuity for countless families.
 Even in times of transition , from monarchy to socialism to modern democracy , the cooperative ideal endured, adapting to new realities without losing its moral foundation. The museum honours these transitions not as breaks, but as chapters in a continuous narrative of resilience.`,
-        image: 'assets/images/sites_files/image049.jpg'
+        image: 'assets/images/sites_files/image049.png'
       },
       aditionalData: {
         title: 'A Living Dialogue for the Future',
@@ -2481,7 +2480,7 @@ It is an enduring image of unity, trust, and shared strength , the very principl
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Central Cooperative Union Bulgaria official website'
+          'https://www.cks.bg/en/coop-policy/cooperative-national-museu/?utm_source'
         ]
       }
     }
@@ -2509,7 +2508,7 @@ It is an enduring image of unity, trust, and shared strength , the very principl
     infoCard: {
       country: 'India',
       countryFlag: 'assets/images/sites_files/country-img/india.png',
-      theme: 'Worker Contract Cooperative',
+      theme: 'Birthplace Worker Cooperatives',
       entryYear: 2025,
       coordinates: '11.6033, 75.5843'
     },
@@ -2606,8 +2605,8 @@ From the dusty paths of 1920s Kerala to the global stage of social enterprise, U
     ],
     infoCard: {
       country: 'Finland',
-      countryFlag: 'assets/images/sites_files/country-img/finlandflag.jpg',
-      theme: 'Labour History and Cooperative Education',
+      countryFlag: 'assets/images/sites_files/country-img/Finland.png',
+      theme: 'Musuem of Cooperation',
       entryYear: 2025,
       coordinates: '61.4981, 23.7600'
     },
@@ -2702,7 +2701,7 @@ In the story Werstas tells,of factory and co-op, of labour and democracy,lies th
     ],
     infoCard: {
       country: 'Italy',
-      countryFlag: 'assets/images/sites_files/country-img/italyflag.jpg',
+      countryFlag: 'assets/images/sites_files/country-img/Italy.png',
       theme: 'Worker Production Cooperative',
       entryYear: 2025,
       coordinates: '44.3524, 11.7161'
@@ -2768,7 +2767,7 @@ For the global cooperative movement, Imola remains an emblem of enduring solidar
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Chttps://www.ccimola.com/'
+          'https://www.ccimola.com/'
         ]
       }
     }
@@ -2795,8 +2794,8 @@ For the global cooperative movement, Imola remains an emblem of enduring solidar
     ],
     infoCard: {
       country: 'Germany',
-      countryFlag: 'assets/images/sites_files/country-img/germanyflag.jpg',
-      theme: 'Pioneers and Museums',
+      countryFlag: 'assets/images/sites_files/country-img/Germany.png',
+      theme: 'Musuem of Cooperation',
       entryYear: 2025,
       coordinates: '51.0753, 10.0034'
     },
@@ -2863,8 +2862,8 @@ Though their contexts differed, their principles converged: mutual trust, shared
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Deutsches Genossenschaftsmuseum official website',
-          'Deutsches Raiffeisenmuseum official website'
+          'https://genossenschaftsmuseum.de/museum/',
+          'https://www.raiffeisen-gesellschaft.de/content/Raiffeisen_Gesellschaft-MS/de/homepage/Raiffeisen_besuchen/raiffeisenhaus_flammersfeld.html'
         ]
       }
     }
@@ -2890,8 +2889,8 @@ Though their contexts differed, their principles converged: mutual trust, shared
     ],
     infoCard: {
       country: 'Malaysia',
-      countryFlag: 'assets/images/sites_files/country-img/malaysiaflag.jpg',
-      theme: 'Education and Archive',
+      countryFlag: 'assets/images/sites_files/country-img/Malaysia.png',
+      theme: 'Education Training Centre',
       entryYear: 2025,
       coordinates: '3.1000, 101.6400'
     },
@@ -2996,8 +2995,8 @@ Its enduring message remains clear: cooperation, when informed by knowledge and 
     ],
     infoCard: {
       country: 'Spain',
-      countryFlag: 'assets/images/sites_files/country-img/spainflag.jpg',
-      theme: 'Worker Co-op Management and Education',
+      countryFlag: 'assets/images/sites_files/country-img/Spain.png',
+      theme: 'EducationTraining Centre',
       entryYear: 2025,
       coordinates: '43.0645, -2.4939'
     },

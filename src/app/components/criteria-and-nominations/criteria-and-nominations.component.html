@@ -66,7 +66,7 @@
  </h1>
 
   <!-- First Heading + Paragraph -->
-  <div class="mb-10 ">
+  <div class="mb-10 sm:ml-[10%] md:ml-[15%] lg:ml-[23%]">
     <h2 class="text-left text-2xl sm:text-3xl font-semibold text-[#7a004a] mb-3 ml-2 sm:ml-4">
 {{ 'criteria.preamble_title' | translate }}</h2>
     <p class="text-justify  text-gray-600 leading-relaxed ml-2 sm:ml-4 max-w-3xl">
@@ -76,9 +76,9 @@
 
   <!-- Second Heading + Subheading -->
   <div>
-    <h2 class="text-left text-2xl sm:text-3xl font-semibold text-[#7a004a] mb-2 ml-2 sm:ml-4">
+    <h2 class="text-left text-2xl sm:text-3xl font-semibold text-[#7a004a] mb-2 ml-2 sm:ml-4 sm:ml-[10%] md:ml-[15%] lg:ml-[25%] text-center">
 {{ 'criteria.evaluation_title' | translate }}</h2>
-    <h3 class="text-left text-xl sm:text-2xl text-[#7a004a] font-medium ml-2 sm:ml-4">
+    <h3 class="text-left text-xl sm:text-2xl text-[#7a004a] font-medium ml-2 sm:ml-4 sm:ml-[10%] md:ml-[15%] lg:ml-[25%]">
       {{ 'criteria.version' | translate }}
     </h3>
   </div>
@@ -103,11 +103,11 @@
       </div>
 
       <!-- Right: Title and Paragraph Side by Side (as in your original) -->
-      <div class="flex flex-col sm:flex-row items-center sm:items-center gap-6 w-full justify-between text-left">
+      <div class="flex flex-col sm:flex-row items-left sm:items-center gap-6 w-full justify-between text-left">
         <h2 class="text-xl sm:text-xl font-semibold">
           {{ criterion.id }}. {{ criterion.title }}
         </h2>
-       <p class="text-gray-100 text-lg leading-relaxed sm:w-1/2 text-justify">
+       <p class="text-gray-100 text-lg leading-relaxed sm:w-1/2 text-left">
     {{ criterion.description }}
   </p>
 

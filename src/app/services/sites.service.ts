@@ -80,7 +80,7 @@ The Society’s mission is both simple and profound: “to safeguard and promote
             content: `For those unable to visit in person, the Society offers an engaging 15-minute virtual tour of the birthplace of cooperation. This online experience immerses visitors in the world of Alphonse and Dorimène Desjardins, allowing them to explore the very rooms where ideas of mutual aid, trust, and economic democracy were first shaped.
 
 Through this digital journey, one can witness history as though standing alongside the founders themselves  hearing their story, seeing their environment, and understanding how one couple’s vision laid the groundwork for an entire cooperative movement.`,
-            image: 'assets/images/Mask group.png'
+            image: 'assets/images/sites_files/sub-icon/Alphonce-Desjardins4.png'
           },
           community: {
             title: 'Serving a Broad Community',
@@ -600,7 +600,7 @@ Once the home of Joseph Boivin, who volunteered as the first manager of the St. 
 With Boivin’s commitment and Desjardins’ mentorship, the St. Mary’s Cooperative Credit Association opened its doors in November 1908. The credit union’s guiding principle was simple yet revolutionary: people helping people. Members pooled their modest savings, made affordable loans, and discovered collective dignity through cooperation.
 
 That first act of faith became the cornerstone of a national tradition. The very walls of Boivin’s home,where ledgers were kept, coins counted, and decisions made,still resonate with the determination of those early pioneers.`,
-            image: 'assets/images/sites_files/am.jpg'
+            image: 'assets/images/sites_files/America’sCreditUnionMuseum.jpg'
           },
           community: {
             title: 'A Museum with a Mission',
@@ -649,7 +649,7 @@ Among its most powerful projects is “Unsung Heroes,” a storytelling initiati
     {
       id: 'site-morocco',
       name: 'Al Amal and other Women led cooperatives in the Argan Oil Sector in Morocco',
-      siteName: 'Al – Amal and other Women led cooperatives in the Argan Oil Sector in Morocco',
+      siteName: 'Al Amal and other Women led cooperatives in the Argan Oil Sector in Morocco',
       coopYear: 2025,
       lat: 30.3967,
       lng: 9.6849,
@@ -1814,7 +1814,7 @@ The cooperative’s mission was visionary: to manage Levigliani’s natural, his
 ·       A restaurant and visitor services, offering hospitality rooted in local culinary traditions.
 ·       A transport network, linking the village with the cave and surrounding natural attractions.
 A portion of the cooperative’s revenue is paid to the Community of Goods, which still owns the land collectively. These funds are reinvested in infrastructure, cultural programs, and youth employment, helping to sustain both the landscape and the population , a rare achievement for a remote Italian mountain village.`,
-        image: 'assets/images/sites_files/image031.jpg'
+        image: 'assets/images/sites_files/sub-icon/image032.jpg',
       },
       aditionalData: {
         title: 'A Model of Democratic Economics',
@@ -1909,7 +1909,7 @@ When the State of Israel was founded in 1948, Degania Alef stood as a symbol of 
         title: 'A Cultural and Human Landmark',
         content: `Beyond its economic and historical significance, Degania Alef is deeply woven into Israel’s cultural and intellectual heritage. It was home to the poet Rachel Bluwstein, whose lyrical reflections on love, labor, and landscape captured the heart of early settlement life, and to Moshe Dayan, who would later become one of the nation’s most prominent military figures.
 Through the decades, the kibbutz has remained not only a physical community but also a symbolic space , one that embodies the ongoing dialogue between tradition and change. While modern economic realities have led many kibbutzim to evolve, Degania Alef continues to uphold its founding ethos: collective responsibility, equality, and respect for the land.`,
-        image: 'assets/images/sites_files/image033.jpg'
+        image:  'assets/images/sites_files/sub-icon/image035.jpg',
       },
       aditionalData: {
         title: 'A Living Heritage of Cooperation',
@@ -2572,7 +2572,7 @@ Unlike conventional firms, ULCCS places people before profit. Every worker is bo
         title: 'Expanding Horizons: Tradition Meets Innovation',
         content: `While deeply rooted in Kerala’s cooperative heritage, ULCCS has also embraced modernisation and diversification. Beyond construction, it has expanded into information technology, education, tourism, and social welfare, applying the same cooperative principles to new industries.
 Its IT division, for instance, employs hundreds of young professionals in software development and digital solutions , demonstrating that the cooperative spirit is as relevant to the digital economy as it was to manual labour. Similarly, the ULCCS Foundation focuses on education, disability inclusion, and community development, extending the society’s mission of empowerment beyond its workforce.`,
-        image: 'assets/images/sites_files/image046.jpg'
+        image: 'assets/images/sites_files/sub-icon/image048.jpg',
       },
       aditionalData: {
         title: 'The Heart of Cooperation',
@@ -2811,7 +2811,7 @@ For the global cooperative movement, Imola remains an emblem of enduring solidar
   content: {
     pageTitle: 'Deutsches Genossenschaftsmuseum (Delitzsch) and  Raiffeisenmuseum (Flammersfeld), Germany',
     pageSubtitle: 'The Urban Beginning – Schulze-Delitzsch and the Birth of the Modern Cooperative ',
-    mainImage: 'assets/images/sites_files/germany.jpeg',
+    mainImage: 'assets/images/sites_files/germanyBanner.jpeg',
     thumbnails: [
       'assets/images/sites_files/sub-icon/image059.jpg',
       'assets/images/sites_files/sub-icon/image060.jpg',

@@ -121,8 +121,8 @@ Through its commitment to education, preservation, and interpretation, the Socie
     // Brazil Site
     {
       id: 'theodor-amstad-monument',
-      name: 'Linha Imperial e Monumento A Força Cooperativa, in Nova Petrópolis',
-      siteName:'Linha Imperial e Monumento A Força Cooperativa, in Nova Petrópolis, Brazil',
+      name: 'Monumento ao Cooperativismo: A Living Symbol in Nova Petrópolis, Brazil',
+      siteName:'Monumento ao Cooperativismo: A Living Symbol in Nova Petrópolis, Brazil',
       coopYear: 2025,
       lat: -29.3804,
       lng: -51.1087,
@@ -130,7 +130,7 @@ Through its commitment to education, preservation, and interpretation, the Socie
       continent: 'South America',
       type: 'tangible',
       content: {
-        pageTitle: 'Linha Imperial e Monumento A Força Cooperativa, in Nova Petrópolis, Brazil',
+        pageTitle: 'Monumento ao Cooperativismo: A Living Symbol in Nova Petrópolis, Brazil',
         pageSubtitle: 'A city celebrated as Brazil’s Capital Nacional do Cooperativismo (National Capital of Cooperativism)',
         mainImage: 'assets/images/sites_files/sub-icon/brazilM.png',
         thumbnails: [

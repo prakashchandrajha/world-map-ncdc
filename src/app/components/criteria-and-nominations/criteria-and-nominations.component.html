@@ -1,142 +1,110 @@
 <app-banner
   [titleText]="'criteria.title' | translate"
   [titleText2]="'criteria.subtitle' | translate"
-  ></app-banner>
-  
-<section class="mx-auto max-w-[1440px] min-w-[280px] py-6 px-3 sm:px-6 md:px-8 lg:px-16 font-[Poppins] mt-20">
-  <div class="max-w-6xl mx-auto bg-white rounded-xl overflow-hidden flex flex-col md:flex-row items-stretch transition-all duration-500 hover:shadow-md">
+></app-banner>
+
+<!-- Assessment Section -->
+<section class="mx-auto max-w-[1440px] min-w-[280px] py-10 px-4 sm:px-6 md:px-8 lg:px-16 font-[Poppins] mt-20">
+  <div class="max-w-6xl mx-auto bg-white rounded-xl overflow-hidden flex flex-col md:flex-row items-stretch transition-shadow duration-500 hover:shadow-xl">
     
     <!-- Image -->
-    <div class="md:w-[45%] w-full relative">
+    <div class="md:w-1/2 w-full relative">
       <img
         src="../../../assets/images/gome2nd.png"
         alt="Cooperative Cultural Heritage Assessment illustration"
-        class="w-full h-auto object-cover md:h-full"
-        style="aspect-ratio: 4/3; /* or use `h-[180px] sm:h-[200px] md:h-full` if preferred */"
+        class="w-full h-full object-cover"
+        style="aspect-ratio: 4/3;"
       />
     </div>
 
     <!-- Text Container -->
-    <div class="flex-1 border border-[#8D1558]/30 p-4 md:p-6 lg:p-8 rounded-br-xl md:rounded-tr-xl flex flex-col">
-      <!-- Title -->
-      <h4
-        class="font-bold text-[22px] sm:text-[24px] md:text-[26px] leading-tight mb-3"
-        style="
-          background: linear-gradient(90deg, #8D1558 -9.89%, #B5ACA1 126.07%);
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          color: transparent;
-        "
-      >
- {{ 'criteria.assessment_title' | translate }}
+    <div class="flex-1 border border-[#8D1558]/20 p-6 md:p-8 flex flex-col justify-between">
+      <h4 class="font-bold text-[22px] sm:text-[24px] md:text-[26px] mb-4 bg-gradient-to-r from-[#8D1558] to-[#B5ACA1] bg-clip-text text-transparent">
+        {{ 'criteria.assessment_title' | translate }}
       </h4>
-
-      <!-- Description -->
-      <p class="font-normal text-[14px] sm:text-[15px] leading-relaxed text-[#8D1558] font-['Inter',sans-serif] mb-4 flex-1">
-{{ 'criteria.assessment_desc' | translate }}
+      <p class="text-[#8D1558] text-[15px] sm:text-[16px] leading-relaxed mb-4">
+        {{ 'criteria.assessment_desc' | translate }}
       </p>
-
-      <!-- Button: bottom-right aligned -->
-     
     </div>
   </div>
 </section>
 
-<p class="text-center"></p>
-
-<div class="mx-50"> <!-- adds margin on left & right -->
-  <p class="mx-auto text-center ">
-   
-</div>
-
-
 <!-- Paragraph Section -->
-<div class="px-8 sm:px-16 md:px-24 lg:px-32">
-  <p class="mx-auto text-justify max-w-4xl leading-relaxed text-gray-800 font-[Poppins]">
-{{ 'criteria.description' | translate }}
+<section class="px-6 sm:px-16 md:px-24 lg:px-32 mt-16">
+  <p class="text-gray-800 leading-relaxed max-w-4xl mx-auto text-justify">
+    {{ 'criteria.description' | translate }}
   </p>
-</div>
+</section>
 
+<!-- Charter Section -->
+<section class="w-full bg-white py-12 px-4 sm:px-8 md:px-16 lg:px-24 font-[Poppins]">
+  <h1 class="text-center text-3xl sm:text-4xl font-bold text-[#7a004a] mb-12">
+    {{ 'criteria.charter_title' | translate }}
+  </h1>
 
-<section class="w-full bg-white py-10 px-4 sm:px-8 md:px-16 lg:px-24 font-[Poppins]">
-  <!-- Title Center -->
-  <h1 class="text-center text-3xl sm:text-4xl font-bold text-[#7a004a] mb-10">
-{{ 'criteria.charter_title' | translate }}
- </h1>
-
-  <!-- First Heading + Paragraph -->
-  <div class="mb-10 sm:ml-[10%] md:ml-[15%] lg:ml-[23%]">
-    <h2 class="text-left text-2xl sm:text-3xl font-semibold text-[#7a004a] mb-3 ml-2 sm:ml-4">
-{{ 'criteria.preamble_title' | translate }}</h2>
-    <p class="text-justify  text-gray-600 leading-relaxed ml-2 sm:ml-4 max-w-3xl">
-{{ 'criteria.preamble_desc' | translate }}
+  <!-- Preamble -->
+  <div class="max-w-3xl mx-auto mb-10">
+    <h2 class="text-left text-2xl sm:text-3xl font-semibold text-[#7a004a] mb-4">
+      {{ 'criteria.preamble_title' | translate }}
+    </h2>
+    <p class="text-gray-600 text-justify leading-relaxed">
+      {{ 'criteria.preamble_desc' | translate }}
     </p>
   </div>
 
-  <!-- Second Heading + Subheading -->
-  <div>
-    <h2 class="text-left text-2xl sm:text-3xl font-semibold text-[#7a004a] mb-2 ml-2 sm:ml-4 sm:ml-[10%] md:ml-[15%] lg:ml-[25%] text-center">
-{{ 'criteria.evaluation_title' | translate }}</h2>
-    <h3 class="text-left text-xl sm:text-2xl text-[#7a004a] font-medium ml-2 sm:ml-4 sm:ml-[10%] md:ml-[15%] lg:ml-[25%]">
+  <!-- Evaluation -->
+  <div class="max-w-3xl mx-auto mb-10">
+    <h2 class="text-left text-2xl sm:text-3xl font-semibold text-[#7a004a] mb-2">
+      {{ 'criteria.evaluation_title' | translate }}
+    </h2>
+    <h3 class="text-left text-xl sm:text-2xl text-[#7a004a] font-medium">
       {{ 'criteria.version' | translate }}
     </h3>
   </div>
 </section>
 
-<!-- Preserve your original layout 1:1, just looped -->
+<!-- Criteria Cards -->
 <div class="font-[Poppins]">
-  <section
-    *ngFor="let criterion of criteria; trackBy: trackByCriterionId"
-    class="flex justify-center items-center mt-20 px-4"
-  >
-    <div
-      class="w-full max-w-4xl bg-[linear-gradient(87.46deg,#8D1558_1.8%,#B5ACA1_111.02%)] p-8 rounded-2xl flex flex-col sm:flex-row items-center text-white shadow-lg"
-    >
-      <!-- Left: Image (Icon) -->
-      <div class="flex justify-center items-center flex-shrink-0 sm:mr-8 w-[100px] h-[100px] bg-white rounded-full p-3 shadow-md overflow-hidden">
-       <img
-  [src]="criterion.img"
-  alt="Illustration"
-  class="w-full h-full object-contain"
-/>
+  <section *ngFor="let criterion of criteria; trackBy: trackByCriterionId" class="flex justify-center items-center mt-12 px-4">
+    <div class="w-full max-w-4xl bg-gradient-to-r from-[#8D1558] via-[#B5ACA1] to-[#B5ACA1] p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row items-center text-white shadow-lg transition-transform duration-300 hover:scale-105">
+      
+      <!-- Icon/Image -->
+      <div class="flex-shrink-0 w-[100px] h-[100px] rounded-full bg-white p-3 flex justify-center items-center shadow-md overflow-hidden sm:mr-6 mb-4 sm:mb-0">
+        <img [src]="criterion.img" alt="Illustration" class="w-full h-full object-contain" />
       </div>
 
-      <!-- Right: Title and Paragraph Side by Side (as in your original) -->
-      <div class="flex flex-col sm:flex-row items-left sm:items-center gap-6 w-full justify-between text-left">
+      <!-- Text -->
+      <div class="flex flex-col sm:flex-row sm:justify-between gap-4 w-full">
         <h2 class="text-xl sm:text-xl font-semibold">
           {{ criterion.id }}. {{ criterion.title }}
         </h2>
-       <p class="text-gray-100 text-lg leading-relaxed sm:w-1/2 text-left">
-    {{ criterion.description }}
-  </p>
-
-
+        <p class="text-gray-100 text-lg leading-relaxed sm:w-1/2">
+          {{ criterion.description }}
+        </p>
       </div>
     </div>
   </section>
 </div>
 
-<section class="w-full flex justify-center px-4 py-8 font-[Poppins]">
-  <div class="w-full max-w-2xl bg-white shadow-lg rounded-xl p-8 text-center border border-gray-100">
-    
-    <!-- Content -->
-    <div class="flex flex-col items-center">
-      <h2 class="text-2xl font-semibold mb-4 text-[#8D1558]">
-{{ 'criteria.nomination_title' | translate }}
-      </h2>
-      <p class="text-gray-700 leading-relaxed mb-6 max-w-lg">
-{{ 'criteria.nomination_desc' | translate }}
-        <a href="mailto:help@culturalheritage.coop" class="text-[#8D1558] font-medium hover:underline">{{ 'criteria.nomination_email' | translate }}</a>
-        {{ 'criteria.nomination_contact' | translate }}
-      </p>
-
-      <a
-        routerLink="/nomination"
-        class="inline-flex items-center justify-center px-8 py-3 rounded-full font-medium bg-[#8D1558] text-white hover:bg-[#731147] transition-colors shadow-sm"
-      >
-{{ 'criteria.access_form' | translate }}
+<!-- Nomination Section -->
+<section class="w-full flex justify-center px-4 py-12 font-[Poppins]">
+  <div class="w-full max-w-2xl bg-white shadow-lg rounded-xl p-8 text-center border border-gray-100 transition-shadow duration-300 hover:shadow-xl">
+    <h2 class="text-2xl font-semibold mb-4 text-[#8D1558]">
+      {{ 'criteria.nomination_title' | translate }}
+    </h2>
+    <p class="text-gray-700 leading-relaxed mb-6 max-w-lg mx-auto">
+      {{ 'criteria.nomination_desc' | translate }}
+      <a href="mailto:help@culturalheritage.coop" class="text-[#8D1558] font-medium hover:underline">
+        {{ 'criteria.nomination_email' | translate }}
       </a>
-    </div>
+      {{ 'criteria.nomination_contact' | translate }}
+    </p>
+
+    <a
+      routerLink="/nomination"
+      class="inline-flex items-center justify-center px-8 py-3 rounded-full font-medium bg-[#8D1558] text-white hover:bg-[#731147] transition-colors shadow-sm"
+    >
+      {{ 'criteria.access_form' | translate }}
+    </a>
   </div>
 </section>

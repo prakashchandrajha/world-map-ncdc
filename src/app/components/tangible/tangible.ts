@@ -64,7 +64,7 @@ export class Tangible implements OnInit {
   private siteToCard(site: Site): HeritageCard {
     return {
       img: site.content.mainImage,
-      badge: '../../../assets/images/b1 (2).png', // tangible badge
+      badge: '../../../assets/images/image_stamp.svg', // tangible badge
       countryName: site.country,
       haritageData: site.content.infoCard.entryYear.toString(),
       btn: 'Read More',

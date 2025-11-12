@@ -47,9 +47,9 @@ export class SitesService {
         infoCard: {
           country: 'Canada',
           countryFlag: 'assets/images/sites_files/country-img/canada.png',
-          theme: 'Financial Group',
+          theme: 'Museum Celebrating Cooperatives and Pioneers',
           entryYear: 2025,
-          coordinates: '46.80942 N, -71.18206 W'
+          coordinates: '46.80942, -71.18206'
         },
         sections: {
           legacy: {
@@ -80,7 +80,7 @@ The Society’s mission is both simple and profound: “to safeguard and promote
             content: `For those unable to visit in person, the Society offers an engaging 15-minute virtual tour of the birthplace of cooperation. This online experience immerses visitors in the world of Alphonse and Dorimène Desjardins, allowing them to explore the very rooms where ideas of mutual aid, trust, and economic democracy were first shaped.
 
 Through this digital journey, one can witness history as though standing alongside the founders themselves  hearing their story, seeing their environment, and understanding how one couple’s vision laid the groundwork for an entire cooperative movement.`,
-            image: 'assets/images/Maskgroup.png'
+            image: 'assets/images/Mask group.png'
           },
           community: {
             title: 'Serving a Broad Community',
@@ -111,8 +111,7 @@ Through its commitment to education, preservation, and interpretation, the Socie
           learnMore: {
             title: 'Learn More',
             resources: [
-              'PDF report on Maison Alphonce Desjardins',
-              'virtual tour'
+              'https://www.desjardins.com/'
               
             ]
           }
@@ -123,7 +122,7 @@ Through its commitment to education, preservation, and interpretation, the Socie
     {
       id: 'theodor-amstad-monument',
       name: 'Linha Imperial e Monumento A Força Cooperativa, in Nova Petrópolis',
-      siteName:'The Square of Flowers and Solidarity',
+      siteName:'Linha Imperial e Monumento A Força Cooperativa, in Nova Petrópolis, Brazil',
       coopYear: 2025,
       lat: -29.3804,
       lng: -51.1087,
@@ -131,8 +130,8 @@ Through its commitment to education, preservation, and interpretation, the Socie
       continent: 'South America',
       type: 'tangible',
       content: {
-        pageTitle: 'Linha Imperial e Monumento A Força Cooperativa, in Nova Petrópolis',
-        pageSubtitle: 'Linha Imperial e Monumento A Força Cooperativa, in Nova Petrópolis',
+        pageTitle: 'Linha Imperial e Monumento A Força Cooperativa, in Nova Petrópolis, Brazil',
+        pageSubtitle: 'A city celebrated as Brazil’s Capital Nacional do Cooperativismo (National Capital of Cooperativism)',
         mainImage: 'assets/images/sites_files/sub-icon/brazilM.png',
         thumbnails: [
           'assets/images/sites_files/sub-icon/brazil1.png',
@@ -145,7 +144,7 @@ Through its commitment to education, preservation, and interpretation, the Socie
           countryFlag: 'assets/images/sites_files/country-img/brazil.png',
           theme: 'Financial Group',
           entryYear: 2025,
-          coordinates: '-29.3804 N, -51.1087 W";'
+          coordinates: '-29.3804, -51.1087";'
         },
         sections: {
           legacy: {
@@ -218,8 +217,7 @@ Rooted in the migrations, settlements, and cooperative experiments that shaped s
           learnMore: {
             title: 'Learn More',
             resources: [
-              'Amul website',
-              'Amul Dairy website'
+            'https://www.novapetropolisturismo.com.br/pagina/o-que-fazer/atrativos-turisticos/monumento-ao-cooperativismo'
               
             ]
           }
@@ -230,7 +228,7 @@ Rooted in the migrations, settlements, and cooperative experiments that shaped s
     {
       id: 'amul-dairy',
       name: 'Dairy Plants of Anand Milk United Limited (AMUL) and the Verghese Kurien Museum',
-      siteName:'Dairy Plants of Anand Milk United Limited (AMUL) and the Verghese Kurien (Dairy) Museum Anand',
+      siteName:'Dairy Plants of Anand Milk United Limited (AMUL) and the Verghese Kurien (Dairy) Museum,India',
       coopYear: 2025,
       lat: 22.55267,
       lng: 72.9715,
@@ -238,7 +236,7 @@ Rooted in the migrations, settlements, and cooperative experiments that shaped s
       continent: 'Asia',
       type: 'tangible',
       content: {
-        pageTitle: 'Dairy Plants of Anand Milk United Limited (AMUL) and the Verghese Kurien (Dairy) Museum Anand',
+        pageTitle: 'Dairy Plants of Anand Milk United Limited (AMUL) and the Verghese Kurien (Dairy) Museum,India',
         pageSubtitle: 'The Amul Museum, Anand: A Living Chronicle of India’s Cooperative Spirit',
         mainImage: 'assets/images/sites_files/amulMain.png',
         thumbnails: [
@@ -252,7 +250,7 @@ Rooted in the migrations, settlements, and cooperative experiments that shaped s
           countryFlag: 'assets/images/sites_files/country-img/india.png',
           theme: 'Milk Producers',
           entryYear: 2025,
-          coordinates: '22.55267 N, 72.9715 W";'
+          coordinates: '22.55267, 72.9715'
         },
         sections: {
           legacy: {
@@ -332,8 +330,7 @@ In Anand, the cradle of the White Revolution, that story continues to be toldnot
           learnMore: {
             title: 'Learn More',
             resources: [
-              'Amul website',
-              'Amul Dairy website'
+              'https://amul.com/'
               
             ]
           }
@@ -365,7 +362,7 @@ In Anand, the cradle of the White Revolution, that story continues to be toldnot
           countryFlag: 'assets/images/sites_files/country-img/Flag_of_Switzerland.svg',
           theme: 'Financial Group',
           entryYear: 2025,
-          coordinates: '46.2268 N, 6.1400 W";'
+          coordinates: '46.2268, 6.1400";'
         },
         sections: {
           legacy: {
@@ -470,7 +467,7 @@ For any effort to chart the world’s cooperative cultural heritage, the ILO Coo
           countryFlag: 'assets/images/sites_files/country-img/Flag_of_France.svg',
           theme: 'Financial Group',
           entryYear: 2025,
-          coordinates: '44.9378 N, 4.4964 W";'
+          coordinates: '44.9378, 4.4964";'
         },
         sections: {
           legacy: {
@@ -538,7 +535,7 @@ In a world dominated by globalised supply-chains, anonymous capital and remote o
           learnMore: {
             title: 'Learn More',
             resources: [
-              'www.ardelaine.fr'
+              'https://www.ardelaine.fr'
              
               
               
@@ -551,7 +548,7 @@ In a world dominated by globalised supply-chains, anonymous capital and remote o
     {
       id: 'america-credit-union-museum',
       name: 'America’s Credit Union Museum',
-      siteName: 'America’s Credit Union Museum',
+      siteName: 'America ’s Credit Union Museum, Manchester, New Hampshire (USA)',
       coopYear: 2025,
       lat: 42.9933,
       lng: -71.4758,
@@ -559,7 +556,7 @@ In a world dominated by globalised supply-chains, anonymous capital and remote o
       continent: 'North America',
       type: 'tangible',
       content: {
-        pageTitle: 'America’s Credit Union Museum, Manchester, New Hampshire, USA The House Where Cooperation Took Root',
+        pageTitle: 'America ’s Credit Union Museum, Manchester, New Hampshire (USA)',
         pageSubtitle: 'A Historic Home with a Living Legacy',
         mainImage: 'assets/images/sites_files/am.jpg',
         thumbnails: [
@@ -570,7 +567,7 @@ In a world dominated by globalised supply-chains, anonymous capital and remote o
           countryFlag: 'assets/images/sites_files/country-img/Flag_of_the_United_States.svg',
           theme: 'Financial Group',
           entryYear: 2025,
-          coordinates: '42.9955 N, -71.4637 W'
+          coordinates: '42.9955, -71.4637'
         },
         sections: {
           legacy: {
@@ -651,7 +648,7 @@ Among its most powerful projects is “Unsung Heroes,” a storytelling initiati
       // Morocco Site
     {
       id: 'site-morocco',
-      name: 'Al – Amal and other Women led cooperatives in the Argan Oil Sector in Morocco',
+      name: 'Al Amal and other Women led cooperatives in the Argan Oil Sector in Morocco',
       siteName: 'Al – Amal and other Women led cooperatives in the Argan Oil Sector in Morocco',
       coopYear: 2025,
       lat: 30.3967,
@@ -660,7 +657,7 @@ Among its most powerful projects is “Unsung Heroes,” a storytelling initiati
       continent: 'Africa',
       type: 'tangible',
       content: {
-        pageTitle: 'Al – Amal and other Women led cooperatives in the Argan Oil Sector in Morocco',
+        pageTitle: 'Al Amal and other Women led cooperatives in the Argan Oil Sector in Morocco',
         pageSubtitle: 'Seeds of Hope: Women, Argan, and the Cooperative Spirit of Morocco',
         mainImage: 'assets/images/sites_files/amal.jpg',
         thumbnails: [
@@ -671,7 +668,7 @@ Among its most powerful projects is “Unsung Heroes,” a storytelling initiati
           countryFlag: 'assets/images/sites_files/country-img/Flag_of_Morocco.svg',
           theme: 'Financial Group',
           entryYear: 2025,
-          coordinates: '30.88 N, 8.10 W'
+          coordinates: '30.88, 8.10'
         },
         sections: {
           legacy: {
@@ -770,7 +767,7 @@ Through the hands of these women, the argan tree continues to whisper its timele
           countryFlag: 'assets/images/sites_files/country-img/argentina-flag.jpg',
           theme: 'Financial Group',
           entryYear: 2025,
-          coordinates: '-30.9442 N, -61.5615 W'
+          coordinates: '-30.9442, -61.5615'
         },
         sections: {
           legacy: {
@@ -876,7 +873,7 @@ Over time, these cooperatives expanded into large-scale enterprises. Among the m
           countryFlag: 'assets/images/sites_files/country-img/tanzania.jpg',
           theme: 'Financial Group',
           entryYear: 2025,
-          coordinates: '-3.3333 N, 37.3333 W'
+          coordinates: '-3.3333, 37.3333'
         },
         sections: {
           legacy: {
@@ -978,7 +975,7 @@ From its beginnings as a small college in 1963 to its present role as a national
           countryFlag: 'assets/images/sites_files/country-img/uk-flag.jpg',
           theme: 'Financial Group',
           entryYear: 2025,
-          coordinates: '53.6168 N, -2.1553 W'
+          coordinates: '53.6168, -2.1553'
         },
         sections: {
           legacy: {
@@ -1047,7 +1044,7 @@ In Toad Lane’s quiet rooms and Holyoake House’s reading halls, the same mess
           learnMore: {
             title: 'Learn More',
             resources: [
-              'https://www.co-operativeheritage.coop/'
+              'https://www.rochdalepioneersmuseum.coop/'
             ]
           }
         }
@@ -1058,7 +1055,7 @@ In Toad Lane’s quiet rooms and Holyoake House’s reading halls, the same mess
 {
   id: 'federation-southern-coops',
   name: 'The Federation of Southern Cooperatives / Land Assistance Fund ',
-  siteName:'Rural Training and Research Center, Epes, Alabama',
+  siteName:'The Federation of Southern Cooperatives Rural Training & Research Center, Epes, Alabama, U.S.A.',
   coopYear: 2025,
   lat: 32.7553,
   lng: -88.1261,
@@ -1066,7 +1063,7 @@ In Toad Lane’s quiet rooms and Holyoake House’s reading halls, the same mess
   continent: 'North America',
   type: 'tangible',
   content: {
-    pageTitle: 'The Federation of Southern Cooperatives / Land Assistance Fund ',
+    pageTitle: 'The Federation of Southern Cooperatives Rural Training & Research Center, Epes, Alabama, U.S.A. ',
     pageSubtitle: 'A Legacy of Land, Liberation, and Cooperative Power in the American South',
     mainImage: 'assets/images/sites_files/image017.jpg',
     thumbnails: [
@@ -1078,7 +1075,7 @@ In Toad Lane’s quiet rooms and Holyoake House’s reading halls, the same mess
       countryFlag: 'assets/images/sites_files/country-img/americaflag.jpg',
       theme: 'Financial Group',
       entryYear: 2025,
-      coordinates: '32.7553 N, -88.1261 W"'
+      coordinates: '32.7553, -88.1261'
     },
     sections: {
       legacy: {
@@ -1154,110 +1151,7 @@ For anyone mapping the world’s cooperative cultural heritage, the Federation s
       },
       learnMore: {
         title: 'Learn More',
-        resources: [
-        ]
-      }
-    }
-  }
-},
-// Malaysia Site
-{
-  id: 'maktab-koperasi-malaysia',
-  name: 'Maktab Koperasi Malaysia,  Institut Koperasi Malaysia (IKMa) and Cooperative Archive, Petaling Jaya, Malaysia ',
-  siteName:'Institut Koperasi Malaysia: Educating a Nation in Cooperation',
-  coopYear: 2025,
-  lat: 3.1000,
-  lng: 101.6400,
-  country: 'Malaysia',
-  continent: 'Asia',
-  type: 'tangible',
-  content: {
-    pageTitle: 'Maktab Koperasi Malaysia,  Institut Koperasi Malaysia (IKMa) and Cooperative Archive, Petaling Jaya, Malaysia',
-    pageSubtitle: 'Institut Koperasi Malaysia: Educating a Nation in Cooperation',
-    mainImage: 'assets/images/sites_files/image018.jpg',
-    thumbnails: [
-    ],
-    infoCard: {
-      country: 'Malaysia',
-      countryFlag: 'assets/images/sites_files/country-img/malaysiaflag.jpg',
-      theme: 'Education and Archive',
-      entryYear: 2025,
-      coordinates: '3.1000 N, 101.6400 E"'
-    },
-    sections: {
-      legacy: {
-        title: 'A Vision Born at Independence',
-        content: `In the leafy suburb of Petaling Jaya, just outside Kuala Lumpur, stands the Institut Koperasi Malaysia (IKMa), once known as Maktab Koperasi Malaysia (MKM), the country’s foremost institution for cooperative education, training, and research. Established in 1956, at the dawn of Malaysia’s independence, the college was conceived as a cornerstone of the young nation’s socioeconomic transformation.
-
-It was created to give structure and strength to the spirit of gotong-royong, the Malay tradition of mutual help and community solidarity, and to transform these values into modern tools of nation-building. MKM was founded with a clear and ambitious purpose: to nurture a new generation of cooperative leaders.`
-      },
-      criteria: {
-        title: 'Featured Criteria ',
-        items: [
-          {
-                heading: 'Criterion 6. Educational Mission',
-                description: 'Sites shall actively promote cooperative literacy through exhibitions, archives, guided tours, and programmes that teach the ICA Statement on the Cooperative Identity.'
-              }
-,
-          {
-            heading: 'Criterion 9. Accessibility for All',
-            description: 'Sites must guarantee accessibility to the public—physically, digitally, or through interpretive materials—and ensure inclusivity for all people regardless of age, gender, background, or ability.'
-          },
-{
-                heading: 'Criterion 13. Networking and International Solidarity',
-                description: 'Sites shall connect to cooperative networks—regional, national, and international—participating in exchanges, research, and cooperative tourism to strengthen global cooperative heritage.'
-              }
-        ]
-      },
-      community: {
-        title: 'From Training College to National Institution',
-        content: `In the years following independence, Malaysia’s leaders viewed cooperatives as key to rural development, poverty reduction, and self-reliance. MKM became the educational foundation of that vision. What began as a modest training centre grew into a national institution under the Ministry of Entrepreneur Development and Cooperatives (MEDAC).
-
-Today, IKMa plays a pivotal role in strengthening over 14,000 registered cooperatives nationwide, serving sectors that range from agriculture and finance to housing, consumer goods, and digital enterprises. Its alumni form the backbone of Malaysia’s people-centred economy.`
-      },
-      virtualExperience: {
-        title: 'The Petaling Jaya Campus: Mid-Century Modern with a Malaysian Heart',
-        content: `Completed in 1968, the Petaling Jaya campus remains an architectural landmark. Its design blends mid-century modernism with tropical Malaysian sensibility, embodying the principles it teaches—transparency, balance, and connection.
-
-Within the campus, visitors find the Cooperative Heritage Gallery, a space that chronicles Malaysia’s cooperative journey from colonial beginnings to the present day through historical documents, photographs, and artefacts.`,
-        image: 'assets/images/sites_files/image018.jpg'
-      },
-      aditionalData: {
-        title: 'Learning as Empowerment',
-        content: `Education at MKM, now IKMa, has always been more than a professional qualification; it is an immersion in the philosophy of cooperation. The institute’s programmes encompass fields such as cooperative governance, accounting, entrepreneurship, digital transformation, and sustainability.
-
-The institution’s motto, “Empowering Cooperatives Through Knowledge,” promotes the belief that education is the most sustainable investment in community progress and social innovation.`
-      },
-      aditionalData2: {
-        title: 'Extending Education Across the Nation',
-        content: `True to the cooperative spirit, IKMa ensures that learning reaches beyond urban centres. Through its regional training centres across Malaysia, the institute brings professional development and advisory services to cooperatives in Sabah, Sarawak, and rural Peninsular Malaysia.
-
-These outreach programmes strengthen local economies, helping small cooperatives modernise operations, adopt digital tools, and sustain their missions in changing times.`
-      },
-      aditionalDat3: {
-        title: 'A Global Partner and Legacy of Nation-Building',
-        content: `In 2011, MKM was officially renamed Institut Koperasi Malaysia, signalling an expanded mandate. Today, IKMa partners with global organisations such as the International Co-operative Alliance (ICA), the Asian Confederation of Credit Unions (ACCU), and the International Labour Organization (ILO).
-
-The archives and gallery preserve decades of cooperative policy, innovation, and people-centred development, a living testament to the institution’s enduring relevance as a guide for Malaysia’s journey from independence to a modern, inclusive economy.`
-      },
-      aditionalDat4: {
-        title: 'A Legacy of Nation-Building',
-        content: `Walking through the quiet corridors of the Petaling Jaya campus, one senses the depth of history and continuity. Generations of cooperative leaders have passed through these classrooms, each contributing to Malaysia’s story of independence through interdependence. The archives and gallery preserve decades of cooperative policy, innovation, and people-centred development,a living testament to the institution’s enduring relevance.
-
-        IKMa’s legacy is not only educational but national. It stands as proof that cooperative values,fairness, participation, and solidarity,can form the foundation of a nation’s progress. In Malaysia’s journey from independence to a modern economy, the cooperative college has been both a witness and a guide.
-`
-      },
-      aditionalDat5: {
-        title: 'Knowledge for a New Era',
-        content: `As Malaysia navigates the challenges of the digital age, IKMa continues to evolve. New programmes in innovation, green entrepreneurship, and social enterprise build on its founding ideals while preparing cooperatives for the future.
-Its enduring message remains clear: cooperation, when informed by knowledge and guided by purpose, is one of society’s most resilient forces,a force that continues to shape Malaysia’s pursuit of inclusive and sustainable development.
-`
-      },
-      learnMore: {
-        title: 'Learn More',
-        resources: [
-          'Institut Koperasi Malaysia (IKMa) official website',
-          'Suruhanjaya Koperasi Malaysia (SKM) official website'
+        resources: ['https://www.federation.coop'
         ]
       }
     }
@@ -1287,7 +1181,7 @@ Its enduring message remains clear: cooperation, when informed by knowledge and 
       countryFlag: 'assets/images/sites_files/country-img/nigeriaflag.jpg',
       theme: 'Leadership and Administration',
       entryYear: 2025,
-      coordinates: '7.3776 N, 3.9059 E"'
+      coordinates: '7.3776 , 3.9059 '
     },
     sections: {
       legacy: {
@@ -1384,7 +1278,7 @@ In its solid structure and storied history, one finds the essence of Nigeria’s
       countryFlag: 'assets/images/sites_files/country-img/netherlandflag.jpg',
       theme: 'Historical Museum and Archive',
       entryYear: 2025,
-      coordinates: '51.9156 N, 4.3971 E"'
+      coordinates: '51.9156, 4.3971 '
     },
     sections: {
       legacy: {
@@ -1453,7 +1347,7 @@ Amid the timeless calm of Schiedam’s canals, the museum stands as both a house
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Nationaal Coöperatie Museum official website'
+          'https://www.cooperatiemuseum.nl'
         ]
       }
     }
@@ -1482,7 +1376,7 @@ Amid the timeless calm of Schiedam’s canals, the museum stands as both a house
       countryFlag: 'assets/images/sites_files/country-img/japanflag.jpg',
       theme: 'Pioneer and Archive',
       entryYear: 2025,
-      coordinates: '34.2007 N, 134.6186 E"'
+      coordinates: '34.2007, 134.6186 E'
     },
     sections: {
       legacy: {
@@ -1556,7 +1450,7 @@ In the gentle rhythm of the Naruto tides and the quiet grace of the museum itsel
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Naruto City Kagawa Toyohiko Memorial Museum official website'
+          'https://museum.city.naruto.tokushima.jp'
         ]
       }
     }
@@ -1585,7 +1479,7 @@ In the gentle rhythm of the Naruto tides and the quiet grace of the museum itsel
       countryFlag: 'assets/images/sites_files/country-img/slovakiaflag.jpg',
       theme: 'Pioneer and Museum',
       entryYear: 2025,
-      coordinates: '48.7833 N, 17.4333 E"'
+      coordinates: '48.7833, 17.4333 '
     },
     sections: {
       legacy: {
@@ -1649,7 +1543,7 @@ The Co-operative Museum of Samuel Jurkovič is thus not only a repository of his
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Co-operative Museum of Samuel Jurkovič official website'
+          'http://www.dusr.sk/museum.php'
         ]
       }
     }
@@ -1679,7 +1573,7 @@ The Co-operative Museum of Samuel Jurkovič is thus not only a repository of his
       countryFlag: 'assets/images/sites_files/country-img/americaflag.jpg',
       theme: 'Consumer Cooperative',
       entryYear: 2025,
-      coordinates: '44.3167 N, -72.5333 W"'
+      coordinates: '44.3167, -72.5333'
     },
     sections: {
       legacy: {
@@ -1771,7 +1665,7 @@ Nearly a century after those first eleven families took a collective leap of fai
       countryFlag: 'assets/images/sites_files/country-img/kenyaflag.jpg',
       theme: 'Higher Education and Research',
       entryYear: 2025,
-      coordinates: '1.3060 S, 36.6853 E"'
+      coordinates: '1.3060, 36.6853'
     },
     sections: {
       legacy: {
@@ -1835,7 +1729,7 @@ The Co-operative University of Kenya is more than an academic institution; it is
       learnMore: {
         title: 'Learn More',
         resources: [
-          'The Co-operative University of Kenya official website'
+          'https://www.cuk.ac.ke'
         ]
       }
     }
@@ -1863,7 +1757,7 @@ The Co-operative University of Kenya is more than an academic institution; it is
       countryFlag: 'assets/images/sites_files/country-img/italyflag.jpg',
       theme: 'Communal Stewardship and Worker Co-op',
       entryYear: 2025,
-      coordinates: '44.0270 N, 10.3129 E"'
+      coordinates: '44.0270, 10.3129 '
     },
     sections: {
       legacy: {
@@ -1961,7 +1855,7 @@ In every sense, Levigliani is more than a village , it is a living cooperative, 
       countryFlag: 'assets/images/sites_files/country-img/israelflag.jpg',
       theme: 'Communal Settlement',
       entryYear: 2025,
-      coordinates: '32.7247 N, 35.5700 E"'
+      coordinates: '32.7247, 35.5700'
     },
     sections: {
       legacy: {
@@ -2054,7 +1948,7 @@ In the words of its founders, “We came not to take, but to build.” Degania A
       countryFlag: 'assets/images/sites_files/country-img/palestineflag.jpg',
       theme: 'Worker Cooperative and Fair Trade',
       entryYear: 2025,
-      coordinates: '31.7067 N, 35.2167 E"'
+      coordinates: '31.7067, 35.2167 '
     },
     sections: {
       legacy: {
@@ -2118,7 +2012,7 @@ Through the work of its artisans, the HLHCS tells a story that transcends border
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Holy Land Handicraft Cooperative Society official website'
+          'https://www.hlhcs.org'
         ]
       }
     }
@@ -2146,7 +2040,7 @@ Through the work of its artisans, the HLHCS tells a story that transcends border
       countryFlag: 'assets/images/sites_files/country-img/spainflag.jpg',
       theme: 'Worker Cooperative and Direct Democracy',
       entryYear: 2025,
-      coordinates: '37.3670 N, -5.1380 E"'
+      coordinates: '37.3670, -5.1380'
     },
     sections: {
       legacy: {
@@ -2242,7 +2136,7 @@ In an era marked by inequality, social fragmentation, and ecological strain, thi
       countryFlag: 'assets/images/sites_files/country-img/canada.png',
       theme: 'Federation and Indigenous Cooperation',
       entryYear: 2025,
-      coordinates: '49.8954 N, -97.1385 W"'
+      coordinates: '49.8954, -97.1385 '
     },
     sections: {
       legacy: {
@@ -2307,7 +2201,7 @@ In a world where communities often struggle to balance prosperity with heritage,
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Arctic Co-operatives Limited official website'
+          'https://www.arctic.coop'
         ]
       }
     }
@@ -2335,7 +2229,7 @@ In a world where communities often struggle to balance prosperity with heritage,
       countryFlag: 'assets/images/sites_files/country-img/denmarkflag.jpg',
       theme: 'Historical Landmark and Museum',
       entryYear: 2025,
-      coordinates: '55.6761 N, 12.5683 E"'
+      coordinates: '55.6761, 12.5683 '
     },
     sections: {
       legacy: {
@@ -2399,7 +2293,7 @@ Standing in the heart of Copenhagen, the Workers’ Assembly Hall is both a monu
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Arbejdermuseet official website'
+          'https://www.arbejdermuseet.dk'
         ]
       }
     }
@@ -2428,7 +2322,7 @@ Standing in the heart of Copenhagen, the Workers’ Assembly Hall is both a monu
       countryFlag: 'assets/images/sites_files/country-img/singaporeflag.jpg',
       theme: 'Housing Cooperative and Legacy',
       entryYear: 2025,
-      coordinates: '1.3533 N, 103.8829 E"'
+      coordinates: '1.3533, 103.8829'
     },
     sections: {
       legacy: {
@@ -2498,105 +2392,8 @@ In a nation celebrated for its urban efficiency, Rochdale Road reminds us of a q
       }
     }
   }
-},
-{
-  id: 'ulccs-india',
-  name: 'Headquarter House of the Uralungal Labour Contract Co-operative Society (ULCCS): Building Dignity, Brick by Brick',
-  siteName:'ULCCS Headquarters, Vadakara, Kerala, India',
-  coopYear: 2025,
-  lat: 11.6033,
-  lng: 75.5843,
-  country: 'India',
-  continent: 'Asia',
-  type: 'tangible',
-  content: {
-    pageTitle: 'Headquarter House of the Uralungal Labour Contract Co-operative Society (ULCCS)',
-    pageSubtitle: 'Building Dignity, Brick by Brick',
-    mainImage: 'assets/images/sites_files/image046.jpg',
-    thumbnails: [
-      'assets/images/sites_files/sub-icon/image047.jpg',
-      'assets/images/sites_files/sub-icon/image048.jpg',
-    ],
-    infoCard: {
-      country: 'India',
-      countryFlag: 'assets/images/sites_files/country-img/india.png',
-      theme: 'Worker Contract Cooperative',
-      entryYear: 2025,
-      coordinates: '11.6033 N, 75.5843 E"'
-    },
-    sections: {
-      legacy: {
-        title: 'Origins of a Movement',
-        content: `In the coastal town of Vadakara, Kerala, stands the headquarters of one of Asia’s most remarkable cooperative enterprises , the Uralungal Labour Contract Co-operative Society (ULCCS). Founded in 1925 by a small group of visionary workers, ULCCS was not born out of wealth or privilege, but out of necessity, unity, and courage.
-At the time, colonial India’s rigid social order left labourers at the mercy of exploitation and insecurity. Denied fair wages and dignity, a handful of workers in the village of Uralungal decided that instead of waiting for justice, they would build it themselves.
-Guided by the reformist ideals of Vagbhatananda, a local philosopher who championed social equality and cooperative action, they came together to form a labour society that would belong to them , a place where work, ownership, and decision-making were shared.
-Fourteen men contributed their modest savings and pledged their labour to found ULCCS, adopting a motto both humble and revolutionary: “Work with dignity, share collectively, serve the community.” From its earliest days, the cooperative embodied the spirit of self-help and solidarity, proving that when people unite around shared values, they can turn hardship into opportunity.`
-      },
-      criteria: {
-        title: 'Featured Criteria ',
-        items: [
-          {
-            heading: 'Criterion 1. Historical Significance',
-            description: 'Founded in 1925, ULCCS is one of Asia’s longest-running and most successful worker cooperatives, established out of necessity by marginalized laborers to combat colonial-era exploitation.'
-          },
-{
-                heading: 'Criterion 4. Active Cooperative Connection',
-                description: 'Sites must either remain in operation as cooperatives or be explicitly dedicated to preserving and interpreting cooperative history.'
-              }
+}
 ,
-          {
-            heading: 'Criterion 9. Accessibility for All',
-            description: 'Sites must guarantee accessibility to the public—physically, digitally, or through interpretive materials—and ensure inclusivity for all people regardless of age, gender, background, or ability.'
-          }
-
-        ]
-      },
-      community: {
-        title: 'From Village Roads to National Landmarks',
-        content: `ULCCS began by taking small public works contracts , repairing roads, constructing culverts, maintaining wells , projects often neglected by private contractors. The society’s commitment to integrity, transparency, and efficiency soon earned the trust of local communities and government bodies alike. What started as a handful of men with basic tools grew steadily into a major civil construction cooperative.
-Over the decades, ULCCS completed thousands of projects across Kerala and beyond: roads, bridges, educational institutions, hospitals, and public infrastructure that today serve millions. Each project became an expression of collective pride, a visible reminder that labour itself could be the foundation of ownership and empowerment.
-Unlike conventional firms, ULCCS places people before profit. Every worker is both a member and a co-owner, participating in decisions and sharing in the rewards. The society provides steady employment, fair wages, social security, pensions, and professional training, making it a rare model of equitable growth in a world too often defined by inequality.`
-      },
-      virtualExperience: {
-        title: 'Expanding Horizons: Tradition Meets Innovation',
-        content: `While deeply rooted in Kerala’s cooperative heritage, ULCCS has also embraced modernisation and diversification. Beyond construction, it has expanded into information technology, education, tourism, and social welfare, applying the same cooperative principles to new industries.
-Its IT division, for instance, employs hundreds of young professionals in software development and digital solutions , demonstrating that the cooperative spirit is as relevant to the digital economy as it was to manual labour. Similarly, the ULCCS Foundation focuses on education, disability inclusion, and community development, extending the society’s mission of empowerment beyond its workforce.`,
-        image: 'assets/images/sites_files/image046.jpg'
-      },
-      aditionalData: {
-        title: 'The Heart of Cooperation',
-        content: `At the centre of ULCCS’s success is its culture of trust and democracy. Decisions are made collectively, hierarchies are minimal, and transparency is paramount. Members see themselves not merely as employees but as stewards of a shared mission.
-This sense of ownership fosters accountability, pride, and unity , the invisible cement holding the cooperative together for nearly a century.
-The headquarters at Madappally, near Vadakara, reflects this legacy. More than an administrative building, it is a living monument to human resilience , the story of generations who turned labour into leadership and solidarity into sustainability. Each wall and beam carries the memory of struggle, progress, and purpose.`
-      },
-      aditionalData2: {
-        title: 'A Global Beacon of Cooperative Enterprise',
-        content: `Today, ULCCS stands as a beacon of hope for cooperative movements worldwide. It demonstrates that the cooperative model , far from being outdated , can thrive as a humane, inclusive, and economically viable system.
-Balancing heritage and innovation, ULCCS shows that progress does not require abandoning community values. Whether paving roads or designing software, it remains guided by the same conviction: that dignity, fairness, and unity are the strongest foundations a society can build upon.
-To visit ULCCS is to witness the transformative power of cooperation , a movement that has built not only infrastructure, but futures.
-From the dusty paths of 1920s Kerala to the global stage of social enterprise, ULCCS continues to remind the world that when people work together with honesty, discipline, and faith in one another, there is no limit to what they can create.`
-      },
-      aditionalDat3: {
-        title: '',
-        content: ``
-      },
-      aditionalDat4: {
-        title: '',
-        content: ``
-      },
-      aditionalDat5: {
-        title: '',
-        content: ``
-      },
-      learnMore: {
-        title: 'Learn More',
-        resources: [
-          'ULCCS official website'
-        ]
-      }
-    }
-  }
-},
 
 {
   id: 'national-coop-museum-bulgaria',
@@ -2620,7 +2417,7 @@ From the dusty paths of 1920s Kerala to the global stage of social enterprise, U
       countryFlag: 'assets/images/sites_files/country-img/bulgariaflag.jpg',
       theme: 'Historical Archive and Cultural Center',
       entryYear: 2025,
-      coordinates: '42.6977 N, 23.3219 E"'
+      coordinates: '42.6977, 23.3219'
     },
     sections: {
       legacy: {
@@ -2689,6 +2486,105 @@ It is an enduring image of unity, trust, and shared strength , the very principl
       }
     }
   }
+},
+
+{
+  id: 'ulccs-india',
+  name: 'Headquarter House of the Uralungal Labour Contract Co-operative Society (ULCCS): Building Dignity, Brick by Brick',
+  siteName:'ULCCS Headquarters, Vadakara, Kerala, India',
+  coopYear: 2025,
+  lat: 11.6033,
+  lng: 75.5843,
+  country: 'India',
+  continent: 'Asia',
+  type: 'tangible',
+  content: {
+    pageTitle: 'Headquarter House of the Uralungal Labour Contract Co-operative Society (ULCCS)',
+    pageSubtitle: 'Building Dignity, Brick by Brick',
+    mainImage: 'assets/images/sites_files/image046.jpg',
+    thumbnails: [
+      'assets/images/sites_files/sub-icon/image047.jpg',
+      'assets/images/sites_files/sub-icon/image048.jpg',
+    ],
+    infoCard: {
+      country: 'India',
+      countryFlag: 'assets/images/sites_files/country-img/india.png',
+      theme: 'Worker Contract Cooperative',
+      entryYear: 2025,
+      coordinates: '11.6033, 75.5843'
+    },
+    sections: {
+      legacy: {
+        title: 'Origins of a Movement',
+        content: `In the coastal town of Vadakara, Kerala, stands the headquarters of one of Asia’s most remarkable cooperative enterprises , the Uralungal Labour Contract Co-operative Society (ULCCS). Founded in 1925 by a small group of visionary workers, ULCCS was not born out of wealth or privilege, but out of necessity, unity, and courage.
+At the time, colonial India’s rigid social order left labourers at the mercy of exploitation and insecurity. Denied fair wages and dignity, a handful of workers in the village of Uralungal decided that instead of waiting for justice, they would build it themselves.
+Guided by the reformist ideals of Vagbhatananda, a local philosopher who championed social equality and cooperative action, they came together to form a labour society that would belong to them , a place where work, ownership, and decision-making were shared.
+Fourteen men contributed their modest savings and pledged their labour to found ULCCS, adopting a motto both humble and revolutionary: “Work with dignity, share collectively, serve the community.” From its earliest days, the cooperative embodied the spirit of self-help and solidarity, proving that when people unite around shared values, they can turn hardship into opportunity.`
+      },
+      criteria: {
+        title: 'Featured Criteria ',
+        items: [
+          {
+            heading: 'Criterion 1. Historical Significance',
+            description: 'Founded in 1925, ULCCS is one of Asia’s longest-running and most successful worker cooperatives, established out of necessity by marginalized laborers to combat colonial-era exploitation.'
+          },
+{
+                heading: 'Criterion 4. Active Cooperative Connection',
+                description: 'Sites must either remain in operation as cooperatives or be explicitly dedicated to preserving and interpreting cooperative history.'
+              }
+,
+          {
+            heading: 'Criterion 9. Accessibility for All',
+            description: 'Sites must guarantee accessibility to the public—physically, digitally, or through interpretive materials—and ensure inclusivity for all people regardless of age, gender, background, or ability.'
+          }
+
+        ]
+      },
+      community: {
+        title: 'From Village Roads to National Landmarks',
+        content: `ULCCS began by taking small public works contracts , repairing roads, constructing culverts, maintaining wells , projects often neglected by private contractors. The society’s commitment to integrity, transparency, and efficiency soon earned the trust of local communities and government bodies alike. What started as a handful of men with basic tools grew steadily into a major civil construction cooperative.
+Over the decades, ULCCS completed thousands of projects across Kerala and beyond: roads, bridges, educational institutions, hospitals, and public infrastructure that today serve millions. Each project became an expression of collective pride, a visible reminder that labour itself could be the foundation of ownership and empowerment.
+Unlike conventional firms, ULCCS places people before profit. Every worker is both a member and a co-owner, participating in decisions and sharing in the rewards. The society provides steady employment, fair wages, social security, pensions, and professional training, making it a rare model of equitable growth in a world too often defined by inequality.`
+      },
+      virtualExperience: {
+        title: 'Expanding Horizons: Tradition Meets Innovation',
+        content: `While deeply rooted in Kerala’s cooperative heritage, ULCCS has also embraced modernisation and diversification. Beyond construction, it has expanded into information technology, education, tourism, and social welfare, applying the same cooperative principles to new industries.
+Its IT division, for instance, employs hundreds of young professionals in software development and digital solutions , demonstrating that the cooperative spirit is as relevant to the digital economy as it was to manual labour. Similarly, the ULCCS Foundation focuses on education, disability inclusion, and community development, extending the society’s mission of empowerment beyond its workforce.`,
+        image: 'assets/images/sites_files/image046.jpg'
+      },
+      aditionalData: {
+        title: 'The Heart of Cooperation',
+        content: `At the centre of ULCCS’s success is its culture of trust and democracy. Decisions are made collectively, hierarchies are minimal, and transparency is paramount. Members see themselves not merely as employees but as stewards of a shared mission.
+This sense of ownership fosters accountability, pride, and unity , the invisible cement holding the cooperative together for nearly a century.
+The headquarters at Madappally, near Vadakara, reflects this legacy. More than an administrative building, it is a living monument to human resilience , the story of generations who turned labour into leadership and solidarity into sustainability. Each wall and beam carries the memory of struggle, progress, and purpose.`
+      },
+      aditionalData2: {
+        title: 'A Global Beacon of Cooperative Enterprise',
+        content: `Today, ULCCS stands as a beacon of hope for cooperative movements worldwide. It demonstrates that the cooperative model , far from being outdated , can thrive as a humane, inclusive, and economically viable system.
+Balancing heritage and innovation, ULCCS shows that progress does not require abandoning community values. Whether paving roads or designing software, it remains guided by the same conviction: that dignity, fairness, and unity are the strongest foundations a society can build upon.
+To visit ULCCS is to witness the transformative power of cooperation , a movement that has built not only infrastructure, but futures.
+From the dusty paths of 1920s Kerala to the global stage of social enterprise, ULCCS continues to remind the world that when people work together with honesty, discipline, and faith in one another, there is no limit to what they can create.`
+      },
+      aditionalDat3: {
+        title: '',
+        content: ``
+      },
+      aditionalDat4: {
+        title: '',
+        content: ``
+      },
+      aditionalDat5: {
+        title: '',
+        content: ``
+      },
+      learnMore: {
+        title: 'Learn More',
+        resources: [
+          'https://www.ulccsltd.com'
+        ]
+      }
+    }
+  }
 }
 ,
 {
@@ -2713,7 +2609,7 @@ It is an enduring image of unity, trust, and shared strength , the very principl
       countryFlag: 'assets/images/sites_files/country-img/finlandflag.jpg',
       theme: 'Labour History and Cooperative Education',
       entryYear: 2025,
-      coordinates: '61.4981 N, 23.7600 E"'
+      coordinates: '61.4981, 23.7600'
     },
     sections: {
       legacy: {
@@ -2780,99 +2676,7 @@ In the story Werstas tells,of factory and co-op, of labour and democracy,lies th
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Finnish Labour Museum Werstas official website',
-          'Pellervo Confederation official website'
-        ]
-      }
-    }
-  }
-},
-{
-  id: 'otalora-mondragon-spain',
-  name: 'Otalora Cooperative Development Centre of the Mondragon Corporation, Spain',
-  siteName:'Otalora Cooperative Development Centre, Arrasate-Mondragón, Spain',
-  coopYear: 2025,
-  lat: 43.0645,
-  lng: -2.4939,
-  country: 'Spain',
-  continent: 'Europe',
-  type: 'tangible',
-  content: {
-    pageTitle: 'Otalora Cooperative Development Centre of the Mondragon Corporation, Spain',
-    pageSubtitle: 'The Heart of the World’s Leading Cooperative Ecosystem',
-    mainImage: 'assets/images/sites_files/image053.jpg',
-    thumbnails: [
-      'assets/images/sites_files/sub-icon/image054.jpg',
-    ],
-    infoCard: {
-      country: 'Spain',
-      countryFlag: 'assets/images/sites_files/country-img/spainflag.jpg',
-      theme: 'Worker Co-op Management and Education',
-      entryYear: 2025,
-      coordinates: '43.0645 N, -2.4939 W"'
-    },
-    sections: {
-      legacy: {
-        title: 'The Heart of the World’s Leading Cooperative Ecosystem',
-        content: `In the rolling green hills of the Basque Country, in northern Spain, stands one of the most extraordinary social and economic experiments in modern history, the Mondragon Corporation. Founded in 1956 in the town of Arrasate-Mondragón by the visionary priest José María Arizmendiarrieta and a small group of young workers, Mondragon grew from a modest workshop into the world’s largest federation of worker cooperatives. It is not only a model of shared ownership but also a living philosophy of how people can work together to shape a fairer and more human economy.
-At the centre of this remarkable network is Otalora, Mondragon’s management and cooperative development centre. Once a 14th-century Basque manor house, Otalora today serves as a place of reflection, education, and renewal  a space where cooperative leaders, students, and visitors from around the world come to learn how democracy, solidarity, and entrepreneurship can coexist within business.`
-      },
-      criteria: {
-        title: 'Featured Criteria ',
-        items: [
-{
-                heading: 'Criterion 2. Connection to Cooperative Pioneers or Communities',
-                description: 'Sites must demonstrate a tangible link to cooperative pioneers, enterprises, federations, or communities that shaped cooperative practice and identity.'
-              },
-{
-                heading: 'Criterion 4. Active Cooperative Connection',
-                description: 'Sites must either remain in operation as cooperatives or be explicitly dedicated to preserving and interpreting cooperative history.'
-              }
-,
-{
-                heading: 'Criterion 7. Research and Knowledge Sharing',
-                description: 'Dedicated researchers delve into the origins and evolution of the Desjardins Group, tracing its expansion from a modest savings cooperative in Lévis, Quebec, into one of the world’s leading cooperative financial institutions. Their work not only illuminates the past but also provides valuable insight into how cooperation and ethical finance can thrive in the modern economy.'
-              }
-
-        ]
-      },
-      community: {
-        title: 'A Vision Rooted in Community',
-        content: `The story of Mondragon began in the difficult years following the Spanish Civil War, when poverty and unemployment ravaged the Basque region. Father Arizmendiarrieta believed that education and cooperation could offer a path forward. He inspired local youth to train as engineers, establish their own enterprises, and share ownership and management responsibilities equally.
-Their first cooperative, Talleres Ulgor, laid the foundations of what would become the Mondragon ecosystem a federation that now includes more than eighty autonomous cooperatives, employing tens of thousands of worker-owners across industries as diverse as manufacturing, finance, agriculture, retail, and education.
-In every Mondragon enterprise, workers are not employees but co-owners. They elect their management boards, share in profits, and take part in decision-making. Wage ratios are deliberately modest, and profits are reinvested into the cooperative community. Over time, Mondragon has built its own university, research centres, and banks, ensuring that innovation remains guided by human and cooperative values.`
-      },
-      virtualExperience: {
-        title: 'Otalora: The Living School of Cooperation',
-        content: `Otalora serves as Mondragon’s beating heart  a place where cooperative identity is cultivated and passed on. It hosts study visits, leadership programmes, and seminars for cooperative managers, educators, and international visitors. In its halls, participants encounter not only economic principles but the lived philosophy of solidarity: the idea that wealth and responsibility should be shared.
-Visitors who walk through Otalora find a blend of history and innovation  ancient stone walls surrounding classrooms equipped with modern tools for learning and dialogue. The centre reflects the essence of Mondragon itself: a union of tradition and progress, rooted in people and community.`,
-        image: 'assets/images/sites_files/image053.jpg'
-      },
-      aditionalData: {
-        title: 'A Legacy of Hope and Humanism',
-        content: `Mondragon stands as a powerful example of what can be achieved when labour, knowledge, and capital work together rather than in opposition. It shows that businesses can grow and compete globally without abandoning human dignity or collective purpose.
-As a site for cooperative cultural heritage, Mondragon and Otalora embody the belief that economic success and social justice need not be opposites. They prove that cooperation grounded in trust, education, and shared values can endure across generations, shaping not only industries but also the moral imagination of a people.`
-      },
-      aditionalData2: {
-        title: '',
-        content: ``
-      },
-      aditionalDat3: {
-        title: '',
-        content: ``
-      },
-      aditionalDat4: {
-        title: '',
-        content: ``
-      },
-      aditionalDat5: {
-        title: '',
-        content: ``
-      },
-      learnMore: {
-        title: 'Learn More',
-        resources: [
-          'Otalora Cooperative Development Centre official website'
+          'https://www.werstas.fi'
         ]
       }
     }
@@ -2901,7 +2705,7 @@ As a site for cooperative cultural heritage, Mondragon and Otalora embody the be
       countryFlag: 'assets/images/sites_files/country-img/italyflag.jpg',
       theme: 'Worker Production Cooperative',
       entryYear: 2025,
-      coordinates: '44.3524 N, 11.7161 E"'
+      coordinates: '44.3524, 11.7161'
     },
     sections: {
       legacy: {
@@ -2964,17 +2768,17 @@ For the global cooperative movement, Imola remains an emblem of enduring solidar
       learnMore: {
         title: 'Learn More',
         resources: [
-          'Cooperativa Ceramica d’Imola official website',
-          'G. Bucci Museum and Historical Archive'
+          'Chttps://www.ccimola.com/'
         ]
       }
     }
   }
 },
+
 {
   id: 'birthplaces-germany',
   name: 'Birthplaces of Cooperation in Germany: Delitzsch and Flammersfeld',
-  siteName:'Deutsches Genossenschaftsmuseum (Delitzsch) and Deutsches Raiffeisenmuseum (Flammersfeld), Germany',
+  siteName:'Deutsches Genossenschaftsmuseum (Delitzsch) and Raiffeisenmuseum (Flammersfeld), Germany',
   coopYear: 2025,
   lat:  51.5221,
   lng: 12.3345,
@@ -2982,7 +2786,7 @@ For the global cooperative movement, Imola remains an emblem of enduring solidar
   continent: 'Europe',
   type: 'tangible',
   content: {
-    pageTitle: 'Deutsches Genossenschaftsmuseum (Delitzsch) and Deutsches Raiffeisenmuseum (Flammersfeld), Germany',
+    pageTitle: 'Deutsches Genossenschaftsmuseum (Delitzsch) and  Raiffeisenmuseum (Flammersfeld), Germany',
     pageSubtitle: 'The Urban Beginning – Schulze-Delitzsch and the Birth of the Modern Cooperative ',
     mainImage: 'assets/images/sites_files/image058.jpg',
     thumbnails: [
@@ -2994,7 +2798,7 @@ For the global cooperative movement, Imola remains an emblem of enduring solidar
       countryFlag: 'assets/images/sites_files/country-img/germanyflag.jpg',
       theme: 'Pioneers and Museums',
       entryYear: 2025,
-      coordinates: '51.0753 N, 10.0034 E (Central)'
+      coordinates: '51.0753, 10.0034'
     },
     sections: {
       legacy: {
@@ -3065,7 +2869,206 @@ Though their contexts differed, their principles converged: mutual trust, shared
       }
     }
   }
-}
+},
+
+// Malaysia Site
+{
+  id: 'maktab-koperasi-malaysia',
+  name: 'Maktab Koperasi Malaysia,  Institut Koperasi Malaysia (IKMa) and Cooperative Archive, Petaling Jaya, Malaysia ',
+  siteName:' Institut Koperasi Malaysia (IKMa) and Cooperative Archive, Petaling Jaya, Malaysia',
+  coopYear: 2025,
+  lat: 3.1000,
+  lng: 101.6400,
+  country: 'Malaysia',
+  continent: 'Asia',
+  type: 'tangible',
+  content: {
+    pageTitle: ' Institut Koperasi Malaysia (IKMa) Cooperative Archive, Petaling Jaya, Malaysia',
+    pageSubtitle: 'Institut Koperasi Malaysia: Educating a Nation in Cooperation',
+    mainImage: 'assets/images/sites_files/image018.jpg',
+    thumbnails: [
+    ],
+    infoCard: {
+      country: 'Malaysia',
+      countryFlag: 'assets/images/sites_files/country-img/malaysiaflag.jpg',
+      theme: 'Education and Archive',
+      entryYear: 2025,
+      coordinates: '3.1000, 101.6400'
+    },
+    sections: {
+      legacy: {
+        title: 'A Vision Born at Independence',
+        content: `In the leafy suburb of Petaling Jaya, just outside Kuala Lumpur, stands the Institut Koperasi Malaysia (IKMa), once known as Maktab Koperasi Malaysia (MKM), the country’s foremost institution for cooperative education, training, and research. Established in 1956, at the dawn of Malaysia’s independence, the college was conceived as a cornerstone of the young nation’s socioeconomic transformation.
+
+It was created to give structure and strength to the spirit of gotong-royong, the Malay tradition of mutual help and community solidarity, and to transform these values into modern tools of nation-building. MKM was founded with a clear and ambitious purpose: to nurture a new generation of cooperative leaders.`
+      },
+      criteria: {
+        title: 'Featured Criteria ',
+        items: [
+          {
+                heading: 'Criterion 6. Educational Mission',
+                description: 'Sites shall actively promote cooperative literacy through exhibitions, archives, guided tours, and programmes that teach the ICA Statement on the Cooperative Identity.'
+              }
+,
+          {
+            heading: 'Criterion 9. Accessibility for All',
+            description: 'Sites must guarantee accessibility to the public—physically, digitally, or through interpretive materials—and ensure inclusivity for all people regardless of age, gender, background, or ability.'
+          },
+{
+                heading: 'Criterion 13. Networking and International Solidarity',
+                description: 'Sites shall connect to cooperative networks—regional, national, and international—participating in exchanges, research, and cooperative tourism to strengthen global cooperative heritage.'
+              }
+        ]
+      },
+      community: {
+        title: 'From Training College to National Institution',
+        content: `In the years following independence, Malaysia’s leaders viewed cooperatives as key to rural development, poverty reduction, and self-reliance. MKM became the educational foundation of that vision. What began as a modest training centre grew into a national institution under the Ministry of Entrepreneur Development and Cooperatives (MEDAC).
+
+Today, IKMa plays a pivotal role in strengthening over 14,000 registered cooperatives nationwide, serving sectors that range from agriculture and finance to housing, consumer goods, and digital enterprises. Its alumni form the backbone of Malaysia’s people-centred economy.`
+      },
+      virtualExperience: {
+        title: 'The Petaling Jaya Campus: Mid-Century Modern with a Malaysian Heart',
+        content: `Completed in 1968, the Petaling Jaya campus remains an architectural landmark. Its design blends mid-century modernism with tropical Malaysian sensibility, embodying the principles it teaches—transparency, balance, and connection.
+
+Within the campus, visitors find the Cooperative Heritage Gallery, a space that chronicles Malaysia’s cooperative journey from colonial beginnings to the present day through historical documents, photographs, and artefacts.`,
+        image: 'assets/images/sites_files/image018.jpg'
+      },
+      aditionalData: {
+        title: 'Learning as Empowerment',
+        content: `Education at MKM, now IKMa, has always been more than a professional qualification; it is an immersion in the philosophy of cooperation. The institute’s programmes encompass fields such as cooperative governance, accounting, entrepreneurship, digital transformation, and sustainability.
+
+The institution’s motto, “Empowering Cooperatives Through Knowledge,” promotes the belief that education is the most sustainable investment in community progress and social innovation.`
+      },
+      aditionalData2: {
+        title: 'Extending Education Across the Nation',
+        content: `True to the cooperative spirit, IKMa ensures that learning reaches beyond urban centres. Through its regional training centres across Malaysia, the institute brings professional development and advisory services to cooperatives in Sabah, Sarawak, and rural Peninsular Malaysia.
+
+These outreach programmes strengthen local economies, helping small cooperatives modernise operations, adopt digital tools, and sustain their missions in changing times.`
+      },
+      aditionalDat3: {
+        title: 'A Global Partner and Legacy of Nation-Building',
+        content: `In 2011, MKM was officially renamed Institut Koperasi Malaysia, signalling an expanded mandate. Today, IKMa partners with global organisations such as the International Co-operative Alliance (ICA), the Asian Confederation of Credit Unions (ACCU), and the International Labour Organization (ILO).
+
+The archives and gallery preserve decades of cooperative policy, innovation, and people-centred development, a living testament to the institution’s enduring relevance as a guide for Malaysia’s journey from independence to a modern, inclusive economy.`
+      },
+      aditionalDat4: {
+        title: 'A Legacy of Nation-Building',
+        content: `Walking through the quiet corridors of the Petaling Jaya campus, one senses the depth of history and continuity. Generations of cooperative leaders have passed through these classrooms, each contributing to Malaysia’s story of independence through interdependence. The archives and gallery preserve decades of cooperative policy, innovation, and people-centred development,a living testament to the institution’s enduring relevance.
+
+        IKMa’s legacy is not only educational but national. It stands as proof that cooperative values,fairness, participation, and solidarity,can form the foundation of a nation’s progress. In Malaysia’s journey from independence to a modern economy, the cooperative college has been both a witness and a guide.
+`
+      },
+      aditionalDat5: {
+        title: 'Knowledge for a New Era',
+        content: `As Malaysia navigates the challenges of the digital age, IKMa continues to evolve. New programmes in innovation, green entrepreneurship, and social enterprise build on its founding ideals while preparing cooperatives for the future.
+Its enduring message remains clear: cooperation, when informed by knowledge and guided by purpose, is one of society’s most resilient forces,a force that continues to shape Malaysia’s pursuit of inclusive and sustainable development.
+`
+      },
+      learnMore: {
+        title: 'Learn More',
+        resources: [
+          'https://www.ikma.edu.my',
+        ]
+      }
+    }
+  }
+},
+
+
+
+
+{
+  id: 'otalora-mondragon-spain',
+  name: 'Otalora Cooperative Development Centre of the Mondragon Corporation, Spain',
+  siteName:'Otalora Cooperative Development Centre, Arrasate-Mondragón, Spain',
+  coopYear: 2025,
+  lat: 43.0645,
+  lng: -2.4939,
+  country: 'Spain',
+  continent: 'Europe',
+  type: 'tangible',
+  content: {
+    pageTitle: 'Otalora Cooperative Development Centre of the Mondragon Corporation, Spain',
+    pageSubtitle: 'The Heart of the World’s Leading Cooperative Ecosystem',
+    mainImage: 'assets/images/sites_files/image053.jpg',
+    thumbnails: [
+      'assets/images/sites_files/sub-icon/image054.jpg',
+    ],
+    infoCard: {
+      country: 'Spain',
+      countryFlag: 'assets/images/sites_files/country-img/spainflag.jpg',
+      theme: 'Worker Co-op Management and Education',
+      entryYear: 2025,
+      coordinates: '43.0645, -2.4939'
+    },
+    sections: {
+      legacy: {
+        title: 'The Heart of the World’s Leading Cooperative Ecosystem',
+        content: `In the rolling green hills of the Basque Country, in northern Spain, stands one of the most extraordinary social and economic experiments in modern history, the Mondragon Corporation. Founded in 1956 in the town of Arrasate-Mondragón by the visionary priest José María Arizmendiarrieta and a small group of young workers, Mondragon grew from a modest workshop into the world’s largest federation of worker cooperatives. It is not only a model of shared ownership but also a living philosophy of how people can work together to shape a fairer and more human economy.
+At the centre of this remarkable network is Otalora, Mondragon’s management and cooperative development centre. Once a 14th-century Basque manor house, Otalora today serves as a place of reflection, education, and renewal  a space where cooperative leaders, students, and visitors from around the world come to learn how democracy, solidarity, and entrepreneurship can coexist within business.`
+      },
+      criteria: {
+        title: 'Featured Criteria ',
+        items: [
+{
+                heading: 'Criterion 2. Connection to Cooperative Pioneers or Communities',
+                description: 'Sites must demonstrate a tangible link to cooperative pioneers, enterprises, federations, or communities that shaped cooperative practice and identity.'
+              },
+{
+                heading: 'Criterion 4. Active Cooperative Connection',
+                description: 'Sites must either remain in operation as cooperatives or be explicitly dedicated to preserving and interpreting cooperative history.'
+              }
+,
+{
+                heading: 'Criterion 7. Research and Knowledge Sharing',
+                description: 'Dedicated researchers delve into the origins and evolution of the Desjardins Group, tracing its expansion from a modest savings cooperative in Lévis, Quebec, into one of the world’s leading cooperative financial institutions. Their work not only illuminates the past but also provides valuable insight into how cooperation and ethical finance can thrive in the modern economy.'
+              }
+
+        ]
+      },
+      community: {
+        title: 'A Vision Rooted in Community',
+        content: `The story of Mondragon began in the difficult years following the Spanish Civil War, when poverty and unemployment ravaged the Basque region. Father Arizmendiarrieta believed that education and cooperation could offer a path forward. He inspired local youth to train as engineers, establish their own enterprises, and share ownership and management responsibilities equally.
+Their first cooperative, Talleres Ulgor, laid the foundations of what would become the Mondragon ecosystem a federation that now includes more than eighty autonomous cooperatives, employing tens of thousands of worker-owners across industries as diverse as manufacturing, finance, agriculture, retail, and education.
+In every Mondragon enterprise, workers are not employees but co-owners. They elect their management boards, share in profits, and take part in decision-making. Wage ratios are deliberately modest, and profits are reinvested into the cooperative community. Over time, Mondragon has built its own university, research centres, and banks, ensuring that innovation remains guided by human and cooperative values.`
+      },
+      virtualExperience: {
+        title: 'Otalora: The Living School of Cooperation',
+        content: `Otalora serves as Mondragon’s beating heart  a place where cooperative identity is cultivated and passed on. It hosts study visits, leadership programmes, and seminars for cooperative managers, educators, and international visitors. In its halls, participants encounter not only economic principles but the lived philosophy of solidarity: the idea that wealth and responsibility should be shared.
+Visitors who walk through Otalora find a blend of history and innovation  ancient stone walls surrounding classrooms equipped with modern tools for learning and dialogue. The centre reflects the essence of Mondragon itself: a union of tradition and progress, rooted in people and community.`,
+        image: 'assets/images/sites_files/image053.jpg'
+      },
+      aditionalData: {
+        title: 'A Legacy of Hope and Humanism',
+        content: `Mondragon stands as a powerful example of what can be achieved when labour, knowledge, and capital work together rather than in opposition. It shows that businesses can grow and compete globally without abandoning human dignity or collective purpose.
+As a site for cooperative cultural heritage, Mondragon and Otalora embody the belief that economic success and social justice need not be opposites. They prove that cooperation grounded in trust, education, and shared values can endure across generations, shaping not only industries but also the moral imagination of a people.`
+      },
+      aditionalData2: {
+        title: '',
+        content: ``
+      },
+      aditionalDat3: {
+        title: '',
+        content: ``
+      },
+      aditionalDat4: {
+        title: '',
+        content: ``
+      },
+      aditionalDat5: {
+        title: '',
+        content: ``
+      },
+      learnMore: {
+        title: 'Learn More',
+        resources: [
+          'https://www.otalora.com/en/we-are/'
+        ]
+      }
+    }
+  }
+},
+
   ];
 
 

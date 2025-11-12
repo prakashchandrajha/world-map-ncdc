@@ -554,7 +554,7 @@ In a world dominated by globalised supply-chains, anonymous capital and remote o
       siteName: 'America’s Credit Union Museum',
       coopYear: 2025,
       lat: 42.9933,
-      lng: 71.4758,
+      lng: -71.4758,
       country: 'United States of America',
       continent: 'North America',
       type: 'tangible',
@@ -570,7 +570,7 @@ In a world dominated by globalised supply-chains, anonymous capital and remote o
           countryFlag: 'assets/images/sites_files/country-img/Flag_of_the_United_States.svg',
           theme: 'Financial Group',
           entryYear: 2025,
-          coordinates: '42.9955 N, 71.4637 W'
+          coordinates: '42.9955 N, -71.4637 W'
         },
         sections: {
           legacy: {
@@ -753,8 +753,8 @@ Through the hands of these women, the argan tree continues to whisper its timele
       name: 'Sunchales – National Capital of Cooperativism Santa Fe, Argentina',
       siteName: 'Sunchales – National Capital of Cooperativism Santa Fe, Argentina',
       coopYear: 2025,
-      lat: 30.933,
-      lng: 61.567,
+      lat: -30.933,
+      lng: -61.567,
       country: 'Argentina',
       continent: 'South America',
       type: 'tangible',
@@ -770,7 +770,7 @@ Through the hands of these women, the argan tree continues to whisper its timele
           countryFlag: 'assets/images/sites_files/country-img/argentina-flag.jpg',
           theme: 'Financial Group',
           entryYear: 2025,
-          coordinates: '30.9442 N, 61.5615 W'
+          coordinates: '-30.9442 N, -61.5615 W'
         },
         sections: {
           legacy: {

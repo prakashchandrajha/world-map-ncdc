@@ -1,6 +1,6 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection, importProvidersFrom } from '@angular/core';
-import { provideRouter } from '@angular/router';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { provideRouter, withEnabledBlockingInitialNavigation, withHashLocation, withInMemoryScrolling, withRouterConfig } from '@angular/router';
+import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { CustomTranslateLoader } from './services/custom-translate-loader';
 
@@ -10,8 +10,18 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes),
-    provideHttpClient(),
+    provideRouter(
+      routes,
+      withEnabledBlockingInitialNavigation(),
+      withInMemoryScrolling({
+        scrollPositionRestoration: 'top',
+        anchorScrolling: 'enabled'
+      }),
+      withRouterConfig({
+        onSameUrlNavigation: 'reload'
+      })
+    ),
+    provideHttpClient(withFetch()),
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {

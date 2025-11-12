@@ -22,6 +22,9 @@ export class Home implements OnInit, OnDestroy {
   isAnimating = true;
   isImageVisible = true;
 
+    isReadMoreModalOpen = false;
+
+
   constructor(
     private homeService: HomeService,
     private translate: TranslateService
@@ -93,6 +96,24 @@ export class Home implements OnInit, OnDestroy {
     const target = event.target as HTMLElement;
     if (target.classList.contains('fixed')) {
       this.closeModal();
+    }
+  }
+
+
+  openReadMoreModal(): void {
+    this.isReadMoreModalOpen = true;
+  }
+
+  // Close modal
+  closeReadMoreModal(): void {
+    this.isReadMoreModalOpen = false;
+  }
+
+  // Close modal when clicking outside
+  closeReadMoreModalOutside(event: MouseEvent): void {
+    const target = event.target as HTMLElement;
+    if (target.classList.contains('fixed')) {
+      this.isReadMoreModalOpen = false;
     }
   }
 }

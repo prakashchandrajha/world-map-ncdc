@@ -32,8 +32,8 @@
     "view_members": "View Members"
   },
   "worldmap": {
-    "title": "Explore the Map (Edition 2025)",
-    "description": "Explore the World Map : Discover the inaugural list of Cooperative Cultural Heritage sites across the world and be inspired to nominate your sites and practices of cooperative cultural significance.",
+    "title": "Explore the Map",
+    "description": "Discover the inaugural list of Cooperative Cultural Heritage sites across the world and be inspired to nominate your sites and practices of cooperative cultural significance.",
     "filter": "Filter",
     "country": "Country:",
     "continent": "Continent:",
@@ -64,7 +64,7 @@
     "cooperative_weaving": "Cooperative Weaving Techniques"
   },
   "home": {
-    "hero_title": "Preserving cooperative cultural  wisdom across generations",
+    "hero_title": "",
     "hero_title2":"Celebrating Sites, Traditions and Practices of cooperation that connect communities around the world.",
     "read_more": "Read More",
     "close": "✕",

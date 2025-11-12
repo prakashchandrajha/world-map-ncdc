@@ -123,11 +123,11 @@
   </section>
 }
 @case ('designB') {
- <section class="mx-auto max-w-[1440px] min-w-[280px] py-6 px-3 sm:px-6 md:px-8 lg:px-16 font-[Poppins]">
+ <section class="mx-auto max-w-[1240px] min-w-[280px] py-6 px-3 sm:px-6 md:px-8 lg:px-16 font-[Poppins]">
   <div class="max-w-6xl mx-auto bg-white rounded-xl overflow-hidden flex flex-col md:flex-row items-start transition-all duration-500 hover:shadow-md">
     
     <!-- Image -->
-    <div class="md:w-[45%] w-full">
+    <div class="md:w-[45%] w-full relative">
       <img
         src="../../../assets/images/gome2nd.png"
         alt="Section illustration"
@@ -136,28 +136,35 @@
     </div>
 
     <!-- Text Container -->
-    <div class="flex-1 border border-[#8D1558]/30 p-4 md:p-6 lg:p-14 rounded-tr-xl rounded-br-xl flex flex-col justify-center h-[180px] md:h-[240px] lg:h-[280px]">
-      <!-- Title -->
-      <h4
-        class="font-bold text-[22px] sm:text-[26px] md:text-[24px] leading-tight mb-3"
-        style="
-          background: linear-gradient(90deg, #8D1558 -9.89%, #B5ACA1 126.07%);
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          color: transparent;
-        "
-      >
-        {{ section.title }}
-      </h4>
+    <div class="flex-1 border border-[#8D1558]/30 p-4 md:p-6 lg:p-14 rounded-tr-xl rounded-br-xl flex flex-col justify-between relative h-[180px] md:h-[240px] lg:h-[280px]">
+      
+      <div>
+        <!-- Title -->
+        <h4
+          class="font-bold text-[22px] sm:text-[26px] md:text-[24px] leading-tight mb-3"
+          style="
+            background: linear-gradient(90deg, #8D1558 -9.89%, #B5ACA1 126.07%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+          "
+        >
+          {{ section.title }}
+        </h4>
 
-      <!-- Description -->
-      <p class="font-normal text-[14px] sm:text-[15px] leading-relaxed text-[#8D1558] font-['Inter'] mb-4 flex-1">
-        {{ section.desc }}
-      </p>
+        <!-- Description -->
+        <p class="font-normal text-[14px] sm:text-[15px] leading-relaxed text-[#8D1558] font-['Inter'] mb-4">
+          {{ section.desc }}
+        </p>
+      </div>
 
-      <!-- Button: bottom-right aligned -->
-      <div class="mt-auto text-right">
+      <!-- Bottom section: Button + Date -->
+      <div class="flex items-end justify-between mt-auto">
+        <!-- Bottom-left date -->
+        
+
+        <!-- Bottom-right button -->
         <button
           (click)="openModal(section)"
           class="inline-flex items-center justify-center gap-1.5
@@ -166,7 +173,7 @@
                  bg-transparent border border-[#8D1558]/50 hover:border-[#8D1558]
                  rounded-full py-1.5 px-4
                  transition-colors duration-300
-                 whitespace-nowrap"
+                 whitespace-nowrap ml-3"
         >
           <span class="font-['Noto_Sans'] font-normal">
             {{ 'home.read_more' | translate }}
@@ -182,9 +189,19 @@
           </svg>
         </button>
       </div>
+      
+
     </div>
+
   </div>
+  <div class="text-[12px] text-[white] bg-[#8D1558] font-['Inter'] leading-tight mb-0">
+    <p >
+          November 3, 1913. Inauguration of the Fontanone Hydroelectric Plant, the development engine of the Alto But in Friuli, Italy
+        </p>
+  </div>
+  
 </section>
+
 
 }
    
@@ -230,7 +247,7 @@
 
 
 <!-- 3 circle -->
-<section class="flex justify-center items-center bg-white mt-[80px] py-10">
+<section class="flex justify-center items-center ">
   <div
     class="w-[1200px] h-[500px] cursor-pointer group bg-gradient-to-br  transition-all duration-1000 flex flex-col relative overflow-hidden rounded-3xl ">
 

@@ -661,6 +661,9 @@ Among its most powerful projects is “Unsung Heroes,” a storytelling initiati
         pageSubtitle: 'Seeds of Hope: Women, Argan, and the Cooperative Spirit of Morocco',
         mainImage: 'assets/images/sites_files/amal.jpg',
         thumbnails: [
+          'assets/images/sites_files/sub-icon/moro1.jpg',
+          'assets/images/sites_files/sub-icon/moro2.jpg',
+          'assets/images/sites_files/amal.jpg',
           
         ],
         infoCard: {
@@ -700,7 +703,7 @@ Then, in the mid-1990s, under the guidance and mentorship of Professor Zoubida C
 
 Visitors to Tamanar today can walk through the cooperative’s sunlit workrooms, where women sit in a rhythmic harmonycracking argan nuts, pressing oil, bottling Morocco’s famed “liquid gold.” Each gesture is both ancient and newly empowered, a dance of patience, precision, and pride. Amal’s success inspired dozens of similar initiatives, proving that economic equality could grow from the very soil of tradition.
 Amal’s story also lives on through its sister cooperatives in Tidzi and Mesti, spreading its mission across the argan forest. Together, they form a living network of resiliencewomen working for women, protecting their ecosystem, and securing a sustainable future for their families.`,
-            image: 'assets/images/sites_files/amal.jpg'
+            image: 'assets/images/sites_files/sub-icon/moro3.jpg'
           },
           community: {
             title: 'Targanine: A Beacon of Quality and Ethics',
@@ -866,6 +869,7 @@ Over time, these cooperatives expanded into large-scale enterprises. Among the m
         mainImage: 'assets/images/sites_files/image008.jpg',
          thumbnails: [
           'assets/images/sites_files/image009.jpg',
+          'assets/images/sites_files/image008.jpg',
         ],
         infoCard: {
           country: 'Tanzania',
@@ -904,7 +908,7 @@ Founded on 5 January 1963 as the Co-operative College Moshi, the institution’s
 Every initiative on campus reflects the cooperative spirit: mutual aid, democratic participation, and accountability. Students learn that success in business and community life depends not on competition alone but on collaboration, shared values, and collective responsibility.
 
 `,
-            image: 'assets/images/sites_files/image008.jpg'
+            image: 'assets/images/sites_files/sub-icon/tanzania.jpeg    '
           },
           community: {
             title: 'A Tradition Rooted in Place',
@@ -1007,7 +1011,7 @@ The museum’s exhibits unfold the story of ordinary working people who built a 
 The building itself, Grade II listed, stands as a national monument to social enterprise,its modest architecture a powerful reminder that great ideas often begin in the simplest of places.
 
 `,
-            image: 'assets/images/sites_files/image010.jpg'
+            image: 'assets/images/sites_files/sub-icon/uk.jpeg'
           },
           community: {
             title: 'Holyoake House and the National Co-operative Archive',
@@ -1053,8 +1057,8 @@ In Toad Lane’s quiet rooms and Holyoake House’s reading halls, the same mess
     // USA Site 2
 {
   id: 'federation-southern-coops',
-  name: 'The Federation of Southern Cooperatives / Land Assistance Fund ',
-  siteName:'The Federation of Southern Cooperatives Rural Training & Research Center, Epes, Alabama, U.S.A.',
+  name: 'The Federation of Southern Cooperatives Rural Training & Research Center, Epes, Alabama, U.S.A. ',
+  siteName:'The Federation of Southern Cooperatives Rural Training & Research Center, Epes, Alabama, U.S.A.',
   coopYear: 2025,
   lat: 32.7553,
   lng: -88.1261,
@@ -1064,9 +1068,10 @@ In Toad Lane’s quiet rooms and Holyoake House’s reading halls, the same mess
   content: {
     pageTitle: 'The Federation of Southern Cooperatives Rural Training & Research Center, Epes, Alabama, U.S.A. ',
     pageSubtitle: 'A Legacy of Land, Liberation, and Cooperative Power in the American South',
-    mainImage: 'assets/images/sites_files/image017.jpg',
+    mainImage: 'assets/images/sites_files/usa.jpeg',
     thumbnails: [
-      
+      'assets/images/sites_files/usa.jpeg',
+      'assets/images/sites_files/image017.jpg',
       
     ],
     infoCard: {
@@ -1174,6 +1179,8 @@ For anyone mapping the world’s cooperative cultural heritage, the Federation s
     mainImage: 'assets/images/sites_files/image019.jpg',
     thumbnails: [
       'assets/images/sites_files/sub-icon/image020.jpg',
+      'assets/images/sites_files/image019.jpg',
+      'assets/images/sites_files/sub-icon/nigeria.jpeg'
     ],
     infoCard: {
       country: 'Nigeria',
@@ -1218,7 +1225,7 @@ Decisions made within its walls shaped the fortunes of thousands of rural househ
         content: `Obisesan House stands as a physical testament to the spirit of determination. Its bold, functional modernist design reflects the confidence of postcolonial Nigeria, a nation eager to chart its own course. The structure’s clean lines and dignified façade speak of stability and progress, mirroring the values of the cooperative movement itself: order, transparency, and endurance.
 
 Inside, the building breathes history. Meeting rooms once filled with community leaders still host gatherings, conferences, and training sessions for cooperatives from Oyo, Ogun, Ondo, Osun, Ekiti, and Lagos States.`,
-        image: 'assets/images/sites_files/image019.jpg'
+        image: 'assets/images/sites_files/sub-icon/nigeria.jpeg'
       },
       aditionalData: {
         title: 'A Living Heritage of Cooperation',
@@ -1255,6 +1262,7 @@ In its solid structure and storied history, one finds the essence of Nigeria’s
     }
   }
 },
+//Netherlands Site  
 {
   id: 'nationaal-cooperatie-museum',
   name: 'Nationaal Coöperatie Museum – The Soul of Dutch Cooperation,Schiedam, Netherlands ',
@@ -1271,6 +1279,8 @@ In its solid structure and storied history, one finds the essence of Nigeria’s
     mainImage: 'assets/images/sites_files/image021.jpg',
     thumbnails: [
       'assets/images/sites_files/sub-icon/image022.jpg',
+      'assets/images/sites_files/image021.jpg',
+      
       ],
     infoCard: {
       country: 'Netherlands',
@@ -1315,7 +1325,7 @@ Families joined forces not only to secure fair prices and quality goods but also
         content: `The museum’s collection captures this heritage in rich, tangible detail. Visitors can examine handwritten ledgers, membership books, vintage packaging, and cooperative signage. Each artifact speaks to the pride and perseverance of ordinary people acting together to improve their lives.
 
 The founders believed that economic progress must be rooted in fairness, trust, education, and solidarity. This belief comes alive in every exhibit, from the neatly labeled tins to the photographs of shopkeepers, clerks, and customers whose livelihoods were intertwined.`,
-        image: 'assets/images/sites_files/image021.jpg'
+        image: 'assets/images/sites_files/sub-icon/Netherlands.jpeg'
       },
       aditionalData: {
         title: 'A Building that Teaches by Design',
@@ -1369,6 +1379,7 @@ Amid the timeless calm of Schiedam’s canals, the museum stands as both a house
     mainImage: 'assets/images/sites_files/image023.jpg',
     thumbnails: [
       'assets/images/sites_files/sub-icon/image024.jpg',
+      'assets/images/sites_files/image023.jpg',
     ],
     infoCard: {
       country: 'Japan',
@@ -1415,7 +1426,7 @@ His philosophy was both simple and radical: that social justice could flourish o
         content: `The museum’s architecture captures the serenity and balance of its subject. Sunlight streams through wide glass panels, illuminating exhibits that trace Kagawa’s life and global influence. Visitors encounter handwritten manuscripts, letters, books, photographs, and personal items, each an artifact of a mind deeply committed to the well-being of others.
 
 Kagawa’s influence also extended to education, labor organization, and health care. He founded schools, hospitals, and cooperatives guided by the principle of “love in action.”`,
-        image: 'assets/images/sites_files/image023.jpg'
+        image: 'assets/images/sites_files/sub-icon/image024.jpg'
       },
       aditionalData: {
         title: 'The Spirit of Cooperation Made Visible',
@@ -1472,6 +1483,7 @@ In the gentle rhythm of the Naruto tides and the quiet grace of the museum itsel
     mainImage: 'assets/images/sites_files/image025.jpg',
     thumbnails: [
       'assets/images/sites_files/sub-icon/image026.jpg',
+      'assets/images/sites_files/image025.jpg',
     ],
     infoCard: {
       country: 'Slovakia',
@@ -1515,7 +1527,7 @@ The exhibits are not static. Multimedia displays, ambient sounds, and interactiv
         title: 'The Manor House and Its Meaning',
         content: `The museum’s home,the historic Sobotište manor,is itself a powerful metaphor for transformation. Once a seat of privilege, it now houses the history of a movement rooted in equality and shared progress. Its architecture evokes continuity and renewal, embodying the evolution of Slovak society from feudal hierarchy to democratic participation.
 The juxtaposition of aristocratic walls and cooperative artifacts invites reflection: here, where power once concentrated in the few, the story of empowerment for the many now takes centre stage. From agricultural associations of the 19th century to the complex credit and consumer cooperatives of the 20th, the museum traces how collective organization became a foundation for regional identity and economic resilience.`,
-        image: 'assets/images/sites_files/image025.jpg'
+        image: 'assets/images/sites_files/sub-icon/image026.jpg'
       },
       aditionalData: {
         title: 'A Living Classroom for All Generations',
@@ -1562,9 +1574,11 @@ The Co-operative Museum of Samuel Jurkovič is thus not only a repository of his
   content: {
     pageTitle: 'Adamant Food Co-op: Born from Necessity and Trust',
     pageSubtitle: 'The oldest continuously operating food co-op in the United States',
-    mainImage: 'assets/images/sites_files/image027.jpg',
+    mainImage: 'assets/images/sites_files/Adamant.jpg',
     thumbnails: [
-      'assets/images/sites_files/sub-icon/image028.jpg',
+      'assets/images/sites_files/sub-icon/Adamant2.jpg',
+      'assets/images/sites_files/sub-icon/Adamant3.jpg',
+      'assets/images/sites_files/Adamant.jpg',
      
     ],
     infoCard: {
@@ -1610,7 +1624,7 @@ What began as an effort to make daily necessities more affordable has evolved in
         title: 'Sustaining Community Through Change',
         content: `While many small grocers have long since disappeared, the Adamant Co-op endures,adapting without abandoning its principles. Its strength lies not in capital but in people: members who volunteer their time, bake bread for the shelves, and gather annually to make collective decisions. Every act of participation reaffirms the co-op’s belief that business can be both sustainable and humane.
 Its model has inspired more than sixty independent food cooperatives across the northeastern United States. Each of these communities, in its own way, carries forward Adamant’s lesson: that small-scale, member-owned enterprises can thrive through trust, transparency, and shared labor.`,
-        image: 'assets/images/sites_files/image027.jpg'
+        image: 'assets/images/sites_files/sub-icon/Adamant3.jpg',
       },
       aditionalData: {
         title: 'Rooted in Place, Guided by People',
@@ -1642,7 +1656,9 @@ Nearly a century after those first eleven families took a collective leap of fai
       }
     }
   }
-},{
+},
+// Kenya Site 
+{
   id: 'coop-university-kenya',
   name: 'The Co-operative University of Kenya, Nurturing Knowledge Through Cooperation,Nairobi, Kenya',
   siteName:'Co-operative University of Kenya, Nairobi, Kenya',
@@ -1655,9 +1671,11 @@ Nearly a century after those first eleven families took a collective leap of fai
   content: {
     pageTitle: 'The Co-operative University of Kenya, Nurturing Knowledge Through Cooperation,Nairobi, Kenya',
     pageSubtitle: 'Roots of a Movement',
-    mainImage: 'assets/images/sites_files/image029.jpg',
+    mainImage: 'assets/images/sites_files/kenya.jpg',
     thumbnails: [
-      'assets/images/sites_files/sub-icon/image030.jpg',
+      'assets/images/sites_files/sub-icon/kenya2.jpg',
+      'assets/images/sites_files/sub-icon/kenya3.jpg',
+      'assets/images/sites_files/kenya.jpg',
     ],
     infoCard: {
       country: 'Kenya',
@@ -1700,7 +1718,7 @@ Through every phase of change, one guiding belief has remained constant: that kn
         title: 'A Campus of Collaboration and Purpose',
         content: `Today, CUK’s campus in Karen blends academic excellence with the collaborative ethos that defines its heritage. Beneath the shade of acacia trees, students move between lecture halls, research centers, and seminar rooms alive with dialogue. Courses range from diploma to doctoral programs, combining business theory, economics, governance, and information technology with the enduring values of cooperation.
 Every aspect of learning at CUK is underpinned by the seven international cooperative principles , voluntary membership, democratic control, economic participation, autonomy, education, inter-cooperation, and concern for community. These ideals are not confined to classrooms; they are lived through the university’s structure, teaching approach, and outreach initiatives.`,
-        image: 'assets/images/sites_files/image029.jpg'
+        image: 'assets/images/sites_files/sub-icon/kenya3.jpg'
       },
       aditionalData: {
         title: 'Education That Builds Communities',
@@ -1941,6 +1959,7 @@ In the words of its founders, “We came not to take, but to build.” Degania A
     mainImage: 'assets/images/sites_files/image036.jpg',
     thumbnails: [
       'assets/images/sites_files/sub-icon/image037.jpg',
+      'assets/images/sites_files/image036.jpg',
     ],
     infoCard: {
       country: 'Palestine',
@@ -1983,7 +2002,7 @@ Today, these traditions live on in the cooperative’s workshops. Artisans colle
         content: `From its inception, the Holy Land Handicraft Cooperative Society has embraced fair trade principles as its moral and economic foundation. It is a guaranteed member of the World Fair Trade Organization (WFTO), committed to ethical production, equitable wages, and environmentally responsible practices.
 The cooperative operates as a network of around 35 member workshops and several collaborating enterprises across the Bethlehem–Beit Sahour region. Together, these artisans support a community of approximately 2,000 people, including women, youth, and persons with disabilities. Through their collective work, families are able to remain in their homeland, sustaining not only livelihoods but a shared sense of identity.
 By eliminating exploitative middlemen and ensuring transparency in pricing and production, HLHCS allows artisans to maintain control over their craft and creative direction. This structure transforms the act of making into a form of self-determination , a quiet assertion of dignity in the face of economic and social challenges.`,
-        image: 'assets/images/sites_files/image036.jpg'
+        image: 'assets/images/sites_files/sub-icon/image037.jpg'
       },
       aditionalData: {
         title: 'Beyond Commerce: A Living Ecosystem',
@@ -2032,7 +2051,8 @@ Through the work of its artisans, the HLHCS tells a story that transcends border
     pageSubtitle: 'A Vision of Justice in the Andalusian Heartland',
     mainImage: 'assets/images/sites_files/image038.jpg',
     thumbnails: [
-      'assets/images/sites_files/sub-icon/image039.jpg'
+      'assets/images/sites_files/sub-icon/image039.jpg',
+      'assets/images/sites_files/image038.jpg'
     ],
     infoCard: {
       country: 'Spain',
@@ -2077,7 +2097,7 @@ Profits are shared equally, and decisions about production, wages, and future pr
         content: `Marinaleda’s cooperative vision extends well beyond its agricultural fields. The town’s approach to housing is perhaps one of its most innovative achievements. Land remains collectively owned, and residents build their own homes with municipal support. They contribute labor and pay a small monthly fee, but cannot sell or speculate on the property. This model ensures that housing remains affordable and secure, rooted in the idea that everyone deserves a place to live,not a commodity to trade.
 Employment, too, follows the cooperative ethos. The town strives for full employment, offering equal pay and collective decision-making through assemblies. In a region long characterized by precarious work and rural poverty, Marinaleda has succeeded in virtually eliminating unemployment through solidarity and shared responsibility.
 At the heart of this system lies direct democracy. Major decisions,from the town budget to infrastructure projects,are debated and decided in open assemblies. Every resident has the right to speak, to question, and to shape the future of their community. It is politics not as performance, but as participation.`,
-        image: 'assets/images/sites_files/image038.jpg'
+        image: 'assets/images/sites_files/sub-icon/image039.jpg'
       },
       aditionalData: {
         title: 'A Living Example of Possibility',
@@ -2125,9 +2145,10 @@ In an era marked by inequality, social fragmentation, and ecological strain, thi
   content: {
     pageTitle: 'Arctic Co-operatives Limited: A Northern Model of Self-Reliance and Shared Strength',
     pageSubtitle: 'Cooperation Rooted in Tradition',
-    mainImage: 'assets/images/sites_files/image041.jpg',
+    mainImage: 'assets/images/sites_files/artic.jpg',
     thumbnails: [
       'assets/images/sites_files/sub-icon/image040.jpg',
+      'assets/images/sites_files/artic.jpg',
      
     ],
     infoCard: {
@@ -2172,7 +2193,7 @@ Over time, ACL developed into a service federation that coordinates bulk purchas
         title: 'Modern Co-ops for Northern Resilience',
         content: `Today, the member co-ops extend far beyond the arts. They operate retail stores, hotels, construction firms, cable and internet providers, outfitters, and property rental services, forming the economic backbone of dozens of Arctic towns. Each cooperative remains locally owned and democratically governed, ensuring that decisions align with the priorities and values of the people they serve rather than distant investors.
 Through these enterprises, Arctic Co-operatives has strengthened local economies while preserving Indigenous traditions of collective leadership and mutual accountability. The federation’s commitment to training and education ensures that leadership and management skills are developed within the communities themselves , an investment in both capacity and confidence.`,
-        image: 'assets/images/sites_files/image041.jpg'
+        image: 'assets/images/sites_files/sub-icon/image040.jpg',
       },
       aditionalData: {
         title: 'Honoring Northern Art and Cultural Identity',
@@ -2222,6 +2243,7 @@ In a world where communities often struggle to balance prosperity with heritage,
     mainImage: 'assets/images/sites_files/image042.jpg',
     thumbnails: [
       'assets/images/sites_files/sub-icon/image043.jpg'
+      ,'assets/images/sites_files/image042.jpg',
     ],
     infoCard: {
       country: 'Denmark',
@@ -2264,7 +2286,7 @@ When the hall finally opened its doors in 1879, it became a sanctuary for educat
         title: 'A House of Democracy and Cooperation',
         content: `Inside these walls, Denmark’s early cooperative movement found its footing. Consumer associations, workers’ bakeries, dairies, and credit co-ops used the Assembly Hall as a common platform for coordination and public meetings. The hall served as a unifying space for the labour movement and the cooperative sector, helping to fuse them into a single progressive force for social change.
 Over time, it earned a reputation as a “house of democracy”, a place where workers learned to govern not only their unions and enterprises but their futures. The discussions and alliances forged here helped lay the groundwork for what would become one of the most advanced welfare states and cooperative economies in the world.`,
-        image: 'assets/images/sites_files/image042.jpg'
+        image: 'assets/images/sites_files/sub-icon/image043.jpg'
       },
       aditionalData: {
         title: 'From Meeting Hall to National Museum',
@@ -2410,6 +2432,7 @@ In a nation celebrated for its urban efficiency, Rochdale Road reminds us of a q
     mainImage: 'assets/images/sites_files/image049.png',
     thumbnails: [
       'assets/images/sites_files/sub-icon/image050.jpg',
+      'assets/images/sites_files/image049.png',
     ],
     infoCard: {
       country: 'Bulgaria',
@@ -2453,7 +2476,7 @@ The seal embodies the Bulgarian cooperative spirit , one rooted not only in econ
         title: 'A Chronicle of National Transformation',
         content: `The museum’s collection extends far beyond objects. It captures how cooperation helped Bulgaria modernize its agriculture, establish credit unions, found consumer stores, and build cultural and educational institutions. During decades of political and economic upheaval, cooperatives served as a stabilizing force, safeguarding dignity and continuity for countless families.
 Even in times of transition , from monarchy to socialism to modern democracy , the cooperative ideal endured, adapting to new realities without losing its moral foundation. The museum honours these transitions not as breaks, but as chapters in a continuous narrative of resilience.`,
-        image: 'assets/images/sites_files/image049.png'
+        image: 'assets/images/sites_files/sub-icon/image050.jpg'
       },
       aditionalData: {
         title: 'A Living Dialogue for the Future',
@@ -2601,7 +2624,8 @@ From the dusty paths of 1920s Kerala to the global stage of social enterprise, U
     pageSubtitle: 'A Museum of Working Lives and Shared Struggles',
     mainImage: 'assets/images/sites_files/image051.jpg',
     thumbnails: [
-      'assets/images/sites_files/sub-icon/image052.jpg'
+      'assets/images/sites_files/sub-icon/image052.jpeg',
+      'assets/images/sites_files/image051.jpg',
     ],
     infoCard: {
       country: 'Finland',
@@ -2647,7 +2671,7 @@ The Finnish Labour Museum Werstas embraces this cooperative heritage as part of 
         title: 'Living Heritage: From Factory Floor to Community Forum',
         content: `Among Werstas’ most engaging features is its “Our Town” exhibition, which recreates the daily life of working communities. Visitors can explore spaces that evoke early cooperative shops, volunteer printing presses, and communal meeting halls,living reminders that cooperation was never confined to boardrooms or balance sheets, but woven into the fabric of everyday life.
 This immersive approach makes Werstas not just a museum, but a living classroom of civil society. It bridges past and present, showing how Finland’s social democracy, trade unions, and cooperative enterprises all grew from the same grassroots belief: that collective action could build a fairer world.`,
-        image: 'assets/images/sites_files/image051.jpg'
+        image: 'assets/images/sites_files/sub-icon/image052.jpeg'
       },
       aditionalData: {
         title: 'Work, Cooperation, and Civil Identity',
@@ -2694,10 +2718,10 @@ In the story Werstas tells,of factory and co-op, of labour and democracy,lies th
   content: {
     pageTitle: 'Cooperativa Ceramica d’Imola – Imola, Italy',
     pageSubtitle: 'A Century and a Half of Craft, Cooperation, and Community',
-    mainImage: 'assets/images/sites_files/image055.jpg',
+    mainImage: 'assets/images/sites_files/mola2.jpeg',
     thumbnails: [
-      'assets/images/sites_files/sub-icon/image056.jpg',
-      'assets/images/sites_files/sub-icon/image057.jpg'
+      'assets/images/sites_files/mola.jpeg',
+      'assets/images/sites_files/mola2.jpeg',
     ],
     infoCard: {
       country: 'Italy',
@@ -2741,7 +2765,7 @@ Yet even as its markets have expanded, the cooperative has remained faithful to 
         title: 'The Museum: Memory and Meaning',
         content: `To celebrate and preserve this remarkable heritage, the cooperative established the G. Bucci Museum and Historical Archive in 1979. Housed in an eighteenth-century glassworks, the museum chronicles the evolution of the cooperative through rare ceramic art, early machinery, archival photographs, and design sketches. It also highlights the cooperative’s social dimension  education, welfare, and culture  showing how artistry, labour, and solidarity have been intertwined since the nineteenth century.
 Visitors to the museum witness the dialogue between past and present: from the hand-painted majolica of the 1870s to the digital design studios of today. It is a space that honours generations of worker-members whose skill and unity built not only a company, but a community of purpose.`,
-        image: 'assets/images/sites_files/image055.jpg'
+        image: 'assets/images/sites_files/mola.jpeg',
       },
       aditionalData: {
         title: 'A Living Heritage',
@@ -2787,7 +2811,7 @@ For the global cooperative movement, Imola remains an emblem of enduring solidar
   content: {
     pageTitle: 'Deutsches Genossenschaftsmuseum (Delitzsch) and  Raiffeisenmuseum (Flammersfeld), Germany',
     pageSubtitle: 'The Urban Beginning – Schulze-Delitzsch and the Birth of the Modern Cooperative ',
-    mainImage: 'assets/images/sites_files/image058.jpg',
+    mainImage: 'assets/images/sites_files/germany.jpeg',
     thumbnails: [
       'assets/images/sites_files/sub-icon/image059.jpg',
       'assets/images/sites_files/sub-icon/image060.jpg',
@@ -2884,8 +2908,10 @@ Though their contexts differed, their principles converged: mutual trust, shared
   content: {
     pageTitle: ' Institut Koperasi Malaysia (IKMa) Cooperative Archive, Petaling Jaya, Malaysia',
     pageSubtitle: 'Institut Koperasi Malaysia: Educating a Nation in Cooperation',
-    mainImage: 'assets/images/sites_files/image018.jpg',
-    thumbnails: [
+    mainImage: 'assets/images/sites_files/malasiya.jpeg',
+     thumbnails: [
+      'assets/images/sites_files/malasiya.jpeg',
+      'assets/images/sites_files/image018.jpg',
     ],
     infoCard: {
       country: 'Malaysia',
@@ -2989,7 +3015,7 @@ Its enduring message remains clear: cooperation, when informed by knowledge and 
   content: {
     pageTitle: 'Otalora Cooperative Development Centre of the Mondragon Corporation, Spain',
     pageSubtitle: 'The Heart of the World’s Leading Cooperative Ecosystem',
-    mainImage: 'assets/images/sites_files/image053.jpg',
+    mainImage: 'assets/images/sites_files/Mondragon.jpg',
     thumbnails: [
       'assets/images/sites_files/sub-icon/image054.jpg',
     ],
@@ -3035,7 +3061,7 @@ In every Mondragon enterprise, workers are not employees but co-owners. They ele
         title: 'Otalora: The Living School of Cooperation',
         content: `Otalora serves as Mondragon’s beating heart  a place where cooperative identity is cultivated and passed on. It hosts study visits, leadership programmes, and seminars for cooperative managers, educators, and international visitors. In its halls, participants encounter not only economic principles but the lived philosophy of solidarity: the idea that wealth and responsibility should be shared.
 Visitors who walk through Otalora find a blend of history and innovation  ancient stone walls surrounding classrooms equipped with modern tools for learning and dialogue. The centre reflects the essence of Mondragon itself: a union of tradition and progress, rooted in people and community.`,
-        image: 'assets/images/sites_files/image053.jpg'
+        image: 'assets/images/sites_files/sub-icon/image054.jpg'
       },
       aditionalData: {
         title: 'A Legacy of Hope and Humanism',

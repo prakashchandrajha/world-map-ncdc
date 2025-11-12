@@ -123,21 +123,25 @@
   </section>
 }
 @case ('designB') {
- <section class="mx-auto max-w-[1240px] min-w-[280px] py-6 px-3 sm:px-6 md:px-8 lg:px-16 font-[Poppins]">
-  <div class="max-w-6xl mx-auto bg-white rounded-xl overflow-hidden flex flex-col md:flex-row items-start transition-all duration-500 hover:shadow-md">
-    
-    <!-- Image -->
-    <div class="md:w-[45%] w-full relative">
+<section class="mx-auto max-w-[1200px] min-w-[280px] py-6 px-3 sm:px-6 md:px-8 lg:px-16 font-[Poppins]">
+  <div class="max-w-6xl mx-auto bg-white rounded-xl overflow-hidden flex flex-col md:flex-row items-start transition-all duration-500 hover:shadow-md relative">
+
+    <!-- Image + Overlay Text Container -->
+    <div class="md:w-[25%] w-full relative">
       <img
         src="../../../assets/images/gome2nd.png"
         alt="Section illustration"
         class="w-full h-[180px] md:h-[240px] lg:h-[280px] object-cover rounded-tl-4xl"
       />
+      <!-- Overlay Text -->
+      <div class="absolute bottom-0 left-0 right-0 bg-[#8D1558] text-[white] text-[8px] font-['Inter'] leading-tight p-2 text-center">
+        November 3, 1913. Inauguration of the Fontanone Hydroelectric<br>
+        Plant, the development engine of the Alto But in Friuli, Italy
+      </div>
     </div>
 
     <!-- Text Container -->
     <div class="flex-1 border border-[#8D1558]/30 p-4 md:p-6 lg:p-14 rounded-tr-xl rounded-br-xl flex flex-col justify-between relative h-[180px] md:h-[240px] lg:h-[280px]">
-      
       <div>
         <!-- Title -->
         <h4
@@ -152,18 +156,13 @@
         >
           {{ section.title }}
         </h4>
-
         <!-- Description -->
         <p class="font-normal text-[14px] sm:text-[15px] leading-relaxed text-[#8D1558] font-['Inter'] mb-4">
           {{ section.desc }}
         </p>
       </div>
-
       <!-- Bottom section: Button + Date -->
       <div class="flex items-end justify-between mt-auto">
-        <!-- Bottom-left date -->
-        
-
         <!-- Bottom-right button -->
         <button
           (click)="openModal(section)"
@@ -189,18 +188,10 @@
           </svg>
         </button>
       </div>
-      
-
     </div>
-
   </div>
-  <div class="text-[12px] text-[white] bg-[#8D1558] font-['Inter'] leading-tight mb-0">
-    <p >
-          November 3, 1913. Inauguration of the Fontanone Hydroelectric Plant, the development engine of the Alto But in Friuli, Italy
-        </p>
-  </div>
-  
 </section>
+
 
 
 }
@@ -257,21 +248,21 @@
      
     </div>
 
-    <div class="flex flex-col justify-between items-end mt-auto p-6 pt-0 text-black">
+    <!-- <div class="flex flex-col justify-between items-end mt-auto p-6 pt-0 text-black">
       <div class="h-4 w-full"></div>
-    </div>
+    </div> -->
   </div>
 </section>
 
 
 
   <section 
-  class="relative w-full mt-20 py-16 px-6 sm:px-8 lg:px-12 text-center bg-[rgba(181,172,161,0.2)]"
+  class="relative w-full mt-5 py-5 px-6 sm:px-8 lg:px-12 text-center bg-[rgba(181,172,161,0.2)]"
 >
   <div class="max-w-4xl mx-auto">
     <h2 
       class="font-['Noto_Sans'] font-bold text-[#8D1558]
-             text-[28px] sm:text-[32px] md:text-[28px]
+             text-[28px] sm:text-[32px] md:text-[25px]
              leading-snug max-w-[900px] mx-auto"
     >
       {{ 'home.did_you_know' | translate }}
@@ -280,7 +271,7 @@
 
     <div class="mt-12 flex justify-center">
       <a
-        routerLink="/criteriaAndNomination"
+        routerLink="/about"
         class="flex items-center justify-center gap-2
                px-5 sm:px-6 md:px-8 py-2.5 sm:py-3
                w-[160px] h-[40.93px]
@@ -344,7 +335,7 @@
       routerLink="/tangible"
       class="mt-3 px-3 py-1 rounded-full text-white text-sm font-medium bg-[#7a004a] hover:bg-[#5c0037] border border-[#7a004a] w-full shadow-sm transition-colors duration-300"
     >
-{{ 'home.read_more' | translate }}
+{{ 'home.view_all' | translate }}
     </button>
   } @else {
     <!-- Intangible Heritage Section -->
@@ -417,9 +408,9 @@
     </p>
 </div>
 
-<section class="flex justify-center items-center  mt-[50px] font-[Poppins] px-4">
+<section class="flex justify-center items-center mt-[50px] font-[Poppins] px-4">
   <div
-    class="w-full max-w-[1200px] group bg-gradient-to-br  transition-all duration-1000 flex flex-col relative overflow-hidden rounded-2xl cursor-pointer"
+    class="w-full max-w-[1200px] group bg-gradient-to-br transition-all duration-1000 flex flex-col relative overflow-hidden rounded-2xl"
   >
     <!-- Responsive Image -->
     <img 
@@ -432,13 +423,56 @@
     <div class="flex justify-center items-center py-6">
       <button
         class="py-2 border-2 border-[#7a004a] text-[#7a004a] font-semibold rounded-full px-8
-               hover:bg-[#7a004a] hover:text-white transition-colors duration-300"
-        routerLink="/toolkit"
+               hover:bg-[#7a004a] hover:text-white transition-colors duration-300 cursor-pointer"
+        (click)="openReadMoreModal()"
       >
-{{ 'home.read_more' | translate }}
+        {{ 'home.read_more' | translate }}
       </button>
     </div>
   </div>
+</section>
+
+<!-- Modal -->
+<div 
+  *ngIf="isReadMoreModalOpen" 
+  class="fixed inset-0  bg-opacity-50 flex justify-center items-center z-50"
+  (click)="closeReadMoreModalOutside($event)"
+>
+  <div class="bg-white rounded-2xl shadow-xl p-8 max-w-lg w-[90%] relative">
+    <!-- Close Button -->
+    <button 
+      (click)="closeReadMoreModal()" 
+      class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl font-bold"
+    >
+      &times;
+    </button>
+
+    <!-- Modal Content -->
+    <h2 class="text-xl font-semibold text-[#7a004a] mb-4">{{ 'home.criteria_title' | translate }}</h2>
+    <p class="text-gray-700 leading-relaxed mb-6">
+      {{ 'home.criteria_desc' | translate }}
+    </p>
+
+    <div class="flex justify-center">
+      <button
+        class="py-2 px-6 border-2 border-[#7a004a] text-[#7a004a] font-semibold rounded-full
+               hover:bg-[#7a004a] hover:text-white transition-colors duration-300"
+        routerLink="/criteriaAndNomination"
+        (click)="closeReadMoreModal()"
+      >
+        {{ 'home.read_more' | translate }}
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="flex justify-center items-center mt-10">
+<iframe width="550" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
 </section>
 
         </div>

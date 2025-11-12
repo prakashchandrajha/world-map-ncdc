@@ -4,7 +4,7 @@
   [titleText2]="config.subtitle">
 </app-banner>
 
-<section class="ml-4 sm:ml-8 md:ml-16 lg:ml-32 xl:ml-[340px]">
+<section class="ml-4 sm:ml-8 md:ml-16 lg:ml-32 xl:ml-[250px]">
   <!-- Back Button -->
   <section class="py-4 sm:py-6 px-4 sm:px-8 lg:px-16 font-[Poppins] min-h-[60vh]">
     <button
@@ -217,13 +217,13 @@
       </h1>
      <ul class="list-disc pl-5 text-gray-700">
   <li *ngFor="let resource of content.sections.learnMore.resources">
-    <a 
+   {{ 'heritage_detail.official_website' | translate }} <a 
       [href]="resource" 
        
       rel="noopener noreferrer" 
       class="text-purple-900 hover:underline"
     >
-{{ 'heritage_detail.official_website' | translate }} {{ resource }}
+ {{ resource }}
     </a>
   </li>
 </ul>

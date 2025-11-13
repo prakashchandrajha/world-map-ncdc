@@ -1047,7 +1047,7 @@ In Toad Lane’s quiet rooms and Holyoake House’s reading halls, the same mess
           learnMore: {
             title: 'Learn More',
             resources: [
-              'https://www.rochdalepioneersmuseum.coop/'
+              'https://www.co-operativeheritage.coop/'
             ]
           }
         }

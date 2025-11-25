@@ -23,7 +23,7 @@ export class MembersComponent implements OnInit {
         organization: 'President, Organization of Brazilian Cooperatives, Brazil',
         country: '',
         category: 'workingGroup',
-        image: '../../../../../assets/images/m1.jpg'
+        image: '../../../../../assets/images/mem/MarcioLopes.jpg'
       },
       {
         name: 'Ms. Aicha Errifaai',
@@ -32,7 +32,7 @@ export class MembersComponent implements OnInit {
         organization: 'Office of Cooperation Development, Morocco',
         country: '',
         category: 'workingGroup',
-        image: '../../../../../assets/images/ladya.jpg'
+        image: '../../../../../assets/images/mem/Aicha.jpg'
       },
       {
         name: 'Dr. Andreas Wieg',
@@ -41,7 +41,7 @@ export class MembersComponent implements OnInit {
         organization: 'DGRV - Deutscher Genossenschafts- und Raiffeisenverband e.V., Germany',
         country: '',
         category: 'workingGroup',
-        image: '../../../../../assets/images/m3.jpg'
+        image: '../../../../../assets/images/mem/Andreas.jpg'
       },
       {
         name: 'Ms. Ebun Akin-Falaiye',
@@ -50,7 +50,7 @@ export class MembersComponent implements OnInit {
         organization: 'Cooperative Federation of Nigeria',
         country: '',
         category: 'workingGroup',
-        image: '../../../../../assets/images/m4.jpg'
+        image: '../../../../../assets/images/mem/Ebun.jpg'
       },
       {
         name: 'Mr. Rohit Gupta',
@@ -59,7 +59,7 @@ export class MembersComponent implements OnInit {
         organization: 'National Cooperative Development Corporation, India',
         country: '',
         category: 'workingGroup',
-        image: '../../../../../assets/images/m5.jpg'
+        image: '../../../../../assets/images/mem/Rohit.jpg'
       },
       {
         name: 'Mr. Osamu Nakano',
@@ -68,7 +68,7 @@ export class MembersComponent implements OnInit {
         organization: 'Japan Workers’ Cooperative Union, Japan',
         country: '',
         category: 'workingGroup',
-        image: '../../../../../assets/images/m6.jpg'
+        image: '../../../../../assets/images/mem/Osamu.jpg'
       },
       {
         name: 'Ms. Liz McIvor',
@@ -77,7 +77,7 @@ export class MembersComponent implements OnInit {
         organization: 'The Co-operative Heritage Trust, United Kingdom',
         country: '',
         category: 'workingGroup',
-        image: '../../../../../assets/images/m7.jpg'
+        image: '../../../../../assets/images/mem/Liz.jpg'
       },
       {
         name: 'Mr. Tiago Luiz Schmidt',
@@ -86,7 +86,7 @@ export class MembersComponent implements OnInit {
         organization: 'Sicredi Pioneira, Brazil',
         country: '',
         category: 'workingGroup',
-        image: '../../../../../assets/images/m8.jpg'
+        image: '../../../../../assets/images/mem/Tiago.jpg'
       },
       {
         name: 'Mr. Erbin Crowell',
@@ -104,7 +104,7 @@ export class MembersComponent implements OnInit {
         organization: 'International Cooperative Alliance CCH-WG Technical Team',
         country: '',
         category: 'workingGroup',
-        image: '../../../../../assets/images/Picture3qq.jpg'
+        image: '../../../../../assets/images/mem/Jeroen.jpg'
       },
 
 

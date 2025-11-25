@@ -27,7 +27,7 @@ export class SitesService {
     {
       id: 'maison-alphonse-desjardins',
       name: 'Maison Alphonse-Desjardins',
-      siteName: 'Maison Alphonce-Desjardins',
+      siteName: 'Maison Alphonse-Desjardins',
       coopYear: 2025,
       lat: 46.80942,
       lng: -71.18206,
@@ -121,8 +121,8 @@ Through its commitment to education, preservation, and interpretation, the Socie
     // Brazil Site
     {
       id: 'theodor-amstad-monument',
-      name: 'Monumento ao Cooperativismo: A Living Symbol in Nova Petrópolis, Brazil',
-      siteName:'Monumento ao Cooperativismo: A Living Symbol in Nova Petrópolis, Brazil',
+      name: 'Linha Imperial and Monumento A Força Cooperativa, in Nova Petrópolis',
+      siteName:'Linha Imperial and Monumento A Força Cooperativa, in Nova Petrópolis',
       coopYear: 2025,
       lat: -29.3804,
       lng: -51.1087,
@@ -130,7 +130,7 @@ Through its commitment to education, preservation, and interpretation, the Socie
       continent: 'South America',
       type: 'tangible',
       content: {
-        pageTitle: 'Monumento ao Cooperativismo: A Living Symbol in Nova Petrópolis, Brazil',
+        pageTitle: 'Linha Imperial and Monumento A Força Cooperativa, in Nova Petrópolis',
         pageSubtitle: 'A city celebrated as Brazil’s Capital Nacional do Cooperativismo (National Capital of Cooperativism)',
         mainImage: 'assets/images/sites_files/sub-icon/brazilM.png',
         thumbnails: [
@@ -651,8 +651,8 @@ Among its most powerful projects is “Unsung Heroes,” a storytelling initiati
       name: 'Al Amal and other Women led cooperatives in the Argan Oil Sector in Morocco',
       siteName: 'Al Amal and other Women led cooperatives in the Argan Oil Sector in Morocco',
       coopYear: 2025,
-      lat: 30.3967,
-      lng: 9.6849,
+      lat: 29.7090,
+      lng: -8.4314,
       country: 'Morocco',
       continent: 'Africa',
       type: 'tangible',
@@ -1564,7 +1564,7 @@ The Co-operative Museum of Samuel Jurkovič is thus not only a repository of his
 {
   id: 'adamant-food-coop',
   name: 'Adamant Food Co-op (1935), Adamant, Vermont (USA) - The oldest continuously operating food co-op in the United States',
-  siteName:'Oldest Continuously Operating Food Co-op in the United States',
+  siteName:'Adamant Food Co-op',
   coopYear: 2025,
   lat: 44.3167,
   lng: -72.5333,
@@ -2797,14 +2797,14 @@ For the global cooperative movement, Imola remains an emblem of enduring solidar
     }
   }
 },
-
+//Germany Site                                                                                                            
 {
   id: 'birthplaces-germany',
   name: 'Birthplaces of Cooperation in Germany: Delitzsch and Flammersfeld',
   siteName:'Deutsches Genossenschaftsmuseum (Delitzsch) and Raiffeisenmuseum (Flammersfeld), Germany',
   coopYear: 2025,
-  lat:  51.5221,
-  lng: 12.3345,
+  lat:  51.5255661,
+  lng: 12.342857,
   country: 'Germany',
   continent: 'Europe',
   type: 'tangible',
@@ -2893,7 +2893,102 @@ Though their contexts differed, their principles converged: mutual trust, shared
     }
   }
 },
+// Germany Site           
+{
+  id: 'birthplaces-germany1',
+  name: 'Raiffeisen Museum',
+  siteName:'Raiffeisen Museum',
+  coopYear: 2025,
+  lat:  50.63333,
+  lng: 7.55,
+  country: 'Germany',
+  continent: 'Europe',
+  type: 'tangible',
+  content: {
+    pageTitle: 'Raiffeisen Museum, Germany',
+    pageSubtitle: ' ',
+    mainImage: 'assets/images/sites_files/germanyBanner.jpeg',
+    thumbnails: [
+      'assets/images/sites_files/sub-icon/image059.jpg',
+      'assets/images/sites_files/sub-icon/image060.jpg',
+    ],
+    infoCard: {
+      country: 'Germany',
+      countryFlag: 'assets/images/sites_files/country-img/Germany.png',
+      theme: 'Musuem of Cooperation',
+      entryYear: 2025,
+      coordinates: '51.0753, 10.0034'
+    },
+    sections: {
+      legacy: {
+        title: 'The Urban Beginning – Schulze-Delitzsch and the Birth of the Modern Cooperative',
+        content: `In the quiet Saxon town of Delitzsch, the modest house at Kreuzgasse 10 witnessed an event that would shape economic history. In 1849, fifty-seven shoemakers, led by Hermann Schulze-Delitzsch, founded what is widely regarded as the first successful modern craft and producer cooperative in Germany. Their goal was simple yet revolutionary , to achieve dignity, self-reliance, and economic justice through collective effort.
+Today, that same building hosts the Deutsches Genossenschaftsmuseum (Schulze-Delitzsch-Haus), a museum devoted to the origins of cooperative self-help. Within its walls, visitors step into the working world of 19th-century artisans: workshops filled with tools, leather, bindery presses, and documents that evoke the determination of ordinary craftspeople who chose self-help over dependence. Interactive exhibits trace how their experiment in mutual support became a model for cooperatives around the world.
+Schulze-Delitzsch’s guiding principles , Selbsthilfe, Selbstverantwortung, Selbstverwaltung (self-help, self-responsibility, self-administration) , still resonate through the museum’s narrative. Each exhibit illustrates how these ideals transformed not only Germany’s craft economy but also inspired cooperative systems across Europe and beyond. Visiting Delitzsch is thus not just a lesson in history but a reflection on how community and enterprise can coexist in balance.`
+      },
+      criteria: {
+        title: 'Featured Criteria ',
+        items: [
 
+          {
+            heading: 'Criterion 1. Historical Significance',
+            description: 'The Schulze-Delitzsch-Haus marks the birthplace of the first successful modern craft cooperative (1849), and the Raiffeisenhaus the birthplace of the rural credit cooperative movement (1849).'
+          },
+          {
+                heading: 'Criterion 2. Connection to Cooperative Pioneers or Communities',
+                description: 'Sites must demonstrate a tangible link to cooperative pioneers, enterprises, federations, or communities that shaped cooperative practice and identity.'
+              }
+,
+{
+                heading: 'Criterion 4. Active Cooperative Connection',
+                description: 'Sites must either remain in operation as cooperatives or be explicitly dedicated to preserving and interpreting cooperative history.'
+              }
+
+        ]
+      },
+      community: {
+        title: 'The Rural Counterpart – Raiffeisen and the Power of Mutual Aid',
+        content: `While Schulze-Delitzsch was shaping cooperation in urban workshops, a different revolution was taking root in the rural heart of the Westerwald region. In the small village of Flammersfeld, Friedrich Wilhelm Raiffeisen, then the local mayor, founded in 1849 the “Flammersfelder Hülfsverein zur Unterstützung unbemittelter Landwirthe” (Aid Association for Impoverished Farmers). This initiative marked the birth of rural credit cooperatives , organisations that enabled farmers to pool resources, access credit, and free themselves from usury and debt.
+The historic timber-framed house where Raiffeisen lived and worked now houses the Deutsches Raiffeisenmuseum (Raiffeisenhaus Flammersfeld). Here, visitors encounter the intimate world of 19th-century rural life , rooms preserved with original furnishings, farm tools, ledgers, and photographs that tell the story of how cooperation became a lifeline for small farmers. Exhibits show how Raiffeisen’s vision grew from a local initiative into a global cooperative credit movement, laying the groundwork for institutions that still empower millions today.
+More than an agricultural tale, the museum presents a profound social lesson: that real change often begins in the smallest of communities. Raiffeisen’s belief that collective strength could overcome individual hardship continues to inspire cooperative credit systems worldwide.`
+      },
+      virtualExperience: {
+        title: 'Two Visions, One Legacy',
+        content: `Together, Delitzsch and Flammersfeld represent the twin origins of Germany’s cooperative heritage , one urban and industrial, the other rural and agrarian.
+Schulze-Delitzsch’s model empowered artisans and small producers through democratic self-management, while Raiffeisen’s approach provided social and economic security for farmers through shared credit.
+Though their contexts differed, their principles converged: mutual trust, shared responsibility, and democratic participation. Both men believed that cooperation could be the foundation of social progress , a belief that would spread from Germany to every continent, influencing cooperative banks, consumer co-ops, housing societies, and fair-trade networks across the world.`,
+        image: 'assets/images/sites_files/image058.jpg'
+      },
+      aditionalData: {
+        title: 'A Call to Solidarity',
+        content: `Visiting these two museums is to journey to the birthplaces of modern cooperation, where ideas forged by shoemakers and farmers continue to shape economies and communities today. Together, the Schulze-Delitzsch Haus in Delitzsch and the Raiffeisenhaus in Flammersfeld stand as living memorials to solidarity, reminding us that the power to build a fairer society begins when people choose to work together.`
+      },
+      aditionalData2: {
+        title: '',
+        content: ``
+      },
+      aditionalDat3: {
+        title: '',
+        content: ``
+      },
+      aditionalDat4: {
+        title: '',
+        content: ``
+      },
+      aditionalDat5: {
+        title: '',
+        content: ``
+      },
+      learnMore: {
+        title: 'Learn More',
+        resources: [
+          'https://genossenschaftsmuseum.de/museum/',
+          'https://www.raiffeisen-gesellschaft.de/content/Raiffeisen_Gesellschaft-MS/de/homepage/Raiffeisen_besuchen/raiffeisenhaus_flammersfeld.html'
+        ]
+      }
+    }
+  }
+},
 // Malaysia Site
 {
   id: 'maktab-koperasi-malaysia',

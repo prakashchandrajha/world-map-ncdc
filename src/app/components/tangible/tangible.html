@@ -2,14 +2,14 @@
   [titleText]="'tangible.title' | translate"
   [titleText2]="'tangible.subtitle' | translate"
   ></app-banner>
-<p class="mt-10 text-left text-gray-700 text-lg font-[Poppins] max-w-6xl mx-auto mb-6">
+<p class="mt-10 text-left text-gray-700 text-lg font-[Poppins] max-w-6xl mx-auto mb-6 px-4">
 {{ 'tangible.description' | translate }}
 </p><section
   class="flex justify-center items-start py-10 px-6   mt-10"
 >
 <p></p>
   <div
-    class="w-full max-w-6xl bg-white rounded-2xl shadow-xl p-8 border-4 border-transparent bg-clip-border"
+    class="w-full max-w-6xl bg-white rounded-2xl shadow-xl p-4 md:p-8 border-4 border-transparent bg-clip-border"
     style="border-image: linear-gradient(135deg, #7a004a, #ff77a9) 1"
   >
 
@@ -119,8 +119,8 @@
 
 
 
-<section class="flex items-center px-4 mt-[100px] ml-[20%]">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-8xl">
+<section class="flex justify-center px-4 mt-10 md:mt-20">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-7xl mx-auto">
 
     <!-- Loop through Tangible Heritage cards -->
     @for (card of cards; track $index) {

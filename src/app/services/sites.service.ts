@@ -1857,7 +1857,7 @@ In every sense, Levigliani is more than a village , it is a living cooperative, 
   lat: 32.7080,
   lng: 35.5747,
   country: 'Israel',
-  continent: 'Asia',
+  continent: 'Europe',
   type: 'tangible',
   content: {
     pageTitle: 'Kibbutz Degania Alef: The Mother of the Kibbutzim',

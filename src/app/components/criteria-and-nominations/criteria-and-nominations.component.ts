@@ -13,6 +13,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class CriteriaAndNominationsComponent implements OnInit {
   criteria: Criterion[] = [];
+  isComingSoonModalOpen = false;
 
   constructor(
     private criteriaService: CriteriaAndNominationsService,
@@ -36,5 +37,20 @@ export class CriteriaAndNominationsComponent implements OnInit {
 
   trackByCriterionId(index: number, criterion: Criterion): number {
     return criterion.id;
+  }
+
+  openComingSoonModal(): void {
+    this.isComingSoonModalOpen = true;
+  }
+
+  closeComingSoonModal(): void {
+    this.isComingSoonModalOpen = false;
+  }
+
+  closeComingSoonModalOutside(event: MouseEvent): void {
+    const target = event.target as HTMLElement;
+    if (target.classList.contains('fixed')) {
+      this.isComingSoonModalOpen = false;
+    }
   }
 }

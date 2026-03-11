@@ -97,7 +97,10 @@
     "nomination_desc": "Access the form to nominate elements of Cooperative Cultural Heritage from your country. Please feel free to contact",
     "nomination_email": "help@culturalheritage.coop",
     "nomination_contact": "if you need any assistance or support.",
-    "access_form": "Access form"
+    "access_form": "Access form",
+    "coming_soon": "Coming Soon",
+    
+    "close": "Close"
   },
   "events": {
     "title": "Cooperative Cultural <br> Heritage Events",

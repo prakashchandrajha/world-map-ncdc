@@ -100,11 +100,36 @@
       {{ 'criteria.nomination_contact' | translate }}
     </p>
 
-    <a
-      routerLink="/nomination"
+    <button
+      (click)="openComingSoonModal()"
       class="inline-flex items-center justify-center px-8 py-3 rounded-full font-medium bg-[#8D1558] text-white hover:bg-[#731147] transition-colors shadow-sm"
     >
       {{ 'criteria.access_form' | translate }}
-    </a>
+    </button>
+
+<!-- Coming Soon Modal -->
+<div 
+  *ngIf="isComingSoonModalOpen" 
+  class="fixed inset-0 bg-white/70 flex justify-center items-center z-50"
+  (click)="closeComingSoonModalOutside($event)"
+>
+  <div class="bg-white rounded-2xl shadow-xl p-8 max-w-lg w-[90%] relative">
+    <!-- Close Button -->
+    <button 
+      (click)="closeComingSoonModal()" 
+      class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl font-bold"
+    >
+      &times;
+    </button>
+
+    <!-- Modal Content -->
+ <h2 class="text-5xl font-extrabold text-[#7a004a] text-center mb-6 tracking-wide">
+  {{ 'criteria.coming_soon' | translate }}
+</h2>
+   
+
+  
+  </div>
+</div>
   </div>
 </section>

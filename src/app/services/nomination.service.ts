@@ -88,7 +88,7 @@ export interface FormSummary {
   providedIn: 'root'
 })
 export class NominationService {
-  private apiUrl = 'http://localhost:8080/api/forms';
+  private apiUrl = 'https://www.culturalheritage.coop/cch/api/forms';
 
   constructor(private http: HttpClient) { }
 

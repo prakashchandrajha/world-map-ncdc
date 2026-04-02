@@ -58,15 +58,13 @@ These elements, more often than not, inscribed by the United Nations Education, 
     if (!text || text.trim() === '') return text;
 
     try {
-      const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=AIzaSyC-U0ZsN3yMFgXUqrEu72N_3iAQZO2IkyU&q=${encodeURIComponent(text)}&target=${targetLang}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      });
+      const response = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`);
 
       const data = await response.json();
-      return data.data.translations[0].translatedText;
+      if (data && data[0]) {
+        return data[0].map((item: any) => item[0]).join('');
+      }
+      return text;
     } catch (error) {
       console.error('Translation error:', error);
       return text; // Return original text if translation fails

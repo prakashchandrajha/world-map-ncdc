@@ -7,7 +7,7 @@ export class CustomTranslateLoader implements TranslateLoader {
 
   private apiKey = 'AIzaSyAHGM8vXKWHNDzIZramCtpeopYL3M28pOM'; // replace later
   private baseUrl = 'https://translation.googleapis.com/language/translate/v2';
-  private cacheVersion = 'v1'; // change if en.json changes
+  private cacheVersion = 'v2'; // change if en.json changes
 
   constructor(private http: HttpClient) {}
 
@@ -37,25 +37,31 @@ export class CustomTranslateLoader implements TranslateLoader {
 
           const translatedObject: any = {};
           
-          // Translate all values by joining with a special delimiter
-          const delimiter = ' \n\n ';
-          const combinedText = values.join(delimiter);
-          
-          const response = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${lang}&dt=t&q=${encodeURIComponent(combinedText)}`);
-          const data = await response.json();
-          
-          let translatedCombined = '';
-          if (data && data[0]) {
-            translatedCombined = data[0].map((item: any) => item[0]).join('');
+          const translatedValues: string[] = [];
+          for (const text of values) {
+            if (!text || typeof text !== 'string') {
+              translatedValues.push(text as string);
+              continue;
+            }
+            try {
+              const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${lang}&dt=t&q=${encodeURIComponent(text)}`);
+              const data = await res.json();
+              let translated = text;
+              if (data && data[0]) {
+                translated = data[0].map((item: any) => item[0]).join('');
+              }
+              translatedValues.push(translated);
+            } catch (error) {
+              console.error('Individual translation error:', error);
+              translatedValues.push(text);
+            }
           }
-          
-          const translatedValues = translatedCombined.split(delimiter.trim());
           
           keys.forEach((key, index) => {
             this.setObjectProperty(
               translatedObject,
               key,
-              translatedValues[index] ? translatedValues[index].trim() : values[index]
+              translatedValues[index]
             );
           });
 

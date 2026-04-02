@@ -15,6 +15,7 @@ export interface NominationForm {
   officialName: string;
   localName: string;
   otherNames: string;
+  heritageCategory?: 'tangible' | 'intangible';
   // Section C
   tangible: boolean;
   intangible: boolean;
@@ -62,14 +63,17 @@ export interface NominationForm {
   // Section P
   lettersConsentFile?: string;
   photosFile?: string;
-  video: boolean;
   archivalMaterialsFile?: string;
+  video?: boolean;
+  videoFile?: string;
   referencesFile?: string;
   // Section Q
   declarantName: string;
   declarantDesignation: string;
   declarantOrganization: string;
   declarationDate: string;
+  icaMember?: 'yes' | 'no';
+  icaAffiliated?: 'yes' | 'no';
   // Metadata
   submissionDate?: string;
   createdAt?: string;

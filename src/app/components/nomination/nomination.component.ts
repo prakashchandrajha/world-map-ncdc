@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NominationService, NominationForm } from '../../services/nomination.service';
 import { Banner } from '../../shared/banner/banner';
 
@@ -14,7 +14,7 @@ export class NominationComponent {
   nominationForm: FormGroup;
   showSuccessModal = false;
   isSubmitting = false;
-  selectedFiles: { [key: string]: File } = {};
+  selectedFiles: { [key: string]: File | File[] } = {};
 
   constructor(
     private fb: FormBuilder,
@@ -37,8 +37,9 @@ export class NominationComponent {
       localName: [''],
       otherNames: [''],
       // Section C
-      tangible: [false],
-      intangible: [false],
+  heritageCategory: ['', Validators.required],
+  icaMember: ['', Validators.required],
+  icaAffiliated: ['', Validators.required],
       // Section D
       communities: [''],
       // Section E
@@ -81,7 +82,7 @@ export class NominationComponent {
       // Section O
       documentationInventories: [''],
       // Section P
-      video: [false],
+  video: [false],
       // Section Q
       declarantName: [''],
       declarantDesignation: [''],
@@ -91,9 +92,13 @@ export class NominationComponent {
   }
 
   onFileChange(event: any, fieldName: string): void {
-    const file = event.target.files[0];
-    if (file) {
-      this.selectedFiles[fieldName] = file;
+    const files: FileList = event.target.files;
+    if (files && files.length > 0) {
+      if (fieldName === 'photos') {
+        this.selectedFiles[fieldName] = Array.from(files);
+      } else {
+        this.selectedFiles[fieldName] = files[0];
+      }
     } else {
       delete this.selectedFiles[fieldName];
     }
@@ -103,36 +108,50 @@ export class NominationComponent {
     if (this.nominationForm.valid && !this.isSubmitting) {
       this.isSubmitting = true;
       const formValue = this.nominationForm.value;
+      const payload = {
+        ...formValue,
+        tangible: formValue.heritageCategory === 'tangible',
+        intangible: formValue.heritageCategory === 'intangible',
+      };
+
+      delete payload.heritageCategory;
       
       const formData = new FormData();
-      formData.append('form', new Blob([JSON.stringify(formValue)], { type: 'application/json' }));
+      formData.append('form', new Blob([JSON.stringify(payload)], { type: 'application/json' }));
       
       if (this.selectedFiles['lettersConsent']) {
-        formData.append('lettersConsent', this.selectedFiles['lettersConsent']);
+        formData.append('lettersConsent', this.selectedFiles['lettersConsent'] as File);
       }
       if (this.selectedFiles['photos']) {
-        formData.append('photos', this.selectedFiles['photos']);
+        const photos = this.selectedFiles['photos'];
+        if (Array.isArray(photos)) {
+          photos.forEach(photo => formData.append('photos', photo));
+        } else {
+          formData.append('photos', photos as File);
+        }
       }
       if (this.selectedFiles['archivalMaterials']) {
-        formData.append('archivalMaterials', this.selectedFiles['archivalMaterials']);
+        formData.append('archivalMaterials', this.selectedFiles['archivalMaterials'] as File);
       }
       if (this.selectedFiles['references']) {
-        formData.append('references', this.selectedFiles['references']);
+        formData.append('references', this.selectedFiles['references'] as File);
       }
-      
-      this.nominationService.submitForm(formData as any).subscribe({
-        next: () => {
-          this.showSuccessModal = true;
-          this.isSubmitting = false;
-          this.nominationForm.reset(this.createForm().getRawValue());
-          this.selectedFiles = {};
-        },
-        error: (error) => {
-          console.error('Error submitting form:', error);
-          alert('Error submitting form. Please try again.');
-          this.isSubmitting = false;
+
+      // DEBUG: Do not call backend API now, just dump payload to console and complete
+      console.log('Nomination form submit payload:', {
+        form: payload,
+        files: {
+          lettersConsent: this.selectedFiles['lettersConsent'],
+          photos: this.selectedFiles['photos'],
+          archivalMaterials: this.selectedFiles['archivalMaterials'],
+          references: this.selectedFiles['references'],
         }
       });
+      this.showSuccessModal = true;
+      this.isSubmitting = false;
+      this.nominationForm.reset(this.createForm().getRawValue());
+      this.selectedFiles = {};
+      return;
     }
   }
 

@@ -1,15 +1,30 @@
 <app-banner></app-banner>
-<div class="text-center px-6 py-6">
-  <h1 class="text-2xl md:text-3xl font-bold text-[#7a004a]">
-    ICA Cooperative Cultural Heritage <br> Nomination Form
+<div class="text-center px-6 py-8  rounded-2xl  max-w-2xl mx-auto">
+  
+  <h1 class="text-2xl md:text-3xl font-bold text-[#7a004a] leading-snug">
+    ICA Cooperative Cultural Heritage <br />
+    Nomination Form
   </h1>
+
+  <p class="mt-4 text-sm md:text-base text-gray-700 font-medium">
+    Period: <span class="font-semibold">April – 31 May 2026</span>
+  </p>
+
+  <p class="mt-3 text-sm text-gray-600">
+    Any questions? Feel free to contact us at
+    <a href="mailto:nominations@culturalheritage.coop" 
+       class="text-[#7a004a] font-semibold underline hover:text-pink-700 transition">
+      nominations@culturalheritage.coop
+    </a>
+  </p>
+
 </div>
 <div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
     <form [formGroup]="nominationForm" (ngSubmit)="onSubmit()" class="p-6">
       <!-- Section A -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section A: Nominating ICA Member Organization</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section A: Nominating ICA Member Organization Mandatory</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <div>
             <label class="block text-gray-700 font-medium mb-1">Name of Organization</label>
@@ -46,11 +61,11 @@
           <textarea rows="2" formControlName="officialName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Local Name (if applicable)</label>
+          <label class="block text-gray-700 font-medium mb-1">Local Name (Optional)</label>
           <input type="text" formControlName="localName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
         </div>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Other Names/Titles (if applicable)</label>
+          <label class="block text-gray-700 font-medium mb-1">Other Names/Titles (Optional)</label>
           <input type="text" formControlName="otherNames" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
         </div>
       </div>
@@ -60,13 +75,14 @@
         <h2 class="text-xl font-semibold text-[#7a004a]">Section C: Category of Heritage</h2>
         <div class="mt-4 space-y-2">
           <label class="flex items-center">
-            <input type="checkbox" formControlName="tangible" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+            <input type="radio" value="tangible" formControlName="heritageCategory" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
             <span class="ml-2 block text-gray-700">Tangible Cooperative Cultural Heritage (Physical Sites/Monuments/Museums etc.)</span>
           </label>
           <label class="flex items-center">
-            <input type="checkbox" formControlName="intangible" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">Intangible Cooperative Cultural Heritage (Launching Soon)</span>
+            <input type="radio" value="intangible" formControlName="heritageCategory" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
+            <span class="ml-2 mt-2 block text-gray-700">Intangible Cooperative Cultural Heritage (Elements of local practice & traditions that safeguard cooperative values, practices and governance systems passed down through generations)</span>
           </label>
+          <p class="text-sm text-gray-500 mt-1">Choose one category only.</p>
         </div>
       </div>
 
@@ -92,7 +108,7 @@
       <div class="mb-8 border-b border-gray-200 pb-4">
         <h2 class="text-xl font-semibold text-[#7a004a]">Section F: Description of the Heritage Element</h2>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Provide a summary description (170–280 words) including historical background, core cooperative values, and relevance for community identity.</label>
+          <label class="block text-gray-700 font-medium mb-1">Provide a summary description (100 words) including historical background, core cooperative values, and relevance for community identity.</label>
           <textarea rows="6" formControlName="description" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
@@ -137,39 +153,25 @@
       <div class="mb-8 border-b border-gray-200 pb-4">
         <h2 class="text-xl font-semibold text-[#7a004a]">Section K: Safeguarding Measures</h2>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">K.1 Past and Ongoing Efforts (170–280 words)</label>
+          <label class="block text-gray-700 font-medium mb-1">K.1 Past and Ongoing Efforts ( 100 words)</label>
           <textarea rows="4" formControlName="safeguardingPast" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">K.2 Proposed Measures for the Future (570–860 words)</label>
+          <label class="block text-gray-700 font-medium mb-1">K.2 Proposed Measures for the Future (100 words)</label>
           <textarea rows="8" formControlName="safeguardingFuture" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">K.3 Community Involvement in Safeguarding (170–280 words)</label>
+          <label class="block text-gray-700 font-medium mb-1">K.3 Community Involvement in Safeguarding (100 words)</label>
           <textarea rows="4" formControlName="safeguardingCommunity" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
 
       <!-- Section L -->
-      <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section L: Contribution to Visibility and Dialogue</h2>
-        <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">L.1 Visibility of Cooperative Cultural Heritage (120–170 words)</label>
-          <textarea rows="4" formControlName="visibilityCooperative" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
-        </div>
-        <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">L.2 Promotion of Dialogue Between Communities (120–170 words)</label>
-          <textarea rows="4" formControlName="dialogueBetweenCommunities" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
-        </div>
-        <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">L.3 Respect for Diversity and Creativity (120–170 words)</label>
-          <textarea rows="4" formControlName="respectDiversity" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
-        </div>
-      </div>
+     
 
-      <!-- Section M -->
+      <!-- Section L -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section M: Alignment with ICA CCH Standards (13 Point Criteria)</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section L: Indicate how many criterions does the elememt aligns with -Select as many as relevant in your opinion</h2>
         <div class="mt-4 space-y-2">
           <label class="flex items-center">
             <input type="checkbox" formControlName="criterion1" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
@@ -230,9 +232,9 @@
         </div>
       </div>
 
-      <!-- Section N -->
+      <!-- Section M -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section N: Consent and Participation</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section M: Consent and Participation</h2>
         <div class="mt-4">
           <label class="block text-gray-700 font-medium mb-1">Document the free, prior, and informed consent of concerned communities or institutions. Attach letters, resolutions, or recorded statements. (170–280 words)</label>
           <textarea rows="6" formControlName="consentParticipation" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
@@ -241,7 +243,7 @@
 
       <!-- Section O -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section O: Documentation and Inventories</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section N: Documentation and Inventories optional</h2>
         <div class="mt-4">
           <label class="block text-gray-700 font-medium mb-1">If the element is already registered in any types of local/national heritage records, provide references or links. (170–280 words)</label>
           <textarea rows="6" formControlName="documentationInventories" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
@@ -250,56 +252,111 @@
 
       <!-- Section P -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section P: Supporting Materials</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section O: Supporting Materials</h2>
         <div class="mt-4 space-y-4">
           <div class="block">
             <span class="block text-gray-700 font-medium mb-1">Letters of consent from communities/institutions</span>
-            <input type="file" (change)="onFileChange($event, 'lettersConsent')" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
+            <input type="file" (change)="onFileChange($event, 'lettersConsent')" accept=".pdf" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
+            <p class="text-xs text-gray-500 mt-1">Accepts PDF only.</p>
           </div>
           <div class="block">
             <span class="block text-gray-700 font-medium mb-1">High-resolution photos</span>
-            <input type="file" (change)="onFileChange($event, 'photos')" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
+            <input type="file" multiple (change)="onFileChange($event, 'photos')" accept="image/png, image/jpeg, image/jpg" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
+            <p class="text-xs text-gray-500 mt-1">Accepts PNG/JPEG/JPG only (minimum 300dpi recommended).</p>
           </div>
-          <label class="flex items-center mt-4">
-            <input type="checkbox" formControlName="video" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700 font-medium">Video documentation (5–10 minutes)</span>
-          </label>
           <div class="block mt-4">
             <span class="block text-gray-700 font-medium mb-1">Archival materials / publications</span>
-            <input type="file" (change)="onFileChange($event, 'archivalMaterials')" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
+            <input type="file" (change)="onFileChange($event, 'archivalMaterials')" accept=".pdf" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
+            <p class="text-xs text-gray-500 mt-1">Accepts PDF only.</p>
           </div>
           <div class="block">
             <span class="block text-gray-700 font-medium mb-1">References / bibliography</span>
-            <input type="file" (change)="onFileChange($event, 'references')" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
+            <input type="file" (change)="onFileChange($event, 'references')" accept=".pdf" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
+            <p class="text-xs text-gray-500 mt-1">Accepts PDF only.</p>
           </div>
         </div>
       </div>
 
       <!-- Section Q -->
-      <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section Q: Declaration and Signature</h2>
-        <div class="mt-4">
-          <p class="text-gray-700 mb-4">I hereby submit this nomination for consideration to the ICA Cooperative Cultural Heritage List.</p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-gray-700 font-medium mb-1">Your Name</label>
-              <input type="text" formControlName="declarantName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
-            </div>
-            <div>
-              <label class="block text-gray-700 font-medium mb-1">Designation</label>
-              <input type="text" formControlName="declarantDesignation" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
-            </div>
-            <div>
-              <label class="block text-gray-700 font-medium mb-1">Organization</label>
-              <input type="text" formControlName="declarantOrganization" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
-            </div>
-            <div>
-              <label class="block text-gray-700 font-medium mb-1">Date</label>
-              <input type="date" formControlName="declarationDate" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
-            </div>
-          </div>
+     <div class="mb-8 border-b border-gray-200 pb-6">
+  <h2 class="text-xl font-semibold text-[#7a004a]">
+    Section P: Declaration and Signature
+  </h2>
+
+  <div class="mt-4">
+    <p class="text-gray-700 mb-4">
+      I hereby submit this nomination for consideration to the ICA Cooperative Cultural Heritage List.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+      <!-- Name -->
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Your Name</label>
+        <input type="text" formControlName="declarantName"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+      </div>
+
+      <!-- Designation -->
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Designation</label>
+        <input type="text" formControlName="declarantDesignation"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+      </div>
+
+      <!-- Organization -->
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Organization</label>
+        <input type="text" formControlName="declarantOrganization"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+      </div>
+
+      <!-- Date -->
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Date</label>
+        <input type="date" formControlName="declarationDate"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
+      </div>
+
+      <!-- ICA Member -->
+      <div>
+        <label class="block text-gray-700 font-medium mb-2">ICA Member</label>
+        <div class="flex items-center gap-4">
+          <label class="flex items-center gap-2">
+            <input type="radio" value="yes" formControlName="icaMember" required
+              class="text-[#7a004a] focus:ring-[#7a004a]">
+            Yes
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="radio" value="no" formControlName="icaMember" required
+              class="text-[#7a004a] focus:ring-[#7a004a]">
+            No
+          </label>
         </div>
       </div>
+
+      <!-- Affiliated to ICA Member -->
+      <div>
+        <label class="block text-gray-700 font-medium mb-2">
+          Affiliated to ICA Member
+        </label>
+        <div class="flex items-center gap-4">
+          <label class="flex items-center gap-2">
+            <input type="radio" value="yes" formControlName="icaAffiliated" required
+              class="text-[#7a004a] focus:ring-[#7a004a]">
+            Yes
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="radio" value="no" formControlName="icaAffiliated" required
+              class="text-[#7a004a] focus:ring-[#7a004a]">
+            No
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
       <!-- Submit Button -->
       <div class="flex justify-start mt-8">

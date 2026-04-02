@@ -251,27 +251,27 @@
       <!-- Section P -->
       <div class="mb-8 border-b border-gray-200 pb-4">
         <h2 class="text-xl font-semibold text-[#7a004a]">Section P: Supporting Materials</h2>
-        <div class="mt-4 space-y-2">
-          <label class="flex items-center">
-            <input type="checkbox" formControlName="lettersConsent" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">Letters of consent from communities/institutions</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" formControlName="photos" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">High-resolution photos</span>
-          </label>
-          <label class="flex items-center">
+        <div class="mt-4 space-y-4">
+          <div class="block">
+            <span class="block text-gray-700 font-medium mb-1">Letters of consent from communities/institutions</span>
+            <input type="file" (change)="onFileChange($event, 'lettersConsent')" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
+          </div>
+          <div class="block">
+            <span class="block text-gray-700 font-medium mb-1">High-resolution photos</span>
+            <input type="file" (change)="onFileChange($event, 'photos')" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
+          </div>
+          <label class="flex items-center mt-4">
             <input type="checkbox" formControlName="video" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">Video documentation (5–10 minutes)</span>
+            <span class="ml-2 block text-gray-700 font-medium">Video documentation (5–10 minutes)</span>
           </label>
-          <label class="flex items-center">
-            <input type="checkbox" formControlName="archivalMaterials" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">Archival materials / publications</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" formControlName="references" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 block text-gray-700">References / bibliography</span>
-          </label>
+          <div class="block mt-4">
+            <span class="block text-gray-700 font-medium mb-1">Archival materials / publications</span>
+            <input type="file" (change)="onFileChange($event, 'archivalMaterials')" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
+          </div>
+          <div class="block">
+            <span class="block text-gray-700 font-medium mb-1">References / bibliography</span>
+            <input type="file" (change)="onFileChange($event, 'references')" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
+          </div>
         </div>
       </div>
 

@@ -14,6 +14,7 @@ export class NominationComponent {
   nominationForm: FormGroup;
   showSuccessModal = false;
   isSubmitting = false;
+  selectedFiles: { [key: string]: File } = {};
 
   constructor(
     private fb: FormBuilder,
@@ -80,11 +81,7 @@ export class NominationComponent {
       // Section O
       documentationInventories: [''],
       // Section P
-      lettersConsent: [false],
-      photos: [false],
       video: [false],
-      archivalMaterials: [false],
-      references: [false],
       // Section Q
       declarantName: [''],
       declarantDesignation: [''],
@@ -93,16 +90,42 @@ export class NominationComponent {
     });
   }
 
+  onFileChange(event: any, fieldName: string): void {
+    const file = event.target.files[0];
+    if (file) {
+      this.selectedFiles[fieldName] = file;
+    } else {
+      delete this.selectedFiles[fieldName];
+    }
+  }
+
   onSubmit(): void {
     if (this.nominationForm.valid && !this.isSubmitting) {
       this.isSubmitting = true;
-      const formValue = this.nominationForm.value as NominationForm;
+      const formValue = this.nominationForm.value;
       
-      this.nominationService.submitForm(formValue).subscribe({
+      const formData = new FormData();
+      formData.append('form', new Blob([JSON.stringify(formValue)], { type: 'application/json' }));
+      
+      if (this.selectedFiles['lettersConsent']) {
+        formData.append('lettersConsent', this.selectedFiles['lettersConsent']);
+      }
+      if (this.selectedFiles['photos']) {
+        formData.append('photos', this.selectedFiles['photos']);
+      }
+      if (this.selectedFiles['archivalMaterials']) {
+        formData.append('archivalMaterials', this.selectedFiles['archivalMaterials']);
+      }
+      if (this.selectedFiles['references']) {
+        formData.append('references', this.selectedFiles['references']);
+      }
+      
+      this.nominationService.submitForm(formData as any).subscribe({
         next: () => {
           this.showSuccessModal = true;
           this.isSubmitting = false;
           this.nominationForm.reset(this.createForm().getRawValue());
+          this.selectedFiles = {};
         },
         error: (error) => {
           console.error('Error submitting form:', error);

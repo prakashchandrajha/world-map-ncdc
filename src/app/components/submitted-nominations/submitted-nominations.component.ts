@@ -14,7 +14,7 @@ export class SubmittedNominationsComponent implements OnInit {
   isLoading = true;
   error: string | null = null;
 
-  constructor(private nominationService: NominationService) { }
+  constructor(public nominationService: NominationService) { }
 
   ngOnInit(): void {
     this.loadNominations();

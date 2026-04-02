@@ -60,11 +60,11 @@ export interface NominationForm {
   // Section O
   documentationInventories: string;
   // Section P
-  lettersConsent: boolean;
-  photos: boolean;
+  lettersConsentFile?: string;
+  photosFile?: string;
   video: boolean;
-  archivalMaterials: boolean;
-  references: boolean;
+  archivalMaterialsFile?: string;
+  referencesFile?: string;
   // Section Q
   declarantName: string;
   declarantDesignation: string;
@@ -82,6 +82,10 @@ export interface FormSummary {
   officialName: string;
   contactPerson: string;
   submissionDate: string;
+  hasLettersConsent?: boolean;
+  hasPhotos?: boolean;
+  hasArchivalMaterials?: boolean;
+  hasReferences?: boolean;
 }
 
 @Injectable({
@@ -92,8 +96,8 @@ export class NominationService {
 
   constructor(private http: HttpClient) { }
 
-  submitForm(form: NominationForm): Observable<NominationForm> {
-    return this.http.post<NominationForm>(this.apiUrl, form);
+  submitForm(formData: FormData): Observable<NominationForm> {
+    return this.http.post<NominationForm>(this.apiUrl, formData);
   }
 
   getAllForms(): Observable<FormSummary[]> {
@@ -106,6 +110,10 @@ export class NominationService {
 
   downloadPdf(id: number): Observable<Blob> {
     return this.http.get(`${this.apiUrl}/${id}/pdf`, { responseType: 'blob' });
+  }
+
+  getFileUrl(id: number, fileType: string): string {
+    return `${this.apiUrl}/${id}/file/${fileType}`;
   }
 
   deleteForm(id: number): Observable<void> {

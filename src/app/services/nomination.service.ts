@@ -65,8 +65,8 @@ export type FormSummary = Nomination;
   providedIn: 'root'
 })
 export class NominationService {
-  private apiUrl = 'http://localhost:2003/cch/api/nominations';
-  // private apiUrl = 'https://www.culturalheritage.coop/cch/api/nominations';
+  // private apiUrl = 'http://localhost:2003/cch/api/nominations';
+  private apiUrl = 'https://www.culturalheritage.coop/cch/api/nominations';
 
   constructor(private http: HttpClient) { }
 

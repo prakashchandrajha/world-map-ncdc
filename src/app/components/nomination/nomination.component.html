@@ -7,7 +7,7 @@
   </h1>
 
   <p class="mt-4 text-sm md:text-base text-gray-700 font-medium">
-    Period: <span class="font-semibold">April – 31 May 2026</span>
+    Period: <span class="font-semibold">5 April 2026 – 31 May 2026</span>
   </p>
 
   <p class="mt-3 text-sm text-gray-600">
@@ -31,7 +31,7 @@
     >
       <!-- Section A -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section A: Nominating ICA Member Organization Mandatory</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section A: Nominating ICA Member Organization</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <div>
             <label class="block text-gray-700 font-medium mb-1">Name of Organization</label>
@@ -62,24 +62,24 @@
 
       <!-- Section B -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section B: Nomination Details</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section B: Nomination Details*</h2>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Official Name of the Heritage Element (max. 230 characters)</label>
+          <label class="block text-gray-700 font-medium mb-1">Official Name of the Heritage Element (200 characters)</label>
           <textarea rows="2" formControlName="officialName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Local Name (Optional)</label>
+          <label class="block text-gray-700 font-medium mb-1">Local Name (optional)</label>
           <input type="text" formControlName="localName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
         </div>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Other Names/Titles (Optional)</label>
+          <label class="block text-gray-700 font-medium mb-1">Other Names/Titles (optional)</label>
           <input type="text" formControlName="otherNames" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
         </div>
       </div>
 
       <!-- Section C -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section C: Category of Heritage</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section C: Category of Heritage (choose one)</h2>
         <div class="mt-4 space-y-2">
           <label class="flex items-center">
             <input type="radio" value="tangible" formControlName="heritageCategory" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
@@ -87,15 +87,14 @@
           </label>
           <label class="flex items-center">
             <input type="radio" value="intangible" formControlName="heritageCategory" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
-            <span class="ml-2 mt-2 block text-gray-700">Intangible Cooperative Cultural Heritage (Elements of local practice & traditions that safeguard cooperative values, practices and governance systems passed down through generations)</span>
+            <span class="ml-2 mt-2 block text-gray-700">Intangible Cooperative Cultural Heritage (Elements of local customs practices & traditions that safeguard cooperative values, practices and governance systems trasmitted through generations)</span>
           </label>
-          <p class="text-sm text-gray-500 mt-1">Choose one category only.</p>
         </div>
       </div>
 
       <!-- Section D -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section D: Communities and Groups Concerned</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section D: Communities and Groups Concerned *</h2>
         <div class="mt-4">
           <label class="block text-gray-700 font-medium mb-1">Identify the cooperative communities, groups, institutions, or networks responsible for safeguarding and transmitting this heritage. (Max. 100 words)</label>
           <textarea rows="4" formControlName="communities" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
@@ -104,7 +103,7 @@
 
       <!-- Section E -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section E: Geographic Scope and Location</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section E: Geographic Scope and Location *</h2>
         <div class="mt-4">
           <label class="block text-gray-700 font-medium mb-1">Provide details on location (city, region, country) and area of influence (local, national, international). (Max. 100 words)</label>
           <textarea rows="4" formControlName="geographicScope" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
@@ -113,54 +112,47 @@
 
       <!-- Section F -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section F: Description of the Heritage Element</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section F: Description of the Heritage Element *</h2>
         <div class="mt-4">
           <label class="block text-gray-700 font-medium mb-1">Provide a summary description (100 words) including historical background, core cooperative values, and relevance for community identity.</label>
           <textarea rows="6" formControlName="description" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
 
+
+
       <!-- Section G -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section G: Holders and Practitioners</h2>
-        <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Who are the principal carriers of this heritage? (Members, leaders, educators, archivists, creative professionals, etc.) (100 words)</label>
-          <textarea rows="6" formControlName="holders" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
-        </div>
-      </div>
-
-      <!-- Section H -->
-      <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section H: Knowledge Transmission</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section G: Legacy And Knowledge Transmission *</h2>
         <div class="mt-4">
           <label class="block text-gray-700 font-medium mb-1">Explain how knowledge and practices are transmitted today (education, oral traditions, cooperative schools, museums, archives, creative projects). (170–280 words)</label>
           <textarea rows="6" formControlName="knowledgeTransmission" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
 
+      <!-- Section H -->
+      <div class="mb-8 border-b border-gray-200 pb-4">
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section H: Social and Cultural Functions (optional)</h2>
+        <div class="mt-4">
+          <label class="block text-gray-700 font-medium mb-1">What role does the heritage play in the lives of communities (identity, cohesion, creativity, sustainability)? (100 words)</label>
+          <textarea rows="6" formControlName="socialFunctions" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+        </div>
+      </div>
+
       <!-- Section I -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section I: Social and Cultural Functions</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section I: Human Rights and Sustainability *</h2>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">What role does this heritage play in the lives of communities (identity, cohesion, creativity, sustainability)? (100 words)</label>
-          <textarea rows="6" formControlName="socialFunctions" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          <label class="block text-gray-700 font-medium mb-1">Indicate compliance of the heritage element with universal values of human rights, cultural diversity, and sustainable development principles. (100 words)</label>
+          <textarea rows="6" formControlName="humanRights" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
 
       <!-- Section J -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section J: Human Rights and Sustainability</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section J: Safeguarding Measures *</h2>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Confirm compliance with universal values of human rights, cultural diversity, and sustainable development principles. (100 words)</label>
-          <textarea rows="6" formControlName="humanRights" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
-        </div>
-      </div>
-
-      <!-- Section K -->
-      <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section K: Safeguarding Measures</h2>
-        <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">K.1 Past and Ongoing Efforts ( 100 words)</label>
+          <label class="block text-gray-700 font-medium mb-1">K.1 Indicate how the heritage through Past and Ongoing Efforts is being concretely safeguarded ( 100 words)</label>
           <textarea rows="4" formControlName="safeguardingPast" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
         <div class="mt-4">
@@ -168,17 +160,16 @@
           <textarea rows="8" formControlName="safeguardingFuture" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">K.3 Community Involvement in Safeguarding (100 words)</label>
+          <label class="block text-gray-700 font-medium mb-1">K.3 Community Involvement in Safeguarding (200 words) *</label>
           <textarea rows="4" formControlName="safeguardingCommunity" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
 
-      <!-- Section L -->
      
 
-      <!-- Section L -->
+      <!-- Section K -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section L: Indicate how many criterions does the elememt aligns with -Select as many as relevant in your opinion</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section K: Indicate how many criterions does the elememt aligns with -Select as many CCH standards below are relevant to the heritage *</h2>
         <div class="mt-4 space-y-2">
           <label class="flex items-center">
             <input type="checkbox" formControlName="criterion1" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
@@ -239,30 +230,23 @@
         </div>
       </div>
 
-      <!-- Section M -->
-      <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section M: Consent and Participation</h2>
-        <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Document the free, prior, and informed consent of concerned communities or institutions. Attach letters, resolutions, or recorded statements. (100 words)</label>
-          <textarea rows="6" formControlName="consentParticipation" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
-        </div>
-      </div>
+     
 
-      <!-- Section O -->
+      <!-- Section L -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section N: Documentation and Inventories optional</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section L: Documentation and Inventories optional *</h2>
         <div class="mt-4">
           <label class="block text-gray-700 font-medium mb-1">If the element is already registered in any types of local/national heritage records, provide references or links. (100 words)</label>
           <textarea rows="6" formControlName="documentationInventories" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
 
-      <!-- Section P -->
+      <!-- Section M -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section O: Supporting Materials</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section M: Supporting Materials *</h2>
         <div class="mt-4 space-y-4">
           <div class="block">
-            <span class="block text-gray-700 font-medium mb-1">Letters of consent from communities/institutions</span>
+            <span class="block text-gray-700 font-medium mb-1">Letters of consent from communities/institutions the nominating organisation must on its letterhead and authorized representative ,consent for the site/element to be considered for the ICA CCH listing 2026</span>
             <input type="file" (change)="onFileChange($event, 'lettersConsent')" accept=".pdf" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
             <p class="text-xs text-gray-500 mt-1">Accepts PDF only Optional.</p>
           </div>
@@ -272,22 +256,22 @@
             <p class="text-xs text-gray-500 mt-1">Accepts PNG/JPEG/JPG only (minimum 300dpi recommended).</p>
           </div>
           <div class="block mt-4">
-            <span class="block text-gray-700 font-medium mb-1">Archival materials / publications</span>
+            <span class="block text-gray-700 font-medium mb-1">Archival materials / publications /Photographs</span>
             <input type="file" (change)="onFileChange($event, 'archivalMaterials')" accept=".pdf" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
             <p class="text-xs text-gray-500 mt-1">Accepts PDF only Optional</p>
           </div>
           <div class="block">
-            <span class="block text-gray-700 font-medium mb-1">References / bibliography</span>
+            <span class="block text-gray-700 font-medium mb-1">Additional document if Any</span>
             <input type="file" (change)="onFileChange($event, 'references')" accept=".pdf" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
             <p class="text-xs text-gray-500 mt-1">Accepts PDF only Optional.</p>
           </div>
         </div>
       </div>
 
-      <!-- Section Q -->
+      <!-- Section N -->
      <div class="mb-8 border-b border-gray-200 pb-6">
   <h2 class="text-xl font-semibold text-[#7a004a]">
-    Section P: Declaration and Signature
+    Section N: Declaration and Signature
   </h2>
 
   <div class="mt-4">
@@ -345,7 +329,7 @@
       <!-- Affiliated to ICA Member -->
       <div>
         <label class="block text-gray-700 font-medium mb-2">
-          Affiliated to ICA Member
+          Affiliated to an ICA Member Organization
         </label>
         <div class="flex items-center gap-4">
           <label class="flex items-center gap-2">

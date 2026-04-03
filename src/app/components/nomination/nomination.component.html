@@ -19,9 +19,16 @@
   </p>
 
 </div>
-<div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
-    <form [formGroup]="nominationForm" (ngSubmit)="onSubmit()" novalidate>
+<div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 flex justify-center items-start">
+  
+  <div class="w-full max-w-4xl bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8">
+    
+    <form 
+      [formGroup]="nominationForm" 
+      (ngSubmit)="onSubmit()" 
+      novalidate 
+      class="space-y-6"
+    >
       <!-- Section A -->
       <div class="mb-8 border-b border-gray-200 pb-4">
         <h2 class="text-xl font-semibold text-[#7a004a]">Section A: Nominating ICA Member Organization Mandatory</h2>
@@ -90,7 +97,7 @@
       <div class="mb-8 border-b border-gray-200 pb-4">
         <h2 class="text-xl font-semibold text-[#7a004a]">Section D: Communities and Groups Concerned</h2>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Identify the cooperative communities, groups, institutions, or networks responsible for safeguarding and transmitting this heritage. (Max. 500 words)</label>
+          <label class="block text-gray-700 font-medium mb-1">Identify the cooperative communities, groups, institutions, or networks responsible for safeguarding and transmitting this heritage. (Max. 100 words)</label>
           <textarea rows="4" formControlName="communities" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
@@ -99,7 +106,7 @@
       <div class="mb-8 border-b border-gray-200 pb-4">
         <h2 class="text-xl font-semibold text-[#7a004a]">Section E: Geographic Scope and Location</h2>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Provide details on location (city, region, country) and area of influence (local, national, international). (Max. 500 words)</label>
+          <label class="block text-gray-700 font-medium mb-1">Provide details on location (city, region, country) and area of influence (local, national, international). (Max. 100 words)</label>
           <textarea rows="4" formControlName="geographicScope" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
@@ -117,7 +124,7 @@
       <div class="mb-8 border-b border-gray-200 pb-4">
         <h2 class="text-xl font-semibold text-[#7a004a]">Section G: Holders and Practitioners</h2>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Who are the principal carriers of this heritage? (Members, leaders, educators, archivists, creative professionals, etc.) (170–280 words)</label>
+          <label class="block text-gray-700 font-medium mb-1">Who are the principal carriers of this heritage? (Members, leaders, educators, archivists, creative professionals, etc.) (100 words)</label>
           <textarea rows="6" formControlName="holders" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
@@ -135,7 +142,7 @@
       <div class="mb-8 border-b border-gray-200 pb-4">
         <h2 class="text-xl font-semibold text-[#7a004a]">Section I: Social and Cultural Functions</h2>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">What role does this heritage play in the lives of communities (identity, cohesion, creativity, sustainability)? (170–280 words)</label>
+          <label class="block text-gray-700 font-medium mb-1">What role does this heritage play in the lives of communities (identity, cohesion, creativity, sustainability)? (100 words)</label>
           <textarea rows="6" formControlName="socialFunctions" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
@@ -144,7 +151,7 @@
       <div class="mb-8 border-b border-gray-200 pb-4">
         <h2 class="text-xl font-semibold text-[#7a004a]">Section J: Human Rights and Sustainability</h2>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Confirm compliance with universal values of human rights, cultural diversity, and sustainable development principles. (170–280 words)</label>
+          <label class="block text-gray-700 font-medium mb-1">Confirm compliance with universal values of human rights, cultural diversity, and sustainable development principles. (100 words)</label>
           <textarea rows="6" formControlName="humanRights" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
@@ -236,7 +243,7 @@
       <div class="mb-8 border-b border-gray-200 pb-4">
         <h2 class="text-xl font-semibold text-[#7a004a]">Section M: Consent and Participation</h2>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Document the free, prior, and informed consent of concerned communities or institutions. Attach letters, resolutions, or recorded statements. (170–280 words)</label>
+          <label class="block text-gray-700 font-medium mb-1">Document the free, prior, and informed consent of concerned communities or institutions. Attach letters, resolutions, or recorded statements. (100 words)</label>
           <textarea rows="6" formControlName="consentParticipation" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
@@ -245,7 +252,7 @@
       <div class="mb-8 border-b border-gray-200 pb-4">
         <h2 class="text-xl font-semibold text-[#7a004a]">Section N: Documentation and Inventories optional</h2>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">If the element is already registered in any types of local/national heritage records, provide references or links. (170–280 words)</label>
+          <label class="block text-gray-700 font-medium mb-1">If the element is already registered in any types of local/national heritage records, provide references or links. (100 words)</label>
           <textarea rows="6" formControlName="documentationInventories" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
@@ -257,7 +264,7 @@
           <div class="block">
             <span class="block text-gray-700 font-medium mb-1">Letters of consent from communities/institutions</span>
             <input type="file" (change)="onFileChange($event, 'lettersConsent')" accept=".pdf" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
-            <p class="text-xs text-gray-500 mt-1">Accepts PDF only.</p>
+            <p class="text-xs text-gray-500 mt-1">Accepts PDF only Optional.</p>
           </div>
           <div class="block">
             <span class="block text-gray-700 font-medium mb-1">High-resolution photos</span>
@@ -267,12 +274,12 @@
           <div class="block mt-4">
             <span class="block text-gray-700 font-medium mb-1">Archival materials / publications</span>
             <input type="file" (change)="onFileChange($event, 'archivalMaterials')" accept=".pdf" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
-            <p class="text-xs text-gray-500 mt-1">Accepts PDF only.</p>
+            <p class="text-xs text-gray-500 mt-1">Accepts PDF only Optional</p>
           </div>
           <div class="block">
             <span class="block text-gray-700 font-medium mb-1">References / bibliography</span>
             <input type="file" (change)="onFileChange($event, 'references')" accept=".pdf" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
-            <p class="text-xs text-gray-500 mt-1">Accepts PDF only.</p>
+            <p class="text-xs text-gray-500 mt-1">Accepts PDF only Optional.</p>
           </div>
         </div>
       </div>

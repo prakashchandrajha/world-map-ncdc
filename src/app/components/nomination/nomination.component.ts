@@ -150,23 +150,17 @@ export class NominationComponent {
 
     this.isSubmitting = true;
 
-    const formValue = this.nominationForm.value;
-
-    const payload = {
-      ...formValue,
-      tangible: formValue.heritageCategory === 'tangible' ? true : false,
-      intangible: formValue.heritageCategory === 'intangible' ? true : false,
-    };
-
-    delete payload.heritageCategory;
+    const formValue = this.nominationForm.getRawValue();
 
     const formData = new FormData();
 
-    // JSON data
-    formData.append(
-      'form',
-      new Blob([JSON.stringify(payload)], { type: 'application/json' })
-    );
+    // Append every field individually so backend @ModelAttribute can bind
+    Object.keys(formValue).forEach(key => {
+      const val = formValue[key];
+      if (val !== null && val !== undefined && val !== '') {
+        formData.append(key, String(val));
+      }
+    });
 
     // ===== FILES =====
 
@@ -196,9 +190,10 @@ export class NominationComponent {
     this.nominationService.submitNomination(formData).subscribe({
       next: () => {
         this.showSuccessModal = true;
+        this.isSubmitting = false;
         this.resetForm();
       },
-      error: (err) => {
+      error: (err: any) => {
         console.error('Nomination submission failed:', err);
         this.isSubmitting = false;
       }

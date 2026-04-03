@@ -82,6 +82,11 @@ export const routes: Routes = [
     title: 'Submitted Nominations - Cooperative Culture Heritage'
   },
   {
+    path: 'nomination-detail/:id',
+    loadComponent: () => import('./components/nomination-detail/nomination-detail.component').then(m => m.NominationDetailComponent),
+    title: 'Nomination Detail - Cooperative Culture Heritage'
+  },
+  {
     path: 'member',
     loadComponent: () => import('./components/members/members.component').then(m => m.MembersComponent),
     title: 'Members - Cooperative Culture Heritage'

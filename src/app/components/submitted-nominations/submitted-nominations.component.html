@@ -29,13 +29,11 @@
               <th>Organization</th>
               <th>Country</th>
               <th>Official Name</th>
-              <th>Local Name</th>
+              <th>Heritage Category</th>
               <th>Contact Person</th>
               <th>Email</th>
-              <th>Telephone</th>
-              <th>Tangible</th>
-              <th>Intangible</th>
               <th>Submitted At</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -43,14 +41,14 @@
               <td>{{ i + 1 }}</td>
               <td>{{ n.organizationName || '—' }}</td>
               <td>{{ n.country || '—' }}</td>
-              <td>{{ n.officialName || '—' }}</td>
-              <td>{{ n.localName || '—' }}</td>
+              <td class="official-name">{{ n.officialName || '—' }}</td>
+              <td>{{ getCategoryLabel(n.heritageCategory) }}</td>
               <td>{{ n.contactPerson || '—' }}</td>
               <td>{{ n.email || '—' }}</td>
-              <td>{{ n.telephone || '—' }}</td>
-              <td class="bool-cell" [class.yes]="n.tangible">{{ n.tangible ? 'Yes' : 'No' }}</td>
-              <td class="bool-cell" [class.yes]="n.intangible">{{ n.intangible ? 'Yes' : 'No' }}</td>
-              <td>{{ n.createdAt ? (n.createdAt | date:'dd MMM yyyy, HH:mm') : '—' }}</td>
+              <td>{{ n.submittedAt ? (n.submittedAt | date:'dd MMM yyyy, HH:mm') : '—' }}</td>
+              <td>
+                <button class="btn-view" (click)="viewFullForm(n.id)">View Full Form</button>
+              </td>
             </tr>
           </tbody>
         </table>

@@ -1,0 +1,199 @@
+<app-banner title="Nomination Detail"></app-banner>
+
+<section class="detail-section">
+  <div class="container">
+
+    <!-- Loading -->
+    <div *ngIf="isLoading" class="state-msg">
+      <span class="spinner"></span> Loading nomination details...
+    </div>
+
+    <!-- Error -->
+    <div *ngIf="!isLoading && errorMessage" class="state-msg error">
+      {{ errorMessage }}
+      <button class="btn-back" (click)="goBack()">Back to List</button>
+    </div>
+
+    <!-- Detail Content -->
+    <div *ngIf="!isLoading && !errorMessage && nomination" class="detail-content">
+
+      <!-- Back Button -->
+      <button class="btn-back" (click)="goBack()">← Back to List</button>
+
+      <h2 class="form-title">{{ nomination.officialName || 'Untitled Nomination' }}</h2>
+      <p class="form-subtitle">Submitted: {{ nomination.submittedAt | date:'dd MMM yyyy, HH:mm' }}</p>
+
+      <!-- Section A -->
+      <div class="form-section">
+        <h3 class="section-header">Section A: Nominating ICA Member Organization</h3>
+        <div class="fields-grid">
+          <div class="field"><label>Organization Name</label><span>{{ nomination.organizationName || '—' }}</span></div>
+          <div class="field"><label>Country</label><span>{{ nomination.country || '—' }}</span></div>
+          <div class="field"><label>Contact Person</label><span>{{ nomination.contactPerson || '—' }}</span></div>
+          <div class="field"><label>Position</label><span>{{ nomination.position || '—' }}</span></div>
+          <div class="field"><label>Email</label><span>{{ nomination.email || '—' }}</span></div>
+          <div class="field"><label>Telephone</label><span>{{ nomination.telephone || '—' }}</span></div>
+        </div>
+      </div>
+
+      <!-- Section B -->
+      <div class="form-section">
+        <h3 class="section-header">Section B: Nomination Details</h3>
+        <div class="fields-grid">
+          <div class="field full-width"><label>Official Name</label><span class="text-block">{{ nomination.officialName || '—' }}</span></div>
+          <div class="field"><label>Local Name</label><span>{{ nomination.localName || '—' }}</span></div>
+          <div class="field"><label>Other Names</label><span>{{ nomination.otherNames || '—' }}</span></div>
+        </div>
+      </div>
+
+      <!-- Section C -->
+      <div class="form-section">
+        <h3 class="section-header">Section C: Category of Heritage</h3>
+        <div class="fields-grid">
+          <div class="field"><label>Heritage Category</label><span>{{ getCategoryLabel(nomination.heritageCategory) }}</span></div>
+          <div class="field"><label>Tangible</label><span>{{ boolLabel(nomination.tangible) }}</span></div>
+          <div class="field"><label>Intangible</label><span>{{ boolLabel(nomination.intangible) }}</span></div>
+        </div>
+      </div>
+
+      <!-- Section D -->
+      <div class="form-section">
+        <h3 class="section-header">Section D: Communities and Groups Concerned</h3>
+        <div class="fields-grid">
+          <div class="field full-width"><label>Communities</label><span class="text-block">{{ nomination.communities || '—' }}</span></div>
+        </div>
+      </div>
+
+      <!-- Section E -->
+      <div class="form-section">
+        <h3 class="section-header">Section E: Geographic Scope and Location</h3>
+        <div class="fields-grid">
+          <div class="field full-width"><label>Geographic Scope</label><span class="text-block">{{ nomination.geographicScope || '—' }}</span></div>
+        </div>
+      </div>
+
+      <!-- Section F -->
+      <div class="form-section">
+        <h3 class="section-header">Section F: Description of the Heritage Element</h3>
+        <div class="fields-grid">
+          <div class="field full-width"><label>Description</label><span class="text-block">{{ nomination.description || '—' }}</span></div>
+        </div>
+      </div>
+
+      <!-- Section G -->
+      <div class="form-section">
+        <h3 class="section-header">Section G: Legacy and Knowledge Transmission</h3>
+        <div class="fields-grid">
+          <div class="field full-width"><label>Knowledge Transmission</label><span class="text-block">{{ nomination.knowledgeTransmission || '—' }}</span></div>
+        </div>
+      </div>
+
+      <!-- Section H -->
+      <div class="form-section">
+        <h3 class="section-header">Section H: Social and Cultural Functions</h3>
+        <div class="fields-grid">
+          <div class="field full-width"><label>Social Functions</label><span class="text-block">{{ nomination.socialFunctions || '—' }}</span></div>
+          <div class="field full-width"><label>Holders</label><span class="text-block">{{ nomination.holders || '—' }}</span></div>
+        </div>
+      </div>
+
+      <!-- Section I -->
+      <div class="form-section">
+        <h3 class="section-header">Section I: Human Rights and Sustainability</h3>
+        <div class="fields-grid">
+          <div class="field full-width"><label>Human Rights</label><span class="text-block">{{ nomination.humanRights || '—' }}</span></div>
+        </div>
+      </div>
+
+      <!-- Section J -->
+      <div class="form-section">
+        <h3 class="section-header">Section J: Safeguarding Measures</h3>
+        <div class="fields-grid">
+          <div class="field full-width"><label>Safeguarding (Past)</label><span class="text-block">{{ nomination.safeguardingPast || '—' }}</span></div>
+          <div class="field full-width"><label>Safeguarding (Future)</label><span class="text-block">{{ nomination.safeguardingFuture || '—' }}</span></div>
+          <div class="field full-width"><label>Safeguarding (Community Role)</label><span class="text-block">{{ nomination.safeguardingCommunity || '—' }}</span></div>
+        </div>
+      </div>
+
+      <!-- Section K -->
+      <div class="form-section">
+        <h3 class="section-header">Section K: CCH Criteria Alignment</h3>
+        <div class="criteria-grid">
+          <div class="criteria-item"><span class="criteria-label">1. Historical Significance</span><span class="criteria-value">{{ boolLabel(nomination.criterion1) }}</span></div>
+          <div class="criteria-item"><span class="criteria-label">2. Connection to Cooperative Pioneers</span><span class="criteria-value">{{ boolLabel(nomination.criterion2) }}</span></div>
+          <div class="criteria-item"><span class="criteria-label">3. Archival, Architectural, or Symbolic Value</span><span class="criteria-value">{{ boolLabel(nomination.criterion3) }}</span></div>
+          <div class="criteria-item"><span class="criteria-label">4. Active Cooperative Connection</span><span class="criteria-value">{{ boolLabel(nomination.criterion4) }}</span></div>
+          <div class="criteria-item"><span class="criteria-label">5. Living Practice of Cooperation</span><span class="criteria-value">{{ boolLabel(nomination.criterion5) }}</span></div>
+          <div class="criteria-item"><span class="criteria-label">6. Educational Mission</span><span class="criteria-value">{{ boolLabel(nomination.criterion6) }}</span></div>
+          <div class="criteria-item"><span class="criteria-label">7. Research and Knowledge Sharing</span><span class="criteria-value">{{ boolLabel(nomination.criterion7) }}</span></div>
+          <div class="criteria-item"><span class="criteria-label">8. Community and Member Engagement</span><span class="criteria-value">{{ boolLabel(nomination.criterion8) }}</span></div>
+          <div class="criteria-item"><span class="criteria-label">9. Accessibility for All</span><span class="criteria-value">{{ boolLabel(nomination.criterion9) }}</span></div>
+          <div class="criteria-item"><span class="criteria-label">10. Preservation and Safeguarding</span><span class="criteria-value">{{ boolLabel(nomination.criterion10) }}</span></div>
+          <div class="criteria-item"><span class="criteria-label">11. Visibility and Symbolism</span><span class="criteria-value">{{ boolLabel(nomination.criterion11) }}</span></div>
+          <div class="criteria-item"><span class="criteria-label">12. Sustainability and Inclusivity</span><span class="criteria-value">{{ boolLabel(nomination.criterion12) }}</span></div>
+          <div class="criteria-item"><span class="criteria-label">13. Networking and International Solidarity</span><span class="criteria-value">{{ boolLabel(nomination.criterion13) }}</span></div>
+        </div>
+        <div class="fields-grid" style="margin-top: 16px;">
+          <div class="field full-width"><label>Criteria Explanation</label><span class="text-block">{{ nomination.criteriaExplanation || '—' }}</span></div>
+        </div>
+      </div>
+
+      <!-- Section L -->
+      <div class="form-section">
+        <h3 class="section-header">Section L: Documentation and Inventories</h3>
+        <div class="fields-grid">
+          <div class="field full-width"><label>Documentation & Inventories</label><span class="text-block">{{ nomination.documentationInventories || '—' }}</span></div>
+        </div>
+      </div>
+
+      <!-- Section N -->
+      <div class="form-section">
+        <h3 class="section-header">Section N: Declaration and Signature</h3>
+        <div class="fields-grid">
+          <div class="field"><label>Declarant Name</label><span>{{ nomination.declarantName || '—' }}</span></div>
+          <div class="field"><label>Declarant Designation</label><span>{{ nomination.declarantDesignation || '—' }}</span></div>
+          <div class="field"><label>Declarant Organization</label><span>{{ nomination.declarantOrganization || '—' }}</span></div>
+          <div class="field"><label>Declaration Date</label><span>{{ nomination.declarationDate || '—' }}</span></div>
+          <div class="field"><label>ICA Member</label><span>{{ nomination.icaMember || '—' }}</span></div>
+          <div class="field"><label>ICA Affiliated</label><span>{{ nomination.icaAffiliated || '—' }}</span></div>
+        </div>
+      </div>
+
+      <!-- Section M: Attachments -->
+      <div class="form-section">
+        <h3 class="section-header">Section M: Supporting Materials & Attachments</h3>
+        <div *ngIf="nomination.files && nomination.files.length > 0; else noFiles">
+          <table class="files-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>File Name</th>
+                <th>Type</th>
+                <th>Size</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let file of nomination.files; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ file.fileName }}</td>
+                <td>{{ file.contentType || '—' }}</td>
+                <td>{{ formatFileSize(file.fileSize) }}</td>
+                <td>
+                  <button class="btn-download" (click)="downloadFile(file)">
+                    ⬇ Download
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ng-template #noFiles>
+          <p class="no-files">No attachments uploaded for this nomination.</p>
+        </ng-template>
+      </div>
+
+    </div>
+
+  </div>
+</section>

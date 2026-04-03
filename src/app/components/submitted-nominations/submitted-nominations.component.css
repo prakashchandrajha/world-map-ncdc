@@ -81,3 +81,27 @@
 .bool-cell.yes {
   color: #27ae60;
 }
+
+.official-name {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* View Full Form Button */
+.btn-view {
+  background: #1a1a2e;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+.btn-view:hover {
+  background: #16213e;
+}

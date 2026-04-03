@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NominationService, Nomination } from '../../services/nomination.service';
+import { Router } from '@angular/router';
+import { NominationService, NominationSummary } from '../../services/nomination.service';
 import { Banner } from '../../shared/banner/banner';
 
 @Component({
@@ -11,23 +12,41 @@ import { Banner } from '../../shared/banner/banner';
 })
 export class SubmittedNominationsComponent implements OnInit {
 
-  nominations: Nomination[] = [];
+  nominations: NominationSummary[] = [];
   isLoading = true;
   errorMessage = '';
 
-  constructor(private nominationService: NominationService) { }
+  constructor(
+    private nominationService: NominationService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.loadNominations();
+  }
+
+  loadNominations(): void {
+    this.isLoading = true;
     this.nominationService.getAllNominations().subscribe({
-      next: (data) => {
+      next: (data: NominationSummary[]) => {
         this.nominations = data;
         this.isLoading = false;
       },
-      error: (err) => {
+      error: (err: any) => {
         console.error('Failed to load nominations:', err);
         this.errorMessage = 'Failed to load nominations. Please try again later.';
         this.isLoading = false;
       }
     });
+  }
+
+  viewFullForm(id: number): void {
+    this.router.navigate(['/nomination-detail', id]);
+  }
+
+  getCategoryLabel(category: string): string {
+    if (category === 'tangible') return 'Tangible';
+    if (category === 'intangible') return 'Intangible';
+    return '—';
   }
 }

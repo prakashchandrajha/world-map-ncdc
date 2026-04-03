@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { NominationService, NominationForm } from '../../services/nomination.service';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { NominationService } from '../../services/nomination.service';
 import { Banner } from '../../shared/banner/banner';
 
 @Component({
@@ -11,9 +11,12 @@ import { Banner } from '../../shared/banner/banner';
   styleUrl: './nomination.component.css'
 })
 export class NominationComponent {
+
   nominationForm: FormGroup;
   showSuccessModal = false;
   isSubmitting = false;
+
+  // store files
   selectedFiles: { [key: string]: File | File[] } = {};
 
   constructor(
@@ -23,8 +26,10 @@ export class NominationComponent {
     this.nominationForm = this.createForm();
   }
 
+  // ================= FORM =================
   createForm(): FormGroup {
     return this.fb.group({
+
       // Section A
       organizationName: [''],
       country: [''],
@@ -32,37 +37,42 @@ export class NominationComponent {
       position: [''],
       email: [''],
       telephone: [''],
+
       // Section B
       officialName: [''],
       localName: [''],
       otherNames: [''],
+
       // Section C
-  heritageCategory: ['', Validators.required],
-  icaMember: ['', Validators.required],
-  icaAffiliated: ['', Validators.required],
+      heritageCategory: [''],
+
       // Section D
       communities: [''],
+
       // Section E
       geographicScope: [''],
+
       // Section F
       description: [''],
+
       // Section G
       holders: [''],
+
       // Section H
       knowledgeTransmission: [''],
+
       // Section I
       socialFunctions: [''],
+
       // Section J
       humanRights: [''],
+
       // Section K
       safeguardingPast: [''],
       safeguardingFuture: [''],
       safeguardingCommunity: [''],
-      // Section L
-      visibilityCooperative: [''],
-      dialogueBetweenCommunities: [''],
-      respectDiversity: [''],
-      // Section M
+
+      // Section L (Criteria)
       criterion1: [false],
       criterion2: [false],
       criterion3: [false],
@@ -77,84 +87,125 @@ export class NominationComponent {
       criterion12: [false],
       criterion13: [false],
       criteriaExplanation: [''],
-      // Section N
+
+      // Section M
       consentParticipation: [''],
-      // Section O
+
+      // Section N
       documentationInventories: [''],
-      // Section P
-  video: [false],
-      // Section Q
+
+      // Section P (Declaration)
       declarantName: [''],
       declarantDesignation: [''],
       declarantOrganization: [''],
-      declarationDate: ['']
+      declarationDate: [''],
+      icaMember: [''],
+      icaAffiliated: ['']
+
     });
   }
 
+  // ================= FILE HANDLING =================
   onFileChange(event: any, fieldName: string): void {
     const files: FileList = event.target.files;
+
     if (files && files.length > 0) {
+
+      // photos (multiple)
       if (fieldName === 'photos') {
-        this.selectedFiles[fieldName] = Array.from(files);
+        const fileArray = Array.from(files);
+
+        // limit to 5
+        if (fileArray.length > 5) {
+          alert('Maximum 5 photos allowed');
+          return;
+        }
+
+        this.selectedFiles[fieldName] = fileArray;
+
       } else {
+        // single file (PDF fields)
         this.selectedFiles[fieldName] = files[0];
       }
+
     } else {
       delete this.selectedFiles[fieldName];
     }
   }
 
-  onSubmit(): void {
-    if (this.nominationForm.valid && !this.isSubmitting) {
-      this.isSubmitting = true;
-      const formValue = this.nominationForm.value;
-      const payload = {
-        ...formValue,
-        tangible: formValue.heritageCategory === 'tangible',
-        intangible: formValue.heritageCategory === 'intangible',
-      };
+  // ================= RESET =================
+  resetForm(): void {
+    this.nominationForm.reset({
+      ...this.createForm().getRawValue()
+    });
 
-      delete payload.heritageCategory;
-      
-      const formData = new FormData();
-      formData.append('form', new Blob([JSON.stringify(payload)], { type: 'application/json' }));
-      
-      if (this.selectedFiles['lettersConsent']) {
-        formData.append('lettersConsent', this.selectedFiles['lettersConsent'] as File);
-      }
-      if (this.selectedFiles['photos']) {
-        const photos = this.selectedFiles['photos'];
-        if (Array.isArray(photos)) {
-          photos.forEach(photo => formData.append('photos', photo));
-        } else {
-          formData.append('photos', photos as File);
-        }
-      }
-      if (this.selectedFiles['archivalMaterials']) {
-        formData.append('archivalMaterials', this.selectedFiles['archivalMaterials'] as File);
-      }
-      if (this.selectedFiles['references']) {
-        formData.append('references', this.selectedFiles['references'] as File);
-      }
-
-      // DEBUG: Do not call backend API now, just dump payload to console and complete
-      console.log('Nomination form submit payload:', {
-        form: payload,
-        files: {
-          lettersConsent: this.selectedFiles['lettersConsent'],
-          photos: this.selectedFiles['photos'],
-          archivalMaterials: this.selectedFiles['archivalMaterials'],
-          references: this.selectedFiles['references'],
-        }
-      });
-      this.showSuccessModal = true;
-      this.isSubmitting = false;
-      this.nominationForm.reset(this.createForm().getRawValue());
-      this.selectedFiles = {};
-      return;
-    }
+    this.selectedFiles = {};
+    this.isSubmitting = false;
   }
 
+  // ================= SUBMIT =================
+  onSubmit(): void {
+
+    if (this.isSubmitting) return;
+
+    this.isSubmitting = true;
+
+    const formValue = this.nominationForm.value;
+
+    const payload = {
+      ...formValue,
+      tangible: formValue.heritageCategory === 'tangible' ? true : false,
+      intangible: formValue.heritageCategory === 'intangible' ? true : false,
+    };
+
+    delete payload.heritageCategory;
+
+    const formData = new FormData();
+
+    // JSON data
+    formData.append(
+      'form',
+      new Blob([JSON.stringify(payload)], { type: 'application/json' })
+    );
+
+    // ===== FILES =====
+
+    if (this.selectedFiles['lettersConsent']) {
+      formData.append('lettersConsent', this.selectedFiles['lettersConsent'] as File);
+    }
+
+    if (this.selectedFiles['photos']) {
+      const photos = this.selectedFiles['photos'];
+
+      if (Array.isArray(photos)) {
+        photos.forEach(photo => formData.append('photos', photo));
+      } else {
+        formData.append('photos', photos as File);
+      }
+    }
+
+    if (this.selectedFiles['archivalMaterials']) {
+      formData.append('archivalMaterials', this.selectedFiles['archivalMaterials'] as File);
+    }
+
+    if (this.selectedFiles['references']) {
+      formData.append('references', this.selectedFiles['references'] as File);
+    }
+
+    // ===== CALL BACKEND =====
+    this.nominationService.submitNomination(formData).subscribe({
+      next: () => {
+        this.showSuccessModal = true;
+        this.resetForm();
+      },
+      error: (err) => {
+        console.error('Nomination submission failed:', err);
+        this.isSubmitting = false;
+      }
+    });
+  }
+
+  // ================= MODAL =================
   closeModal(): void {
     this.showSuccessModal = false;
   }

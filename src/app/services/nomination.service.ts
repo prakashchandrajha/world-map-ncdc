@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-export interface NominationForm {
+export interface Nomination {
   id?: number;
   // Section A
   organizationName: string;
@@ -15,33 +15,21 @@ export interface NominationForm {
   officialName: string;
   localName: string;
   otherNames: string;
-  heritageCategory?: 'tangible' | 'intangible';
   // Section C
   tangible: boolean;
   intangible: boolean;
-  // Section D
+  // Section D–K
   communities: string;
-  // Section E
   geographicScope: string;
-  // Section F
   description: string;
-  // Section G
   holders: string;
-  // Section H
   knowledgeTransmission: string;
-  // Section I
   socialFunctions: string;
-  // Section J
   humanRights: string;
-  // Section K
   safeguardingPast: string;
   safeguardingFuture: string;
   safeguardingCommunity: string;
   // Section L
-  visibilityCooperative: string;
-  dialogueBetweenCommunities: string;
-  respectDiversity: string;
-  // Section M
   criterion1: boolean;
   criterion2: boolean;
   criterion3: boolean;
@@ -56,71 +44,39 @@ export interface NominationForm {
   criterion12: boolean;
   criterion13: boolean;
   criteriaExplanation: string;
-  // Section N
+  // Section M–N
   consentParticipation: string;
-  // Section O
   documentationInventories: string;
   // Section P
-  lettersConsentFile?: string;
-  photosFile?: string;
-  archivalMaterialsFile?: string;
-  video?: boolean;
-  videoFile?: string;
-  referencesFile?: string;
-  // Section Q
   declarantName: string;
   declarantDesignation: string;
   declarantOrganization: string;
   declarationDate: string;
-  icaMember?: 'yes' | 'no';
-  icaAffiliated?: 'yes' | 'no';
+  icaMember: string;
+  icaAffiliated: string;
   // Metadata
-  submissionDate?: string;
   createdAt?: string;
 }
 
-export interface FormSummary {
-  id: number;
-  organizationName: string;
-  country: string;
-  officialName: string;
-  contactPerson: string;
-  submissionDate: string;
-  hasLettersConsent?: boolean;
-  hasPhotos?: boolean;
-  hasArchivalMaterials?: boolean;
-  hasReferences?: boolean;
-}
+// kept for backward compat if anything else imports it
+export type FormSummary = Nomination;
 
 @Injectable({
   providedIn: 'root'
 })
 export class NominationService {
-  private apiUrl = 'https://www.culturalheritage.coop/cch/api/forms';
+  // private apiUrl = 'http://localhost:2003/cch/api/nominations';
+  private apiUrl = 'https://www.culturalheritage.coop/cch/api/nominations';
 
   constructor(private http: HttpClient) { }
 
-  submitForm(formData: FormData): Observable<NominationForm> {
-    return this.http.post<NominationForm>(this.apiUrl, formData);
+  /** POST multipart/form-data — returns the saved nomination id */
+  submitNomination(formData: FormData): Observable<number> {
+    return this.http.post<number>(this.apiUrl, formData);
   }
 
-  getAllForms(): Observable<FormSummary[]> {
-    return this.http.get<FormSummary[]>(`${this.apiUrl}/summary`);
-  }
-
-  getFormById(id: number): Observable<NominationForm> {
-    return this.http.get<NominationForm>(`${this.apiUrl}/${id}`);
-  }
-
-  downloadPdf(id: number): Observable<Blob> {
-    return this.http.get(`${this.apiUrl}/${id}/pdf`, { responseType: 'blob' });
-  }
-
-  getFileUrl(id: number, fileType: string): string {
-    return `${this.apiUrl}/${id}/file/${fileType}`;
-  }
-
-  deleteForm(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  /** GET all nominations */
+  getAllNominations(): Observable<Nomination[]> {
+    return this.http.get<Nomination[]>(this.apiUrl);
   }
 }

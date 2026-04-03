@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 export interface NominationSummary {
   id: number;
@@ -76,7 +77,7 @@ export interface NominationDetail {
 })
 export class NominationService {
 
-  private apiUrl = '/api/nominations';
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 

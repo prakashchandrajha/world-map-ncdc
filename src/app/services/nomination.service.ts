@@ -11,6 +11,7 @@ export interface NominationSummary {
   heritageCategory: string;
   contactPerson: string;
   email: string;
+  declarationDate: string;
   submittedAt: string;
 }
 

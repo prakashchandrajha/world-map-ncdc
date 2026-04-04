@@ -31,7 +31,7 @@
     >
       <!-- Section A -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section A: Nominating ICA Member Organization</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section A: Nominating Organization</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <div>
             <label class="block text-gray-700 font-medium mb-1">Name of Organization</label>
@@ -93,20 +93,55 @@
       </div>
 
       <!-- Section D -->
-      <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section D: Communities and Groups Concerned *</h2>
-        <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Identify the cooperative communities, groups, institutions, or networks responsible for safeguarding and transmitting this heritage. (Max. 100 words)</label>
-          <textarea rows="4" formControlName="communities" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
-        </div>
-      </div>
+<div class="mb-8 border-b border-gray-200 pb-4">
+  <h2 class="text-xl font-semibold text-[#7a004a]">
+    Section D: Communities and Groups Concerned *
+  </h2>
+
+  <div class="mt-4">
+    <label class="block text-gray-700 font-medium mb-1">
+      Identify the cooperative communities, groups, institutions, or networks responsible for safeguarding and transmitting this heritage.
+      <span class="block text-xs text-gray-500 font-normal mt-0.5">
+        Max. 100 words
+      </span>
+    </label>
+
+    <textarea
+      rows="4"
+      formControlName="communities"
+      class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"
+      [ngClass]="{
+        'border-gray-300': !nominationForm.get('communities')?.invalid || !nominationForm.get('communities')?.touched,
+        'border-red-500': nominationForm.get('communities')?.invalid && nominationForm.get('communities')?.touched
+      }"
+    ></textarea>
+
+    <!-- Error Message -->
+    <p 
+      *ngIf="nominationForm.get('communities')?.touched && nominationForm.get('communities')?.hasError('required')"
+      class="text-red-500 text-xs mt-1"
+    >
+      This field is required.
+    </p>
+  </div>
+</div>
 
       <!-- Section E -->
       <div class="mb-8 border-b border-gray-200 pb-4">
         <h2 class="text-xl font-semibold text-[#7a004a]">Section E: Geographic Scope and Location *</h2>
         <div class="mt-4">
           <label class="block text-gray-700 font-medium mb-1">Provide details on location (city, region, country) and area of influence (local, national, international). (Max. 100 words)</label>
-          <textarea rows="4" formControlName="geographicScope" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          <textarea rows="4" formControlName="geographicScope" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]" [ngClass]="{
+        'border-gray-300': !nominationForm.get('geographicScope')?.invalid || !nominationForm.get('geographicScope')?.touched,
+        'border-red-500': nominationForm.get('geographicScope')?.invalid && nominationForm.get('geographicScope')?.touched
+      }"></textarea>
+        <!-- Error Message -->
+    <p 
+      *ngIf="nominationForm.get('geographicScope')?.touched && nominationForm.get('geographicScope')?.hasError('required')"
+      class="text-red-500 text-xs mt-1"
+    >
+      This field is required.
+    </p>
         </div>
       </div>
 
@@ -114,8 +149,20 @@
       <div class="mb-8 border-b border-gray-200 pb-4">
         <h2 class="text-xl font-semibold text-[#7a004a]">Section F: Description of the Heritage Element *</h2>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Provide a summary description (100 words) including historical background, core cooperative values, and relevance for community identity.</label>
-          <textarea rows="6" formControlName="description" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          <label class="block text-gray-700 font-medium mb-1">Provide a summary description (300 words) including historical background, core cooperative values, and relevance for community identity.</label>
+          <textarea rows="6" formControlName="description" 
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"
+          [ngClass]="{
+        'border-gray-300': !nominationForm.get('description')?.invalid || !nominationForm.get('description')?.touched,
+        'border-red-500': nominationForm.get('description')?.invalid && nominationForm.get('description')?.touched
+      }"
+          ></textarea>
+           <p 
+      *ngIf="nominationForm.get('description')?.touched && nominationForm.get('description')?.hasError('required')"
+      class="text-red-500 text-xs mt-1"
+    >
+      This field is required.
+    </p>
         </div>
       </div>
 
@@ -123,10 +170,22 @@
 
       <!-- Section G -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section G: Legacy And Knowledge Transmission *</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section G: Legacy and Knowledge Transmission *</h2>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Explain how knowledge and practices are transmitted today (education, oral traditions, cooperative schools, museums, archives, creative projects). (170–280 words)</label>
-          <textarea rows="6" formControlName="knowledgeTransmission" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          <label class="block text-gray-700 font-medium mb-1">Explain how the legacy of the site and in case of intangible, knowledge and practices are transmitted today (170–280 words)</label>
+          <textarea rows="6" formControlName="knowledgeTransmission"
+           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"
+           [ngClass]="{
+        'border-gray-300': !nominationForm.get('knowledgeTransmission')?.invalid || !nominationForm.get('knowledgeTransmission')?.touched,
+        'border-red-500': nominationForm.get('knowledgeTransmission')?.invalid && nominationForm.get('knowledgeTransmission')?.touched
+      }"
+           ></textarea>
+            <p
+      *ngIf="nominationForm.get('knowledgeTransmission')?.touched && nominationForm.get('knowledgeTransmission')?.hasError('required')"
+      class="text-red-500 text-xs mt-1"
+    >
+      This field is required.
+    </p>
         </div>
       </div>
 
@@ -135,7 +194,19 @@
         <h2 class="text-xl font-semibold text-[#7a004a]">Section H: Social and Cultural Functions (optional)</h2>
         <div class="mt-4">
           <label class="block text-gray-700 font-medium mb-1">What role does the heritage play in the lives of communities (identity, cohesion, creativity, sustainability)? (100 words)</label>
-          <textarea rows="6" formControlName="socialFunctions" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          <textarea rows="6" formControlName="socialFunctions" 
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"
+            [ngClass]="{
+        'border-gray-300': !nominationForm.get('socialFunctions')?.invalid || !nominationForm.get('socialFunctions')?.touched,
+        'border-red-500': nominationForm.get('socialFunctions')?.invalid && nominationForm.get('socialFunctions')?.touched
+      }"
+          ></textarea>
+            <p
+      *ngIf="nominationForm.get('socialFunctions')?.touched && nominationForm.get('socialFunctions')?.hasError('required')"
+      class="text-red-500 text-xs mt-1"
+    >
+      This field is required.
+    </p>
         </div>
       </div>
 
@@ -144,7 +215,19 @@
         <h2 class="text-xl font-semibold text-[#7a004a]">Section I: Human Rights and Sustainability *</h2>
         <div class="mt-4">
           <label class="block text-gray-700 font-medium mb-1">Indicate compliance of the heritage element with universal values of human rights, cultural diversity, and sustainable development principles. (100 words)</label>
-          <textarea rows="6" formControlName="humanRights" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          <textarea rows="6" formControlName="humanRights"
+           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"
+               [ngClass]="{
+        'border-gray-300': !nominationForm.get('humanRights')?.invalid || !nominationForm.get('humanRights')?.touched,
+        'border-red-500': nominationForm.get('humanRights')?.invalid && nominationForm.get('humanRights')?.touched
+      }"
+           ></textarea>
+            <p
+      *ngIf="nominationForm.get('humanRights')?.touched && nominationForm.get('humanRights')?.hasError('required')"
+      class="text-red-500 text-xs mt-1"
+    >
+      This field is required.
+    </p>
         </div>
       </div>
 
@@ -153,15 +236,40 @@
         <h2 class="text-xl font-semibold text-[#7a004a]">Section J: Safeguarding Measures *</h2>
         <div class="mt-4">
           <label class="block text-gray-700 font-medium mb-1">K.1 Indicate how the heritage through Past and Ongoing Efforts is being concretely safeguarded ( 100 words)</label>
-          <textarea rows="4" formControlName="safeguardingPast" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          <textarea rows="4" formControlName="safeguardingPast" 
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"
+             [ngClass]="{
+        'border-gray-300': !nominationForm.get('safeguardingPast')?.invalid || !nominationForm.get('safeguardingPast')?.touched,
+        'border-red-500': nominationForm.get('safeguardingPast')?.invalid && nominationForm.get('safeguardingPast')?.touched
+      }"
+          ></textarea>
+
+           <p
+      *ngIf="nominationForm.get('safeguardingPast')?.touched && nominationForm.get('safeguardingPast')?.hasError('required')"
+      class="text-red-500 text-xs mt-1"
+    >
+      This field is required.
+    </p>
         </div>
-        <div class="mt-4">
+        <!-- <div class="mt-4">
           <label class="block text-gray-700 font-medium mb-1">K.2 Proposed Measures for the Future (100 words)</label>
           <textarea rows="8" formControlName="safeguardingFuture" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
-        </div>
+        </div> -->
         <div class="mt-4">
           <label class="block text-gray-700 font-medium mb-1">K.3 Community Involvement in Safeguarding (200 words) *</label>
-          <textarea rows="4" formControlName="safeguardingCommunity" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          <textarea rows="4" formControlName="safeguardingCommunity" 
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"
+            [ngClass]="{
+        'border-gray-300': !nominationForm.get('safeguardingCommunity')?.invalid || !nominationForm.get('safeguardingCommunity')?.touched,
+        'border-red-500': nominationForm.get('safeguardingCommunity')?.invalid && nominationForm.get('safeguardingCommunity')?.touched
+      }"
+          ></textarea>
+            <p
+      *ngIf="nominationForm.get('safeguardingCommunity')?.touched && nominationForm.get('safeguardingCommunity')?.hasError('required')"
+      class="text-red-500 text-xs mt-1"
+    >
+      This field is required.
+    </p>
         </div>
       </div>
 
@@ -169,7 +277,7 @@
 
       <!-- Section K -->
       <div class="mb-8 border-b border-gray-200 pb-4">
-        <h2 class="text-xl font-semibold text-[#7a004a]">Section K: Indicate how many criterions does the elememt aligns with -Select as many CCH standards below are relevant to the heritage *</h2>
+        <h2 class="text-xl font-semibold text-[#7a004a]">Section K: Indicate how many criterions does the elememt aligns with -Select as many CCH standrads below as are relevant to the heritage *</h2>
         <div class="mt-4 space-y-2">
           <label class="flex items-center">
             <input type="checkbox" formControlName="criterion1" class="h-4 w-4 text-[#7a004a] focus:ring-[#7a004a] border-gray-300 rounded">
@@ -225,7 +333,7 @@
           </label>
         </div>
         <div class="mt-4">
-          <label class="block text-gray-700 font-medium mb-1">Briefly explain how the element reflects the selected standards (100 words per criterion):</label>
+          <label class="block text-gray-700 font-medium mb-1">Briefly explain how the element reflects the selected standards (200 words per criterion):</label>
           <textarea rows="8" formControlName="criteriaExplanation" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
         </div>
       </div>
@@ -237,7 +345,19 @@
         <h2 class="text-xl font-semibold text-[#7a004a]">Section L: Documentation and Inventories optional *</h2>
         <div class="mt-4">
           <label class="block text-gray-700 font-medium mb-1">If the element is already registered in any types of local/national heritage records, provide references or links. (100 words)</label>
-          <textarea rows="6" formControlName="documentationInventories" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"></textarea>
+          <textarea rows="6" formControlName="documentationInventories" 
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]"
+             [ngClass]="{
+        'border-gray-300': !nominationForm.get('documentationInventories')?.invalid || !nominationForm.get('documentationInventories')?.touched,
+        'border-red-500': nominationForm.get('documentationInventories')?.invalid && nominationForm.get('documentationInventories')?.touched
+      }"
+          ></textarea>
+              <p
+      *ngIf="nominationForm.get('documentationInventories')?.touched && nominationForm.get('documentationInventories')?.hasError('required')"
+      class="text-red-500 text-xs mt-1"
+    >
+      This field is required.
+    </p>
         </div>
       </div>
 
@@ -246,7 +366,7 @@
         <h2 class="text-xl font-semibold text-[#7a004a]">Section M: Supporting Materials *</h2>
         <div class="mt-4 space-y-4">
           <div class="block">
-            <span class="block text-gray-700 font-medium mb-1">Letters of consent from communities/institutions the nominating organisation must on its letterhead and authorized representative ,consent for the site/element to be considered for the ICA CCH listing 2026</span>
+            <span class="block text-gray-700 font-medium mb-1">Letters of consent from communities/institutions (the nominating organisation must on its letterhead and authorized representative ,consent for the site/element to be considered for the ICA CCH listing 2026</span>
             <input type="file" (change)="onFileChange($event, 'lettersConsent')" accept=".pdf" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
             <p class="text-xs text-gray-500 mt-1">Accepts PDF only Optional.</p>
           </div>
@@ -255,11 +375,11 @@
             <input type="file" multiple (change)="onFileChange($event, 'photos')" accept="image/png, image/jpeg, image/jpg" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
             <p class="text-xs text-gray-500 mt-1">Accepts PNG/JPEG/JPG only (minimum 300dpi recommended).</p>
           </div>
-          <div class="block mt-4">
+          <!-- <div class="block mt-4">
             <span class="block text-gray-700 font-medium mb-1">Archival materials / publications /Photographs</span>
             <input type="file" (change)="onFileChange($event, 'archivalMaterials')" accept=".pdf" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
             <p class="text-xs text-gray-500 mt-1">Accepts PDF only Optional</p>
-          </div>
+          </div> -->
           <div class="block">
             <span class="block text-gray-700 font-medium mb-1">Additional document if Any</span>
             <input type="file" (change)="onFileChange($event, 'references')" accept=".pdf" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-[#7a004a] hover:file:bg-gray-200">
@@ -309,41 +429,41 @@
           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#7a004a]">
       </div>
 
-      <!-- ICA Member -->
-      <div>
-        <label class="block text-gray-700 font-medium mb-2">ICA Member</label>
-        <div class="flex items-center gap-4">
-          <label class="flex items-center gap-2">
-            <input type="radio" value="yes" formControlName="icaMember" required
-              class="text-[#7a004a] focus:ring-[#7a004a]">
-            Yes
-          </label>
-          <label class="flex items-center gap-2">
-            <input type="radio" value="no" formControlName="icaMember" required
-              class="text-[#7a004a] focus:ring-[#7a004a]">
-            No
-          </label>
-        </div>
-      </div>
+     <!-- ICA Member -->
+<div>
+  <label class="block text-gray-700 font-medium mb-2">ICA Member</label>
+  <div class="flex items-center gap-4">
+    <label class="flex items-center gap-2">
+      <input type="radio" value="yes" formControlName="icaMember"
+        class="text-[#7a004a] focus:ring-[#7a004a]">
+      Yes
+    </label>
+    <label class="flex items-center gap-2">
+      <input type="radio" value="no" formControlName="icaMember"
+        class="text-[#7a004a] focus:ring-[#7a004a]">
+      No
+    </label>
+  </div>
+</div>
 
-      <!-- Affiliated to ICA Member -->
-      <div>
-        <label class="block text-gray-700 font-medium mb-2">
-          Affiliated to an ICA Member Organization
-        </label>
-        <div class="flex items-center gap-4">
-          <label class="flex items-center gap-2">
-            <input type="radio" value="yes" formControlName="icaAffiliated" required
-              class="text-[#7a004a] focus:ring-[#7a004a]">
-            Yes
-          </label>
-          <label class="flex items-center gap-2">
-            <input type="radio" value="no" formControlName="icaAffiliated" required
-              class="text-[#7a004a] focus:ring-[#7a004a]">
-            No
-          </label>
-        </div>
-      </div>
+<!-- Affiliated → show ONLY when ICA Member = NO -->
+<div *ngIf="nominationForm.get('icaMember')?.value === 'no'">
+  <label class="block text-gray-700 font-medium mb-2">
+    Affiliated to an ICA Member Organization
+  </label>
+  <div class="flex items-center gap-4">
+    <label class="flex items-center gap-2">
+      <input type="radio" value="yes" formControlName="icaAffiliated"
+        class="text-[#7a004a] focus:ring-[#7a004a]">
+      Yes
+    </label>
+    <label class="flex items-center gap-2">
+      <input type="radio" value="no" formControlName="icaAffiliated"
+        class="text-[#7a004a] focus:ring-[#7a004a]">
+      No
+    </label>
+  </div>
+</div>
 
     </div>
   </div>

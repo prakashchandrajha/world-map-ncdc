@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NominationService } from '../../services/nomination.service';
 import { Banner } from '../../shared/banner/banner';
 
@@ -47,30 +47,30 @@ export class NominationComponent {
       heritageCategory: [''],
 
       // Section D
-      communities: [''],
+      communities: ['',Validators.required],
 
       // Section E
-      geographicScope: [''],
+      geographicScope: ['',Validators.required],
 
       // Section F
-      description: [''],
+      description: ['',Validators.required],
 
       // Section G
-      holders: [''],
+      holders: ['',Validators.required],
 
       // Section H
-      knowledgeTransmission: [''],
+      knowledgeTransmission: ['',Validators.required],
 
       // Section I
-      socialFunctions: [''],
+      socialFunctions: ['',Validators.required],
 
       // Section J
-      humanRights: [''],
+      humanRights: ['',Validators.required],
 
       // Section K
-      safeguardingPast: [''],
+      safeguardingPast: ['',Validators.required],
       safeguardingFuture: [''],
-      safeguardingCommunity: [''],
+      safeguardingCommunity: ['',Validators.required],
 
       // Section L (Criteria)
       criterion1: [false],

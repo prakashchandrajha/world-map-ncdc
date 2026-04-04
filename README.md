@@ -29,5 +29,5 @@ this.locations = [
   { id: 'cooperativa-ceramica-imola', name: 'Cooperativa Ceramica d’Imola', lat: 44.3596, lng: 11.7158, country: 'Italy', continent: 'Europe' },
   { id: 'delitzsch-flammersfeld', name: 'Birthplaces of Cooperation in Germany: Delitzsch and Flammersfeld', lat: 51.5240, lng: 12.3431, country: 'Germany', continent: 'Europe' }, // Delitzsch
   { id: 'ardelaine-france', name: 'Ardelaine and the Spirit of Collective Work', lat: 44.9378, lng: 4.4964, country: 'France', continent: 'Europe' }, // Saint-Pierreville, Ardèche
-  { id: 'ilo-cooperative-geneva', name: 'International Labour Organization (ILO) Cooperative, Social and Solidarity Economy Unit', lat: 46.2268, lng: 6.1400, country: 'Switzerland', continent: 'Europe' } // Geneva, ILO HQ
+  { id: 'ilo-cooperative-geneva', name: 'International Labour Organization (ILO) Cooperative, Social and Solidarity Economy Unit', lat: 46.2268, lng: 6.1400, country: 'Switzerland', continent: 'Europe' } // Geneva, ILO H
 ];

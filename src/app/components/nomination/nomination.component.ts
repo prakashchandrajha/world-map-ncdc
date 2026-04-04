@@ -191,7 +191,6 @@ export class NominationComponent {
       next: () => {
         this.showSuccessModal = true;
         this.isSubmitting = false;
-        this.resetForm();
       },
       error: (err: any) => {
         console.error('Nomination submission failed:', err);

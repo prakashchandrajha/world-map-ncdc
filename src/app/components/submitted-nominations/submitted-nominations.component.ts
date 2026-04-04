@@ -29,6 +29,9 @@ export class SubmittedNominationsComponent implements OnInit {
     this.isLoading = true;
     this.nominationService.getAllNominations().subscribe({
       next: (data: NominationSummary[]) => {
+        console.log('=== LOADED NOMINATIONS ===');
+        console.log('Count:', data.length);
+        console.log('Data:', JSON.stringify(data, null, 2));
         this.nominations = data;
         this.isLoading = false;
       },

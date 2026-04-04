@@ -186,9 +186,24 @@ export class NominationComponent {
       formData.append('references', this.selectedFiles['references'] as File);
     }
 
+    // ===== Prevent empty submission =====
+    const hasAnyValue = Object.values(formValue).some(v => v !== '' && v !== null && v !== undefined && v !== false);
+    const hasAnyFile = Object.keys(this.selectedFiles).length > 0;
+
+    if (!hasAnyValue && !hasAnyFile) {
+      alert('Please fill in at least some fields before submitting.');
+      this.isSubmitting = false;
+      return;
+    }
+
+    // ===== DEBUG: Log what we're about to send =====
+    console.log('=== FORM SUBMISSION DEBUG ===');
+    console.log('Form raw value:', formValue);
+
     // ===== CALL BACKEND =====
     this.nominationService.submitNomination(formData).subscribe({
-      next: () => {
+      next: (response: any) => {
+        console.log('Backend response:', response);
         this.showSuccessModal = true;
         this.isSubmitting = false;
       },

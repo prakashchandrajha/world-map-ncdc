@@ -81,12 +81,21 @@ export class MembersComponent implements OnInit {
       },
       {
         name: 'Mr. Tiago Luiz Schmidt',
-        title: 'President',
+        title: 'Chairperson',
         // description: 'Leads one of Brazil\'s oldest credit unions. Adds the perspective of legacy financial heritage to the group\'s work. Promotes cooperative financing as a cultural and social force. Connects local cooperative history to global networks.',
         organization: 'Sicredi Pioneira, Brazil',
         country: '',
         category: 'workingGroup',
         image: '../../../../../assets/images/mem/Tiago.jpg'
+      },
+       {
+        name: 'Mr. T.K Kishor kumar',
+        title: 'Chief project coordinator',
+        // description: 'Leads one of Brazil\'s oldest credit unions. Adds the perspective of legacy financial heritage to the group\'s work. Promotes cooperative financing as a cultural and social force. Connects local cooperative history to global networks.',
+        organization: 'Uralungal Labour Contract Co-operative Society',
+        country: '',
+        category: '',
+        image: '../../../../../assets/images/mem/ulcc.jpeg'
       },
       {
         name: 'Mr. Erbin Crowell',

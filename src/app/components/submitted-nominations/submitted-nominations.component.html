@@ -32,7 +32,6 @@
               <th>Heritage Category</th>
               <th>Contact Person</th>
               <th>Email</th>
-              <th>Submitted At</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -45,7 +44,7 @@
               <td>{{ getCategoryLabel(n.heritageCategory) }}</td>
               <td>{{ n.contactPerson || '—' }}</td>
               <td>{{ n.email || '—' }}</td>
-              <td>{{ n.declarationDate || '—' }}</td>
+              <!-- <td>{{ n.declarationDate || '—' }}</td> -->
               <td>
                 <button class="btn-view" (click)="viewFullForm(n.id)">View Full Form</button>
               </td>

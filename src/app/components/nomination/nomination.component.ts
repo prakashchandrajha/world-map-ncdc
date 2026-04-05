@@ -39,7 +39,7 @@ export class NominationComponent {
       telephone: [''],
 
       // Section B
-      officialName: [''],
+      officialName: ['',Validators.required],
       localName: [''],
       otherNames: [''],
 

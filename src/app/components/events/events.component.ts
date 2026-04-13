@@ -341,6 +341,27 @@ Key themes included:
          
         </div>
       `
+    },
+    {
+      id: 7,
+      date: '26',
+      month: 'Apr',
+      year: '2026',
+      title: 'Nominations Open for In/Tangible Cooperative Cultural Heritage',
+      content: `
+      
+
+        <p class="text-gray-700 mt-10 leading-relaxed">
+         In 2025, the ICA established the Cooperative Cultural Heritage programme to safeguard tangible and intangible elements of Co-operative Cultural Heritage (CCH) around the world. The inaugural list featured 32 sites from 25 countries on its website and interactive map at culturalheritage.coop. In 2026, the goal is to include around 35 additional sites from 25 countries - and nominations from ICA members are open now. The call out coincides with the week that marks the UN International Day of Conscience, which aims to build a Culture of Peace.
+        </p>
+
+          
+
+         
+          
+         
+        </div>
+      `
     }
   ];
 

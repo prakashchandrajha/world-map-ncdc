@@ -7,6 +7,11 @@ export const routes: Routes = [
     title: 'Home - Cooperative Culture Heritage'
   },
   {
+    path:'stewardship',
+    loadComponent: () => import('./components/stewardship/stewardship').then(m => m.Stewardship),
+    title: 'Stewardship - Cooperative Culture Heritage'
+  },
+  {
     path: 'about',
     loadComponent: () => import('./components/about/about').then(m => m.About),
     title: 'About - Cooperative Culture Heritage'

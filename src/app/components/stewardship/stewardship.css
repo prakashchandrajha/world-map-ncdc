@@ -1,0 +1,31 @@
+/* stewardship.component.css */
+* {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.border-dashed-custom {
+  border-bottom: 1px dashed #7d2148;
+}
+
+.hover-scale {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-scale:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 30px -10px rgba(125, 33, 72, 0.08);
+}
+
+.bg-soft-maroon {
+  background-color: #7d2148;
+}
+
+.text-maroon {
+  color: #7d2148;
+}
+
+.border-maroon {
+  border-color: #7d2148;
+}
+
+/* Preserve the same color palette as requested */
